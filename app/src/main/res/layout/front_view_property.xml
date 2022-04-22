@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Select Property"
+                    />
+                <ImageView
+                    android:id="@+id/ivf1"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="@dimen/icon_dialog_padding1_5dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="@dimen/icon_dialog_padding1_5dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/filter_padding_20sp"
+                android:paddingRight="@dimen/filter_padding_20sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/filters_rounded_30sp">
+
+                    <FrameLayout
+                        android:id="@+id/DIO_PROPOSAL_REQ_PRO_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/employe_circle_rounded">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Property 1"
+                            android:textColor="@color/black_font"
+                            android:textSize="14sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/DIO_PROPOSAL_REQ_PRO_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Property 2"
+                            android:textColor="@color/black_font"
+                            android:textSize="14sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/DIO_PROPOSAL_REQ_PRO_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Property 3"
+                            android:textColor="@color/black_font"
+                            android:textSize="14sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+
+                <FrameLayout
+                    android:id="@+id/DIO_PROPOSAL_REQ_PRO_CANCEL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:text="Clear All"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/DIO_PROPOSAL_REQ_PRO_APPLY"
+                    android:layout_width="105dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="05dp"
+
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background">
+
+                    <TextView
+                        android:id="@+id/tv_view_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:text="Apply"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

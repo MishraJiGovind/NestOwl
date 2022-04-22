@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/pincode_background"
+        android:layout_height="225dp">
+        <TextView
+            android:layout_marginTop="45dp"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto_third"
+            android:textSize="14sp"
+            android:text="Please Enter The Locality Name"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bacground_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sign_up_40sp">
+
+            <EditText
+                android:id="@+id/DIO_LOCALITYIES_ADD_IN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:hint="Enter Name Here"
+                android:singleLine="true"
+                android:textColorHint="@color/color_edit_text"
+                android:textSize="@dimen/text_sign_up_16sp" />
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/DIO_LOALITIES_SUMBIT"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/brown_two"
+
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="Submit"
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

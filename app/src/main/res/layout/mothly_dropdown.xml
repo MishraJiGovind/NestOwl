@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Montly"
+                    android:textColor="#8A8888"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivr3"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/close_icon_multipul" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#E6E0E0" />
+
+
+
+            <RadioGroup
+                android:id="@+id/group_login"
+                android:paddingLeft="20dp"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feet"
+                    android:layoutDirection="rtl"
+                    android:textDirection="ltr"
+                    android:id="@+id/feet_radio"
+                    android:textColor="#000"
+                    android:buttonTint="@color/brown_color"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="16sp"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/meter_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/brown_color"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layoutDirection="rtl"
+                    android:text="Meter"
+                    android:textColor="#000"
+                    android:textDirection="ltr"
+                    android:textSize="16sp" />
+
+
+            </RadioGroup>
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E6E0E0" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/brown_two"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="8dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Submit"
+                    android:textColor="#ffff"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

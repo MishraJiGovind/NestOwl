@@ -1,0 +1,2032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.QueryFinalScreenSecond">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Builder Deal"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+                            <LinearLayout
+
+
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:background="@drawable/background"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="20dp"
+                                android:layout_height="215dp">
+
+                                <FrameLayout
+
+                                    android:layout_width="250dp"
+                                    android:layout_height="215dp"
+                                    android:background="@drawable/background_image_personal"
+                                    android:fitsSystemWindows="true" />
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="250dp"
+                                    android:layout_height="215dp"
+                                    android:background="@drawable/background_image_personal"
+                                    android:fitsSystemWindows="true" />
+
+
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="250dp"
+                                    android:layout_height="215dp"
+                                    android:background="@drawable/background_image_personal"
+                                    android:fitsSystemWindows="true" />
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="250dp"
+                                    android:layout_height="215dp"
+                                    android:background="@drawable/background_image_personal"
+                                    android:fitsSystemWindows="true" />
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Name of the Project"
+                            />
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_color"
+                                    android:text="M3M Project"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+                                    android:layout_marginLeft="10dp"
+
+
+                                    android:textColor="@color/black_color"
+                                    android:text="DLF Project"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="Gurgaon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@null"
+                                    android:background="@null"
+                                    android:hint="Address"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="16sp"
+
+                                    />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Possesion Type"
+                            />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_color"
+                                    android:text="Ready to Move"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+                                    android:layout_marginLeft="10dp"
+
+
+                                    android:textColor="@color/black_color"
+                                    android:text="Under Construction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="Pre-Launch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Project Type"
+                            />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_color"
+                                    android:text="Residential"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+                                    android:layout_marginLeft="10dp"
+
+
+                                    android:textColor="@color/black_color"
+                                    android:text="Commercial"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="Other"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Total Unit Unsold"
+                            />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@null"
+                                    android:background="@null"
+                                    android:hint="Total Unit Unsold"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="16sp"
+
+                                    />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Demand Structure"
+                            />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@null"
+                                    android:background="@null"
+                                    android:hint="1.BHK"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="16sp"
+
+                                    />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:layout_marginRight="05dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@null"
+                android:background="@null"
+                android:hint="₹"
+                android:textColorHint="@color/color_edit_text"
+
+                android:fontFamily="@font/second"
+                android:layout_marginRight="20dp"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#D8D6D6" />
+
+
+        </FrameLayout>
+        <TextView
+            android:text="To"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/first"
+            android:textColor="@color/black_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_marginLeft="05dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@null"
+                android:background="@null"
+                android:hint="₹"
+                android:textColorHint="@color/color_edit_text"
+
+                android:fontFamily="@font/second"
+                android:layout_marginRight="20dp"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#D8D6D6" />
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Comission Service Charge%"
+                            />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@null"
+                                    android:background="@null"
+                                    android:hint="%"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="16sp"
+
+                                    />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Deal Valid for"
+                            />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_color"
+                                    android:text="3 Months"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+                                    android:layout_marginLeft="10dp"
+
+
+                                    android:textColor="@color/black_color"
+                                    android:text="6 Months"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="12 Months"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="18 Months"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+                                <RadioButton
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="24 Months"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Addition details of Project"
+                            />
+
+                        <FrameLayout
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_lenght"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="90dp">
+                            <EditText
+                                android:layout_marginTop="15dp"
+                                android:textColorHint="@color/color_edit_text"
+                                android:layout_marginLeft="10dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/text_sign_up_16sp"
+                                android:background="@null"
+                                android:backgroundTint="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint=""
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Date and Time Schedule for meeting and Description"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginTop="05dp"
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+<LinearLayout
+    android:paddingLeft="@dimen/screen_sixteen_16sp"
+    android:paddingRight="@dimen/screen_sixteen_16sp"
+    android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="23"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black_color"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Aug"
+        android:textColor="@color/black_color"
+        android:textSize="22sp"
+        android:fontFamily="@font/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="24"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="25"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="25"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="26"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="27"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="28"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Aug"
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                android:fontFamily="@font/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginTop="05dp"
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                android:paddingRight="@dimen/screen_sixteen_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:layout_height="match_parent">
+
+
+
+                                <FrameLayout
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="12:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="2:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="3:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="4:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="5:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="6:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:text="7:00"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Mode of Meet"
+                            />
+
+
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none"
+                            android:layout_height="@dimen/padding_horizontal_36dp">
+                            <LinearLayout
+                                android:paddingRight="16dp"
+                                android:paddingLeft="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+
+                                <FrameLayout
+                                    android:id="@+id/BUILDER_DEAL_PYCALLY"
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/ready_to_move_rounded_background"
+                                    android:layout_height="36dp">
+                                    <TextView
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:textColor="@color/black_color"
+                                        android:layout_gravity="center"
+                                        android:textSize="14sp"
+                                        android:fontFamily="@font/roboto_mediaum_second"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Physically"
+
+                                        />
+
+
+                                </FrameLayout>
+
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:id="@+id/BUILDER_DEAL_VEETRUALLY"
+                                    android:background="@drawable/ready_to_move_rounded_background"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:textSize="14sp"
+                                        android:fontFamily="@font/roboto_mediaum_second"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Virtually"
+
+                                        />
+
+                                </FrameLayout>
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="22dp"
+                            android:id="@+id/BUILDER_DEAL_PYCALLY_LNR"
+                            android:visibility="gone"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:textSize="22sp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:textColor="#000"
+
+                                android:layout_height="wrap_content"
+                                android:text="Office address for meeting Purpose"
+                                />
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@null"
+                                        android:background="@null"
+                                        android:hint="Please mention office address"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/PROPOSAL_REQ_VIDEO_OPTIONS"
+    android:layout_marginTop="15dp"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:paddingRight="14dp"
+            android:paddingLeft="14dp"
+            android:id="@+id/PROPOSAL_REQ_VIDEO_OPTIONS_GROUP"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RadioButton
+                android:layout_weight="1"
+                android:buttonTint="@color/black_color"
+                android:id="@+id/PROPOSAL_REQ_VIDEO_WHATSAPP"
+                android:onClick="rbclick"
+
+                android:textSize="16sp"
+                android:textColor="@color/black_color"
+                android:text="Whats App"
+                android:fontFamily="@font/roboto_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_third"
+                android:textSize="16sp"
+                android:buttonTint="@color/black_color"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/PROPOSAL_REQ_VIDEO_JIO_MEET"
+                android:onClick="rbclick"
+
+                android:textColor="@color/black_color"
+                android:text="Jio Meet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:id="@+id/PROPOSAL_REQ_VIDEO_SKIPE"
+                android:fontFamily="@font/roboto_third"
+                android:textSize="16sp"
+                android:onClick="rbclick"
+
+                android:buttonTint="@color/black_color"
+
+                android:textColor="@color/black_color"
+                android:text="Skype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:onClick="rbclick"
+
+                android:fontFamily="@font/roboto_third"
+                android:textSize="16sp"
+                android:buttonTint="@color/black_color"
+                android:id="@+id/PROPOSAL_REQ_VIDEO_ZOOM"
+
+                android:textColor="@color/black_color"
+                android:text="Zoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:onClick="rbclick"
+
+                android:id="@+id/PROPOSAL_REQ_VIDEO_DUO"
+                android:fontFamily="@font/roboto_third"
+                android:textSize="16sp"
+                android:buttonTint="@color/black_color"
+
+                android:textColor="@color/black_color"
+                android:text="Google Due"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:onClick="rbclick"
+                android:id="@+id/PROPOSAL_REQ_VIDEO_FACE"
+                android:fontFamily="@font/roboto_third"
+                android:textSize="16sp"
+                android:buttonTint="@color/black_color"
+
+                android:textColor="@color/black_color"
+                android:text="Face Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:ignore="OnClick" />
+
+
+
+        </RadioGroup>
+
+
+
+    </HorizontalScrollView>
+
+
+
+</LinearLayout>
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/PROPOSAL_REQ_VIDEO_INPUT_ID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Whats App Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lnd_jio_meet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Jio Meet Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lnd_skype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Skype Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lnd_zoom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Zoom Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lnd_google_due"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Google Due Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lnd_face_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:layout_marginTop="@dimen/filter_18sp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <EditText
+                                        android:background="@null"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Face TIme Id"
+                                        android:backgroundTint="@null"
+                                        android:textColorHint="@color/color_edit_text"
+
+                                        android:fontFamily="@font/second"
+                                        android:layout_marginRight="20dp"
+                                        android:textSize="16sp"
+
+                                        />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Details for Enquiry"
+                            />
+
+                        <FrameLayout
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_lenght"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="90dp">
+                            <EditText
+                                android:textColorHint="@color/color_edit_text"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/text_sign_up_16sp"
+                                android:background="@null"
+                                android:backgroundTint="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint=""
+                                />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+
+
+        </ScrollView>
+        <HorizontalScrollView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone"
+            android:id="@+id/horizontal_id_two"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+            android:layout_height="@dimen/bottom_size_height_button_40sp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/nest_pro_rectangle"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        android:textColor="@color/brown_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accept"
+
+                        />
+
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/nest_pro_rectangle"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="12sp"
+
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/brown_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reject"
+
+                        />
+
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/nest_pro_rectangle"
+                    android:layout_height="@dimen/bottom_size_height_button_40sp">
+                    <TextView
+                        android:id="@+id/make_offer_rera"
+                        android:layout_gravity="center"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat"
+
+                        />
+
+
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

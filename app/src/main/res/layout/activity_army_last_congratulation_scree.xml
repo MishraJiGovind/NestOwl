@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.ArmyLastCongratulationScree">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Indian Heros"
+                    />
+                <ImageView
+                    android:id="@+id/iv49"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="18dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="18dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <HorizontalScrollView
+                android:fillViewport="true"
+                android:layout_marginTop="20dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/netswl_icon"
+            android:layout_width="match_parent"
+            android:layout_height="145dp" />
+
+
+        <FrameLayout
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_bold_first"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:text="Congratulations Your Profile has been Submitted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/continue_cond"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:id="@+id/tv_next_make_offer"
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Go to Home Screen"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

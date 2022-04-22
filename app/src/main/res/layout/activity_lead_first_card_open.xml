@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.LeadFirstCardOpen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/iv34"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/LEADS_NAV_TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buyer Details"
+                            android:textColor="#fff"
+
+                            android:textSize="20sp" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_marginRight="15dp"
+        android:visibility="visible"
+        android:background="@drawable/lead_unlock_alert"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_height="21dp">
+
+
+        <TextView
+            android:id="@+id/LEADS_ACTIVITY_UNLOCKS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="05dp"
+            android:layout_marginRight="05dp"
+            android:fontFamily="@font/second"
+
+            android:text="Unlock in 90 mnts"
+            android:textColor="@color/black_color"
+            android:textSize="13sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <FrameLayout
+            android:layout_width="45dp"
+            android:background="@drawable/circle_background"
+            android:layout_height="45dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/LEADS_ACTIVITY_DP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/face_icon" />
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginLeft="05dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/LEADS_ACTIVITY_NAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Rahul Yadav"
+                    android:textColor="#000"
+
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:id="@+id/LEADS_ACTIVITY_DOCTOR_FRAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/LEADS_ACTIVITY_DOCTOR_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginRight="05dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="DOCTOR"
+                        android:textColor="@color/black_color"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="05dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/LEADS_ACTIVITY_STATUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/second"
+                    android:text="Looking to buy"
+                    android:textColor="#000"
+
+                    android:textSize="13sp" />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/LEADS_ACTIVITY_VIEWPOHOTO"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_gravity="end"
+        android:layout_marginLeft="05dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/verify_background"
+        android:visibility="visible">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/second"
+            android:text="View Photo"
+
+            android:textColor="@color/black_color"
+            android:textSize="13sp" />
+    </FrameLayout>
+
+</FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/LEADS_REQ_TEXT_UPDATE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requirements"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:visibility="visible"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="05dp"
+                        android:id="@+id/LEADS_ACTIVITY_VIEW_REQ"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp">
+
+
+                        <TextView
+                            android:id="@+id/LEADS_ACTIVITY_VIEW_REQ_TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/second"
+
+                            android:text="View Requirement"
+                            android:textColor="@color/black_color"
+                            android:textSize="13sp" />
+                    </FrameLayout>
+
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="120dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="05dp"
+                    app:cardElevation="05dp"
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+
+                    android:layout_height="110dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BHK"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/second"
+                            android:textSize="14sp"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+
+                        <TextView
+                            android:id="@+id/LEADS_ACTIVITY_BHK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="2 BHK"
+
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="05dp"
+
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="05dp"
+                    android:layout_marginLeft="05dp"
+
+                    android:layout_height="110dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Locality"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/second"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+
+                        <TextView
+                            android:id="@+id/LEADS_ACTIVITY_AD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Tilak Nagar"
+
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="05dp"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="05dp"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+
+                    android:layout_height="110dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Budget"
+                            android:fontFamily="@font/second"
+                            android:textSize="14sp"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+
+                        <TextView
+                            android:id="@+id/LEADS_ACTIVITY_BUDGET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="₹ 4 lac"
+
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+            android:layout_height="@dimen/bottom_size_height_button_40sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/LEADS_ACTIVITY_ACCEPT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Accept"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/LEADS_ACTIVITY_REJECT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:text="Reject"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/LEADS_ACTIVITY_CHAT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chat"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </HorizontalScrollView>
+
+    </FrameLayout>
+
+
+</LinearLayout>

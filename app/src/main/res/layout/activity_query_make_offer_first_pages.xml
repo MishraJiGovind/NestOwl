@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.QueryMakeOfferFirstPages">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Submit Proposal"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <ScrollView
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="65dp"
+        android:layout_weight="1"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/second"
+
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content"
+                        android:text="Tell us about the offer you have in mind. You can propose your offer complete privacy."
+                        />
+
+                    <FrameLayout
+
+
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:background="@drawable/background"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="215dp">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="215dp"
+                            android:fitsSystemWindows="true">
+
+                            <ImageView
+                                android:id="@+id/SELLER_PROPOSAL_IMG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/background_image_personal" />
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="@drawable/make_offer_img_back"
+                            android:layout_gravity="bottom"
+                            android:layout_height="45dp">
+                            <LinearLayout
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="05dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/SELLER_PROPOSAL_PRICE"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₹ 7000"
+                                    android:textColor="#fff"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/SELLER_PROPOSAL_ADDRES"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="03dp"
+                                    android:maxWidth="200dp"
+                                    android:maxLines="1"
+                                    android:text="Gurgaon"
+                                    android:textColor="#fff"
+                                    android:textSize="12sp"
+                                    tools:ellipsize="end" />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginRight="50dp"
+                                android:layout_marginTop="05dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/SELLER_PROPOSAL_BED"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="5"
+                                    android:textColor="#fff"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:textColor="#fff"
+                                    android:layout_marginBottom="03dp"
+                                    android:textSize="12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bed"
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="05dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/SELLER_PROPOSAL_BATH"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="4"
+                                    android:textColor="#fff"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:textColor="#fff"
+                                    android:layout_marginBottom="03dp"
+                                    android:textSize="12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bath"
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/second"
+
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:textColor="@color/black_light"
+                        android:layout_height="wrap_content"
+                        android:text="You will be notified when user will Accept your offer"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#A7A6A6" />
+
+                    <TextView
+                        android:id="@+id/SELLER_PROPOSAL_NAME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:fontFamily="@font/first"
+                        android:text="Hello Sahil"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:textSize="14sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/roboto_third"
+                        android:textColor="@color/black_color"
+                        android:layout_height="wrap_content"
+                        android:text="Please fill out following details to submit your offer"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#A7A6A6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:text="How Many Buyers do you have for Client property*"
+
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+
+                    <HorizontalScrollView
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:id="@+id/SELLER_PROPOSAL_BUYER_GROUP"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="05dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp">
+
+                            <RadioButton
+                                android:id="@+id/SELLER_PROPOSAL_BUYER_1"
+                                android:layout_width="75dp"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/black_color"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="1"
+                                android:textColor="@color/black_color"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/SELLER_PROPOSAL_BUYER_2"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:buttonTint="@color/black_color"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="2"
+                                android:textColor="@color/black_color"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/SELLER_PROPOSAL_BUYER_3"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:buttonTint="@color/black_color"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="3"
+                                android:textColor="@color/black_color"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/SELLER_PROPOSAL_BUYER_MORE"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:buttonTint="@color/black_color"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="More than 3"
+                                android:textColor="@color/black_color"
+                                android:textSize="16sp" />
+
+
+                        </RadioGroup>
+
+
+
+                    </HorizontalScrollView>
+
+
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/SELLER_PROPOSAL_BUYER_COUNTINUE"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:id="@+id/tv_next_make_offer"
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Continue"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

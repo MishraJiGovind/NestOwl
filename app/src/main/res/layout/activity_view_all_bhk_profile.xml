@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.ViewAllBhkProfile">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="10 Photos"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="end|center_vertical"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18sp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="08dp"
+                        android:layout_height="wrap_content"
+                        >
+
+
+                        <TextView
+                            android:text="Deal Closed"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+                        <TextView
+                            android:text="No.43"
+                            android:textSize="12sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_properties"
+        app:tabSelectedTextColor="@color/brown_color"
+        app:tabTextColor="#000"
+        android:visibility="gone"
+
+        app:tabIndicatorColor="@color/brown_color"
+
+        app:tabIndicatorHeight="03dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#fff"
+        app:tabGravity="fill"
+
+        app:tabTextAppearance="@style/tab_text"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <FrameLayout
+                android:background="@drawable/chat_background"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="45dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/chat_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enquiry Now"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/contact_builder"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="45dp">
+                <TextView
+                    android:id="@+id/tv_contact_builder"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Offer"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_marginTop="20dp"
+            android:id="@+id/scroll__scrolling"
+            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+
+                    android:fillViewport="true"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:fillViewport="true"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:fillViewport="true"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:fillViewport="true"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:fillViewport="true"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/property_six"
+                            android:fitsSystemWindows="true" >
+
+
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="end"
+                                android:rating="5"
+
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:saveEnabled="true"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:theme="@style/RatingBar"
+                                android:numStars="5"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="145dp"
+                            android:layout_marginLeft="07dp"
+                            android:layout_marginRight="07dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="03dp"
+                                    android:src="@drawable/location_top" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="05dp"
+                                android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="10"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginTop="05dp"
+                                    android:text="Gurgaon"
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

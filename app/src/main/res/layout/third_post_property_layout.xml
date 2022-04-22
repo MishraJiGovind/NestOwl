@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@color/rera_color"
+        android:layout_width="match_parent"
+        android:layout_height="235dp">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Property Owners"
+
+            />
+
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent/sell your property for"
+
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:layout_gravity="end"
+                android:layout_marginLeft="20dp"
+                android:textSize="12sp"
+                android:background="@color/brown_color"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free"
+
+                />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="75dp"
+
+            android:layout_marginTop="85dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circle_image_view"
+            android:layout_height="75dp">
+            <ImageView
+                android:visibility="visible"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/green_circle"
+                />
+
+
+        </FrameLayout>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="165dp"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faster Tenants"
+
+            />
+
+
+
+        <ImageView
+            android:id="@+id/three_dots_firs"
+            android:layout_gravity="bottom|center_horizontal"
+            android:src="@drawable/three_dots"
+            android:layout_width="55dp"
+            android:layout_height="30dp" />
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

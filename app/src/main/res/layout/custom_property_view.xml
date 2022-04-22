@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+
+        android:layout_width="260dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/shadow_home_page"
+        android:padding="5dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/CUSTOM_PRO_PROPERTY_IMAGE"
+            android:layout_width="120dp"
+            android:layout_height="155dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/house_png_same" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/premium_back">
+
+            <TextView
+                android:id="@+id/CUSTOM_PRO_STATUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxWidth="110dp"
+                android:singleLine="true"
+                android:text="Live to Public and Pro's"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/CUSTOM_PRO_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/second"
+                android:text="PROPERTY ID:123"
+                android:textColor="#000"
+
+
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_PRO_PRICE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="PRICE:₹ 1.20L"
+                android:textColor="#000"
+
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_PRO_RENT_STATUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="2 Bed Apartment for Rent"
+                android:textColor="#000"
+
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_PRO_ADDRESS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/second"
+                android:maxLines="1"
+
+                android:text="Sec, 65 Gurgaon"
+                android:textColor="#000"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/CUSTOM_PRO_MANNAGE"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/post_property_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="07dp"
+                android:layout_marginRight="07dp"
+                android:fontFamily="@font/sort_btn_font"
+                android:text="Manage Property"
+                android:textColor="#fff"
+                android:textSize="12sp"
+
+                />
+
+
+        </FrameLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

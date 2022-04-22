@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.PincodeSearch">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/ARTICLES_BACK"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/close_icon_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:text="Select Pincode"
+            android:textColor="#000"
+            android:textSize="16sp"
+
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+            android:background="@drawable/search_view_background_home">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:hint="Enter Pincode"
+                android:singleLine="true"
+                android:textColorHint="#C4BEBE"
+                android:textSize="12sp" />
+
+
+            <ImageView
+
+                android:id="@+id/search_filters"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="10dp"
+
+                android:src="@drawable/serch_iconp" />
+
+        </FrameLayout>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="#DBD9D9" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/city_centric_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:fontFamily="@font/roboto_third"
+                android:text="Localities We are live in"
+                android:textColor="#000"
+                android:textSize="16sp"
+
+                />
+
+        </FrameLayout>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DBD9D9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/roboto_third"
+            android:text="Sector 56"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBD9D9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+
+            android:fontFamily="@font/roboto_third"
+            android:text="Sector 57"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBD9D9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+
+            android:fontFamily="@font/roboto_third"
+            android:text="Sector 58"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBD9D9" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

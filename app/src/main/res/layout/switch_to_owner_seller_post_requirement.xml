@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black_color"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/second"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Select"
+                    />
+                <ImageView
+                    android:id="@+id/iv9"
+                    android:src="@drawable/cross_pp"
+                    android:layout_width="23dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="23dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <FrameLayout
+                android:layout_marginTop="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/post_property_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<ImageView
+    android:src="@drawable/post_second"
+    android:layout_width="25dp"
+    android:layout_height="25dp" />
+
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_third"
+                            android:textColor="@color/black_font"
+                            android:layout_height="wrap_content"
+                            android:text="Post Property"
+
+                            />
+
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginTop="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/post_requirement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/property"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_third"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="Post Requirement"
+
+                        />
+
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

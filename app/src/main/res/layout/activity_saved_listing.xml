@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.SavedListing">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="08dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Saved Listing"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_third"
+
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/card_sale_two"
+        app:cardBackgroundColor="@color/light_blue"
+        android:layout_height="241dp">
+        <FrameLayout
+            android:id="@+id/frame_one_image"
+            android:focusable="true"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/top_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" >
+
+
+            <ImageView
+                android:id="@+id/three_dots_firs"
+                android:layout_gravity="bottom|center_horizontal"
+                android:src="@drawable/three_dots"
+                android:layout_width="55dp"
+                android:layout_height="30dp" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/premium_back"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Premium"
+                />
+
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_marginLeft="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="135dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="₹ 27 Lakh, 3BHK Independet House"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+
+                    />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="07dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Tata Housing Society"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Sector-112,Gurgaon"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="02dp"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginBottom="06dp"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp">
+
+
+                <FrameLayout
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Ready to move"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Resale"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="500 SQ, FT,"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="08dp"
+                        android:layout_marginLeft="08dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Owner"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="05dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <FrameLayout
+                android:layout_weight="1"
+                android:background="@drawable/chat_sale_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sale_back"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Phone"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/make_offer_sale_act"
+                android:background="@drawable/contact_builder"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make an Offer"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/CUSTOM_MY_PRO_CARD"
+        app:cardCornerRadius="15dp"
+
+
+        android:layout_width="match_parent"
+        android:background="@drawable/nest_card_back"
+        android:layout_marginTop="20dp"
+        android:layout_height="241dp">
+        <FrameLayout
+
+            android:fitsSystemWindows="true"
+            android:id="@+id/CUSTOM_MY_PRO_IMG"
+            android:background="@drawable/top_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" >
+
+
+            <ImageView
+                android:id="@+id/three_dots_second"
+                android:layout_gravity="bottom|center_horizontal"
+                android:src="@drawable/three_dots"
+                android:layout_width="55dp"
+                android:layout_height="30dp" />
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/premium_back"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Featured"
+                />
+
+
+
+        </FrameLayout>
+        <ImageView
+            android:layout_gravity="end"
+            android:layout_width="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/heart_icon_black_trans"
+            android:layout_height="25dp" />
+
+        <FrameLayout
+            android:layout_marginLeft="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="135dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="₹ 27 Lakh, 3BHK Home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+
+                    />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="07dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Tata Housing Society"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Sector-112,Gurgaon"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="02dp"
+
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginBottom="06dp"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp">
+
+
+                <FrameLayout
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Ready to move"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Resale"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="07dp"
+                        android:layout_marginLeft="07dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="500 SQ, FT,"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="08dp"
+                        android:layout_marginLeft="08dp"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="Owner"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="05dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <FrameLayout
+                android:background="@drawable/chat_sale_back"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/chat_sale_back"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Phone"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/contact_builder"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/maek_offer_two"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Offer"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

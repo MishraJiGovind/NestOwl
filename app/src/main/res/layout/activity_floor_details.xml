@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.FloorDetails">
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/filter_padding_20sp"
+        android:paddingRight="@dimen/filter_padding_20sp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_POLISHED_CONC"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Polished Concrete"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_GRANITE"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Grainite"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_CARAMIC"
+                android:layout_width="match_parent"
+
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Caramic"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="14sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_MOSIC"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Mosaic"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_CEMENTS"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Cement"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_STONE"
+                android:layout_width="match_parent"
+
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Stone"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_VINY"
+
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Vinyl"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_WOOD"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Wood"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_VERIED"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Verified"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_SPRATEX"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+
+                    android:text="Spartex"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_IPS"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="IPSFinish"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/FLORS_DETAILS_CURTAINS"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:background="@drawable/employe_circle_rounded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Curtains"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/FLORS_DETAILS_SUMBIT"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        app:cardBackgroundColor="@color/brown_two"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:text="Submit"
+            android:textColor="#ffff"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.Contact">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/PROPERTY_PREVIEW_APPBAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/brown"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/CONTACT_US_BACK"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/left_arrow"
+                        app:tint="@color/whit_button" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Contact Us"
+                            android:textColor="@color/whit_button"
+                            android:textSize="20sp"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/PROFILE_CONTACT_US_SUMBIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PROPERTY_PREVIEW_APPBAR">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/roboto_bold_first"
+
+            android:text="Please share your Contact"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+                <EditText
+                    android:id="@+id/PROFILE_CONTACT_US_NAME"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+
+                    android:fontFamily="@font/second"
+                    android:hint="Name"
+                    android:textColorHint="@color/color_edit_text"
+
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#D8D6D6" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+                <EditText
+                    android:id="@+id/PROFILE_CONTACT_US_PHONE"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+
+                    android:fontFamily="@font/second"
+                    android:hint="Mobile"
+                    android:textColorHint="@color/color_edit_text"
+
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#D8D6D6" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+                <EditText
+                    android:id="@+id/PROFILE_CONTACT_US_EMAIL_ADDRESS"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+
+                    android:fontFamily="@font/second"
+                    android:hint="Your Email Address"
+                    android:textColorHint="@color/color_edit_text"
+
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#D8D6D6" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:background="@drawable/background_lenght">
+
+            <EditText
+                android:id="@+id/PROFILE_CONTACT_US_QURY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:hint="Please Mention Your Query"
+                android:singleLine="false"
+                android:textColorHint="@color/color_edit_text"
+                android:textSize="@dimen/text_sign_up_16sp" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/PROFILE_CONTACT_US_SUMBIT"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_gravity="bottom"
+
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/brown_two"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="@dimen/card_elevation_05dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:text="SUBMIT DETAILS"
+            android:textColor="#ffff"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

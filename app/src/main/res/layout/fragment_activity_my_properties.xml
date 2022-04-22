@@ -1,0 +1,340 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.nestowl.Fragment.ActivityMyProperties">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_horizontal_36dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <FrameLayout
+
+                android:id="@+id/MY_RESPONSE_SEACRH"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <AutoCompleteTextView
+                    android:id="@+id/MY_RESPONSE_ID_FITER"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:gravity="center"
+                    android:hint="Search by Id"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black_light"
+                    android:textSize="14sp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:id="@+id/MY_RESPONSE_LEADS_STATUS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Lead Status"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="07dp"
+                    android:src="@drawable/arrow_down_filter" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/MY_RESPONSE_LEADS_FORMAT"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Lead Format"
+
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="07dp"
+                    android:src="@drawable/arrow_down_filter" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:id="@+id/MY_RESPONSE_TIME"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Time Filter"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="07dp"
+                    android:src="@drawable/arrow_down_filter" />
+
+
+            </FrameLayout>
+
+            <!--
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+
+                android:background="@drawable/search_by_activity"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="05dp"
+
+                    android:entries="@array/property_type"
+                    />
+
+
+            </FrameLayout>
+-->
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ALL_NO_DATA_SHOW"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="144dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/responce" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Oops! No Response found"
+            android:textAlignment="center"
+            android:textColor="@color/brown"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ALL_NO_DATA_SHOW_BTN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/brown_color"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView58">
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Post Requrements"
+                android:textColor="@color/whit_button"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="65dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MY_RESPONSE_MAKE_OFFER"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MY_RESPONSE_CONTACT_USER"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MY_RESPONSE_START_OFFER"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--
+        <FrameLayout
+            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_pro_two"
+                        android:layout_height="75dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:textSize="16sp"
+                        android:text="No Property posted yet"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black_light"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp"
+                        android:text="You haven't posted any property yet."
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black_light"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp"
+                        android:text="Post public or to nest professional."
+                        android:layout_height="wrap_content" />
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="@dimen/button_all_45sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="05dp"
+                        android:background="@drawable/background_edit_camera">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Post Property"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+        </FrameLayout>
+    -->
+
+
+
+</LinearLayout>

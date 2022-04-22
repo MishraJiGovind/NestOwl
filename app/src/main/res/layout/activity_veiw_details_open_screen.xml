@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.VeiwDetailsOpenScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="Property ID: 0000"
+            android:textColor="@color/black_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_ASK_REVIEW_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_DEAL_CLOSED_LNR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout5"
+                    android:layout_width="2dp"
+                    android:layout_height="4dp"
+                    android:layout_marginStart="13dp"
+                    app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_ASK_REVIEW_IMG"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/ALERT_STATUS_TRACKER_ASK_FOR_REVIEW_BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/contact_builder"
+                    app:layout_constraintStart_toEndOf="@+id/ALERT_STATUS_TRACKER_ASK_REVIEW_IMG"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Ask for Review"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+
+                            />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_ASK_REVIEW_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout5"
+                    app:srcCompat="@drawable/check_black_right" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_DEAL_CLOSED_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_LNR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_DEAL_CLOSED_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_black_right" />
+
+                <FrameLayout
+                    android:id="@+id/DEAL_STATUS_LINE"
+                    android:layout_width="2dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@color/line_color_two"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@id/ALERT_STATUS_TRACKER_DEAL_CLOSED_IMG"
+                    app:layout_constraintTop_toBottomOf="@id/ALERT_STATUS_TRACKER_DEAL_CLOSED_IMG">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/ALERT_STATUS_TRACKER_DEALCLOSED_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Deal Closed"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/ALERT_STATUS_TRACKER_DEAL_CLOSED_IMG"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/ALERT_STATUS_TRACKER_DEAL_CLOSED_BUTTON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deal Closed"
+                    app:layout_constraintStart_toStartOf="@id/ALERT_STATUS_TRACKER_DEALCLOSED_TXT"
+                    app:layout_constraintTop_toBottomOf="@id/ALERT_STATUS_TRACKER_DEALCLOSED_TXT" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_REQ_ACCEPTED_LNR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_black_right" />
+
+                <FrameLayout
+                    android:layout_width="2dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@color/line_color_two"
+                    app:layout_constraintStart_toStartOf="@id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_IMG"
+                    app:layout_constraintTop_toBottomOf="@id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_IMG">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPTED_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Customor Accepted"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/ALERT_STATUS_TRACKER_CUSTOMER_ACCEPT_IMG"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_SUMBITED_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_POSTED_BY_LNR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_SUMBITED_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_black_right" />
+
+                <FrameLayout
+                    android:layout_width="2dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@color/line_color_two"
+                    app:layout_constraintStart_toStartOf="@id/ALERT_STATUS_TRACKER_SUMBITED_IMG"
+                    app:layout_constraintTop_toBottomOf="@id/ALERT_STATUS_TRACKER_SUMBITED_IMG">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/ALERT_STATUS_TRACKER_SUMBITED_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Proposal Sumbited"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/ALERT_STATUS_TRACKER_SUMBITED_IMG"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_POSTED_BY_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_POSTED_BY_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_black_right" />
+
+                <FrameLayout
+                    android:layout_width="2dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@color/line_color_two"
+                    app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_POSTED_BY_IMG"
+                    app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_POSTED_BY_IMG">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/ALERT_STATUS_TRACKER_POSTED_BY_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Posted By"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/ALERT_STATUS_TRACKER_POSTED_BY_IMG"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ALERT_STATUS_TRACKER_REQ_ACCEPTED_LNR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ALERT_STATUS_TRACKER_PROPERTY_ID"
+            app:layout_constraintTop_toBottomOf="@+id/ALERT_STATUS_TRACKER_SUMBITED_LNR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ALERT_STATUS_TRACKER_REQ_ACCEPT_IMG"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_black_right" />
+
+                <FrameLayout
+                    android:layout_width="2dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@color/line_color_two"
+                    app:layout_constraintStart_toStartOf="@id/ALERT_STATUS_TRACKER_REQ_ACCEPT_IMG"
+                    app:layout_constraintTop_toBottomOf="@id/ALERT_STATUS_TRACKER_REQ_ACCEPT_IMG">
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/ALERT_STATUS_TRACKER_ACCEPT_REQ_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Request Accept"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/ALERT_STATUS_TRACKER_REQ_ACCEPT_IMG"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

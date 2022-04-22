@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.SubscriptionKnowMore">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/SUBSCRIPTION_VIEW_BACK"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/left_arrow" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/SUBSCRIPTION_TITLE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basic"
+                            android:textColor="#fff"
+
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout4">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/SUBSCRIPTION_BUY_PLANS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginRight="05dp"
+                        android:padding="5dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="05dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_TIME"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:text="Free"
+                                    android:textColor="@color/black_color"
+
+                                    android:textSize="18sp" />
+
+                                <FrameLayout
+                                    android:id="@+id/NEST_PRO_LOCALTIES"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="end"
+                                    android:background="@drawable/ongoing_deal_closed_background">
+
+                                    <TextView
+                                        android:id="@+id/SUBSCRIPTION_PURCHASE"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:fontFamily="@font/roboto_mediaum_second"
+                                        android:text="450 Purchase"
+                                        android:textColor="@color/brown_color"
+
+                                        android:textSize="14sp" />
+
+
+                                </FrameLayout>
+
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_PRICE"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_bold_first"
+                                    android:text="₹ 00"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="22sp" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_VIEW_23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="  Per listing" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/SUBSCRIPTION_OFFER"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/second"
+                                android:text="Use it wisely, its limited"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_VALIDITY_IMAGE"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_VALIDITY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="1 Listing"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_LISTING_IMAGE"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_FREE_LISTINGS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="1 Listing"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_VARIFICATION"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_VARIFICATION"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="90 Days Validity"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_RESPONSE"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_RESPONSE"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="30 Response"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_SELLER_LEADS"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_SELLER_LEADS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Unlimited Offers"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_BUYER_LEADS"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_BUYER_LEADS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="15 Image Quantity"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_EARN"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_EARN_MORE"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="No Property Description"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_HERO"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_INDIAN_HERO"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Chat Features"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_NEST"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_NEST_PRO"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Freeze and Resume"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_CHAT"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_CHAT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Contact Privacy"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_IMAGES"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_IMAGES"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="No tag on Listing"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/SUBSCRIPTION_VIEW_21"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_FREEZE"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_FREEZE"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="No tag on Listing"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/SUBSCRIPTION_VIEW_22"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="25dp">
+
+                                <ImageView
+                                    android:id="@+id/SUBSCRIPTION_IMAGE_TIOP"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/green_tick_second" />
+
+                                <TextView
+                                    android:id="@+id/SUBSCRIPTION_TI_UP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="No tag on Listing"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SUBSCRIPTION_BUY_PLANS"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="10dp"
+
+            app:cardBackgroundColor="@color/brown_two"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="Buy Plan"
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

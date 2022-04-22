@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.PostRequirementSkip">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <TextView
+                    android:text="Skip Details"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                </TextView>
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/iv15"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Post Requirement"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_third"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:fontFamily="@font/roboto_third"
+            android:text="How Post Requirements Work's"
+            android:textColor="#000"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+
+            android:layout_marginTop="15dp"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingRight="@dimen/screen_sixteen_16sp"
+                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow_for_buyer_and_saller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/step_icon_circle"
+                            android:layout_height="20dp" />
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/third"
+                            android:layout_height="wrap_content"
+                            android:text="step 1"
+                            />
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/first"
+                            android:layout_height="wrap_content"
+                            android:text="Draft your offer Term"
+                            />
+                        <TextView
+                            android:layout_marginTop="14dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="Use our step by step tool to send"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_height="wrap_content"
+                            android:text="your requirement to Nest"
+                            />
+
+                        <TextView
+                            android:layout_marginBottom="07dp"
+
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:text="Professionals Team"
+                            />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="05dp"
+                    android:background="@drawable/shadow_for_buyer_and_saller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/step_icon_circle"
+                            android:layout_height="20dp" />
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/third"
+                            android:layout_height="wrap_content"
+                            android:text="step 2"
+                            />
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/first"
+                            android:layout_height="wrap_content"
+                            android:text="Draft your offer Term"
+                            />
+                        <TextView
+                            android:layout_marginTop="14dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="Use our step by step tool to send"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:fontFamily="@font/second"
+
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:text="your requirement to Nest"
+                            />
+
+                        <TextView
+                            android:layout_marginBottom="07dp"
+                            android:layout_marginTop="07dp"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_height="wrap_content"
+                            android:text="Professionals Team"
+                            />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="120dp"
+            android:background="#A7A6A6" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="18sp"
+
+
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:id="@+id/start_offer_now_id"
+            android:text="Post Requiremets Now"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</FrameLayout>
+
+
+</LinearLayout>

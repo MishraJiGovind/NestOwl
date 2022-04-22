@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.Fragment.SubsCription">
+
+        <FrameLayout
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/benefits_background_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plan"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+android:layout_weight="1"
+                    android:background="@drawable/benefits_background_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Validity"
+
+                        />
+
+                </FrameLayout>
+                <FrameLayout
+android:layout_weight="1"
+                    android:background="@drawable/benefits_background_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Mode"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SUBSCRIPTION_HISTORY_RECYCLER"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp" />
+
+
+        </FrameLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="Other Charges"
+                    />
+
+                <ImageView
+                    android:id="@+id/DIO_OTHER_CHARGES_DISSMISED"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/close_icon_search" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#E6E0E0" />
+
+
+
+
+
+
+
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/other_charges_background"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resale Price"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="16sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/DIO_OTHER_CHARGES_RESALE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="₹ 16,00,000"
+                    android:textColor="#000"
+
+                    android:textSize="16sp" />
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration Charges"
+                    android:textColor="#7E7878"
+                    android:fontFamily="@font/roboto_five"
+                    android:textSize="16sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/DIO_OTHER_CHARGES_REAGISTRATION"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/roboto_five"
+                    android:text="₹ 6,00,00"
+                    android:textColor="#7E7878"
+
+                    android:textSize="16sp" />
+
+
+            </FrameLayout>
+
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E6E0E0" />
+
+
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*Charges as per Details Provide the adviser."
+                android:textColor="#948E8E"
+                android:fontFamily="@font/roboto_five"
+                android:textSize="12sp"
+
+                />
+
+
+<!--
+            <FrameLayout
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_height="43dp">
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All"
+                        />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/apply_background"
+                    android:layout_width="90dp"
+                    android:layout_gravity="end|center_vertical"
+
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:id="@+id/tv_view_profile"
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+-->
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

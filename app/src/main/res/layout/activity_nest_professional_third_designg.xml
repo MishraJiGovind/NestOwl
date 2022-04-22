@@ -1,0 +1,2874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.NestProfessionalThirdDesign">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_filter_screen"
+        app:tabSelectedTextColor="@color/brown_color"
+        app:tabTextColor="#000"
+        app:tabMode="scrollable"
+        android:visibility="gone"
+
+        app:tabIndicatorColor="@color/brown_color"
+
+        app:tabIndicatorHeight="03dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:tabGravity="fill"
+
+        app:tabTextAppearance="@style/tab_text"
+
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:id="@+id/filters_view_pager"
+
+        android:layout_height="wrap_content">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+    <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/frm_rer"
+                    android:layout_width="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:background="@drawable/property_six"
+                    android:layout_height="200dp">
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:id="@+id/ARTICLES_BACK"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_keyboard_backspace_whit"
+                            android:layout_height="25dp" />
+                        <LinearLayout
+                            android:layout_gravity="center_vertical|end"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_marginRight="05dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/heart_icon_black_trans"
+                                android:layout_height="20dp" />
+
+                            <ImageView
+                                android:layout_marginLeft="05dp"
+                                android:layout_width="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/share_icon_top"
+                                android:layout_height="20dp" />
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_width="55dp"
+                        android:layout_marginBottom="22dp"
+
+                        android:background="@drawable/make_offer_img_back"
+                        android:layout_height="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1/4"
+                            android:layout_marginLeft="05dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:textColor="#fff"
+
+                            />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/camera_icon"
+                            android:layout_marginRight="05dp"
+                            android:layout_gravity="end|center_vertical"
+                            />
+
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/scroll_parent_details"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="186dp"
+                                android:layout_marginBottom="55dp"
+                                android:background="@drawable/sign_up_design"
+
+                                android:layout_height="match_parent">
+
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+
+                                        android:layout_height="match_parent">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/first"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+                                            android:text="3 BHK Flat"
+
+                                            />
+                                        <TextView
+                                            android:layout_gravity="end"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/first"
+
+                                            android:layout_height="wrap_content"
+                                            android:text="₹ 14.3 Lac"
+
+                                            />
+
+
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_marginTop="05dp"
+                                        android:layout_width="match_parent"
+
+                                        android:layout_height="match_parent">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:textColor="#000"
+                                            android:layout_marginTop="02dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Posted On 2nd Aug 2017"
+
+                                            />
+                                        <LinearLayout
+                                            android:layout_marginTop="30dp"
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:textSize="16sp"
+                                                android:fontFamily="@font/first"
+                                                android:textColor="#000"
+                                                android:layout_height="wrap_content"
+                                                android:text="The Valley Limited"
+
+                                                />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="05dp">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:src="@drawable/location_top" />
+
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:text="Sec, 65 Gurgaon"
+                                                    android:textColor="#000"
+                                                    android:fontFamily="@font/second"
+                                                    android:textSize="12sp"
+
+                                                    />
+
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                        <FrameLayout
+                                            android:layout_gravity="end"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:layout_marginRight="25dp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/second"
+                                                android:layout_width="wrap_content"
+                                                android:textSize="12sp"
+                                                android:id="@+id/nst_sixteen_tv"
+
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_height="wrap_content"
+                                                android:text="See other charges"
+                                                />
+
+                                            <ImageView
+
+                                                android:src="@drawable/info_icon"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_width="22dp"
+                                                android:layout_marginLeft="02dp"
+                                                android:layout_height="22dp" />
+
+                                        </FrameLayout>
+
+
+
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+                                <FrameLayout
+                                    android:layout_marginTop="@dimen/dimen_15dp"
+                                    android:background="@color/light_blue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="08dp">
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_gravity="end"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/first"
+                                            android:layout_marginTop="03dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Vasu Miglani"
+                                            android:textColor="#000"
+
+                                            />
+                                        <FrameLayout
+                                            android:layout_gravity="end"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content">
+
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/nest_circle_back"
+                                                    android:layout_height="25dp" />
+
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/nest_circle_back"
+                                                    android:layout_height="22dp" />
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/nest_circle_back"
+                                                    android:layout_height="25dp" />
+                                            </LinearLayout>
+
+                                        </FrameLayout>
+
+
+
+                                        <TextView
+                                            android:layout_gravity="end"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/roboto_third"
+                                            android:layout_marginRight="05dp"
+                                            android:textColor="#000"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="+91-98xxxxxxx2"
+
+                                            />
+
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+
+                                        <TextView
+                                            android:layout_marginLeft="1dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/first"
+                                            android:text="NEST PRO"
+                                            android:textColor="#000"
+
+                                            />
+
+                                        <FrameLayout
+                                            android:layout_marginTop="12dp"
+
+                                            android:background="@drawable/rera_background_nest"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="36dp">
+
+                                            <TextView
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_width="wrap_content"
+                                                android:text="RERA Registered: Yes"
+                                                android:textSize="12sp"
+                                                android:layout_gravity="center"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:textColor="#fff"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+
+
+                                            <TextView
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_width="wrap_content"
+                                                android:text="Yes"
+                                                android:textSize="12sp"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:textColor="@color/rera_color"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+
+                                        </FrameLayout>
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:layout_marginTop="12dp"
+                                            android:fontFamily="@font/third"
+
+                                            android:gravity="end|center_vertical"
+                                            android:text="RERA ID:98124"
+                                            android:textColor="#000"
+
+                                            />
+
+
+
+                                    </LinearLayout>
+
+
+                                    <!--
+
+
+
+                                                    <TextView
+                                                        android:layout_marginTop="12dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_marginRight="45dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:textSize="12sp"
+                                                        android:fontFamily="@font/third"
+
+                                                        android:gravity="center_vertical"
+                                                        android:layout_gravity="end|center_vertical"
+                                                        android:text="RERA ID:98124"
+                                                        android:textColor="#000"
+
+                                                        />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textSize="12sp"
+                                                        android:fontFamily="@font/third"
+                                                        android:layout_marginTop="03dp"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:text="Vasu Miglani"
+                                                        android:textColor="#000"
+
+                                                        />
+                                                    <FrameLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_marginTop="55dp"
+
+                                                        android:layout_height="wrap_content">
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content">
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+
+
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_marginLeft="05dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_marginLeft="05dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+                                                        </LinearLayout>
+
+                                                    </FrameLayout>
+
+                                    -->
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <FrameLayout
+                                        android:background="@drawable/contact_builder"
+                                        android:layout_width="wrap_content"
+                                        android:id="@+id/view_profile_nineteen"
+                                        android:layout_gravity="center_vertical"
+
+                                        android:layout_height="@dimen/view_profile_offer_28sp">
+                                        <TextView
+                                            android:id="@+id/view_profile_rera"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp"
+                                            android:textSize="@dimen/text_profile_offer_12sp"
+
+                                            android:fontFamily="@font/sort_btn_font"
+                                            android:textColor="#fff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="View Profile"
+
+                                            />
+
+                                    </FrameLayout>
+
+                                    <LinearLayout
+                                        android:layout_gravity="end|center_vertical"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <FrameLayout
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginTop="02dp"
+
+                                            android:layout_height="@dimen/view_profile_offer_28sp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="12dp"
+                                                android:layout_marginRight="12dp"
+                                                android:textSize="@dimen/text_profile_offer_12sp"
+                                                android:fontFamily="@font/sort_btn_font"
+
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="View Phone No."
+
+                                                />
+
+                                        </FrameLayout>
+
+
+
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_marginTop="@dimen/dimen_15sp"
+                                    android:background="@color/light_blue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="08dp">
+
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginTop="@dimen/screen_sixteen_16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="32dp">
+                                    <FrameLayout
+                                        android:background="@drawable/card_back_amenties"
+                                        android:layout_width="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="match_parent">
+                                        <TextView
+                                            android:textColor="@color/brown_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="10dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Pro Agent"
+                                            />
+
+
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:textColor="@color/brown_color"
+                                        android:textSize="12sp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Eligible for 30% Off on Second Deal......"
+                                        />
+                                </LinearLayout>
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="#A7A6A6" />
+
+
+                                <TextView
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/dimen_15sp"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="16sp"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/first"
+                                    android:layout_height="wrap_content"
+                                    android:text="Overview"
+
+                                    />
+                                <LinearLayout
+
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginTop="05dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="Carpet Area"
+                                            android:textSize="12sp"
+                                            android:layout_marginTop="02dp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/second"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="360 Sq.ft."
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/third"
+                                            android:layout_marginTop="04dp"
+                                            android:textColor="#0F0000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="Location"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_marginTop="16dp"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="25dp">
+
+                                            <TextView
+                                                android:layout_marginTop="04dp"
+                                                android:layout_width="wrap_content"
+                                                android:text="City Phase 2, Gurgaon"
+                                                android:textSize="12sp"
+                                                android:fontFamily="@font/third"
+                                                android:textColor="#000"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+                                        </LinearLayout>
+
+
+
+                                        <TextView
+                                            android:layout_marginTop="16dp"
+                                            android:layout_width="wrap_content"
+                                            android:text="Status"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_marginTop="04dp"
+                                            android:layout_width="wrap_content"
+                                            android:text="Ready to move"
+                                            android:textSize="12sp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/third"
+                                            android:layout_height="wrap_content"
+
+                                            />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_marginLeft="80dp"
+
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="Carpet Area"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_marginTop="02dp"
+                                            android:textColor="@color/black_color"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="3250 Sq.ft."
+                                            android:fontFamily="@font/third"
+                                            android:textSize="12sp"
+                                            android:layout_marginTop="04dp"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:text="Configuration"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:layout_marginTop="16dp"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_marginTop="04dp"
+                                            android:layout_width="wrap_content"
+                                            android:text="4 Bed, 4 Bath"
+                                            android:textSize="12sp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/third"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_marginTop="16sp"
+                                            android:layout_width="wrap_content"
+                                            android:text="Car Parking"
+                                            android:textSize="12sp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/second"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <TextView
+                                            android:layout_marginTop="04dp"
+                                            android:layout_width="wrap_content"
+                                            android:text="2 Covered"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/third"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+
+                                            />
+
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="15dp"
+                                        android:background="#A7A6A6" />
+
+                                    <FrameLayout
+                                        android:visibility="visible"
+                                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                        android:layout_marginTop="15dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+
+                                        <TextView
+                                            android:fontFamily="@font/third"
+                                            android:textSize="16sp"
+                                            android:textColor="#000"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:text="Make an offer in-built Tools"
+                                            />
+
+                                        <FrameLayout
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:id="@+id/CUSTOM_PROPERTY_ONBOARD_MAKE_OFFER"
+
+                                            android:layout_height="@dimen/view_profile_offer_28sp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="12dp"
+                                                android:fontFamily="@font/sort_btn_font"
+                                                android:layout_marginRight="12dp"
+                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Make an Offer"
+
+                                                />
+
+                                        </FrameLayout>
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_marginTop="15dp"
+                                        android:background="@color/light_blue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="08dp">
+
+
+                                    </FrameLayout>
+
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+
+                                        <TextView
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="@dimen/dimen_15sp"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/first"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+                                            android:text="Property Description"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="@dimen/screen_sixteen_16sp"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="12sp"
+                                            android:fontFamily="@font/second"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+                                            android:text="We are looking for Ready to move Developers..........................................."
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="03dp"
+                                            android:fontFamily="@font/second"
+                                            android:text="Read More"
+                                            android:id="@+id/read_more_second"
+                                            android:textColor="#488BAC"
+                                            android:textSize="12sp" />
+                                        <FrameLayout
+                                            android:layout_marginTop="15dp"
+                                            android:background="@color/light_blue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="08dp">
+
+
+                                        </FrameLayout>
+
+
+
+
+
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_marginTop="10dp"
+                                            app:cardElevation="07dp"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <ImageView
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_width="115dp"
+                                                android:src="@drawable/three_tree"
+                                                android:layout_height="115dp" />
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="@color/black_color"
+                                                    android:fontFamily="@font/second"
+                                                    android:textSize="10sp"
+                                                    android:layout_marginRight="07dp"
+                                                    android:text="Hasle-free homebuying"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" />
+
+                                                <TextView
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="@color/black_color"
+                                                    android:fontFamily="@font/roboto_mediaum_second"
+                                                    android:textSize="16sp"
+                                                    android:layout_marginRight="07dp"
+                                                    android:text="Buy this Home with Nest Pro's"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" />
+                                                <LinearLayout
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:layout_marginTop="20dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <ImageView
+                                                        android:src="@drawable/green_tick_second"
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp" />
+                                                    <TextView
+                                                        android:textSize="12sp"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:textColor="@color/black_color"
+                                                        android:fontFamily="@font/roboto_third"
+                                                        android:layout_marginLeft="05dp"
+                                                        android:text="Lorem the home or we buy"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content" />
+
+                                                </LinearLayout>
+                                                <LinearLayout
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <ImageView
+                                                        android:src="@drawable/green_tick_second"
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp" />
+                                                    <TextView
+                                                        android:textSize="12sp"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:textColor="@color/black_color"
+                                                        android:fontFamily="@font/roboto_third"
+                                                        android:layout_marginLeft="05dp"
+                                                        android:text="Save upto 60% when you"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content" />
+
+                                                </LinearLayout>
+                                                <LinearLayout
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <ImageView
+                                                        android:src="@drawable/green_tick_second"
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp" />
+                                                    <TextView
+                                                        android:textSize="12sp"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:textColor="@color/black_color"
+                                                        android:fontFamily="@font/roboto_third"
+                                                        android:layout_marginLeft="05dp"
+                                                        android:text="When help you from offer to close"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content" />
+
+                                                </LinearLayout>
+
+                                                <FrameLayout
+                                                    android:layout_marginTop="15dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginBottom="15dp"
+                                                    android:id="@+id/LEADS_PROPERTY_DETA_BUYTHIS"
+                                                    android:background="@drawable/contact_builder"
+                                                    android:layout_width="wrap_content"
+
+                                                    android:layout_height="@dimen/view_profile_offer_28sp">
+                                                    <TextView
+
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginLeft="15dp"
+                                                        android:fontFamily="@font/sort_btn_font"
+                                                        android:layout_marginRight="15dp"
+                                                        android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                        android:textColor="#fff"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Buy with Nest Pro's"
+
+                                                        />
+
+                                                </FrameLayout>
+
+
+
+
+                                            </LinearLayout>
+
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <FrameLayout
+                                            android:visibility="gone"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:background="@drawable/start_offer_bakground"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_width="wrap_content"
+                                                    android:textSize="12sp"
+                                                    android:textColor="#000"
+                                                    android:fontFamily="@font/sort_btn_font"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Start Your Offer"
+
+                                                    />
+
+
+                                                <TextView
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="07dp"
+                                                    android:layout_width="wrap_content"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/second"
+                                                    android:textColor="#000"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Buy this Property with Nest Pro's to save your Time, Document work load\n
+Legal framework and Fraud."
+
+                                                    />
+
+
+
+                                                <LinearLayout
+                                                    android:layout_marginTop="07dp"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:layout_gravity="bottom|center"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="@dimen/view_profile_offer_28sp">
+
+                                                    <FrameLayout
+                                                        android:background="@drawable/background_black"
+                                                        android:layout_width="wrap_content"
+
+                                                        android:layout_height="@dimen/view_profile_offer_28sp">
+                                                        <TextView
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:layout_marginRight="10dp"
+                                                            android:textSize="12sp"
+                                                            android:fontFamily="@font/sort_btn_font"
+
+                                                            android:textColor="#000"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Know More"
+
+                                                            />
+
+                                                    </FrameLayout>
+                                                    <FrameLayout
+                                                        android:layout_marginLeft="10dp"
+                                                        android:id="@+id/start_an_offer_nest_owner"
+                                                        android:background="@drawable/contact_builder"
+                                                        android:layout_width="wrap_content"
+
+                                                        android:layout_height="@dimen/view_profile_offer_28sp">
+                                                        <TextView
+
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="15dp"
+                                                            android:fontFamily="@font/sort_btn_font"
+                                                            android:layout_marginRight="15dp"
+                                                            android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                            android:textColor="#fff"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Start an Offer"
+
+                                                            />
+
+                                                    </FrameLayout>
+
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+
+
+                                        </FrameLayout>
+
+
+                                        <FrameLayout
+                                            android:layout_marginTop="15dp"
+                                            android:background="@color/light_blue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="08dp">
+
+
+                                        </FrameLayout>
+
+
+
+
+
+
+
+
+                                        <TextView
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="16sp"
+                                            android:fontFamily="@font/first"
+                                            android:textColor="#000"
+                                            android:layout_height="wrap_content"
+                                            android:text="Property Detail"
+
+                                            />
+                                        <LinearLayout
+
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="05dp"
+                                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <LinearLayout
+
+                                                android:orientation="vertical"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:text="Over Looking"
+                                                    android:textSize="12sp"
+                                                    android:layout_marginTop="02dp"
+                                                    android:fontFamily="@font/second"
+                                                    android:textColor="@color/black_light"
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:text="No.of sides open"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/second"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textColor="#0F0000"
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="10dp"
+                                                    android:fontFamily="@font/second"
+                                                    android:text="Furnishing"
+                                                    android:textColor="#000"
+
+                                                    android:textSize="12sp"
+
+                                                    />
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="25dp">
+
+                                                    <TextView
+                                                        android:layout_marginTop="10dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:text="Area"
+                                                        android:textSize="12sp"
+                                                        android:fontFamily="@font/second"
+                                                        android:textColor="#000"
+                                                        android:layout_height="wrap_content"
+
+                                                        />
+
+                                                </LinearLayout>
+
+
+
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:layout_marginLeft="80dp"
+
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:text="East"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/third"
+
+                                                    android:layout_marginTop="02dp"
+                                                    android:textColor="#000"
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:text="2"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/third"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textColor="#000"
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:text="Un-Furnished"
+                                                    android:textSize="12sp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textColor="#000"
+                                                    android:fontFamily="@font/third"
+
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+                                                <TextView
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_width="wrap_content"
+                                                    android:text="1250.Sq.ft"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/third"
+                                                    android:textColor="#000"
+                                                    android:layout_height="wrap_content"
+
+                                                    />
+
+
+
+
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="15dp">
+
+
+                                            <TextView
+                                                android:id="@+id/explore_more_sixteen"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="18dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+
+
+                                                android:layout_marginRight="15dp"
+                                                android:fontFamily="@font/first"
+                                                android:text="Explore more"
+                                                android:textColor="#000"
+                                                android:textSize="12sp"
+
+                                                />
+
+                                            <TextView
+                                                android:layout_width="75dp"
+                                                android:layout_height="1dp"
+
+
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="02dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="#000"
+                                                android:fontFamily="@font/first" />
+
+
+                                        </FrameLayout>
+
+
+
+                                        <FrameLayout
+                                            android:layout_marginTop="15dp"
+                                            android:background="@color/light_blue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="08dp">
+
+
+                                        </FrameLayout>
+
+                                        <TextView
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_width="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/first"
+                                            android:layout_height="wrap_content"
+                                            android:text="Amenties"
+
+                                            />
+
+                                        <HorizontalScrollView
+                                            android:layout_marginTop="10dp"
+                                            android:fillViewport="true"
+                                            android:scrollbars="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="105dp">
+
+                                            <LinearLayout
+                                                android:paddingRight="16dp"
+                                                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <FrameLayout
+                                                    android:layout_width="95dp"
+                                                    android:id="@+id/LEADS_PROPERTY_DETA_AMETIES_POWER_BACKUP"
+                                                    android:background="@drawable/card_back_two"
+                                                    android:layout_height="105dp">
+                                                    <LinearLayout
+                                                        android:layout_gravity="center"
+                                                        android:layout_width="wrap_content"
+                                                        android:orientation="vertical"
+                                                        android:layout_height="wrap_content">
+
+                                                        <ImageView
+                                                            android:id="@+id/card_image"
+                                                            android:layout_width="45dp"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/home_icon_tym"
+                                                            android:layout_height="45dp" />
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:textSize="10sp"
+                                                            android:layout_marginTop="05dp"
+                                                            android:id="@+id/card_tv"
+
+                                                            android:layout_gravity="center"
+                                                            android:textColor="#000"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Power Back Up"
+                                                            />
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+                                                <FrameLayout
+                                                    android:layout_marginLeft="05dp"
+
+                                                    android:layout_width="95dp"
+                                                    android:background="@drawable/card_back_two"
+                                                    android:layout_height="105dp">
+                                                    <LinearLayout
+                                                        android:layout_gravity="center"
+                                                        android:layout_width="wrap_content"
+                                                        android:orientation="vertical"
+                                                        android:layout_height="wrap_content">
+
+                                                        <ImageView
+                                                            android:layout_width="45dp"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/mediation_icon"
+                                                            android:layout_height="45dp" />
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:textSize="10sp"
+                                                            android:layout_marginTop="05dp"
+
+                                                            android:layout_gravity="center"
+                                                            android:textColor="#000"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Mediation Area"
+                                                            />
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+                                                <FrameLayout
+                                                    android:layout_marginLeft="05dp"
+
+                                                    android:layout_width="95dp"
+                                                    android:background="@drawable/card_back_two"
+                                                    android:layout_height="105dp">
+                                                    <LinearLayout
+                                                        android:layout_gravity="center"
+                                                        android:layout_width="wrap_content"
+                                                        android:orientation="vertical"
+                                                        android:layout_height="wrap_content">
+
+                                                        <ImageView
+                                                            android:layout_width="45dp"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/swiming_pool"
+                                                            android:layout_height="45dp" />
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:textSize="10sp"
+                                                            android:layout_marginTop="05dp"
+
+                                                            android:layout_gravity="center"
+                                                            android:textColor="#000"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Swiming Pool"
+                                                            />
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+                                                <FrameLayout
+                                                    android:id="@+id/LEADS_PROPERTY_DETA_AMETIES_MORE"
+                                                    android:layout_marginLeft="05dp"
+
+                                                    android:layout_width="95dp"
+                                                    android:background="@drawable/card_back_two"
+                                                    android:layout_height="105dp">
+                                                    <LinearLayout
+                                                        android:layout_gravity="center"
+                                                        android:layout_width="wrap_content"
+                                                        android:orientation="vertical"
+                                                        android:layout_height="wrap_content">
+
+                                                        <ImageView
+                                                            android:layout_width="45dp"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/mediation_icon"
+                                                            android:layout_height="45dp" />
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:textSize="10sp"
+                                                            android:layout_marginTop="05dp"
+
+                                                            android:layout_gravity="center"
+                                                            android:textColor="#000"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="+4 More"
+                                                            />
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+
+
+                                            </LinearLayout>
+                                        </HorizontalScrollView>
+
+
+
+                                        <FrameLayout
+                                            android:layout_marginTop="15dp"
+                                            android:background="@color/light_blue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="10dp">
+
+
+                                        </FrameLayout>
+                                        <LinearLayout
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+
+                                            android:background="@drawable/shadow_for_buyer_and_saller"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:fontFamily="@font/first"
+                                                android:text="Locality"
+                                                android:textColor="#000"
+                                                android:textSize="16sp"
+
+                                                />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="05dp"
+                                                android:fontFamily="@font/third"
+                                                android:text="Sec 102, Gurgaon"
+                                                android:textColor="#000"
+                                                android:textSize="12sp"
+
+                                                />
+
+
+
+                                            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                                xmlns:map="http://schemas.android.com/apk/res-auto"
+                                                xmlns:tools="http://schemas.android.com/tools"
+                                                android:id="@+id/map"
+                                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="165dp"
+
+                                                tools:context="com.nestowl.brokerapp.MapsActivity" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginBottom="10dp">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/airport_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:text="Airport"
+                                                        android:layout_marginTop="05dp"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/grocery_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="05dp"
+                                                        android:text="Railway"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/grocery_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="05dp"
+                                                        android:text="Pharmacy"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/school_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="05dp"
+                                                        android:text="Park"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/hospital_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="05dp"
+                                                        android:text="Hospital"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="45dp"
+                                                        android:layout_gravity="center"
+                                                        app:cardElevation="@dimen/card_elevation_05dp"
+                                                        app:cardCornerRadius="25dp"
+                                                        android:layout_height="45dp">
+
+                                                        <ImageView
+                                                            android:layout_gravity="center"
+                                                            android:layout_width="28dp"
+
+                                                            android:layout_height="28dp"
+                                                            android:src="@drawable/bank_icon" />
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="05dp"
+                                                        android:text="Banks"
+                                                        android:textColor="#000"
+                                                        android:textSize="10sp" />
+                                                </LinearLayout>
+
+
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+
+                                        <FrameLayout
+                                            android:layout_marginTop="15dp"
+                                            android:background="@color/light_blue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="10dp">
+
+
+                                        </FrameLayout>
+
+
+                                        <FrameLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="05dp"
+                                            android:layout_marginRight="@dimen/screen_sixteen_16sp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/third"
+                                                android:text="Has Builder provided correct information"
+                                                android:textColor="#000"
+                                                android:textSize="16sp" />
+
+
+                                            <ImageView
+                                                android:layout_width="33dp"
+                                                android:layout_height="33dp"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_marginTop="05dp"
+                                                android:src="@drawable/mail_second" />
+
+                                        </FrameLayout>
+
+                                        <LinearLayout
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="05dp">
+
+                                            <FrameLayout
+                                                android:id="@+id/LEADS_PROPERTY_DETA_SUMBIT_YES"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="35dp"
+                                                android:background="@drawable/background_black_two">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+
+                                                    android:layout_marginLeft="20dp"
+                                                    android:layout_marginRight="20dp"
+                                                    android:text="Yes"
+                                                    android:textColor="#000"
+                                                    android:textSize="10sp" />
+
+                                            </FrameLayout>
+
+                                            <FrameLayout
+                                                android:id="@+id/LEADS_PROPERTY_DETA_SUMBIT_NO"
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="35dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/background_black_two">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginLeft="22dp"
+                                                    android:layout_marginRight="22dp"
+
+                                                    android:text="No"
+                                                    android:textColor="#000"
+                                                    android:textSize="10sp" />
+
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_marginTop="@dimen/dimen_15sp"
+                                            android:background="#A7A6A6" />
+
+
+
+                                        <FrameLayout
+                                            android:visibility="gone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dimen_space_19sp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                                android:fontFamily="@font/first"
+                                                android:text="More Properties By Vasu"
+                                                android:textColor="#000"
+                                                android:textSize="@dimen/home_long_size"
+
+                                                />
+
+                                            <TextView
+                                                android:id="@+id/view_all_sixteen_nst"
+                                                android:layout_width="wrap_content"
+
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/third"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                                android:text="View All"
+                                                android:textColor="@color/brown_color"
+                                                android:textSize="12sp"
+
+                                                />
+
+
+                                        </FrameLayout>
+
+                                        <HorizontalScrollView
+                                            android:visibility="gone"
+
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:fillViewport="true"
+                                            android:measureAllChildren="false"
+                                            android:scrollbars="none">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                                android:paddingRight="@dimen/screen_sixteen_16sp">
+
+                                                <FrameLayout
+
+                                                    android:layout_width="190dp"
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+                                                            android:id="@+id/make_two"
+
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:layout_marginRight="03dp"
+                                                                android:layout_marginLeft="03dp"
+                                                                android:textColor="#fff"
+                                                                android:fontFamily="@font/sort_btn_font"
+                                                                android:textSize="12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+                                                        android:id="@+id/property_one_sixteen_nst"
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_one"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="7dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:id="@+id/first_first_first"
+                                                            android:fontFamily="@font/first"
+                                                            android:textColor="#000"
+                                                            android:textSize="14sp"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/second_second_second"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:id="@+id/third_third_third"
+                                                            android:fontFamily="@font/second"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+                                                <FrameLayout
+                                                    android:layout_width="190dp"
+
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:id="@+id/make_three"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:layout_marginLeft="03dp"
+                                                                android:layout_marginRight="3dp"
+                                                                android:textColor="#fff"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+                                                        android:id="@+id/property_two_sixteen_nst"
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_two"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:textColor="#000"
+                                                            android:id="@+id/fourth_fourth_fourth"
+                                                            android:textSize="14sp"
+                                                            android:fontFamily="@font/first"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/five_five_five"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:fontFamily="@font/second"
+
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:id="@+id/six_six_six"
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+                                                <FrameLayout
+                                                    android:layout_width="190dp"
+
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:id="@+id/LEADS_PROPERTY_DETA_CHAT"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:layout_marginLeft="03dp"
+                                                                android:layout_marginRight="3dp"
+                                                                android:textColor="#fff"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_two"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:textColor="#000"
+                                                            android:id="@+id/saven_saven_saven"
+                                                            android:textSize="14sp"
+                                                            android:fontFamily="@font/first"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/eight_eight_eight"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:fontFamily="@font/second"
+
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:id="@+id/nine_nine_nine"
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+
+                                            </LinearLayout>
+                                        </HorizontalScrollView>
+
+
+
+                                        <FrameLayout
+                                            android:visibility="gone"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dimen_space_19sp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                                android:fontFamily="@font/first"
+                                                android:text="Similar Properties"
+                                                android:textColor="#000"
+                                                android:textSize="@dimen/home_long_size"
+
+                                                />
+
+                                            <TextView
+                                                android:id="@+id/view_all_sixteen"
+                                                android:layout_width="wrap_content"
+
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/third"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                                android:text="View All"
+                                                android:textColor="@color/brown_color"
+                                                android:textSize="12sp"
+
+                                                />
+
+
+                                        </FrameLayout>
+
+                                        <HorizontalScrollView
+                                            android:visibility="gone"
+
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:fillViewport="true"
+                                            android:measureAllChildren="false"
+                                            android:scrollbars="none">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                                android:paddingRight="@dimen/screen_sixteen_16sp">
+
+                                                <FrameLayout
+
+                                                    android:layout_width="190dp"
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:id="@+id/make_five"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:layout_marginRight="03dp"
+                                                                android:layout_marginLeft="03dp"
+                                                                android:textColor="#fff"
+                                                                android:fontFamily="@font/first"
+                                                                android:textSize="12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/first"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+                                                        android:id="@+id/property_one_sixteen"
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_one"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="7dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:id="@+id/first_one"
+                                                            android:fontFamily="@font/first"
+                                                            android:textColor="#000"
+                                                            android:textSize="14sp"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/second_one"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:id="@+id/third_one"
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:fontFamily="@font/second"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+                                                <FrameLayout
+                                                    android:layout_width="190dp"
+
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:id="@+id/make_six"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:layout_marginLeft="03dp"
+                                                                android:layout_marginRight="3dp"
+                                                                android:textColor="#fff"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/first"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+                                                        android:id="@+id/property_two_sixteen"
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_two"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:textColor="#000"
+                                                            android:id="@+id/fourth_one"
+                                                            android:textSize="14sp"
+                                                            android:fontFamily="@font/first"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/five_one"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:fontFamily="@font/second"
+                                                            android:id="@+id/six_one"
+
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+                                                <FrameLayout
+                                                    android:layout_width="190dp"
+
+                                                    android:layout_height="@dimen/similar_properties_225dp"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:background="@drawable/shadow_for_buyer_and_saller">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginRight="06dp"
+                                                        android:layout_marginBottom="05dp">
+
+
+                                                        <FrameLayout
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:id="@+id/make_saven"
+                                                            android:background="@drawable/contact_builder">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Make Offer"
+                                                                android:fontFamily="@font/sort_btn_font"
+
+                                                                android:layout_marginLeft="03dp"
+                                                                android:layout_marginRight="3dp"
+                                                                android:textColor="#fff"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                        <FrameLayout
+                                                            android:layout_marginLeft="05dp"
+                                                            android:layout_weight="1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                                            android:layout_gravity="end"
+                                                            android:background="@drawable/chat_background">
+
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Chat"
+                                                                android:fontFamily="@font/first"
+
+                                                                android:textColor="@color/brown_color"
+                                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                                />
+
+                                                        </FrameLayout>
+                                                    </LinearLayout>
+
+                                                    <FrameLayout
+
+                                                        android:layout_width="180dp"
+                                                        android:layout_height="100dp"
+                                                        android:background="@drawable/property_two"
+                                                        android:fitsSystemWindows="true" />
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="07dp"
+                                                        android:layout_marginTop="105dp"
+                                                        android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="₹ 75 Lac, 2BHK"
+                                                            android:textColor="#000"
+                                                            android:id="@+id/saven_one"
+                                                            android:textSize="14sp"
+                                                            android:fontFamily="@font/first"
+
+
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="M3M"
+                                                            android:id="@+id/eight_one"
+                                                            android:fontFamily="@font/second"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+                                                        <TextView
+                                                            android:fontFamily="@font/second"
+                                                            android:id="@+id/nine_one"
+
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="03dp"
+                                                            android:text="Sector-104, Gurgaon,"
+                                                            android:textColor="#000"
+                                                            android:textSize="12sp"
+
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                                                </FrameLayout>
+
+
+                                            </LinearLayout>
+                                        </HorizontalScrollView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="@dimen/screen_sixteen_16sp"
+                                            android:text="Lorem ipsum dolor sit amet, consectetur addipiscing elit. lectus."
+                                            android:textColor="#000"
+                                            android:fontFamily="@font/second"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:id="@+id/LEADS_PROPERTY_DETA_DESCLAIMER"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                            android:layout_marginTop="05dp"
+                                            android:text="Read Disclaimer"
+                                            android:fontFamily="@font/second"
+                                            android:textColor="#488BAC"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_btm_nest_owner"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bottom_size_height_button_40sp">
+                        <FrameLayout
+                            android:layout_weight="1"
+
+                            android:background="@drawable/chat_sale_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/bottom_size_height_button_40sp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:textSize="@dimen/text_profile_offer_12sp"
+                                android:fontFamily="@font/second"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chat"
+
+                                />
+
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_marginLeft="05dp"
+
+                            android:background="@drawable/chat_sale_back"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+
+                            android:layout_height="@dimen/bottom_size_height_button_40sp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:textSize="@dimen/text_profile_offer_12sp"
+                                android:fontFamily="@font/second"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Contact"
+
+                                />
+
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_marginLeft="05dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            android:layout_marginRight="05dp"
+                            android:background="@drawable/contact_builder"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/make_eight"
+                            android:layout_height="@dimen/bottom_size_height_button_40sp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textSize="@dimen/text_profile_offer_12sp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Make an Offer"
+
+                                />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

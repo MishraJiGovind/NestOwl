@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.NestPros">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/iv5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Nest Pro's"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/NEST_PROS_COUNTS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#fff"
+
+                            android:textSize="14sp" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/NEST_PRO_TABS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingTop="5dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="5dp">
+
+
+            <FrameLayout
+                android:id="@+id/NEST_PRO_LOCALTIES"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ready_to_move_rounded_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="select "
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="05dp"
+                    android:src="@drawable/cross_icon_pers" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/NEST_PRO_CITY"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/ready_to_move_rounded_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="select"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="05dp"
+                    android:src="@drawable/cross_icon_pers" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/NEST_PRO_PIN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/ready_to_move_rounded_background"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="00-131"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="05dp"
+                    android:src="@drawable/cross_icon_pers" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/NEST_PRO_Z_A"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/ready_to_move_rounded_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Z-A"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/NEST_PRO_A_Z"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+
+                android:layout_marginRight="05dp"
+                android:background="@drawable/ready_to_move_rounded_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="A-Z"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/NEST_PRO_RECYCLER"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ALL_NO_DATA_SHOW"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="144dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/search_four" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Oops! No locality nest pro found\nPlease try another locality"
+            android:textAlignment="center"
+            android:textColor="@color/brown"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

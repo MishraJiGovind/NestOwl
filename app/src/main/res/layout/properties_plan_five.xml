@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="15dp"
+            android:layout_marginLeft="05dp"
+            android:layout_marginRight="05dp"
+            app:cardElevation="05dp"
+            android:layout_width="match_parent"
+            android:layout_height="330dp">
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/PROPERTY_PLAN_TYPE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:text="FREE"
+                        android:textColor="@color/black_color"
+
+                        android:textSize="18sp" />
+                    <FrameLayout
+                        android:layout_gravity="end"
+                        android:id="@+id/NEST_PRO_LOCALTIES"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/ongoing_deal_closed_background"
+                        android:layout_height="36dp">
+
+                        <TextView
+                            android:id="@+id/PROPERTY_PLAN_REMAINING"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="5 Remaining"
+
+                            android:textColor="@color/brown_color"
+                            android:textSize="14sp" />
+
+
+                    </FrameLayout>
+
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/PROPERTY_PLAN_EXTRA_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/second"
+                    android:text="Use it wisely, its limited"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/PROPERTY_PLAN_PRICE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:text="₹ 0"
+                        android:textColor="@color/black_color"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/PROPERTY_PLAN_ONLYINPROPERTY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/second"
+                        android:text="Per Listing"
+                        android:textColor="@color/black_color"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/green_tick_second"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/PROPERTY_PLAN_LINE_ONE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_third"
+                        android:text="Normal Visibility"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/green_tick_second"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/PROPERTY_PLAN_LINE_TWO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_third"
+                        android:text="60 days Visibility"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="bottom"
+                android:layout_height="@dimen/padding_horizontal_36dp">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:id="@+id/PROPERTY_PLAN_KNOW_MORE"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/nest_pro_rectangle"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Know More"
+                        android:textSize="14sp"
+
+                        android:fontFamily="@font/sort_btn_font"
+                        android:textColor="@color/brown_color"
+
+                        />
+
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/PROPERTY_PLAN_BUYPROPERTY"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sort_btn_font"
+                        android:text="Post Property"
+                        android:textColor="@color/brown_color"
+                        android:textSize="14sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

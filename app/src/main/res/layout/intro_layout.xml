@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/intro_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutBars"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+
+        android:layout_gravity="bottom|center_horizontal"
+        >
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/id_third_back"
+            android:layout_gravity="bottom"
+            android:onClick="skip"
+            android:tint="@color/brown_color"
+            android:focusable="true"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/arrow_back_skip"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+
+
+
+        <ImageView
+            android:id="@+id/id_third_screen"
+            android:layout_gravity="bottom|end"
+            android:onClick="next"
+            android:focusable="true"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/arrow_skip"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+    </FrameLayout>
+
+
+
+
+
+</FrameLayout>

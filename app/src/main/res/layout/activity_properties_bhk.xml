@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.PropertiesBhkActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/OFFICE_PHOTOS_RECYCLER"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/HideLiNie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_properties" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:id="@+id/PROPERY_PHOTOS_COUNT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:text="10 Photos"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/left_arrow" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="08dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Property Photos"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_properties"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+
+        android:visibility="visible"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/brown_color"
+
+        app:tabIndicatorHeight="03dp"
+        app:tabSelectedTextColor="@color/brown_color"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabTextColor="#000"
+        tools:ignore="SpeakableTextPresentCheck" >
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/office_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office Photos" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/site_view_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Site View" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/floor_plan_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Floor Plan" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/HideLiNie"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/CHAT"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/second"
+                android:text="Chat"
+                android:textColor="@color/brown_color"
+                android:textSize="14sp"
+
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ENQURY_NOW"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="05dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/second"
+                android:text="Enquiry Now"
+                android:textColor="@color/brown_color"
+                android:textSize="14sp"
+
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/MAKE_OFFER"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="05dp"
+            android:layout_weight="1"
+            android:background="@drawable/contact_builder">
+
+            <TextView
+                android:id="@+id/tv_contact_builder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/second"
+                android:text="Make Offer"
+                android:textColor="#fff"
+                android:textSize="14sp"
+
+                />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

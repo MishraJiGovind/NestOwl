@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_fourth"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:fontFamily="@font/roboto_bold_first"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"
+                android:text="Sort by:"
+                />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_third"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:text="New"
+                />
+
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_five"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Price:  low to high"
+                />
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_five"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Price:  high to low"
+                />
+
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#F7EFEF" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"></LinearLayout>
+
+
+<!--
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_height="43dp">
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All"
+                        />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginRight="23dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:id="@+id/tv_view_profile"
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+-->
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

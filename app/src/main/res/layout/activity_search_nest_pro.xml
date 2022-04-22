@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.SearchNestPro">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/iv5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Search Pro's"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Location Details"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="22sp"
+
+                    />
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+
+                    android:orientation="horizontal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <FrameLayout
+                        android:id="@+id/SEARCH_NEST_PRO_CITY"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/SEARCH_NEST_PRO_CITY_TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="City" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="30dp"
+                            android:background="#D8D6D6" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+
+                    android:orientation="horizontal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <FrameLayout
+                        android:id="@+id/SEARCH_NEST_PRO_LOCALITY"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/SEARCH_NEST_PRO_LOCALITY_TEXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Locality" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="30dp"
+                            android:background="#D8D6D6" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+
+                    android:orientation="horizontal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <FrameLayout
+                        android:id="@+id/SEARCH_NEST_PRO_PIN"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/SEARCH_NEST_PRO_PIN_IN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pin code" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="30dp"
+                            android:background="#D8D6D6" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Expertise in"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+
+                    />
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/SEARCH_NEST_PRO_RESIDENTAL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Residential"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/SEARCH_NEST_PRO_COMERCIAL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Commericial"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/SEARCH_NEST_PRO_OTHERS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Other"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Rera Registered"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+
+                    />
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/SEARCH_NEST_PRO_RERA_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Yes"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/SEARCH_NEST_PRO_RERA_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="No"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+        app:cardCornerRadius="30dp"
+        android:id="@+id/SEARCH_NEST_PRO_SEARCH"
+
+        app:cardElevation="8dp"
+
+        android:layout_marginBottom="10dp"
+
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="SEARCH NEST PRO"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

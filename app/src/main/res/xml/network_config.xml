@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-config xmlns:android="http://schemas.android.com/apk/res/android">
+        <domain-config cleartextTraficPermitted="true">
+            <domain includeSubdomains="true">https://munafa.digitalfueled.in/</domain>
+        </domain-config>
+</network-config>

@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.BrokerSubmitProfileRequirement">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/BROKER_COVER_IMG"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/house_png_same" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/BROKER_BACK"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_backspace_whit" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <ScrollView
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="186dp"
+                            android:background="@drawable/sign_up_design"
+
+
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="45dp">
+
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_NAME"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/first"
+                                        android:text="Sahil Dahiya"
+                                        android:textColor="#000"
+
+                                        android:textSize="18sp" />
+                                </FrameLayout>
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <RatingBar
+
+                                        android:id="@+id/BROKER_PROFILE_RATING_BAR"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_width="wrap_content"
+
+
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:numStars="5"
+                                        android:rating="3"
+                                        android:saveEnabled="true"
+                                        android:scaleX="0.9"
+                                        android:scaleY="0.9"
+                                        android:theme="@style/RatingBar" />
+
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_REVIEWS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/second"
+                                        android:text="104 Reviews"
+                                        android:textColor="#000"
+
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_third"
+                                            android:text="RERA Registered"
+                                            android:textColor="#000"
+                                            android:textSize="12sp"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/BROKER_PROFILE_RERA"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="05dp"
+
+                                            android:fontFamily="@font/first"
+                                            android:text="Yes"
+                                            android:textColor="#000"
+
+                                            android:textSize="11sp" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginRight="15dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_third"
+
+                                        android:text="Deals in"
+                                        android:textColor="#000"
+                                        android:textSize="12sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_DEALS_IN"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:fontFamily="@font/first"
+                                        android:text="............"
+                                        android:textColor="#000"
+                                        android:textSize="11sp"
+
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_third"
+                                        android:text="Address"
+                                        android:textColor="#000"
+                                        android:textSize="12sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_ADDRESS"
+                                        android:layout_width="wrap_content"
+
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+
+                                        android:fontFamily="@font/first"
+                                        android:gravity="center"
+                                        android:maxWidth="100dp"
+
+                                        android:maxLines="1"
+                                        android:text="................"
+                                        android:textColor="#000"
+                                        android:textSize="11dp" />
+
+
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_third"
+
+                                            android:text="Operating Since"
+                                            android:textColor="#000"
+                                            android:textSize="12sp"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/BROKER_PROFILE_OPRATING"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="05dp"
+
+                                            android:fontFamily="@font/first"
+
+                                            android:text="Yes"
+                                            android:textColor="#000"
+
+                                            android:textSize="11sp" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginRight="15dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_third"
+
+                                        android:text="Nest Badges"
+                                        android:textColor="#000"
+                                        android:textSize="12sp"
+
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="04dp">
+
+                                        <ImageView
+                                            android:id="@+id/BROKER_PROFILE_BADGE_1"
+                                            android:layout_width="21dp"
+                                            android:layout_height="21dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/nest_circle_back" />
+
+                                        <ImageView
+                                            android:id="@+id/BROKER_PROFILE_BADGE_2"
+                                            android:layout_width="21dp"
+                                            android:layout_height="21dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="05dp"
+                                            android:src="@drawable/nest_circle_back" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Website"
+                                        android:textColor="#000"
+                                        android:textSize="12sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_WEBSITE"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/first"
+                                        android:text="................"
+                                        android:textColor="#000"
+
+                                        android:textSize="11sp" />
+
+
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@color/light_blue">
+
+
+                            </FrameLayout>
+                            <!--
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="15dp"
+                                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                                    android:text="Sahil Dahiya"
+                                                    android:textColor="#000"
+                                                    android:textSize="18sp"
+                                                    android:fontFamily="@font/first"
+
+                                                    />
+                                                <FrameLayout
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginLeft="25dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+
+                                                    <ImageView
+                                                        android:layout_width="30dp"
+                                                        android:src="@drawable/proposal_stts_two"
+                                                        android:layout_height="30dp" />
+
+                                                    <LinearLayout
+                                                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                                        android:layout_gravity="end|center_vertical"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="@dimen/view_profile_offer_28sp">
+                                                        <FrameLayout
+
+                                                            android:background="@drawable/contact_builder"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent">
+                                                            <TextView
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginLeft="13dp"
+                                                                android:layout_marginRight="13dp"
+                                                                android:textSize="16sp"
+                                                                android:textColor="#fff"
+                                                                android:fontFamily="@font/roboto_third"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Accept"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+
+                                                        <FrameLayout
+                                                            android:layout_marginLeft="05dp"
+
+
+                                                            android:background="@drawable/contact_builder"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent">
+                                                            <TextView
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginLeft="13dp"
+                                                                android:layout_marginRight="13dp"
+                                                                android:textSize="16sp"
+                                                                android:textColor="#fff"
+                                                                android:fontFamily="@font/roboto_third"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="Reject"
+
+                                                                />
+
+                                                        </FrameLayout>
+
+                                                    </LinearLayout>
+
+
+
+
+
+                                                </FrameLayout>
+
+                                                <TextView
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:fontFamily="@font/roboto_mediaum_second"
+                                                    android:layout_marginTop="05dp"
+                                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="View Proposal"
+
+                                                    />
+
+                                                <TextView
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_marginLeft="10dp"
+
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="1dp"
+                                                    android:layout_marginTop="15dp"
+                                                    android:background="#A7A6A6" />
+
+                                                <FrameLayout
+                                                    android:layout_marginTop="20dp"
+                                                    android:background="@color/light_blue"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="10dp">
+
+
+                                                </FrameLayout>
+                            -->
+
+                            <TextView
+                                android:id="@+id/BROKER_PROFILE_ABOUT_HEAD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/first"
+                                android:text="About Sahil"
+                                android:textColor="#000"
+
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/BROKER_PROFILE_ABOUT_PARA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="05dp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:fontFamily="@font/second"
+                                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendreit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venentis. Donec a dui et dui fringilla
+consectetur id nec massa.
+nAliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus."
+                                android:textColor="#000"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/BROKER_PROFILE_READMORE_ABOUT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="03dp"
+                                android:text="Read More"
+                                android:textColor="#488BAC"
+                                android:textSize="10sp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/light_blue">
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/BROKER_PROFILE_DUBBLE_DEALS"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/card_back_amenties">
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp">
+
+                                    <ImageView
+                                        android:id="@+id/BROKER_PROFILE_DUUBLE_DEALS_IMG"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/offer_icon" />
+
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_DUBBLE_DEALS_HEAD"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="03dp"
+                                        android:fontFamily="@font/roboto_third"
+                                        android:text="Double Deal:"
+                                        android:textColor="@color/brown_color"
+
+
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/BROKER_PROFILE_DUBBLE_DEALS_PARA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="03dp"
+                                        android:fontFamily="@font/second"
+                                        android:text="Get 30% Off on Second Deal with this Pro"
+                                        android:textColor="@color/brown_color"
+
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/light_blue">
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/first"
+                                    android:text="Office Potos"
+                                    android:textColor="#000"
+                                    android:textSize="18sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/BROKER_PROFILE_OFFICE_VIEW_ALL"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="View All"
+                                    android:textColor="@color/brown_color"
+                                    android:textSize="12sp"
+
+                                    />
+
+
+                            </FrameLayout>
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+
+                                    android:id="@+id/BROKER_PROFILE_OFFICE_POHOTOS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fillViewport="true"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                    android:paddingRight="@dimen/screen_sixteen_16sp">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/BROKER_PROFILE_OFICE_PHOTO_RECYCLER"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@color/light_blue">
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp">
+
+                                <TextView
+                                    android:id="@+id/BROKER_PROFILE_DEAL_CLOSED_TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/first"
+                                    android:text="Deal Closed"
+                                    android:textColor="#000"
+
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/BROKER_PROFILE_CLOSED_DEALS"
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="View All"
+                                    android:textColor="@color/brown_color"
+                                    android:textSize="12sp"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:fillViewport="true"
+                                android:orientation="vertical">
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/BROKER_PROFILE_DEALS_CLOSE_RECYCLER"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="16dp" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/light_blue">
+
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/first"
+                                        android:text="Properties on Board"
+                                        android:textColor="#000"
+                                        android:textSize="16sp"
+
+                                        />
+
+
+                                </FrameLayout>
+
+
+                                <HorizontalScrollView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fillViewport="true"
+                                    android:measureAllChildren="false"
+                                    android:scrollbars="none"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                        android:paddingRight="@dimen/screen_sixteen_16sp">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/BROKER_ONBOARD_RECYCLER"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="@dimen/dimen_15sp"
+                                    android:background="@color/light_blue"
+                                    android:visibility="gone">
+
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:orientation="vertical">
+
+                                    <FrameLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/BROKER_REVIEWS"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/first"
+                                                android:text="104 Reviews"
+                                                android:textColor="#000"
+
+
+                                                android:textSize="16sp" />
+
+                                            <RatingBar
+                                                android:id="@+id/BROKER_RATING_BAR"
+                                                style="?android:attr/ratingBarStyleSmall"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="05dp"
+                                                android:numStars="5"
+
+                                                android:rating="5"
+                                                android:saveEnabled="true"
+                                                android:scaleX="0.9"
+                                                android:scaleY="0.9"
+                                                android:theme="@style/RatingBar" />
+
+                                        </LinearLayout>
+
+                                        <FrameLayout
+                                            android:id="@+id/BROKER_REVIEW_ME"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                            android:layout_gravity="end|center_vertical"
+                                            android:background="@drawable/contact_builder">
+
+                                            <TextView
+                                                android:id="@+id/tv_reviews_me"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:fontFamily="@font/sort_btn_font"
+                                                android:text="Review Me"
+                                                android:textColor="#fff"
+                                                android:textSize="12sp"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                    android:orientation="vertical">
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="20dp">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/BROKER_REVIEWS_RECYCLER"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="75dp"
+
+                            android:layout_height="75dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="150dp"
+                            android:background="@drawable/circle_image_view">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="50dp"
+                                app:cardElevation="0dp">
+
+                                <ImageView
+                                    android:id="@+id/BROKER_PROFILE_DP"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+
+                                    android:layout_gravity="center"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/profile_img_sahil" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </FrameLayout>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="@dimen/bottom_size_height_button_40sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/BROKER_CHAT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/second"
+                            android:text="Chat"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/BROKER_CONTACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/second"
+                            android:text="View Contact"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/BROKER_SUMBIT"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bottom_size_height_button_40sp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/contact_builder"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/make_offer_rera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/second"
+                            android:text="Submit Requirement"
+                            android:textColor="#fff"
+                            android:textSize="10sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,2307 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.nestowl.Fragment.MyRequirementsSecond">
+
+    <RadioGroup
+        android:layout_marginLeft="12dp"
+        android:id="@+id/rg_two"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+
+
+        <RadioButton
+            android:id="@+id/HOME_PROJECT_LIVE"
+            android:buttonTint="@color/black_light"
+            android:layout_weight="1"
+            android:textSize="14sp"
+
+            android:checked="false"
+            android:textColor="#000"
+            android:text="Submitted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+
+            android:id="@+id/HOME_PROJECT_RECIVIED"
+
+            android:checked="false"
+
+
+            android:layout_weight="1"
+            android:buttonTint="@color/black_light"
+
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:text="Received"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/HOME_PROJECT_PENDING"
+
+            android:checked="false"
+
+
+            android:layout_weight="1"
+            android:buttonTint="@color/black_light"
+
+
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:text="Accepted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_marginBottom="65dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+
+        android:layout_height="match_parent">
+
+
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/HOME_PROJECT_LNR_LIVE"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="15dp"
+            android:id="@+id/requirement_proposal_card"
+            android:background="@drawable/nest_card_back"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_marginTop="07dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requirement Proposal"
+                        />
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_gravity="end|center_vertical"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 aug 2017"
+                        />
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_gravity="center_vertical"
+                            android:text="2 BHK"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Gurgaon"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="3-4 Crore"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+
+                            android:layout_weight="1"
+                            android:textColor="#000"
+                            android:layout_marginLeft="12sp"
+                            android:layout_gravity="end|center_vertical"
+                            android:text="680 Sq.ft."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="05dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="05dp"
+                    android:layout_height="25dp">
+
+
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:text="Proposal Accepted "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="15dp"
+                        android:src="@drawable/right_arrow"
+                        android:layout_height="15dp" />
+
+                    <TextView
+                        android:textColor="#000"
+                        android:layout_marginLeft="05dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="by 3 Nest Pro "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A7A6A6" />
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_marginRight="05dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:text="View Requirement"
+                            android:textColor="@color/brown_color"
+                            android:textSize="14sp" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/card_leads_first"
+                        android:layout_marginRight="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="@color/brown_color"
+                            android:text="View Leads"
+                            />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_marginTop="07dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requirement Proposal"
+                        />
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_gravity="end|center_vertical"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 aug 2017"
+                        />
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_gravity="center_vertical"
+                            android:text="2 BHK"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Gurgaon"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="3-4 Crore"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+
+                            android:layout_weight="1"
+                            android:textColor="#000"
+                            android:layout_marginLeft="12sp"
+                            android:layout_gravity="end|center_vertical"
+                            android:text="680 Sq.ft."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="05dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="05dp"
+                    android:layout_height="25dp">
+
+
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:text="Proposal Accepted "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="15dp"
+                        android:src="@drawable/right_arrow"
+                        android:layout_height="15dp" />
+
+                    <TextView
+                        android:textColor="#000"
+                        android:layout_marginLeft="05dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="by 3 Nest Pro "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A7A6A6" />
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_marginRight="05dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="@color/brown_color"
+                            android:text="View Requirement"
+                            />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:id="@+id/card_view_leads_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:textColor="@color/brown_color"
+                            android:text="View Leads"
+                            />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_marginTop="07dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requirement Proposal"
+                        />
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_gravity="end|center_vertical"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 aug 2017"
+                        />
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_gravity="center_vertical"
+                            android:text="2 BHK"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Gurgaon"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="3-4 Crore"
+
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+                        <TextView
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#A7A6A6" />
+                        <TextView
+
+                            android:layout_weight="1"
+                            android:textColor="#000"
+                            android:layout_marginLeft="12sp"
+                            android:layout_gravity="end|center_vertical"
+                            android:text="680 Sq.ft."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="05dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="05dp"
+                    android:layout_height="25dp">
+
+
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:text="Proposal Accepted "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="15dp"
+                        android:src="@drawable/right_arrow"
+                        android:layout_height="15dp" />
+
+                    <TextView
+                        android:textColor="#000"
+                        android:layout_marginLeft="05dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="by 3 Nest Pro "
+
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A7A6A6" />
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_marginRight="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="@color/brown_color"
+                            android:text="View Requirement"
+                            />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_marginRight="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:id="@+id/card_view_leads_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="@color/brown_color"
+                            android:text="View Leads"
+                            />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/HOME_PROJECT_LNR_RECIVED"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Accept"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textSize="12sp"
+
+
+                            android:textColor="@color/brown_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reject"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/brown_color"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_width="100dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/view_profile_one"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:id="@+id/tv_view_profile"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="05dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_marginLeft="05dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Accept"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textSize="12sp"
+
+
+                            android:textColor="@color/brown_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reject"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_width="100dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/view_profile_second_s"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="05dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_marginLeft="05dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Accept"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textSize="12sp"
+
+
+                            android:textColor="@color/brown_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reject"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+
+                        android:layout_width="100dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/view_profile_third"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/HOME_PROJECT_LNR_PENDING"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Chat"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/brown_color"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Contact"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/accept_one"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="05dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_marginLeft="05dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Chat"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Contact"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/accept_two"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="05dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_marginLeft="05dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nest_circle_back"
+                            android:layout_height="22dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@drawable/nest_card_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="07dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/contact_builder"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Chat"
+                            android:textSize="12sp"
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:textColor="#fff"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+
+
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Contact"
+
+                            />
+
+
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="05dp"
+                        android:background="@drawable/nest_pro_rectangle"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/brown_color"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sort_btn_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Proposal"
+
+                            />
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:background="@drawable/circle_background"
+                    android:layout_height="45dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginBottom="05dp"
+                        android:src="@drawable/face_icon_two"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_height="30dp" />
+
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_marginLeft="05dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rajesh Singh"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+                            android:textSize="16sp"
+
+                            />
+
+                        <FrameLayout
+                            android:background="@drawable/eligible_for_second_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/accept_three"
+                            android:layout_height="25dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="05dp"
+                                android:layout_marginRight="05dp"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sort_btn_font"
+                                android:textColor="@color/brown_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View Profile"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sector 23, Noida"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deals in- Residential, Commercial other"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+                        />
+
+                    <FrameLayout
+                        android:background="@drawable/eligible_for_second_deal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_height="25dp">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eligible for Second Deal Offer"
+
+                            />
+
+                    </FrameLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="55dp"
+                android:layout_gravity="bottom"
+                android:background="#A7A6A6" />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

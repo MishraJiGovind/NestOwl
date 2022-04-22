@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CUSTOM_ALERT_PROJECT_MAIN"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="06dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="05dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="05dp"
+            android:layout_marginBottom="62dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/CUSTOM_ALERT_PROJECT_NAME_USER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="R.K Developer"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10sp"
+                    android:background="#A7A6A6" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_ALERT_PROJECT_TYPE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:text="Residential"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10sp"
+                    android:background="#A7A6A6" />
+
+                <TextView
+
+                    android:id="@+id/CUSTOM_ALERT_PROJECT_CHARGE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginLeft="12sp"
+                    android:layout_weight="1"
+                    android:text="7% Service Charge"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="47dp"
+            android:background="#A7A6A6" />
+
+        <FrameLayout
+            android:id="@+id/first_card"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CUSTOM_ALERT_PROJECT_NAME"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginTop="06dp"
+                        android:layout_weight="1"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="M3M Project"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/doctor_background">
+
+                        <TextView
+                            android:id="@+id/CUSTOM_ALERT_PROJECT_DATE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="2 aug,2017"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/doctor_background">
+
+                        <TextView
+                            android:id="@+id/CUSTOM_ALERT_PROJECT_STATUS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="Live"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/CUSTOM_ALERT_PROJECT_INTRERSTED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="05dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/second"
+                android:text="is interested to have a meet to onboard you"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="07dp"
+            android:layout_marginBottom="07dp"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_ALERT_PROJECT_SEE_DETAILS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sort_btn_font"
+                        android:text="See Details"
+
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_ALERT_PROJECT_VIEW_CONTACT"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sort_btn_font"
+                        android:text="View Contact"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

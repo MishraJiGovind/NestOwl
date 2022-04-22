@@ -1,0 +1,4711 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nestowl.Fragment.PropertyFeaturesRqrmnt">
+
+    <ScrollView
+        android:id="@+id/POST_REQ_SCROLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linear_by_default"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:text="Property Features Requird"
+                    android:textColor="#000"
+                    android:textSize="26sp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Area Required*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_MIN_AREA"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min Area"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_MIN_AREA_SELECTED"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <TextView
+                                android:id="@+id/POST_REQ_MIN_AREA_TEXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Feet"
+                                android:textColor="@color/black_color"
+
+
+                                android:textSize="11sp" />
+
+
+                            <TextView
+
+                                android:layout_width="65dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                        <ImageView
+                            android:id="@+id/property_on_floor_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginLeft="35dp"
+                            android:src="@drawable/down_arrow_personal" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="07dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_MAX_AREA_INPUT"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max Area"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="07dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+                    <FrameLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_MAX_AREA_SELECTOR"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <TextView
+                                android:id="@+id/POST_REQ_MAX_AREA_TEXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="feet"
+                                android:textColor="@color/black_color"
+
+
+                                android:textSize="11sp" />
+
+
+                            <TextView
+
+                                android:layout_width="65dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                        <ImageView
+                            android:id="@+id/property_on_floor_image_second"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginLeft="35dp"
+                            android:src="@drawable/down_arrow_personal" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Budget*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_BUDGET_MIN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="120dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_BUDGET_MAX"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="120dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Corner Space Preference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_CORNER_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Yes"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/LEADS_REQ_SHOW_CORNER_NO"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="No"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Transaction Type*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_TRANSCTION_RESALE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Resale"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_TRANSATION_NEW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="New Property"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Boundary Wall Made*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ__BOUNDRY_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Required"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_BOUNDRY_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Not Required"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Main Road Property preference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_MAIN_ROAD_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Required"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_MAIN_ROAD_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Not Required"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:id="@+id/lnr_lenght_first"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="@dimen/post_property_padding_20dp"
+                        android:paddingRight="@dimen/post_property_padding_20dp">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/second"
+
+                                android:text="Length"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="16sp"
+
+                                />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/multiply_icon_to" />
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="@dimen/post_property_padding_20dp"
+                        android:paddingRight="@dimen/post_property_padding_20dp">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/second"
+
+                                android:text="Breadth"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="16sp"
+
+                                />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="@dimen/post_property_padding_20dp"
+                        android:paddingRight="@dimen/post_property_padding_20dp">
+
+                        <FrameLayout
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/second"
+
+                                android:text="Fit"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="16sp"
+
+                                />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Direction Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_DRECTION_E"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="East"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_DRECTION_W"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="West"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_DRECTION_N"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="North"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_DRECTION_S"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="South"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Want to Buy*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_WANT_FAST"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Immediate"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_WANT_SLOW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Can Wait for betther deal"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Nature of Employement*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_EMPLOYMENT_GOV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Goverment Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_EMPLOYMENT_PVT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Private Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_EMPLOYMENT_BUSS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Businessman"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_EMPLOYMENT_OTHER"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Other"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_EMPLOYMENT_NOTSAY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Prefer not to say"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Reason for Buying*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_RESSION_RASIDENCE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Residence Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_RESSION_INVESTMENT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Investment Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:background="@drawable/background_lenght">
+
+                    <EditText
+                        android:id="@+id/POST_REQ_MORE_COMMENTS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_house"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:text="property Features Required"
+                    android:textColor="#000"
+                    android:textSize="26sp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="BHK Types*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_1BHK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="1BHK"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_2BHK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="2BHK"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_3BHK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="3BHK"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_ADD_BHK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:id="@+id/POST_REQ_HOME_ADD_BHK_TXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="+Add"
+                                android:textColor="@color/black_font"
+
+                                android:textSize="14sp" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Furnished Status*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_FURNISHED"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Furnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_F_SEMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Semi-Furnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_F_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Unfurnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_bold_first"
+                    android:text="Add Area Details"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="240dp"
+
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+
+                            android:layout_marginRight="10dp"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/post_property_padding_20dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <EditText
+                                    android:id="@+id/POST_REQ_HOME_ADD_CARPET_IN"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:fontFamily="@font/second"
+
+                                    android:hint="Carpet Area"
+
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="14sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="175dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/POST_REQ_HOME_SET_CARPET"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <TextView
+                                    android:id="@+id/POST_REQ_HOME_SET_CARPET_TEXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:text="Sqft."
+                                    android:textColor="#000"
+
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/down_arrow_second_carpet"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="60dp"
+                                    android:src="@drawable/down_arrow_btm" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="240dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginTop="10dp"
+
+                            android:layout_marginRight="10dp"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/post_property_padding_20dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <EditText
+                                    android:id="@+id/POST_REQ_HOME_ADD_BULTUP_IN"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:fontFamily="@font/second"
+
+                                    android:hint="Builtup Area"
+                                    android:inputType="number"
+
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="14sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="175dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/POST_REQ_HOME_BULTUP_SET"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <TextView
+                                    android:id="@+id/POST_REQ_HOME_ADD_BULTP_TEXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:text="Sqft."
+                                    android:textColor="#000"
+
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/down_arrow_second_builtup"
+                                    android:layout_width="30dp"
+
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="60dp"
+                                    android:src="@drawable/down_arrow_btm" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="240dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+
+                            android:layout_marginRight="10dp"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/post_property_padding_20dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <EditText
+                                    android:id="@+id/POST_REQ_HOME_SUPERAREA_IN"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:fontFamily="@font/second"
+
+                                    android:hint="Super Area"
+                                    android:inputType="number"
+
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="14sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="175dp"
+                            android:layout_height="50dp"
+
+
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/POST_REQ_HOME_SET_SUPER_AREA"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                                <TextView
+                                    android:id="@+id/POST_REQ_HOME_SUPER_TEXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:text="Sqft."
+                                    android:textColor="#000"
+
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/down_arrow_second_super"
+                                    android:layout_width="30dp"
+
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="60dp"
+                                    android:src="@drawable/down_arrow_btm" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Any Floor Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_FLOOR_NONE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="None"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_FLOR_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="1"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_FLOR_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="2"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_FLOR_ADD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:id="@+id/POST_REQ_HOME_ADD_FLOOR_TXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="+Add"
+                                android:textColor="@color/black_font"
+
+                                android:textSize="14sp" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Transaction Type*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_TRANS_RESALE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Resale"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_TRANS_NEW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="New Property"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Direction Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_E"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="East"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_W"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="West"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_N"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="North"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_S"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="South"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_NE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="North-East"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_DRECTION_NW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="North-West"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Budget*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_BUDGET_MIN"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_HOME_BUDGET_MIN_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_BUDGET_MAX"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_HOME_BUDGET_MAX_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/POST_REQ_HOME_CHEAKBOX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/POST_REQ_HOME_BUDGET_ADJUST"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+
+                        android:layout_gravity="center_vertical" />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="05dp"
+                                    android:gravity="start"
+                                    android:text="Can adjust builder property "
+                                    android:textAlignment="viewStart"
+                                    android:textColor="#000"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Need Possesion*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_POSSESION_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Already as Possible"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_HOME_POSSION_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Can wait for better deal"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Nature of Employement*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_GOV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Goverment Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_PVT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Private Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_BUSS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Businessman"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_OTHER"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Other"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_NOTSAY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Prefer not to say"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Reason for Buying*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_RESSION_RESIDENCE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Residence Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_HOME_JOB_RESSION_INVESTMENT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Investment Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:background="@drawable/background_lenght">
+
+                    <EditText
+                        android:id="@+id/POST_REQ_HOME_MORE_COMMENTS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:backgroundTint="@null"
+                        android:hint="Additional Requirement Details"
+                        android:singleLine="false"
+                        android:textColorHint="@color/color_edit_text"
+                        android:textSize="@dimen/text_sign_up_16sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_office_space"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:text="Property Features Required"
+                    android:textColor="#000"
+                    android:textSize="26sp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Area*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_AREA_MIN_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="05dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_AREA_MAX_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Budget*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_BUDGET_MIN_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="02dp"
+                        android:text="To"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="05dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_BUDGET_MAX_IN"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max"
+                                android:singleLine="true"
+
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/POST_REQ_OFFICE_CAN_ADJUST"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/POST_REQ_OFFICE_CAN_CHEACK"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+
+                        android:layout_gravity="center_vertical" />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="05dp"
+                                    android:gravity="start"
+                                    android:text="Can adjust for builder property"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="#000"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Any Floor Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_FLOR_NONE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="None"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_FLOR_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="1"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_FLOR_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="2"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_FLOR_ADD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:id="@+id/POST_REQ_OFFICE_ADD_FLOOR_TXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="+Add"
+                                android:textColor="@color/black_font"
+
+                                android:textSize="14sp" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Corner Property Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CORNER_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Yes"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CORNER_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="No"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Office Setup*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="05dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_OFFICESETUP_MIN_SEATS"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Min No.of Seats"
+
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="05dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+
+                            <EditText
+                                android:id="@+id/POST_REQ_OFFICE_SETUP_MAC_SEAT"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/second"
+
+                                android:hint="Max No.of Seats"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="30dp"
+                                android:background="#D8D6D6" />
+
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Reception area Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_RECEPTION_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Yes"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_RESCEPTION_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="No"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Building Class Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CLASS_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="A+"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CLASS_B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="B"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CLASS_C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="c"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_CLASS_NONE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="None"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Transaction Type*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_TRANS_RESALE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Resale"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_TRANS_NEW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="New Property"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Need Possesion*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_POSSAION_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Already as Possible"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_POSSATIO_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Can wait for better deal"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Furnishing Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_FURNISHED_YES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Furnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_FURNISHED_SEMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Semi-Furnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_FURNISHED_NO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Unfurnished"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Direction Prefference*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_DRECTION_E"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="East"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_DRECTION_W"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="West"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_DRECTION_N"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="North"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_DRECTION_S"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="South"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Age of Construction*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_AGE_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="0-1 Yrs"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_AGE_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="1-5 Yrs"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_AGE_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="5-10 yrs"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+
+                            android:id="@+id/POST_REQ_OFFICE_AGE_ADD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:id="@+id/POST_REQ_OFFICE_ADD_AGE_TXT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="+add"
+                                android:textColor="@color/black_font"
+
+                                android:textSize="14sp" />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Nature of Employement*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_JOB_GOV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Goverment Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_JOB_PVT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Private Employee"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_JOB_BUSS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Businessman"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_JOB_OTHER"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Other"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_JOB_NOTSAY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Prefer not to say"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="20dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Reason for Buying*"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_RESSION_RESIDENCE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Residence Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/POST_REQ_OFFICE_RESSION_INVESTMENT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/filters_rounded_30sp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:text="Investment Purpose"
+                                android:textColor="@color/black_font"
+                                android:textSize="14sp"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:background="@drawable/background_lenght">
+
+                    <EditText
+                        android:id="@+id/POST_REQ_OFFICE_EXTRA_COMMENT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:backgroundTint="@null"
+                        android:hint="Additional Requirement Details"
+                        android:singleLine="false"
+                        android:textColorHint="@color/color_edit_text"
+                        android:textSize="@dimen/text_sign_up_16sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arshi_card_rew"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+
+        android:layout_marginBottom="10dp"
+
+        app:cardBackgroundColor="@color/brown_two"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp">
+
+
+        <TextView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:text="Post Requirement"
+            android:textColor="#ffff"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

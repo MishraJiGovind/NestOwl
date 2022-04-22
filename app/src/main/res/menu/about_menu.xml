@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/our_mission"
+        android:icon="@drawable/mission"
+        android:title="Our Mission"
+        />
+    <item
+        android:id="@+id/nest_pros"
+        android:icon="@drawable/nest_proffesional3"
+        android:title="Nest Professionals"
+        />
+</menu>

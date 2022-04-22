@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:background="#fff"
+    android:paddingRight="15dp"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/deal_with_privacy"
+            android:layout_width="270dp"
+            android:layout_height="150dp"
+            ></FrameLayout>
+
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="22sp"
+                android:fontFamily="@font/roboto_black"
+                android:textColor="#000"
+                android:layout_gravity="center_horizontal"
+                android:text="DEAL WITH PRIVACY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_five"
+                android:layout_gravity="center_horizontal"
+
+                android:text="Make an offer to users four their live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:fontFamily="@font/roboto_five"
+
+                android:text="listing or post requirement to verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_five"
+
+                android:text="locally pro's.Accept or reject proposals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_five"
+
+                android:layout_gravity="center_horizontal"
+                android:text="of por's that suits you."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+    </LinearLayout><!--
+    <ImageView
+
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/ic_more_horiz_black_24dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <ImageView
+        android:id="@+id/id_fourth_screen"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/arrow_skip"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+
+    <ImageView
+        android:id="@+id/deal_with_back"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/arrow_back_skip"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />-->
+
+</FrameLayout>

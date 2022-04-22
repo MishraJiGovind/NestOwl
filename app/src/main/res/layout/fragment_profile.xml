@@ -1,0 +1,422 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.Fragment.ProfileFragment">
+
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_bold_first"
+                    android:textColor="#000"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Sahil Dhingra"
+                    />
+
+                <TextView
+                    android:textSize="11sp"
+                    android:layout_marginTop="05dp"
+                    android:fontFamily="@font/second"
+                    android:textColor="@color/black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="sahidhi90@gmail.com"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="05dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp">
+
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:id="@+id/id_view_nest_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="View Nest Profile"
+                        />
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="08dp"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_right"
+                        android:layout_marginLeft="03dp"
+                        android:layout_height="08dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="05dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/user_icon_p"
+                    android:layout_height="50dp" />
+
+            </FrameLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#D1CFCF"
+            android:layout_marginTop="15dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shadow_home_page"
+            android:layout_height="70dp">
+            <LinearLayout
+                android:id="@+id/lnr_home"
+                android:layout_weight="1"
+                android:layout_marginTop="05dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/swithc_to_owner"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="02dp"
+
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Switch to Owner"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+
+                android:layout_weight="1"
+                android:layout_marginTop="05dp"
+
+                android:id="@+id/lnr_activity"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/notification_bell"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="02dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+
+                    android:text="Notification"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/lnr_post_property"
+                android:layout_weight="1"
+                android:layout_marginTop="05dp"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/edit_profile"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="02dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Edit Profile"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="05dp"
+
+                android:orientation="vertical"
+                android:id="@+id/lnr_alert"
+                android:layout_weight="1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/payment"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="02dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+
+                    android:text="Payments"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#D1CFCF"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp" />
+        <FrameLayout
+            android:paddingTop="05dp"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shadow_button_background_two"
+            android:layout_height="97dp">
+            <LinearLayout
+                android:layout_marginTop="05dp"
+                android:orientation="vertical"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="WE SERVE OUR HEROS TOO"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/second"
+                    android:layout_height="wrap_content"
+                    android:text="If you to army,Police,Doctor,Professional,fill details"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/second"
+
+                    android:layout_height="wrap_content"
+                    android:text="to save more with Nest Pro's"
+
+                    />
+
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_profile_offer_28sp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/frem_complete"
+                android:layout_marginBottom="05dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/post_property_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_profile_offer_28sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/sort_btn_font"
+                    android:text="Complete Details"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_height="wrap_content"
+                android:text="ADDITIONAL ACTIVITY"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black_color"
+                android:textSize="14sp"
+                android:fontFamily="@font/second"
+
+                android:layout_marginTop="07dp"
+                android:id="@+id/saved_properties"
+                android:layout_height="wrap_content"
+                android:text="Saved Properties"
+                />
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black_color"
+                android:textSize="14sp"
+                android:id="@+id/saved_search"
+                android:fontFamily="@font/second"
+                android:layout_marginTop="07dp"
+
+                android:layout_height="wrap_content"
+                android:text="Saved Search"
+                />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#D1CFCF"
+            android:layout_marginTop="15dp"
+            android:layout_height="1dp" />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_height="wrap_content"
+                android:text="Send Feedback"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_marginTop="07dp"
+                android:layout_height="wrap_content"
+                android:text="Rate Us on the Play Store"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textSize="14sp"
+                android:layout_marginTop="07dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+   </ScrollView>
+
+
+</LinearLayout>

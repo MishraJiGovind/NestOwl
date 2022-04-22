@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.SignUpKnowMoreDoubleLeads">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/EDIT_PROFILE_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Double Leads"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Oppotunity to Double Leads
+"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="When a customer buy/sell property from you, we will offer same customer to sell/buy his/her property with your help."
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Terms and condition to earn such leads
+
+"
+
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="07dp"
+                android:text="1.You need to take fix 1% commission on first deal from that customer(that may be selling or buying of property)
+"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="07dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/second"
+                android:text="2.On second transaction with same customer, you will only charge 0.80% commission for buying/ selling of his/her property(It means we are providing 0.20% off on service charge to owe customer for doing so)  "
+                android:textColor="#000"
+
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Benifit to you
+
+"
+
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="07dp"
+                android:text="1.Get more leads, Make more money than others
+"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="07dp"
+                android:text="2.According to a survey, customer cut 0.10 to 0.20% of service charge himself then why not provide it for free to make goodwill with clients.
+"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="14sp"
+
+                />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/PROFILE_CONTACT_US_SUMBIT"
+
+            app:cardElevation="8dp"
+            android:layout_gravity="bottom"
+
+            android:layout_marginBottom="10dp"
+
+            app:cardBackgroundColor="@color/brown_two"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+
+
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#ffff"
+                android:text="CONTINUE"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+</LinearLayout>

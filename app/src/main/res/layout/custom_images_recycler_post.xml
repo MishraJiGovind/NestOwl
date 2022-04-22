@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/add_photos_background_top"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/POST_IMAGES_CUSTOM_MAIN_IMG"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/POST_IMAGES_CUSTOM_DELETE"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/delete_background"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/POST_IMAGES_CUSTOM_MAIN_IMG"
+        app:srcCompat="@drawable/delete_icon" />
+
+    <TextView
+        android:id="@+id/POST_IMAGES_CUSTOM_TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/activity_apartment_background"
+        android:padding="5dp"
+        android:text="fdsvdgdfgv"
+        android:textColor="@color/black_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/POST_IMAGES_CUSTOM_MAIN_IMG"
+        app:layout_constraintTop_toBottomOf="@+id/POST_IMAGES_CUSTOM_MAIN_IMG" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

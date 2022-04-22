@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nestowl.brokerapp.MapsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/rapido_waste_layout" />
+
+        </RelativeLayout>
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:layout_weight="1"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.nestowl.brokerapp.MapsActivity" />
+        <LinearLayout
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:id="@+id/healthcare_item"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/five_atms_in_img"
+                    android:src="@drawable/icon_send_money"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp" />
+                <TextView
+                    android:id="@+id/five_atm_text_tv"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="07dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="5 ATMS in Greator Kailash 2"
+                    />
+
+            </LinearLayout>
+-->
+
+            <!--
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+</androidx.recyclerview.widget.RecyclerView>-->
+
+
+        </LinearLayout>
+
+
+<HorizontalScrollView
+    android:background="#fff"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="125dp">
+
+
+    <LinearLayout
+        android:paddingRight="@dimen/screen_sixteen_16sp"
+        android:paddingLeft="@dimen/screen_sixteen_16sp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:background="@drawable/shadow_fpr_image_back"
+                android:layout_gravity="center"
+                android:layout_width="48dp"
+                android:layout_height="@dimen/map_icon_size_48dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/airport_icon" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Airport"
+                android:layout_marginTop="05dp"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/card_elevation_05dp"
+                app:cardCornerRadius="25dp"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/grocery_icon" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:text="Railway"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/card_elevation_05dp"
+                app:cardCornerRadius="25dp"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/hospital_icon" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:text="Pharmacy"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/card_elevation_05dp"
+                app:cardCornerRadius="25dp"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/school_icon" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:text="Park"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/card_elevation_05dp"
+                app:cardCornerRadius="25dp"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/hospital_icon" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:text="Hospital"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/card_elevation_05dp"
+                app:cardCornerRadius="25dp"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="28dp"
+
+                    android:layout_height="28dp"
+                    android:src="@drawable/bank_icon" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:text="Banks"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</HorizontalScrollView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    </FrameLayout>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.PartnerRequestThird">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/iv34"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Builder Tie Up"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <FrameLayout
+                        android:layout_width="45dp"
+                        android:background="@drawable/circle_background"
+                        android:layout_height="45dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_marginBottom="05dp"
+                            android:src="@drawable/face_icon"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_height="30dp" />
+
+
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/PROJECTS_INFO_NAME"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:text="M3M Builder"
+                                android:textColor="#000"
+
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="05dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/PROJECTS_INFO_ADDDRESS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/second"
+                                android:text="Palam Vihar"
+                                android:textColor="#000"
+
+                                android:textSize="13sp" />
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+
+                android:layout_marginTop="25dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+
+
+                    />
+
+                <FrameLayout
+                    android:visibility="visible"
+                    android:layout_gravity="end"
+                    android:id="@+id/view_proposal"
+                    android:layout_marginLeft="05dp"
+                    android:background="@drawable/nest_pro_rectangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+
+
+                    <TextView
+                        android:textSize="13sp"
+                        android:fontFamily="@font/second"
+                        android:textColor="@color/black_color"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="View Proposal"/>
+                </FrameLayout>
+
+
+
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="07dp"
+                android:layout_height="120dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="05dp"
+                    app:cardElevation="06dp"
+                    android:layout_marginTop="03dp"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+
+                    android:layout_height="110dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Type"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/second"
+                            android:textSize="14sp"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+
+                        <TextView
+                            android:id="@+id/PROJECTS_INFO_TYPE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Residential"
+
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="03dp"
+                    app:cardElevation="06dp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="05dp"
+
+                    android:layout_height="110dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Service Charge"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/second"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+                        <TextView
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7%"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+
+
+                            android:textColor="#000"
+                            />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="05dp"
+                    app:cardElevation="06dp"
+                    android:layout_marginTop="03dp"
+                    android:background="@drawable/nest_card_back"
+                    android:layout_weight="1"
+
+                    android:layout_height="110dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Configuration"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/second"
+                            android:textSize="14sp"
+                            android:layout_marginTop="10dp"
+
+
+                            android:textColor="#000"
+                            />
+
+                        <TextView
+                            android:id="@+id/PROJECTS_INFO_CONF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="1,2,3,BHK"
+
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/PROJECTS_INFO_PROJECT_NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold_first"
+                android:text="Project Name - M3M (Top to view )"
+                android:textColor="#000"
+
+
+                android:textSize="16sp" />
+            <androidx.cardview.widget.CardView
+
+                android:background="@drawable/nest_card_back"
+                android:layout_width="275dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/card_interested"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/PROJECTS_INFO_EXTRA_IMG"
+                    android:layout_width="130dp"
+                    android:layout_height="98dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/property_nine" />
+
+
+                <LinearLayout
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/PROJECTS_INFO_EXTRA_CONF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="2 BHK"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/PROJECTS_INFO_EXTRA_SQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="07dp"
+                        android:fontFamily="@font/second"
+                        android:text="680 Sq.ft."
+
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/PROJECTS_INFO_EXTRA_BUDGET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="07dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:text="₹ 2 Crore"
+                        android:textColor="#000"
+
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="05dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_marginTop="03dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/location_top"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/PROJECTS_INFO_EXTRA_ADDRESS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginTop="05dp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Tilak Nagar"
+                            android:textColor="#000"
+
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+            android:layout_height="@dimen/bottom_size_height_button_40sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/PROJECTS_INFO_CHAT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chat"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/PROJECTS_INFO_VIEW_CONTACT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:text="View Contact"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </HorizontalScrollView>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

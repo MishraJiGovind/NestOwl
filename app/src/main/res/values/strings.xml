@@ -1,0 +1,270 @@
+<resources>
+    <string name="app_name">Nestowl - Broker App</string>
+    <string name="title_activity_home_screen"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_for_buy">Properties for Buy</string>
+    <string name="menu_saved">Saved Properties</string>
+    <string name="menu_Recent">Recent Search</string>
+    <string name="menu_proposal">Proposal Offered</string>
+    <string name="menu_post">Post Property</string>
+    <string name="menu_owner">Subscription Plan</string>
+    <string name="menu_manage">Properties Plan</string>
+    <string name="menu_view">View Leads</string>
+    <string name="menu_proposal_recv">Proposal Received</string>
+    <string name="menu_buy_our">Buy Our Service</string>
+    <string name="menu_blog">Blog</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_rate">Rate Us</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_terms">Terms of Use</string>
+    <string name="menu_contact">Contact Us</string>
+
+    <style name="TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#00666666</item>
+    </style>
+
+    <style name="DialogCustomTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="AppTheme.GrayStatusBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/colorGray</item>
+    </style>
+
+
+    <style name="RatingBar_first" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/brown_color</item>
+        <item name="colorControlNormal">@color/brown_color</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="colorControlNormal">@color/line_color_two</item>
+
+    </style>
+
+    <array name="lead_type">
+        <item>Lead Type</item>
+        <item>cab</item>
+        <item>bus</item>
+        <item>Two Wheeler</item>
+
+    </array>
+
+    <array name="Selectt">
+        <item>Select</item>
+        <item>cab</item>
+        <item>bus</item>
+        <item>Two Wheeler</item>
+
+    </array>
+
+    <array name="lead_status">
+        <item>Lead Status</item>
+        <item>cab</item>
+        <item>bus</item>
+        <item>Two Wheeler</item>
+
+    </array>
+
+    <array name="lead_tow">
+        <item>Month</item>
+        <item>cab</item>
+        <item>bus</item>
+        <item>Two Wheeler</item>
+
+    </array>
+
+    <array name="lead_format">
+        <item>Lead Format</item>
+        <item>Direct Lead</item>
+        <item>Proposal</item>
+
+
+    </array>
+
+    <array name="listed_to">
+        <item>Listed To</item>
+        <item>cab</item>
+        <item>bus</item>
+        <item>Two Wheeler</item>
+
+    </array>
+    <array name="customer">
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+    <array name="proposal_status">
+        <item>Proposal Status</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+    <array name="work_location">
+        <item>Work Location</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+    <array name="user_type">
+        <item>User Type</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+    <array name="property_status">
+        <item>Property Status</item>
+
+        <item>Live</item>
+
+
+        <item>Boosted</item>
+        <item>Freezed</item>
+
+        <item>Under Review</item>
+        <item>Incomplete</item>
+
+        <item>History</item>
+
+
+    </array>
+
+    <array name="property_type">
+        <item>Property Type</item>
+
+    </array>
+
+
+    <array name="poste_date">
+
+        <item>Posted by</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+    <array name="posted_to">
+
+        <item>Posted to</item>
+
+        <item>Nest Pro s</item>
+
+    </array>
+    <array name="bhk">
+        <item>BHK</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+    <array name="budget">
+        <item>Select by Project</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+
+    <array name="select">
+        <item>Select Caption</item>
+
+        <item>Exterior View</item>
+        <item>Livingrooms</item>
+        <item>Bedrooms</item>
+        <item>Kitchen Room</item>
+        <item>Floor Plan Room</item>
+        <item>Master Plan</item>
+        <item>Site View</item>
+        <item>Bathrooms</item>
+        <item>Location Mamp</item>
+        <item>Other</item>
+    </array>
+
+
+    <array name="budget_one">
+        <item>Monthly</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+
+    <array name="feete">
+        <item>Feet</item>
+
+        <item>Meter</item>
+        <item>Feet</item>
+    </array>
+
+    <array name="city_centic">
+        <item>Distance From Property</item>
+
+        <item>0.5KM</item>
+        <item>1KM</item>
+        <item>2KM</item>
+        <item>3KM</item>
+        <item>More than 3Kms</item>
+    </array>
+
+
+    <array name="property">
+        <item>Property On FLoor</item>
+
+        <item>GURGAON</item>
+        <item>DELHI</item>
+    </array>
+
+
+    <array name="firsts">
+        <item>Property On FLoor</item>
+
+        <item>Lower Basement</item>
+        <item>Basement</item>
+        <item>Ground Floor</item>
+        <item>Ground Floor</item>
+        <item>First Floor</item>
+        <item>Second Floor</item>
+        <item>Third Floor</item>
+        <item>Four Floor</item>
+
+        <item>Frist Floor</item>
+
+
+    </array>
+
+
+    <array name="monthly">
+        <item>Monthly</item>
+
+        <item>Yearly</item>
+        <item>Weekly</item>
+    </array>
+
+    <array name="feet">
+        <item>feet</item>
+
+        <item>feet</item>
+        <item>meter</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="facebook_app_id">1588246088190341</string>
+    <string name="fb_login_protocol_scheme">fb1588246088190341</string>
+    <string name="channel_name">Notfication counter</string>
+    <string name="channel_description">Notfication counter for app notification</string>
+</resources>

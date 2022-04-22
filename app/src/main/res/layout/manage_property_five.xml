@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Property"
+                    />
+                <ImageView
+                    android:id="@+id/POPUP_PROPERTY_DISMISSED"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="@dimen/dimen_15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="@dimen/dimen_15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#DDD4D4" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CUSTOM_MY_PRO_CARD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/nest_card_back"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Property ID-"
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/POPUP_PROPERTY_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:fontFamily="@font/roboto_five"
+                            android:text="1285"
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp" />
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/POPUP_PROPERTY_STATUS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|end"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_third"
+                        android:text="Status-  2x Pending"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Posted to "
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="67dp"
+                            android:src="@drawable/right_arrow" />
+
+                        <TextView
+                            android:id="@+id/POPUP_PROPERTY_POSTED_TO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="85dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/roboto_five"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="100dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="Public"
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/POPUP_PROPERTY_CATEGORY_STATUS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/roboto_third"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="150dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="1BHK REs"
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp" />
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/POPUP_PROPERTY_PRIVIEW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/second"
+                        android:text="Preview"
+                        android:textColor="#000"
+
+                        android:textSize="14sp"
+
+
+                        />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_simple" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#D3CECE" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/POPUP_PROPERTY_EDIT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/second"
+                        android:text="Edit Details"
+                        android:textColor="#000"
+
+                        android:textSize="14sp"
+
+
+                        />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_simple" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#D3CECE" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/POPUP_PROPERTY_FREEZE"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/second"
+                        android:text="Freeze"
+                        android:textColor="#000"
+
+                        android:textSize="14sp"
+
+
+                        />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_simple" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#D3CECE" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/POPUP_PROPERTY_HIDE_CONTACT"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hide Contact"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+
+                        android:textSize="14sp"
+
+
+                        />
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_simple"
+                        android:layout_height="12dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#D3CECE" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/POPUP_PROPERTY_DELETE"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+
+                        android:textSize="14sp"
+
+
+                        />
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="02dp"
+                        android:src="@drawable/arrow_simple"
+                        android:layout_height="12dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#D3CECE" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <TextView
+
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

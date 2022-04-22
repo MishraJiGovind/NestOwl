@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#48211c</color>
+    <color name="colorPrimaryDark">#80382F</color>
+    <color name="colorAccent">#000</color>
+    <color name="brown_color">#48211c</color>
+    <color name="yellow">#ffeb3b</color>
+    <color name="light_blue">#E0F5FF</color>
+    <color name="mitti_color">#eee1d3</color>
+    <color name="pinkcolor">#F3DBD7</color>
+    <color name="mehnidi_color">#614a26</color>
+    <color name="color_toolbar_orange">#c77843</color>
+    <color name="line_color_two">#918F8E</color>
+
+    <color name="colorGray">#80382F</color>
+
+    <color name="whit_button">#fff</color>
+    colorGray
+
+    <color name="line_color">#D1CFCF</color>
+
+    <color name="rating_select_colour">#FFC107</color>
+    <color name="rating_unselect_colour">#F5F4F0</color>
+
+    <color name="rera_color">#02a9a7</color>
+
+    <color name="brown_two">#48211c</color>
+
+    444343
+    <color name="black_light">#444343</color>
+    <color name="black_color">#000</color>
+    <color name="black_font">#000</color>
+
+    <color name="free_color">#b345fd</color>
+    <color name="basic_color">#698aff</color>
+    <color name="basic_plus">#dd39e0</color>
+    <color name="brown">#48211c</color>
+    <color name="color_edit_text">#A3A0A0</color>
+    <color name="duskYellow">#48211c</color>
+    <color name="lightGrey">#A3A0A0</color>
+    <color name="lightGreyChat">#C4D5D5D5</color>
+
+
+    <integer-array name="dot_on_page_not_active">
+        <item>@color/line_color</item>
+        <item>@color/line_color</item>
+        <item>@color/line_color</item>
+        <item>@color/line_color</item>
+        <item>@color/line_color</item>
+    </integer-array>
+
+    <integer-array name="dot_on_active_page">
+        <item>@color/brown_color</item>
+        <item>@color/brown_color</item>
+        <item>@color/brown_color</item>
+        <item>@color/brown_color</item>
+        <item>@color/brown_color</item>
+    </integer-array>
+
+</resources>

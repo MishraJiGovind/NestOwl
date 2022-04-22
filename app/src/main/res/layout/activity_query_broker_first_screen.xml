@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.QueryBrokerFirstScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ivr3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Submit Proposal"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <ScrollView
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="65dp"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:text="Tell us about the offer you have in mind. You can propose your offer complete privacy."
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="25dp"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+
+
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="15dp"
+                                android:id="@+id/card_image"
+
+                                android:background="@drawable/nest_card_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <FrameLayout
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp"
+                                            android:text="Name"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                        <TextView
+                                            android:layout_gravity="end"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp"
+                                            android:text="Requirement"
+                                            android:fontFamily="@font/second"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+
+
+
+                                    </FrameLayout>
+                                    <FrameLayout
+
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:layout_marginTop="15dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/BUYER_REQ_PROPSAL_NAME"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_mediaum_second"
+                                            android:text="Rohit"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/BUYER_REQ_PROPSAL_REQ"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:fontFamily="@font/roboto_mediaum_second"
+
+                                            android:text="Flat, 3BHK"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+
+
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:layout_marginTop="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp"
+                                            android:text="Budget"
+                                            android:fontFamily="@font/second"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                        <TextView
+                                            android:layout_gravity="end"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp"
+                                            android:text="Location"
+                                            android:fontFamily="@font/second"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+
+
+
+                                    </FrameLayout>
+                                    <FrameLayout
+
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:layout_marginTop="15dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/BUYER_REQ_PROPSAL_PRICE"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_mediaum_second"
+                                            android:text="2-3 Crore"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/BUYER_REQ_PROPSAL_LOCATION"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:fontFamily="@font/roboto_mediaum_second"
+
+                                            android:text="Plam Vihar"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+
+
+
+                                    </FrameLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textColor="@color/black_light"
+                            android:layout_height="wrap_content"
+                            android:text="You will be notified when user will Accept your offer"
+                            />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="25dp"
+                            android:background="#A7A6A6" />
+
+                        <TextView
+                            android:id="@+id/BUYER_REQ_PROPSAL_NAME_HELLO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/first"
+                            android:text="Hello Sahil"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="14sp"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/roboto_third"
+                            android:textColor="@color/black_color"
+                            android:layout_height="wrap_content"
+                            android:text="Please fill out following details to submit your offer"
+                            />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="25dp"
+                            android:background="#A7A6A6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Select number of inventories you have for customer*"
+
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:id="@+id/BUYER_REQ_PROPSAL_INVENTRY_GROUP"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:id="@+id/BUYER_REQ_PROPSAL_INVENTORY_1"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black_color"
+                                    android:text="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:id="@+id/BUYER_REQ_PROPSAL_INVENTORY_2"
+                                    android:buttonTint="@color/black_color"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="2"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textSize="16sp"
+                                    android:buttonTint="@color/black_color"
+                                    android:id="@+id/BUYER_REQ_PROPSAL_INVENTORY_3"
+
+                                    android:textColor="@color/black_color"
+                                    android:text="3"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/BUYER_REQ_PROPSAL_SUMBIT"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:id="@+id/tv_next_make_offer"
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Continue"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

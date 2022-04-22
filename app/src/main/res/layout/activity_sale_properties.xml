@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.SaleProperties">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="Save"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_gravity="end|center_vertical"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18sp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="08dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Sale"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_third"
+
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+                        <TextView
+                            android:text="2521 Properties"
+                            android:textSize="12sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_height="@dimen/padding_horizontal_36dp">
+                    <LinearLayout
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+                        <FrameLayout
+                            android:id="@+id/NEST_PRO_LOCALTIES"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="36dp">
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="@color/brown_color"
+                                android:layout_gravity="center"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Posted By"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:id="@+id/NEST_PRO_CITY"
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="#000"
+                                android:layout_gravity="center"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Carpet Area"
+
+                                />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/NEST_PRO_PIN"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="#000"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:layout_gravity="center"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Budget"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                        <FrameLayout
+                            android:id="@+id/NEST_PRO_Z_A"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:textColor="#000"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BHK"
+
+                                />
+
+                        </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/NEST_PRO_A_Z"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:text="Property Type"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+
+                                />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:id="@+id/amenties_id_sale"
+
+                            android:background="@drawable/ready_to_move_rounded_background"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:text="Amenties"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+
+                                />
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/scroll_view_sale"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    app:cardCornerRadius="15dp"
+                                    android:id="@+id/card_sale_two"
+                                    app:cardBackgroundColor="@color/light_blue"
+                                    android:layout_height="241dp">
+                                    <FrameLayout
+                                        android:id="@+id/frame_one_image"
+                                        android:focusable="true"
+                                        android:fitsSystemWindows="true"
+                                        android:background="@drawable/top_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp" >
+
+
+                                        <ImageView
+                                            android:id="@+id/three_dots_firs"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:src="@drawable/three_dots"
+                                            android:layout_width="55dp"
+                                            android:layout_height="30dp" />
+
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/premium_back"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp">
+                                        <TextView
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:textStyle="bold"
+                                            android:textSize="10sp"
+                                            android:layout_gravity="center"
+                                            android:textColor="#000"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:text="Premium"
+                                            />
+
+
+
+                                    </FrameLayout>
+
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
+                                            android:layout_marginTop="135dp"
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:textSize="16sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_mediaum_second"
+                                                android:text="₹ 27 Lakh, 3BHK Independet House"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+
+
+                                                />
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:layout_marginTop="07dp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Tata Housing Society"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Sector-112,Gurgaon"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginTop="02dp"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+
+
+
+                                        </LinearLayout>
+                                        <LinearLayout
+
+                                            android:layout_marginBottom="06dp"
+                                            android:layout_gravity="bottom"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="28dp">
+
+
+                                            <FrameLayout
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:textSize="12sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Ready to move"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Resale"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="500 SQ, FT,"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Owner"
+
+                                                    />
+
+
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </FrameLayout>
+
+                                    <LinearLayout
+                                        android:visibility="gone"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginBottom="05dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp">
+                                        <FrameLayout
+                                            android:layout_weight="1"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Chat"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="View Phone"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:layout_weight="1"
+                                            android:id="@+id/make_offer_sale_act"
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:textSize="16sp"
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Make an Offer"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    app:cardCornerRadius="15dp"
+                                    android:background="@drawable/nest_card_back"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_height="235dp">
+                                    <FrameLayout
+
+                                        android:fitsSystemWindows="true"
+                                        android:id="@+id/frame_two_image"
+                                        android:background="@drawable/top_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="125dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="130dp"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:textSize="16sp"
+                                            android:textColor="#000"
+                                            android:textStyle="bold"
+                                            android:text="₹ 27 Lakh, 3BHK Independet House"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+
+
+                                            />
+                                        <TextView
+                                            android:textSize="12sp"
+                                            android:textColor="#000"
+                                            android:text="Tata Housing Society"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            />
+
+                                        <TextView
+                                            android:textSize="12sp"
+                                            android:textColor="#000"
+                                            android:text="Sector-112,Gurgaon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginTop="08dp"
+                                            android:layout_height="22dp">
+
+
+                                            <FrameLayout
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:textSize="12sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Ready to move"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Resale"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="500 SQ, FT,"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="By 1 MONTH AGO"
+
+                                                    />
+
+
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
+
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:visibility="gone"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginBottom="05dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp">
+                                        <FrameLayout
+                                            android:layout_weight="1"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Chat"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_weight="1"
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="View Phone"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:id="@+id/contact_builder_frame"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:textSize="16sp"
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Contact Builder"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/CUSTOM_MY_PRO_CARD"
+                                    app:cardCornerRadius="15dp"
+
+
+                                    android:layout_width="match_parent"
+                                    android:background="@drawable/nest_card_back"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_height="241dp">
+                                    <FrameLayout
+
+                                        android:fitsSystemWindows="true"
+                                        android:id="@+id/CUSTOM_MY_PRO_IMG"
+                                        android:background="@drawable/top_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp" >
+
+
+                                        <ImageView
+                                            android:id="@+id/three_dots_second"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:src="@drawable/three_dots"
+                                            android:layout_width="55dp"
+                                            android:layout_height="30dp" />
+
+
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/premium_back"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp">
+                                        <TextView
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:textSize="10sp"
+                                            android:textColor="#000"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:text="Featured"
+                                            />
+
+
+
+                                    </FrameLayout>
+                                    <ImageView
+                                        android:layout_gravity="end"
+                                        android:layout_width="25dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:src="@drawable/heart_icon_black_trans"
+                                        android:layout_height="25dp" />
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
+                                            android:layout_marginTop="135dp"
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:textSize="16sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_mediaum_second"
+                                                android:text="₹ 27 Lakh, 3BHK Home"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+
+
+                                                />
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:layout_marginTop="07dp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Tata Housing Society"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Sector-112,Gurgaon"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginTop="02dp"
+
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+
+
+
+                                        </LinearLayout>
+                                        <LinearLayout
+
+                                            android:layout_marginBottom="06dp"
+                                            android:layout_gravity="bottom"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="28dp">
+
+
+                                            <FrameLayout
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:textSize="12sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Ready to move"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Resale"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="500 SQ, FT,"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Owner"
+
+                                                    />
+
+
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </FrameLayout>
+                                    <LinearLayout
+                                        android:visibility="gone"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginBottom="05dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp">
+                                        <FrameLayout
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_height="match_parent">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Chat"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="View Phone"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:id="@+id/maek_offer_two"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:textSize="16sp"
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Make Offer"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="15dp"
+
+                                    android:layout_width="match_parent"
+                                    android:background="@drawable/nest_card_back"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_height="241dp">
+                                    <FrameLayout
+
+                                        android:fitsSystemWindows="true"
+                                        android:background="@drawable/top_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp" >
+
+
+                                        <ImageView
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:src="@drawable/three_dots"
+                                            android:layout_width="55dp"
+                                            android:layout_height="30dp" />
+
+
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:visibility="gone"
+                                        android:background="@drawable/premium_back"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp">
+                                        <TextView
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:textSize="10sp"
+                                            android:textColor="#000"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:text="Featured"
+                                            />
+
+
+
+                                    </FrameLayout>
+                                    <ImageView
+                                        android:layout_gravity="end"
+                                        android:layout_width="25dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:src="@drawable/heart_icon_black_trans"
+                                        android:layout_height="25dp" />
+
+                                    <FrameLayout
+                                        android:layout_marginLeft="10dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
+                                            android:layout_marginTop="135dp"
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <TextView
+                                                android:textSize="16sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_mediaum_second"
+                                                android:text="₹ 27 Lakh, 3BHK Home"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+
+
+                                                />
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:layout_marginTop="07dp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Tata Housing Society"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Sector-112,Gurgaon"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginTop="02dp"
+
+                                                android:layout_height="wrap_content"
+
+                                                />
+
+
+
+
+                                        </LinearLayout>
+                                        <LinearLayout
+
+                                            android:layout_marginBottom="06dp"
+                                            android:layout_gravity="bottom"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="28dp">
+
+
+                                            <FrameLayout
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:textSize="12sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Ready to move"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Resale"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="07dp"
+                                                    android:layout_marginLeft="07dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="500 SQ, FT,"
+
+                                                    />
+
+
+                                            </FrameLayout>
+                                            <FrameLayout
+                                                android:layout_marginLeft="05dp"
+                                                android:background="@drawable/ready_to_move_rounded_background"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+                                                <TextView
+                                                    android:layout_marginRight="08dp"
+                                                    android:layout_marginLeft="08dp"
+                                                    android:textColor="#000"
+                                                    android:textSize="12sp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="18dp"
+                                                    android:text="Owner"
+
+                                                    />
+
+
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </FrameLayout>
+                                    <LinearLayout
+                                        android:visibility="gone"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginBottom="05dp"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp">
+                                        <FrameLayout
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_height="match_parent">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Chat"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/chat_sale_back"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp"
+                                                android:textSize="16sp"
+                                                android:textColor="@color/brown_color"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="View Phone"
+
+                                                />
+
+                                        </FrameLayout>
+                                        <FrameLayout
+                                            android:layout_marginLeft="05dp"
+                                            android:background="@drawable/contact_builder"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_height="30dp">
+                                            <TextView
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:textSize="16sp"
+                                                android:textColor="#fff"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Make Offer"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <FrameLayout
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/sort_filter_second_main"
+                                    android:background="@drawable/sort_filter_back"
+                                    android:layout_height="37sp">
+                                    <FrameLayout
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <LinearLayout
+                                            android:id="@+id/lnr_sort_sale"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+
+                                            <ImageView
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_width="12dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_height="12dp"
+                                                android:src="@drawable/sort_icon"/>
+                                            <TextView
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Sort"
+                                                android:layout_marginRight="05dp"
+                                                android:layout_marginLeft="05dp"
+
+                                                android:textColor="#000"
+                                                android:textSize="12sp"
+                                                />
+
+                                        </LinearLayout>
+
+
+                                        <TextView
+
+                                            android:layout_width="1dp"
+                                            android:layout_gravity="center_horizontal|center"
+                                            android:layout_height="30dp"
+                                            android:background="#A7A6A6" />
+
+                                        <LinearLayout
+                                            android:layout_marginLeft="55dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+
+                                            <ImageView
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_width="12dp"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_height="12dp"
+                                                android:src="@drawable/filter_iconnm"/>
+                                            <TextView
+                                                android:layout_marginLeft="05dp"
+                                                android:id="@+id/first_filter_sale"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Filters"
+
+                                                android:textColor="#000"
+                                                android:textSize="12sp"
+                                                android:layout_marginRight="08dp"
+                                                />
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+
+
+
+                                </FrameLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </ScrollView>
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:visibility="gone"
+            android:id="@+id/nested_scroll_view"
+            android:fillViewport="true"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/filter_background"
+
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="60dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="5dp"
+                        android:background="@drawable/filter_5dp_background" />
+
+
+
+                    <FrameLayout
+                        android:layout_marginRight="@dimen/filter_padding_20sp"
+                        android:layout_marginLeft="@dimen/filter_padding_20sp"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Filter Applied"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Done"
+                            android:textColor="@color/brown_color"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="20dp"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+
+                            />
+
+                    </FrameLayout>
+
+
+                    <HorizontalScrollView
+                        android:fillViewport="true"
+                        android:layout_marginTop="10dp"
+                        android:measureAllChildren="false"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="@dimen/home_screen_two_20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/selected_background_filter"
+                                android:layout_height="@dimen/filters_rounded_30sp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:layout_marginRight="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:textColor="@color/brown_color"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gurgaon"
+
+                                    />
+
+                                <ImageView
+                                    android:src="@drawable/multiply_brown"
+                                    android:layout_width="15dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_height="15dp" />
+
+
+                            </FrameLayout>
+
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/filters_add_localities_background"
+                                android:layout_height="@dimen/filters_rounded_30sp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="12sp"
+                                    android:id="@+id/add_localities"
+                                    android:layout_marginLeft="08dp"
+                                    android:layout_marginRight="08dp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#fff"
+                                    android:layout_height="wrap_content"
+                                    android:text="+Add Localities"
+
+                                    />
+
+
+
+                            </FrameLayout>
+
+
+
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#A7A6A6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Property Type"
+                        android:textColor="#000"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+
+                        />
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_filter_screen"
+                        app:tabSelectedTextColor="@color/brown_color"
+                        app:tabTextColor="#000"
+
+                        app:tabIndicatorColor="@color/brown_color"
+
+                        app:tabIndicatorHeight="03dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:tabGravity="fill"
+
+                        app:tabTextAppearance="@style/tab_text"
+
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/frame_filter_id"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+                    </FrameLayout>
+                    <androidx.viewpager.widget.ViewPager
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/filters_view_pager"
+
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.viewpager.widget.ViewPager>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+
+                    </ScrollView>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+
+</LinearLayout>

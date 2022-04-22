@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.ArmyAfterIntroScreens">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Indian Heros"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/continue_army"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:id="@+id/tv_next_make_offer"
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Continue"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+<ScrollView
+    android:layout_marginTop="55dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+            android:fontFamily="@font/roboto_bold_first"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="What is your branche of service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frm_army"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Army"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_one"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Navy"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_two"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Airforce"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_three"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CISF"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:id="@+id/frame_four"
+                android:layout_weight="1"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BSF"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_five"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRPF"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_six"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITBP"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_saven"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SSB"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_eight"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPG"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_nine"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RPF"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_marginRight="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_ten"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor"
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:id="@+id/frame_eleven"
+                android:background="@drawable/indian_heros_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Police"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+</FrameLayout>

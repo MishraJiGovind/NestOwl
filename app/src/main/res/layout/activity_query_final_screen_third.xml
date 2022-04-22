@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.QueryFinalScreenThird">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Builder Deal"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/BUILDER_DEAL_RECYCLER"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Name of the Project"
+                            />
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/BUILDER_DEAL_PROJECT_NAME"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="M3M Project"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Address"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/BUILDER_DEAL_ADDRESS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@null"
+                                    android:backgroundTint="@null"
+
+                                    android:editable="false"
+                                    android:fontFamily="@font/second"
+                                    android:hint="Address"
+
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Possesion Type"
+
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/BUILDER_DEAL_POSSASTION"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Ready to Move"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Project Type"
+
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/BUILDER_DEAL_TYPE"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Residential"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Total Unit Unsold"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/BUILDER_DEAL_UNITS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@null"
+                                    android:backgroundTint="@null"
+
+                                    android:editable="false"
+                                    android:fontFamily="@font/second"
+                                    android:hint="Total Unit Unsold"
+
+                                    android:inputType="numberSigned"
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Demand Structure"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/BUILDER_DEAL_BHK"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@null"
+                                    android:backgroundTint="@null"
+
+                                    android:editable="false"
+                                    android:fontFamily="@font/second"
+                                    android:hint="1 BHK"
+
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:layout_marginRight="05dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/BUILDER_DEAL_BUDGET_MIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+
+                android:editable="false"
+                android:fontFamily="@font/second"
+                android:hint="₹"
+
+                android:inputType="number"
+                android:textColorHint="@color/color_edit_text"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#D8D6D6" />
+
+
+        </FrameLayout>
+        <TextView
+            android:text="To"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/first"
+            android:textColor="@color/black_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_marginLeft="05dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/BUILDER_DEAL_BUDGET_MAX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+
+                android:editable="false"
+                android:fontFamily="@font/second"
+                android:hint="₹"
+
+                android:inputType="numberSigned"
+                android:textColorHint="@color/color_edit_text"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#D8D6D6" />
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Comission Service Charge%"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/BUILDER_DEAL_COMMISTION"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@null"
+                                    android:backgroundTint="@null"
+
+                                    android:editable="false"
+                                    android:fontFamily="@font/second"
+                                    android:hint="%"
+
+                                    android:inputType="number"
+                                    android:textColorHint="@color/color_edit_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Deal Valid for"
+
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/BUILDER_DEAL_VALID"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="3 Months"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Addition details of Project"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <FrameLayout
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_lenght"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="90dp">
+
+                            <EditText
+                                android:id="@+id/BUILDER_DEAL_EXTRA_DETAILS"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@null"
+                                android:backgroundTint="@null"
+                                android:editable="false"
+                                android:gravity="start"
+                                android:hint=""
+                                android:singleLine="false"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="@dimen/text_sign_up_16sp" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:text="Date and Time Schedule for meeting and Description"
+
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginTop="05dp"
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+<LinearLayout
+    android:paddingLeft="@dimen/screen_sixteen_16sp"
+    android:paddingRight="@dimen/screen_sixteen_16sp"
+    android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="125dp"
+        android:background="@drawable/date_time_background"
+        android:layout_height="100dp">
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/BUILDER_DEAL_DATE_DATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="23"
+        android:textColor="@color/black_color"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/BUILDER_DEAL_DATE_MONTH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/second"
+        android:text="Aug"
+        android:textColor="@color/black_color"
+        android:textSize="22sp" />
+
+
+
+</LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            />
+
+                        <HorizontalScrollView
+                            android:layout_marginTop="05dp"
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:paddingLeft="@dimen/screen_sixteen_16sp"
+                                android:paddingRight="@dimen/screen_sixteen_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:layout_height="match_parent">
+
+
+
+                                <FrameLayout
+                                    android:layout_width="125dp"
+                                    android:background="@drawable/date_time_background"
+                                    android:layout_height="75dp">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/BUILDER_DEAL_TIME_TIME"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/second"
+                                            android:text="12:00"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="18sp" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="22dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Mode of Meet"
+                            />
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/padding_horizontal_36dp"
+                            android:layout_marginTop="10dp"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp">
+
+
+                                <FrameLayout
+                                    android:id="@+id/BUILDER_DEAL_PYCALLY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/employe_circle_rounded">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:fontFamily="@font/roboto_mediaum_second"
+                                        android:text="Physically"
+                                        android:textColor="@color/black_color"
+                                        android:textSize="14sp"
+
+                                        />
+
+
+                                </FrameLayout>
+
+
+                                <FrameLayout
+                                    android:id="@+id/BUILDER_DEAL_VEETRUALLY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="05dp"
+                                    android:background="@drawable/employe_circle_rounded">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:fontFamily="@font/roboto_mediaum_second"
+                                        android:text="Virtually"
+                                        android:textColor="#000"
+                                        android:textSize="14sp"
+
+                                        />
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="22dp"
+                            android:id="@+id/BUILDER_DEAL_PYCALLY_LNR"
+                            android:visibility="gone"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:textSize="22sp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:textColor="#000"
+
+                                android:layout_height="wrap_content"
+                                android:text="Office address for meeting Purpose"
+                                />
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+
+                                android:orientation="horizontal"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <FrameLayout
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <EditText
+                                        android:id="@+id/BUILDER_DEAL_ADDRESS_OFFICE"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@null"
+                                        android:backgroundTint="@null"
+
+                                        android:fontFamily="@font/second"
+                                        android:hint="Please mention office address"
+                                        android:inputType="number"
+
+                                        android:textColorHint="@color/color_edit_text"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="#D8D6D6" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/BUILDER_DEAL_VITUALLY_LNR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="45dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="14dp"
+                                    android:paddingRight="14dp">
+
+                                    <RadioButton
+                                        android:id="@+id/BUILDER_DEAL_VERTUAL_RD"
+                                        android:layout_width="match_parent"
+
+
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:buttonTint="@color/black_color"
+                                        android:fontFamily="@font/roboto_third"
+                                        android:text="Whats App"
+                                        android:textColor="@color/black_color"
+                                        android:textSize="16sp" />
+
+
+                                </RadioGroup>
+
+
+                            </HorizontalScrollView>
+
+                            <EditText
+                                android:id="@+id/BUILDER_DEAL_DIGITAL_ID"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+
+                                android:backgroundTint="@null"
+                                android:fontFamily="@font/second"
+                                android:hint="Whats App Id"
+
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Details for Enquiry"
+                            />
+
+                        <FrameLayout
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_lenght"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="90dp">
+
+                            <EditText
+                                android:id="@+id/BUILDER_DEAL_CONTACT_DETAILS"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@null"
+                                android:backgroundTint="@null"
+                                android:editable="false"
+                                android:gravity="start"
+                                android:hint=""
+                                android:singleLine="false"
+                                android:textColorHint="@color/color_edit_text"
+                                android:textSize="@dimen/text_sign_up_16sp" />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+
+
+        </ScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_id_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_size_height_button_40sp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+            android:layout_marginBottom="10dp"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/BUILDER_DEAL_ACCEPT"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_size_height_button_40sp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:id="@+id/make_offer_rera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Accept"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/BUILDER_DEAL_REJECT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Reject"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/BUILDER_DEAL_CHAT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Chat"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.StartOfferCongratulationScreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Start an Offer"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/card_cont"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Go to Home Screen"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_marginBottom="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="85dp"
+                android:src="@drawable/rocket_two"
+                android:layout_width="match_parent"
+                android:layout_height="205dp" />
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/first"
+                    android:text="Your Offer has been Submitted"
+                    android:textColor="#000"
+
+                    android:textSize="20sp"
+
+
+                    />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="85dp"
+
+                android:fontFamily="@font/second"
+                android:text="Our Professional will call you as soon as possible"
+                android:textColor="#000"
+
+                android:textSize="14sp"
+
+
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</FrameLayout>

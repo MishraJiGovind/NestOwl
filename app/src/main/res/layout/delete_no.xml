@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+    <LinearLayout
+        android:layout_marginTop="15dp"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_marginTop="05dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="@dimen/home_screen_two_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:id="@+id/iv37"
+                android:src="@drawable/close_icon_search"
+                android:layout_width="15dp"
+
+                android:layout_gravity="end|center_vertical"
+                android:layout_height="15dp" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Your Listing has not been Deleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

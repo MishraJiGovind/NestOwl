@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    />
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#DDD4D4" />
+
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="28dp"
+                android:layout_width="wrap_content"
+                android:textColor="#706E6E"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_five"
+                android:layout_height="wrap_content"
+                android:text="Set Your Price"
+                />
+            <FrameLayout
+                android:layout_marginTop="25dp"
+                android:background="@drawable/minimum_and_maximum_background"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginBottom="05dp"
+                    android:layout_marginTop="05dp"
+                    android:layout_gravity="center"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#DDD4D4" />
+
+                <TextView
+                    android:textColor="#A09A9A"
+                    android:textSize="16sp"
+                    android:text="Min"
+                    android:id="@+id/minimum_budget_dialog_tv_one"
+                    android:layout_marginLeft="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:textColor="#A09A9A"
+                    android:textSize="16sp"
+                    android:layout_marginRight="45dp"
+                    android:text="Max"
+                    android:layout_marginLeft="45dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <SeekBar
+                android:layout_marginTop="15dp"
+                android:id="@+id/seekbar_dialog_one"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:thumb="@drawable/thumb_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_height="43dp">
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:layout_marginRight="25sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All"
+                        />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background"
+                    android:layout_width="105dp"
+                    android:layout_gravity="end|center_vertical"
+
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:id="@+id/tv_view_profile"
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.NearbyPlaces">
+
+<ScrollView
+    android:layout_marginBottom="70dp"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filter_24sp"
+            android:text="Near by Facilities"
+            android:textColor="#000"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/roboto_third"
+
+            android:textSize="16sp"
+
+            />
+
+
+
+        <LinearLayout
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/edt_bus_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Bus Stop"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/distance"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_on_floor_image"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/edt_shopping_mall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Shopping mall"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/shopping_mall"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_shopping_mall"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/edt_office_complex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Office Complex"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/office_complex"
+                        android:hint="Distance "
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_office_complex"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of College"
+                        android:id="@+id/edt_college"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/college_id"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_name_of_college"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Market"
+                        android:id="@+id/edt_market"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/market_id"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_of_market"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Playground/Park"
+                        android:textColorHint="@color/color_edit_text"
+                        android:id="@+id/edt_playground"
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/playground_id"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_playground"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/edt_gym"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Gym"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/gym_id"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_name_of_gym"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/filter_18sp"
+
+            android:layout_marginRight="12dp"
+
+            android:layout_marginLeft="12dp"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="05dp"
+
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:background="@null"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Name of Police Station"
+                        android:textColorHint="@color/color_edit_text"
+                        android:id="@+id/edt_police_station"
+                        android:fontFamily="@font/second"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_color"
+                        android:textSize="14sp"
+                        android:id="@+id/police_station"
+                        android:hint="Distance"
+
+
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#D8D6D6" />
+
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:id="@+id/property_of_police_station"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/down_arrow_personal"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/card_submit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="Submit"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

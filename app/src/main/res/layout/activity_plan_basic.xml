@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.PlanBasicActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+                <TextView
+                    android:id="@+id/clearAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Clear All"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:visibility="gone">
+
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/DEALS_BACK"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/left_arrow" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/NAV_TEXT_PLAN_BASIC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Post Requirements"
+                            android:textColor="#fff"
+
+                            android:textSize="20sp" />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_filter_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/brown"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/brown"
+                app:tabTextAppearance="@style/tab_text"
+                app:tabTextColor="@color/lightGrey">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_BASIC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Details" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_FEATURES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Property Features" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_PRICING"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Pricing Other" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_AMENTIES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Amenities Features" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_PHOTOS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Photos Schedule" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/TAB_VERIFY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Verify Submit" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_filter_id"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </FrameLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/filters_view_pager"
+
+                android:layout_height="wrap_content">
+
+
+            </androidx.viewpager.widget.ViewPager>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

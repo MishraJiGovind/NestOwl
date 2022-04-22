@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.SelectOptionMode">
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT OPTION"
+                    />
+                <ImageView
+                    android:id="@+id/iv19"
+                    android:src="@drawable/back_arrow_first"
+                    android:layout_width="20dp"
+
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_height="25dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <TextView
+                android:layout_marginTop="45dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/first"
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:text="POST PROPERTY TO"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/POST_PRO_SELECTION_PUBLIC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/lower_basement_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="TO PUBLIC "
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/to_public"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/brown_color" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/POST_PRO_SELECTION_LOACLITY"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_mediaum_second"
+
+                    android:text="To Locality Nes Pro's and Public"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/to_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/brown_color" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/POST_PRO_SELECTION_WHOLE"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_mediaum_second"
+
+                    android:text="To Whole City Nest Pro's and Public"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/whole_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/brown_color" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/post_sequence_first"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="Continue"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

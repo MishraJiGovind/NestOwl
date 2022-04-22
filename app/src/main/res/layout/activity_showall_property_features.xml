@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.ShowallPropertyFeatures">
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/filter_padding_20sp"
+        android:paddingRight="@dimen/filter_padding_20sp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/modular_kitchen_idd"
+
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Mudular Kitchen"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:id="@+id/electronics_idd"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Electronic"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/security_alarm_id"
+
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Security Alarm"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:paddingLeft="15dp"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:id="@+id/water_storage_id"
+
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Water Storage"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:id="@+id/piped_gas_id"
+
+                    android:layout_height="43dp"
+                    android:text="Piped Gas"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:id="@+id/private_garden_id"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Private Garden"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/air_condition_id"
+                    android:paddingRight="15dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="air-Condition"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:gravity="center"
+                    android:paddingRight="05dp"
+                    android:paddingLeft="05dp"
+                    android:id="@+id/corner_property_id"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Corner Property"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_marginRight="05dp"
+                    android:layout_marginLeft="05dp"
+                    android:textColor="@color/black_font"
+                    android:gravity="center"
+                    android:id="@+id/main_property_id"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:layout_height="43dp"
+                    android:text="Main Road Property"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/card_submit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="Submit"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.IntroArmyQuery">
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/card_cont"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Continue"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_marginBottom="85dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--<ImageView
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/netswl_icon"
+            android:layout_width="match_parent"
+            android:layout_height="125dp" />
+        -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_bold_first"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:text="Nest Owl Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_bold_first"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:text="Our Heroes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/green_circle"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="25dp" />
+
+
+
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/second"
+                    android:textColor="#000"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:text="BUY a home with Nest Pro's"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/green_circle"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="25dp" />
+
+
+
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/second"
+                    android:textColor="#000"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:text="SELL a home with Nest Pro's"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/home_screen_two_20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/shadow_button_background_two"
+            android:layout_marginRight="@dimen/home_screen_two_20dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_third"
+                android:text="Ready to Submit Details"
+                android:textColor="#000"
+
+                android:textSize="18sp"
+
+
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:text="Benefits for our"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:text="Nation Heroes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </FrameLayout>
+
+<FrameLayout
+    android:paddingLeft="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:src="@drawable/circle_per"
+        android:layout_width="28dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="28dp" />
+    <ImageView
+        android:src="@drawable/icon_blue"
+        android:layout_width="12dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="33dp"
+        android:layout_height="12dp" />
+
+
+
+
+    <FrameLayout
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="12dp"
+        android:layout_width="2dp"
+        android:background="@color/line_color"
+        android:layout_height="155dp">
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:text="Easy to Qualify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <TextView
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:text="Upload service ID Cards and Photos to get verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="95dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:text="Lower and Fixed Service Charge
+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <TextView
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:text="Our Professionals will only charge 0.7% of fix service charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="170dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:text="End to end Assistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <TextView
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="From document verification to client verification to final document submission we are always that for you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</FrameLayout>

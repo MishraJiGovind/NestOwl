@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.EditingScreenAll">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/EDIT_PROFILE_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Edit"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editing"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="20sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/editing_top"
+                    android:layout_gravity="end"
+                    android:src="@drawable/house_edit"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/EDIT_PRO_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:fontFamily="@font/second"
+                android:text="Property Id: Ms45ds"
+                android:textColor="#000"
+
+                android:textSize="13sp" />
+            <FrameLayout
+                android:id="@+id/basic_details_first"
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Details"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference,What a kind of property do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimu Type, How many Aprtment do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+            <FrameLayout
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:id="@+id/basic_details_second"
+
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Features"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location, Add Room Details, Area of your porperty?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minumum LeasableArea, Washrooms,Pantry Type, Other?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/basic_details_third"
+
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pricing Other"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference,What a kind of property do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimu Type, How many Aprtment do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+            <FrameLayout
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/basic_details_fourth"
+
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amenties Features"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference,What a kind of property do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimu Type, How many Aprtment do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/basic_details_five"
+
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Photos Shcedule"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference,What a kind of property do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimu Type, How many Aprtment do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:background="@drawable/shadow_home_page"
+                android:layout_marginRight="10dp"
+                android:id="@+id/basic_details_six"
+
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Submit"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="end"
+                    android:src="@drawable/edit_sort"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference,What a kind of property do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimu Type, How many Aprtment do you have?"
+                        android:textColor="#000"
+                        android:fontFamily="@font/second"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</LinearLayout>

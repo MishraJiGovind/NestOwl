@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.EditSignUpForm">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <com.google.android.material.appbar.AppBarLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:theme="@style/AppTheme.AppBarOverlay">
+
+          <androidx.appcompat.widget.Toolbar
+              android:id="@+id/toolbar"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:background="?attr/colorPrimary"
+              app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+              <FrameLayout
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="55dp">
+                  <LinearLayout
+                      android:layout_gravity="center_vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+                      <ImageView
+                          android:src="@drawable/left_arrow"
+                          android:layout_width="18dp"
+                          android:id="@+id/EDIT_PROFILE_BACK"
+                          android:layout_gravity="center_vertical"
+                          android:layout_height="18dp" />
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginLeft="10dp"
+                          android:layout_height="wrap_content"
+                          >
+
+                          <TextView
+                              android:text="Edit Profile"
+                              android:textSize="20sp"
+                              android:textColor="#fff"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+
+                              />
+
+
+
+
+                      </LinearLayout>
+
+                  </LinearLayout>
+
+
+              </FrameLayout>
+
+
+          </androidx.appcompat.widget.Toolbar>
+
+
+
+      </com.google.android.material.appbar.AppBarLayout>
+      <ScrollView
+          android:layout_marginBottom="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+          <LinearLayout
+
+              android:layout_marginLeft="06dp"
+              android:layout_marginRight="06dp"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+
+                  <FrameLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="90dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="25dp"
+
+                      android:layout_marginRight="10dp"
+                      android:background="@drawable/shadow_home_page"
+                      android:visibility="visible">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginTop="07dp"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:text="Profile Completeness"
+                          android:textColor="@color/black_color"
+                          android:textSize="14sp"
+
+
+                          />
+
+                      <TextView
+                          android:id="@+id/PROFILE_SUMIT_PROGRESS"
+
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="25dp"
+                          android:layout_marginTop="30dp"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:text="0%"
+                          android:textColor="#E70808"
+
+
+                          android:textSize="14sp" />
+
+                      <ProgressBar
+                          android:id="@+id/PROFILE_SUMIT_PROGRESSBAR"
+                          style="?android:attr/progressBarStyleHorizontal"
+                          android:layout_width="match_parent"
+                          android:layout_height="3dp"
+                          android:layout_marginLeft="25dp"
+                          android:layout_marginTop="50dp"
+                          android:layout_marginRight="25dp"
+                          android:progressDrawable="@drawable/custom_progressbar" />
+
+                      <androidx.cardview.widget.CardView
+                          android:id="@+id/PROFILE_SUMIT_PROGRESS_CARD_PARENT"
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:layout_marginLeft="25dp"
+                          android:layout_marginTop="55dp"
+                          android:layout_marginRight="25dp"
+                          android:visibility="gone"
+                          app:cardBackgroundColor="@color/lightGrey"
+                          app:cardCornerRadius="10dp">
+
+                          <androidx.cardview.widget.CardView
+                              android:id="@+id/PROFILE_SUMIT_PROGRESS_CARD"
+
+                              android:layout_width="75dp"
+                              android:layout_height="2dp"
+                              app:cardBackgroundColor="#E70808"
+                              app:cardCornerRadius="10dp" />
+                      </androidx.cardview.widget.CardView>
+
+                  </FrameLayout>
+
+
+                  <FrameLayout
+                      android:visibility="gone"
+
+                      android:id="@+id/basic_primary"
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+
+                      android:layout_marginTop="25dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+                      <ImageView
+                          android:layout_marginLeft="10dp"
+                          android:src="@drawable/green_circle"
+                          android:layout_width="17dp"
+                          android:layout_marginTop="16dp"
+                          android:layout_height="17dp" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Basic Details"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="40dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Name, Age, Expertince etc"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+
+
+                  <FrameLayout
+                      android:visibility="visible"
+                      android:id="@+id/basic_details_first"
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+
+                      android:layout_marginTop="25dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_PERSONAL"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Personal Details"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="40dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Name, Age, Expertince etc"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+
+
+
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:id="@+id/basic_details_second"
+
+                      android:layout_marginLeft="10dp"
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_OFFICE"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Office Details"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Address, Occupancy type etc"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+
+
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:id="@+id/basic_details_third"
+
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_WORK"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="35dp"
+                          android:layout_marginTop="10dp"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:text="Work Description"
+                          android:textColor="#000"
+
+                          android:textSize="18sp" />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Lalitham, Description etc"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:id="@+id/basic_details_fourth"
+
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_SERVICE_CHARGE"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Service Charges"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Select Charge, Achievement, etc"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:id="@+id/basic_details_five"
+
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_EARN"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Earn More"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Indian Heroes and Double Land"
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:id="@+id/basic_details_six"
+
+                      android:layout_marginLeft="10dp"
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_VERFICATION"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Verificaion"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Rera Number, Aadhar Card etc."
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+                  <FrameLayout
+                      android:background="@drawable/shadow_home_page"
+                      android:layout_marginRight="10dp"
+                      android:id="@+id/basic_details_saven"
+
+                      android:layout_marginLeft="10dp"
+
+                      android:layout_marginTop="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp">
+
+                      <ImageView
+                          android:id="@+id/PROFILE_SUMIT_IMG_PHOTOS"
+                          android:layout_width="17dp"
+                          android:layout_height="17dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginTop="16dp"
+                          android:src="@drawable/green_circle" />
+                      <TextView
+                          android:layout_marginTop="10dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Photos"
+                          android:layout_marginLeft="35dp"
+                          android:textColor="#000"
+                          android:fontFamily="@font/roboto_mediaum_second"
+                          android:textSize="18sp"
+
+                          />
+                      <ImageView
+                          android:layout_marginTop="10dp"
+                          android:layout_marginRight="10dp"
+
+                          android:layout_gravity="end"
+                          android:src="@drawable/edit_sort"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp" />
+
+                      <LinearLayout
+                          android:layout_marginTop="47dp"
+
+                          android:layout_marginLeft="35dp"
+
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Profile, Covers, Office etc."
+                              android:textColor="#000"
+                              android:fontFamily="@font/second"
+                              android:textSize="12sp"
+
+                              />
+
+
+
+                      </LinearLayout>
+
+                  </FrameLayout>
+
+
+
+
+              </LinearLayout>
+
+
+          </LinearLayout>
+
+
+      </ScrollView>
+
+
+  </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent"
+    tools:context=".MoneyValue">
+
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:background="@drawable/money_value_img"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            ></FrameLayout>
+
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_gravity="center_horizontal"
+                android:text="MONEY VALUE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="Arial"
+
+                android:text="User's can freeze or resume their"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+
+                android:fontFamily="Arial"
+
+                android:text="listings with hide,unhide contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="Arial"
+
+                android:text="feature, live chat to discuss at most"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="03dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="Arial"
+
+                android:layout_gravity="center_horizontal"
+                android:text="trusted and affordable."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/ic_more_horiz_black_24dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <ImageView
+        android:id="@+id/id_second_screen"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/arrow_skip"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+
+    <ImageView
+        android:id="@+id/id_second_back"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/arrow_back_skip"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+</FrameLayout>

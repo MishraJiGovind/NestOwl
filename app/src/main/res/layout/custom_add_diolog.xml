@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/card_background">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Add Value"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/CUSTOM_DIO_BODY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/CUSTOM_DIO_BODY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/balconies_background">
+
+            <EditText
+                android:id="@+id/CUSTOM_ADD_DIOIN"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:fontFamily="@font/second"
+                android:hint=""
+
+                android:inputType="number"
+                android:textColorHint="@color/color_edit_text"
+
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/CUSTOM_ADD_DIO_SUCCES"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@color/brown_color"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:text="Done"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

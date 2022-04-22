@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout
+            android:layout_width="55dp"
+
+            android:layout_height="55dp"
+            android:background="@drawable/english_background">
+
+            <ImageView
+                android:id="@+id/CUSTOM_REVIWS_DP"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+
+                android:layout_gravity="center"
+                android:src="@drawable/user_icon_p" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/CUSTOM_REVIWS_NAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/first"
+                    android:text="Peter Bai"
+                    android:textColor="#000"
+
+
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_REVIWS_TYPE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Seller"
+                    android:textColor="#000"
+
+
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="vertical">
+
+
+                <RatingBar
+                    android:id="@+id/CUSTOM_REVIWS_RATING"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="05dp"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:saveEnabled="true"
+                    android:theme="@style/RatingBar" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_REVIWS_DATE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/second"
+                    android:text="2,Oct,2000"
+                    android:textColor="#000"
+
+
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/CUSTOM_REVIWS_TEXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/second"
+        android:text="Lorem ipsum dolor st.amet, consectetur adilpicing edit,sed do
+eliusmod\ntempor incididunt ut labore et dolore magna aliqua."
+
+
+        android:textColor="#000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <TextView
+
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#A7A6A6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CUSTOM_REVIWS_TEXT" />
+</androidx.constraintlayout.widget.ConstraintLayout>

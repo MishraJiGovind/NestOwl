@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Posted To"
+                    />
+                <ImageView
+                    android:id="@+id/DIOLOG_POSTED_TO_DELETE"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <LinearLayout
+                android:layout_marginTop="35dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <FrameLayout
+                        android:id="@+id/DIOLOG_POSTED_TO_PUBLIC"
+                        android:layout_width="60dp"
+                        android:layout_height="@dimen/filters_rounded_30sp"
+                        android:background="@drawable/employe_circle_rounded">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:gravity="center"
+                            android:text="Public"
+                            android:textColor="@color/black_font"
+
+                            android:textSize="12sp" />
+
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+
+                        android:id="@+id/DIOLOG_POSTED_TO_LOCLITY"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/filters_rounded_30sp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/employe_circle_rounded">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:gravity="center"
+                            android:text="Locality Pros and Public"
+                            android:textColor="@color/black_font"
+
+                            android:textSize="12sp" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/DIOLOG_POSTED_TO_CITY"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/filters_rounded_30sp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/employe_circle_rounded">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:gravity="center"
+                            android:text="City Pros and Public"
+                            android:textColor="@color/black_font"
+
+                            android:textSize="12sp" />
+
+
+                    </FrameLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <FrameLayout
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+
+
+                <FrameLayout
+                    android:layout_marginLeft="25dp"
+                    android:layout_gravity="bottom"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+
+                    <FrameLayout
+                        android:id="@+id/DIOLOG_POSTED_TO_CLEAR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_gravity="start|center_vertical"
+
+                        android:layout_marginTop="05dp"
+                        android:background="@drawable/reset_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:fontFamily="@font/roboto_bold_first"
+                            android:text="Clear All"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/DIOLOG_POSTED_TO_APPLY"
+                        android:layout_width="105dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginTop="05dp"
+
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/apply_background">
+
+                        <TextView
+                            android:id="@+id/tv_view_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold_first"
+                            android:text="Apply"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+
+                            />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+url : http://localhost:8096/api/Order/SaveOrder
+method : post
+body: 
+
+{
+    "DeliveryDate": "Sat, 28 Mar",
+    "AddressID": 23,
+    "CouponID": 3,
+    "ServiceDate": "Thu, 26 Mar",
+    "PickupTime": "1PM-2PM",
+    "ServiceType": "",
+    "CreatedBy": "1",
+    "ServiceTime": "2PM-3PM",
+    "DeliveryTime": "9AM-10AM",
+    "PickupDate": "Sat, 28 Mar",
+    "IsPaymentSuccess":false,
+    "PaymentMode":"",
+    "PaymentOption":"",
+    "PayTmTransactionID":""
+}
+
+
+url: http://localhost:8096/api/Order/GetOtp
+method:post
+body:
+ {
+ "OrderId":72,
+ "UserId":1,
+ "PaymentOption":"Online",
+ "PayTmTransactionID":"PAYTM0123",
+ "IsPaymentSuccess":true
+ 
+}
+
+
+url : http://localhost:8096/api/Order/VerifyOtp
+method : post
+body:
+
+{
+ "Otp":"4205",
+ "OrderId":72,
+ "UserId":1
+}
+
+url : http://localhost:8096/api/Order/UpdatePayment
+method : post
+body:
+
+{
+ "OrderId":73,
+ "UserId":1,
+ "PaymentOption":"Cash"
+ 
+}

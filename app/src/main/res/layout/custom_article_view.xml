@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:padding="3dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <ImageView
+                android:id="@+id/CUSTOM_ARTICLE_IMAGE"
+                android:layout_width="wrap_content"
+                android:layout_height="132dp"
+                android:maxWidth="170dp"
+                android:minWidth="150dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/download" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="05dp"
+            android:layout_marginTop="135dp"
+            android:orientation="vertical"
+            android:paddingRight="8dp">
+
+
+            <TextView
+                android:id="@+id/CUSTOM_ARTICLE_TITLE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:maxLines="2"
+
+
+                android:text="Metro to supur reality"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/CUSTOM_ARTICLE_DESCRIPTION"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_third"
+                    android:lines="2"
+                    android:paddingRight="3dp"
+                    android:text="House...."
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_ARTICLE_READMOre"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Read More"
+
+                    android:textColor="@color/basic_color"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/CUSTOM_ARTICLE_ADDRES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="New Gurgaon-Faridabad"
+
+
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_ARTICLE_DATE"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Nov 1,2020"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

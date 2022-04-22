@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:background="@drawable/filter_background">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#A8A2A2"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Work Location"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:id="@+id/iv_cancel_9"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+
+                    android:layout_gravity="end">
+
+                    <ImageView
+                        android:id="@+id/iv_six"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+
+                        android:layout_gravity="end|center"
+                        android:src="@drawable/close_icon_search" />
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/filter_padding_20sp"
+                android:paddingRight="@dimen/filter_padding_20sp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/CUSTOM_LOCALITIES_DIOLOG_RECYLCER"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="15dp"
+                android:background="#DDD4D4" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp">
+
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_LOCALITIES_DIOLOG_CLEAR_ALL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:text="Clear All"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_LOCALITIES_DIOLOG_APPLY"
+                    android:layout_width="105dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="05dp"
+
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background">
+
+                    <TextView
+                        android:id="@+id/tv_view_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:text="Apply"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

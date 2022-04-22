@@ -1,0 +1,1179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.nestowl.Fragment.VerifySubmit">
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+        app:cardCornerRadius="30dp"
+        android:id="@+id/id_save_and_continue"
+        android:layout_gravity="bottom"
+
+        app:cardElevation="8dp"
+
+        android:layout_marginBottom="10dp"
+
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="Post Property"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:text="Verification of Property*"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/gas_bill"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Gas Bill"
+
+            />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_gas_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/frm_gas_bill"
+            android:layout_width="165dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_menu_gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="+ Add Photos"
+                android:textColor="#000"
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="05dp"
+                android:layout_marginTop="125dp"
+                android:layout_marginRight="05dp"
+                android:fontFamily="@font/second"
+                android:text="(max limit 5 MB per image)"
+                android:textColor="#000"
+                android:textSize="12sp"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_gas_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_GAS"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/electricity_bill"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Electricity Bill"
+
+            />
+
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_electricity_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_electricity_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_ELECTRCITY"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                tools:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="07dp"
+            android:layout_marginLeft="07dp"
+            android:id="@+id/water_bill_id"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Water Bill"
+
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_water_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_water_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_WATER_BILL"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tax_bill_id"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Tax Bill(Property)"
+
+            />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_tax_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_tax_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_TAX"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:id="@+id/property_maintenance_id"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Property Maintainence Bill"
+
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_property_maintenance_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_property_maintenance_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_MAINTAENACE"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/sewarage_bill_id"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Sewrage Bill"
+
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_sewarage_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_sewarage_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_SEWARGE"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:id="@+id/property_paper_id"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Property Paper"
+
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_property_paper_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/verify_background"
+            android:layout_width="165dp"
+            android:layout_height="190dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_menu_gallery"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Photos"
+
+                />
+            <TextView
+                android:layout_marginTop="125dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/second"
+                android:textColor="#000"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(max limit 5 MB per image)"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_property_paper_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/VERIFY_SUMBIT_DELETE_PROPERTYBILL"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/lightGrey" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Or"
+        android:textColor="#000"
+        android:fontFamily="@font/roboto_bold_first"
+
+        android:layout_marginRight="20dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+
+        />
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/aadhar_card_id"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Aadhar Card Photo"
+
+            />
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnr_aadhar_card_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="26dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select from Gallary"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/adhar_front_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/VERIFY_SUMBIT_DELETE_ADDHAR_FRONT"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:src="@drawable/delete_icon"
+                    android:tint="@color/lightGrey" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Take a Picture"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/adhar_back_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/VERIFY_SUMBIT_DELETE_ADHAR_BACK"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:src="@drawable/delete_icon"
+                    android:tint="@color/lightGrey" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="05dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="06dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/second"
+                    android:text="Front Photo"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="06dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/second"
+                    android:text="Back Photo"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="07dp"
+            android:layout_marginLeft="07dp"
+            android:textColor="@color/black_font"
+            android:id="@+id/two_self_paper_id"
+            android:layout_height="wrap_content"
+            android:text="Two self paper Property in background"
+
+            />
+
+
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_third"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="05dp"
+        android:textColor="@color/brown_color"
+        android:layout_height="wrap_content"
+        android:text="View Sample"
+
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr_two_self_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="26dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select from Gallary"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/two_self_front_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/VERIFY_SUMBIT_DELETE_SELF_FRONT"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:src="@drawable/delete_icon"
+                    android:tint="@color/lightGrey" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Take a Picture"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/two_self_back_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/VERIFY_SUMBIT_DELETE_SELF_BACK"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:src="@drawable/delete_icon"
+                    android:tint="@color/lightGrey" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="05dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="06dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/second"
+                    android:text="Front Photo"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="06dp"
+                android:layout_weight="1"
+                android:background="@drawable/verify_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/second"
+                    android:text="Back Photo"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Note:-"
+        android:textColor="#000"
+        android:fontFamily="@font/roboto_bold_first"
+
+        android:layout_marginRight="20dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/filter_24sp"
+        android:text="As a buyer you would want verified property"
+        android:textColor="#000"
+
+        android:fontFamily="@font/roboto_third"
+        android:textSize="16sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Incase you can's verify it now."
+            android:textColor="#000"
+
+            android:fontFamily="@font/roboto_third"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/POST_PRO_VARIFY_SUMBIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="02dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_third"
+
+            android:text="Verify Later"
+            android:textColor="@color/brown_color"
+
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

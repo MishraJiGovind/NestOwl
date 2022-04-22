@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.SignUpPhotos">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        <FrameLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/left_arrow"
+                    android:layout_width="18dp"
+                    android:id="@+id/EDIT_PROFILE_BACK"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="18dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text="Photos"
+                        android:textSize="20sp"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+    android:layout_marginTop="55dp"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="25dp"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/first"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:text="Office photo
+"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+
+        android:fontFamily="@font/first"
+        android:textColor="@color/brown_color"
+        android:layout_height="wrap_content"
+        android:text="Min 5 and Max 10"
+        />
+</LinearLayout>
+
+
+            <LinearLayout
+
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp">
+
+
+                        <FrameLayout
+                            android:background="@drawable/select_from_gallary_background"
+                            android:layout_marginRight="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/PROFILE_PHOTO_IMAGE_HIDE_OFFICE"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_gallery" />
+
+                            <ImageView
+                                android:id="@+id/office_photo_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:id="@+id/photos_recycler_view"
+                                android:layout_height="match_parent">
+
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+                            <!--
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/one_up"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/two_down"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/three_up"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/four_down"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/five_up"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/six_down"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/saven_up"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/eight_down"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/nine_up"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_weight="1"
+                                        android:id="@+id/ten_down"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"/>
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+-->
+                            <TextView
+                                android:textSize="12sp"
+                                android:layout_gravity="center_horizontal|center"
+                                android:textColor="@color/black_color"
+                                android:layout_marginTop="40dp"
+                                android:visibility="gone"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select from Gallary"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_marginTop="05dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/linear_gas_bill"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp">
+                        <FrameLayout
+                            android:layout_marginRight="06dp"
+                            android:layout_weight="1"
+                            android:id="@+id/add_photos_office_photos"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/verify_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/second"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+ Add Photos"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/first"
+                        android:layout_marginTop="30dp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content"
+                        android:text="Profile photo"
+                        />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="26dp">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_from_gallary_background">
+
+                    <ImageView
+                        android:id="@+id/profile_photo_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/PROFILE_PHOTO_PROFILE_DELETE"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:padding="5dp"
+                        android:tint="@color/lightGrey"
+                        app:srcCompat="@drawable/delete_icon" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:text="Select from Gallary"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_marginTop="05dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp">
+                        <FrameLayout
+                            android:layout_marginRight="06dp"
+                            android:layout_weight="1"
+                            android:id="@+id/profile_add_photos"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/verify_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/second"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+ Add Photos"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/first"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="Logo photo
+"
+                />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="26dp">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_from_gallary_background">
+
+                    <ImageView
+                        android:id="@+id/logo_photo_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fitsSystemWindows="true"
+                        android:focusable="true"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/PROFILE_PHOTO_LOGO_DELETE"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:padding="5dp"
+                        android:tint="@color/lightGrey"
+                        app:srcCompat="@drawable/delete_icon" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:text="Select from Gallary"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="05dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <FrameLayout
+                    android:layout_marginRight="06dp"
+                    android:layout_weight="1"
+                    android:id="@+id/logo_add_photos"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/verify_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ Add Photos"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/first"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="Cover photo
+"
+                />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="26dp">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_from_gallary_background">
+
+                    <ImageView
+                        android:id="@+id/cover_photo_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/PROFILE_PHOTO_COVER_DELETE"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:padding="5dp"
+                        android:tint="@color/lightGrey"
+                        app:srcCompat="@drawable/delete_icon" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_menu_gallery" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:text="Select from Gallary"
+                        android:textColor="@color/black_color"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="05dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <FrameLayout
+                    android:layout_marginRight="06dp"
+                    android:layout_weight="1"
+                    android:id="@+id/cover_photo_add_photos"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/verify_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ Add Photos"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/card_verification"
+
+            app:cardElevation="8dp"
+
+            android:layout_marginBottom="10dp"
+
+            app:cardBackgroundColor="@color/brown_two"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+
+
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textColor="#ffff"
+                android:text="APPLY FOR VERIFICATION"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+
+</FrameLayout>

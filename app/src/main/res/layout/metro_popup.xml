@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Distance from Property"
+                    android:textColor="#8A8888"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_29"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/close_icon_multipul" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#E6E0E0" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RadioGroup
+                    android:layout_marginTop="20dp"
+                    android:paddingRight="17dp"
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.5 Km"
+                        android:layout_marginTop="07dp"
+                        android:layoutDirection="rtl"
+                        android:textDirection="ltr"
+                        android:id="@+id/one_half_id_km"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textSize="16sp"
+
+                        />
+
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 Km"
+                        android:layout_marginTop="07dp"
+
+                        android:layoutDirection="rtl"
+                        android:textDirection="ltr"
+                        android:id="@+id/one_id_km"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textSize="16sp"
+
+                        />
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2 Km"
+                        android:layout_marginTop="07dp"
+                        android:layoutDirection="rtl"
+                        android:textDirection="ltr"
+                        android:id="@+id/two_id_km"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textSize="16sp"
+
+                        />
+
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3 Km"
+                        android:layout_marginTop="07dp"
+                        android:layoutDirection="rtl"
+                        android:textDirection="ltr"
+                        android:textColor="#000"
+                        android:id="@+id/three_id_km"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textSize="16sp"
+
+                        />
+
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="More than 3 Km"
+                        android:layout_marginTop="07dp"
+                        android:layoutDirection="rtl"
+                        android:textDirection="ltr"
+                        android:textColor="#000"
+                        android:id="@+id/more_than_id_km"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textSize="16sp"
+
+                        />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="05dp"
+                android:background="#E6E0E0" />
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="25dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/card_submit_id"
+                app:cardBackgroundColor="@color/brown_two"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="#ffff"
+                    android:text="Submit"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

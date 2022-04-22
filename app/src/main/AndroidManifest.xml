@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nestowl.brokerapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/app_logo" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/brown" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.nestowl.brokerapp.FAQ"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.Notification"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.ClintSumbitCongo"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.HowItWorks"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.DealSumbit"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.Clints"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.Payments"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.PaymentSuccess"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.OfficePhotos"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.DealClosed"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.AboutUs"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.FeedBack"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.Contact"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.Articles"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.LeadBoastPlan"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.BuyPlan"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.SubscriptionKnowMore"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.VarifySumbitWarn"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.ViewContact"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.LeadsPropertyShowMore"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReadMoreProperty"
+            android:exported="false" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReadArticles"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.nestowl.brodcast.OtpResponseReciver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.nestowl.brokerapp.InterestedPropertyThirdUserSecond" />
+        <activity android:name="com.nestowl.brokerapp.PostRequirementFrontViewThird" />
+        <activity android:name="com.nestowl.brokerapp.PostRequirementFrontViewSecond" />
+        <activity android:name="com.nestowl.brokerapp.QueryFinalScreenThird" />
+        <activity android:name="com.nestowl.brokerapp.QueryFinalScreenSecond" />
+        <activity android:name="com.nestowl.brokerapp.NestProfessionalFourthDesign" />
+        <activity android:name="com.nestowl.brokerapp.NestProfessionalThirdDesign" />
+        <activity android:name="com.nestowl.brokerapp.NestProfessionalSecondDesign" />
+        <activity android:name="com.nestowl.brokerapp.InterestedPropertyThirdUser">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.nestowl.in"
+                    android:pathPrefix="/property"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nestowl.brokerapp.PropertySelectedSecondDoneInventory" />
+        <activity android:name="com.nestowl.brokerapp.InventoryThirdLast" />
+        <activity android:name="com.nestowl.brokerapp.InvetoryThirdFirst" />
+        <activity android:name="com.nestowl.brokerapp.InventoryThird" />
+        <activity android:name="com.nestowl.brokerapp.InventorySecondSecond" />
+        <activity android:name="com.nestowl.brokerapp.InventorySecond" />
+        <activity android:name="com.nestowl.brokerapp.PropertySelcectedThirdInventory" />
+        <activity android:name="com.nestowl.brokerapp.InventoryFirstSecond" />
+        <activity android:name="com.nestowl.brokerapp.InventoryFirst" />
+        <activity android:name="com.nestowl.brokerapp.PropertyOneSecondFirstInventory" />
+        <activity android:name="com.nestowl.brokerapp.PropertyOneFirstInventory" />
+        <activity android:name="com.nestowl.brokerapp.FrontViewMainSecond" />
+        <activity android:name="com.nestowl.brokerapp.KnowMoreFive" />
+        <activity android:name="com.nestowl.brokerapp.KnowMoreFour" />
+        <activity android:name="com.nestowl.brokerapp.KnowMoreThird" />
+        <activity android:name="com.nestowl.brokerapp.KnowMoreSecond" />
+        <activity android:name="com.nestowl.brokerapp.KnowMoreFirst" />
+        <activity android:name="com.nestowl.brokerapp.InterestedCardThird" />
+        <activity android:name="com.nestowl.brokerapp.SelectModePostRequirement" />
+        <activity android:name="com.nestowl.brokerapp.SelectPackagePostRequirement" />
+        <activity android:name="com.nestowl.brokerapp.SelectPackageSecondPostProperty" />
+        <activity android:name="com.nestowl.brokerapp.SelectOptionMode" />
+        <activity android:name="com.nestowl.brokerapp.PropertiesPlan" />
+        <activity android:name="com.nestowl.brokerapp.PostRequirementFrontView" />
+        <activity android:name="com.nestowl.brokerapp.ProfileBrokerCongratulationScreen" />
+        <activity android:name="com.nestowl.brokerapp.ProfileBrokerEarnMore" />
+        <activity android:name="com.nestowl.brokerapp.SubscriptionPlan" />
+        <activity android:name="com.nestowl.brokerapp.A3FourScreen" />
+        <activity android:name="com.nestowl.brokerapp.A3ThirdScreen" />
+        <activity android:name="com.nestowl.brokerapp.A3SecondScreen" />
+        <activity android:name="com.nestowl.brokerapp.A2FourScreen" />
+        <activity android:name="com.nestowl.brokerapp.A2ThirdScreen" />
+        <activity android:name="com.nestowl.brokerapp.A2SecondQuery" />
+        <activity android:name="com.nestowl.brokerapp.QueryPropertySelectedScreen" />
+        <activity android:name="com.nestowl.brokerapp.QueryShowAll" />
+        <activity android:name="com.nestowl.brokerapp.QueryBrokerSecondQueryLastScreen" />
+        <activity android:name="com.nestowl.brokerapp.QueryBrokerSecondSecondScreen" />
+        <activity android:name="com.nestowl.brokerapp.FrontViewQuerySecond" />
+        <activity android:name="com.nestowl.brokerapp.FrontViewQueryFirst" />
+        <activity android:name="com.nestowl.brokerapp.ProfileEarnMore" />
+        <activity android:name="com.nestowl.brokerapp.SelectPinCodeSubmit" />
+        <activity android:name="com.nestowl.brokerapp.QueryScreenMakeBrokerThird" />
+        <activity android:name="com.nestowl.brokerapp.QueryBrokerSecondImageSection" />
+        <activity android:name="com.nestowl.brokerapp.QueryBrokerSecondScreen" />
+        <activity android:name="com.nestowl.brokerapp.QueryFinalScreen" />
+        <activity android:name="com.nestowl.brokerapp.QueryBrokerFirstScreen" />
+        <activity android:name="com.nestowl.brokerapp.PartnerRequestThird" />
+        <activity android:name="com.nestowl.brokerapp.PartnerRequestSecond" />
+        <activity android:name="com.nestowl.brokerapp.PartnerRequestLiveCard" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickLastCardBroker" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickFiveCardBroker" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickBrokerThirdCard" />
+        <activity android:name="com.nestowl.brokerapp.PartnerRequirementSecondCard" />
+        <activity android:name="com.nestowl.brokerapp.PartnerRequirementFirstCard" />
+        <activity android:name="com.nestowl.brokerapp.LeadFive" />
+        <activity android:name="com.nestowl.brokerapp.LeadFourScreen" />
+        <activity android:name="com.nestowl.brokerapp.LeadThirdCard" />
+        <activity android:name="com.nestowl.brokerapp.LeadSecondCard" />
+        <activity android:name="com.nestowl.brokerapp.LeadFirstCardOpen" />
+        <activity android:name="com.nestowl.brokerapp.InterestedPropertySecondName" />
+        <activity android:name="com.nestowl.brokerapp.SignUpEditScreen" />
+        <activity android:name="com.nestowl.brokerapp.PincodeSearch" />
+        <activity android:name="com.nestowl.brokerapp.LocalitySearch" />
+        <activity android:name="com.nestowl.brokerapp.CitySearch" />
+        <activity android:name="com.nestowl.brokerapp.NestPros" />
+        <activity android:name="com.nestowl.brokerapp.SearchNestPro" />
+        <activity android:name="com.nestowl.brokerapp.SelectWorkingLocalities" />
+        <activity android:name="com.nestowl.brokerapp.SignUpLastScreenCongratuilation" />
+        <activity android:name="com.nestowl.brokerapp.SignUpPhotos" />
+        <activity android:name="com.nestowl.brokerapp.SignUpVerification" />
+        <activity android:name="com.nestowl.brokerapp.SignUpKnowMoreDoubleLeads" />
+        <activity android:name="com.nestowl.brokerapp.SignUpKnowMore" />
+        <activity android:name="com.nestowl.brokerapp.SignUpEarnMoney" />
+        <activity android:name="com.nestowl.brokerapp.SignUpServiceCharges" />
+        <activity android:name="com.nestowl.brokerapp.SignUpWorkDescription" />
+        <activity android:name="com.nestowl.brokerapp.SignUpOfficeDetails" />
+        <activity android:name="com.nestowl.brokerapp.SignUpPersonalDetails" />
+        <activity android:name="com.nestowl.brokerapp.EditSignUpForm" />
+        <activity android:name="com.nestowl.brokerapp.SavedProperties" />
+        <activity android:name="com.nestowl.brokerapp.ReadMoreScreen" />
+        <activity android:name="com.nestowl.brokerapp.ViewAllBhkProfile" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickDealClosedSecond" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickDealClosedFirst" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickThirdSeller" />
+        <activity android:name="com.nestowl.brokerapp.GreekTickSellerSecond" />
+        <activity android:name="com.nestowl.brokerapp.GreenTickSellerOngoing" />
+        <activity android:name="com.nestowl.brokerapp.InterestedProperty" />
+        <activity android:name="com.nestowl.brokerapp.BrokerSubmitProfileRequirement" />
+        <activity android:name="com.nestowl.brokerapp.SaveMoreClickSeller" />
+        <activity android:name="com.nestowl.brokerapp.SavedSearchProfile" />
+        <activity android:name="com.nestowl.brokerapp.RecentSearch" />
+        <activity android:name="com.nestowl.brokerapp.SavedListing" />
+        <activity android:name="com.nestowl.brokerapp.SahilReviewSubmitProperty" />
+        <activity android:name="com.nestowl.brokerapp.SavedSearchListing" />
+        <activity android:name="com.nestowl.brokerapp.RecentEnquiriesAllListing" />
+        <activity android:name="com.nestowl.brokerapp.ViewDetailsScreenGreenThird" />
+        <activity android:name="com.nestowl.brokerapp.ViewDetailsScreenDealClosedGreenSecondd" />
+        <activity android:name="com.nestowl.brokerapp.ViewDetailsScreenDealClosesGreen" />
+        <activity android:name="com.nestowl.brokerapp.ViewDetailsOpenScreenSecond" />
+        <activity android:name="com.nestowl.brokerapp.VeiwDetailsOpenScreen" />
+        <activity android:name="com.nestowl.brokerapp.ViewProfileAkshitViewLeads" />
+        <activity android:name="com.nestowl.brokerapp.MakeOfferAllQueryPages" />
+        <activity android:name="com.nestowl.brokerapp.StartOfferCongratulationScreen" />
+        <activity android:name="com.nestowl.brokerapp.MakeOfferCongratulationScreen" />
+        <activity android:name="com.nestowl.brokerapp.StartOfferQueryThirdScreen" />
+        <activity android:name="com.nestowl.brokerapp.StartOfferSecondQueryScreens" />
+        <activity android:name="com.nestowl.brokerapp.StartOfferQueryIntro" />
+        <activity android:name="com.nestowl.brokerapp.ArmyLastCongratulationScree" />
+        <activity android:name="com.nestowl.brokerapp.ContentArmyPageSecondLast" />
+        <activity android:name="com.nestowl.brokerapp.ArmyFormSecondStep" />
+        <activity android:name="com.nestowl.brokerapp.IndianHerosForm" />
+        <activity android:name="com.nestowl.brokerapp.ArmyAfterIntroScreens" />
+        <activity android:name="com.nestowl.brokerapp.IntroArmyQuery" />
+        <activity android:name="com.nestowl.brokerapp.QueryScreenThird" />
+        <activity android:name="com.nestowl.brokerapp.QueryPagesSecondMakeOffer" />
+        <activity android:name="com.nestowl.brokerapp.QueryMakeOfferFirstPages" />
+        <activity android:name="com.nestowl.brokerapp.CongratulationPostReq" />
+        <activity android:name="com.nestowl.brokerapp.PostPropertyModeSelect" />
+        <activity android:name="com.nestowl.brokerapp.FloorDetails" />
+        <activity android:name="com.nestowl.brokerapp.HandleActivity" />
+        <activity android:name="com.nestowl.brokerapp.PostRequirements" />
+        <activity android:name="com.nestowl.brokerapp.IntroScreenPostRequirement" />
+        <activity android:name="com.nestowl.brokerapp.PostRequirementForm" />
+        <activity android:name="com.nestowl.brokerapp.SelectPackagePostRqrmnt" />
+        <activity android:name="com.nestowl.brokerapp.PostPropertyFormPrimary" />
+        <activity android:name="com.nestowl.brokerapp.PhotosScheduleAct" />
+        <activity android:name="com.nestowl.brokerapp.AmentiesActCopy" />
+        <activity android:name="com.nestowl.brokerapp.PricingActivity" />
+        <activity android:name="com.nestowl.brokerapp.PropertyFeatures" />
+        <activity android:name="com.nestowl.brokerapp.BasicDetails" />
+        <activity android:name="com.nestowl.brokerapp.EditingScreenAll" />
+        <activity android:name="com.nestowl.brokerapp.FurnishedStatus" />
+        <activity android:name="com.nestowl.brokerapp.SelectPackage" />
+        <activity android:name="com.nestowl.brokerapp.IntroScreenPostProperty" />
+        <activity android:name="com.nestowl.brokerapp.NearbyPlaces" />
+        <activity android:name="com.nestowl.brokerapp.SocietyBuildingUspShowAll" />
+        <activity android:name="com.nestowl.brokerapp.ShowallPropertyFeatures" />
+        <activity android:name="com.nestowl.brokerapp.ShowAllAmenties" />
+        <activity android:name="com.nestowl.brokerapp.CongratulationEmpty" />
+        <activity android:name="com.nestowl.brokerapp.PinCodeClass" />
+        <activity android:name="com.nestowl.brokerapp.LocalitySearchClass" />
+        <activity android:name="com.nestowl.brokerapp.EnterYourCityNameSearch" />
+        <activity android:name="com.nestowl.brokerapp.ProjectSocietySearchClass" />
+        <activity android:name="com.nestowl.brokerapp.PlanBasicActivity" />
+        <activity
+            android:name="com.nestowl.brokerapp.ChatList"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.Chating"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nestowl.brokerapp.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.nestowl.brokerapp.IntroActivityPostPropertyForm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ViewAllOfficePhotos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReadDisclaimer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ViewAllActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SalePropertiesSecondForNestOwners"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.nestowl.brokerapp.EmptyActivity" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReviewMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.nestowl.Fragment.PropertiesOfferedSecond" />
+        <activity
+            android:name="com.nestowl.brokerapp.ScreenSixteenDetailsPage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.NestOwnersSixteen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReraActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SahilDahiyaReviews"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.OwnerPlans"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SaveMoreActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SaveMoreSeeifEligible"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SecondDealOffer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.NewProjectHomeBuyer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.FiltersScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SearchViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReviewBuyerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.ReviewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.PostRequirementSkip"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.StartOfferDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.MakeOfferActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.StartAnOffer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.PostPropertyActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.AkshitActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.BuyerDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.NestProSecondProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.NestProDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SaleProperties"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.AmentiesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.PropertiesBhkActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.HomeScreenSeller"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.BuyerSellerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SahilDahiyaTwo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SahilDahiyaCircle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.HomeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nestowl.brokerapp.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nestowl.brokerapp.IntroActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.nestowl.brokerapp.PlanBasicActivityEdit" />
+    </application>
+
+</manifest>

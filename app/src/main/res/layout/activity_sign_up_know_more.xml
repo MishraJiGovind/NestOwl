@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.SignUpKnowMore">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/EDIT_PROFILE_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Benefits to join munafa hero club"
+                            android:textSize="16sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Brief to Join Munafa hero club"
+            android:textColor="#000"
+            android:fontFamily="@font/second"
+
+            android:textSize="14sp"
+
+            />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="@dimen/icon_home_padding_17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/icon_home_padding_17dp" />
+
+
+            <TextView
+                android:layout_marginLeft="07dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More client leads, more money
+"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="13sp"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="@dimen/icon_home_padding_17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/icon_home_padding_17dp" />
+
+
+            <TextView
+                android:layout_marginLeft="07dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extra value addition in society
+
+"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="13sp"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="@dimen/icon_home_padding_17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/icon_home_padding_17dp" />
+
+
+            <TextView
+                android:layout_marginLeft="07dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Get a badge of (Serve our heros) on Profile get ahead of others"
+                android:textColor="#000"
+                android:fontFamily="@font/second"
+
+                android:textSize="13sp"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="@dimen/icon_home_padding_17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/icon_home_padding_17dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="07dp"
+                android:fontFamily="@font/second"
+                android:text=" Will improve image of our broker society which will lead to more work make our society proud
+"
+                android:textColor="#000"
+
+                android:textSize="13sp"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+        app:cardCornerRadius="30dp"
+        android:id="@+id/PROFILE_CONTACT_US_SUMBIT"
+
+        app:cardElevation="8dp"
+        android:layout_gravity="bottom"
+
+        android:layout_marginBottom="10dp"
+
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="CONTINUE"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
+
+</LinearLayout>

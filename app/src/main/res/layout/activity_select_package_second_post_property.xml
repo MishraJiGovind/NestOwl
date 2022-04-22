@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.SelectPackageSecondPostProperty">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18sp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Select Package"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/post_property_padding_20dp"
+            android:layout_marginLeft="@dimen/post_property_padding_20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_bold_first"
+                android:text="Select a listing package to Post Property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:paddingTop="15dp"
+                android:id="@+id/frame_select_package"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shadow_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <TextView
+                    android:id="@+id/PACKAGE_REMAIN_FREE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginLeft="0dp"
+                    android:text="TextView"
+                    android:textColor="@color/brown" />
+
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:layout_height="25dp" />
+
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select Package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/second"
+                    android:text="1 Free Listing Remaining"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/frame_premiumm"
+                android:background="@drawable/shadow_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <TextView
+                    android:id="@+id/PACKAGE_REMAIN_BASIC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:text="TextView"
+                    android:textColor="@color/brown" />
+
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:layout_height="25dp" />
+
+
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select Package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/second"
+                    android:text="2 Listing Type-Basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/editing_open"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shadow_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <TextView
+                    android:id="@+id/PACKAGE_REMAIN_BASIC_PLUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:text="TextView"
+                    android:textColor="@color/brown" />
+
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:layout_height="25dp" />
+
+
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select Package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/second"
+                    android:text="3 Listing Type-Basic Plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/four_card_s"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shadow_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <TextView
+                    android:id="@+id/PACKAGE_REMAIN_FEATURED"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:text="TextView"
+                    android:textColor="@color/brown" />
+
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:layout_height="25dp" />
+
+
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select Package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/second"
+                    android:text="4 Listing Type-Featured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/five_card"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shadow_home_page"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/PACKAGE_REMAIN_PREMIUM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:text="TextView"
+                    android:textColor="@color/brown" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/arrow_right" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="Select Package"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/second"
+                    android:text="5 Listing Type-Premium"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+</LinearLayout>

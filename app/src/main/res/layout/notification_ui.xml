@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NOTIFICATIONS_MAIN"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/NOTIFICATIONS_TIME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="8 min"
+        android:textColor="@color/black_color"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NOTIFICATIONS_TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Title is here"
+        android:textColor="@color/brown"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NOTIFICATIONS_TIME"
+        tools:singleLine="true" />
+
+    <TextView
+        android:id="@+id/NOTIFICATIONS_BODY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:singleLine="false"
+        android:text="This the body text"
+        android:textColor="@color/black_color"
+        app:layout_constraintStart_toStartOf="@+id/NOTIFICATIONS_TITLE"
+        app:layout_constraintTop_toBottomOf="@+id/NOTIFICATIONS_TITLE" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/NOTIFICATIONS_IMAGE_MAIN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NOTIFICATIONS_TIME">
+
+        <ImageView
+            android:id="@+id/NOTIFICATIONS_IMAGE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/profile_img_sahil" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView89"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NOTIFICATIONS_BODY" />
+</androidx.constraintlayout.widget.ConstraintLayout>

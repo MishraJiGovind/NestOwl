@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <HorizontalScrollView
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/filter_13sp"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Beds"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Wardrobe"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Gycer"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Sofa"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/filter_13sp"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Wasing Machine"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Stove"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Chimeny"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Dining Table"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/filter_13sp"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Curtains"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Modular Kitchen"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Water Purifier"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Lift"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+    <HorizontalScrollView
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/filter_13sp"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Power Backup"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Wi-Fi"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/employe_circle_rounded"
+                android:layout_height="@dimen/filters_rounded_30sp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_height="wrap_content"
+                    android:text="Gymanasium"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>

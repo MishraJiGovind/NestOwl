@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT OPTION"
+                    />
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:src="@drawable/keyboard_backspace_black"
+                    android:layout_width="20dp"
+
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_height="20dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/first"
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:text="POST PROPERTY TO"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PUBLIC (On Website/App)"
+                    android:textColor="#000"
+
+                    android:id="@+id/lower_basement_text"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/second"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rd_similar"
+                    android:buttonTint="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                android:layout_marginRight="@dimen/post_property_padding_20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NEST PROFESSIONAL"
+                    android:textColor="#000"
+
+                    android:layout_weight="1"
+                    android:fontFamily="@font/second"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:buttonTint="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Switch to Owner Mode"
+                    />
+                <ImageView
+                    android:id="@+id/iv6"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <LinearLayout
+                android:layout_marginTop="35dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_third"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+
+            />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:background="@drawable/employe_circle_rounded"
+        android:layout_height="@dimen/filters_rounded_30sp">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/roboto_third"
+            android:textColor="@color/black_font"
+            android:layout_height="wrap_content"
+            android:text="No"
+
+            />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:src="@drawable/info_icon"
+        android:layout_width="30dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_height="30dp" />
+
+
+</FrameLayout>
+            </LinearLayout>
+
+
+
+
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="end|center_vertical"
+
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:id="@+id/tv_view_profile"
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

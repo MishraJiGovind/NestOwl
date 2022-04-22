@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/home_screen_two_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Deal Closed"
+                    />
+                <ImageView
+                    android:id="@+id/iv36"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#DDD4D4" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:text="Your Review has been submitted to Nest Pro for Confirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:id="@+id/lnd_yes"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/yes_frame"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:layout_height="@dimen/filters_rounded_30sp">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+
+                        />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/no_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:layout_height="@dimen/filters_rounded_30sp">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/roboto_third"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deal closed"
+
+                />
+
+
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="55dp"
+                android:layout_gravity="bottom"
+                app:cardBackgroundColor="@color/brown_two"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/get_started"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textSize="18sp"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

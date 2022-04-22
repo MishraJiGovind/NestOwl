@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.BuyerSellerActivity">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:id="@+id/ARTICLES_BACK"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/keyboard_backspace_black"
+            android:layout_height="25dp" />
+        <LinearLayout
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:id="@+id/buyer_wasted"
+                android:fontFamily="@font/roboto_bold_first"
+
+                android:textStyle="bold"
+                android:text="I want to register as"
+
+                />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="#A8A3A3"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You can shift to buyer seller mode as per your needs."
+                    />
+
+            </LinearLayout>
+
+
+
+            <FrameLayout
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shadow_for_buyer_and_saller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:id="@+id/buyer"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buyer"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_marginBottom="08dp"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="02dp"
+                            android:fontFamily="@font/roboto_five"
+                            android:layout_height="wrap_content"
+                            android:text="Get Unlimited Verification Listings\nOn Go"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+
+
+                            />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/seller_for"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_width="39dp"
+                        android:layout_height="39dp" />
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginTop="15dp"
+                android:id="@+id/seller"
+                android:background="@drawable/shadow_for_buyer_and_saller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seller"
+                            android:textStyle="bold"
+                            android:layout_marginTop="12dp"
+
+                            android:textColor="#000"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Post Publically or to Locally\nNest Professionals"
+                            android:textColor="#000"
+                            android:fontFamily="@font/roboto_five"
+                            android:layout_marginTop="02dp"
+                            android:layout_marginBottom="08dp"
+                            android:textSize="14sp"
+
+
+                            />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/buyer_for"
+                        android:layout_gravity="end|center"
+                        android:layout_width="39dp"
+                        android:layout_height="39dp" />
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+<!--
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="35dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/brown_two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="#ffff"
+                    android:text="Continue"
+                    />
+
+            </androidx.cardview.widget.CardView>
+-->
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

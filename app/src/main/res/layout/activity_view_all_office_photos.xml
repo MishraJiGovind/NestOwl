@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nestowl.brokerapp.ViewAllOfficePhotos">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="10 Photos"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="end|center_vertical"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18sp"
+                        android:id="@+id/office_photos"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="08dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Office Photo"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <FrameLayout
+                android:background="@drawable/chat_background"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="45dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/chat_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="@color/brown_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enquiry Now"
+
+                    />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="05dp"
+                android:background="@drawable/contact_builder"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="45dp">
+                <TextView
+                    android:id="@+id/tv_contact_builder"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/second"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Offer"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/background_image_personal"
+                    android:layout_height="220dp">
+
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/background_image_personal"
+                    android:layout_height="220dp">
+
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/background_image_personal"
+                    android:layout_height="150dp">
+
+
+
+                </ImageView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.A2ThirdScreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Property Two"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_weight="1"
+        android:id="@+id/scroll"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+
+                android:layout_height="wrap_content"
+                android:text="Extra offering for you Sir/Madam"
+                />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"
+                    android:text="Local Facility"
+                    />
+                <RadioGroup
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black_color"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black_color"
+                        android:text="Yes"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_third"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black_color"
+
+                        android:textColor="@color/black_color"
+                        android:text="No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+                </RadioGroup>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"
+                    android:text="Client Verification"
+                    />
+                <RadioGroup
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black_color"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black_color"
+                        android:text="Yes"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_third"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black_color"
+
+                        android:textColor="@color/black_color"
+                        android:text="No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"
+                    android:text="Pick and Drop Facility within City"
+                    />
+                <RadioGroup
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black_color"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black_color"
+                        android:text="Yes"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_third"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black_color"
+
+                        android:textColor="@color/black_color"
+                        android:text="No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"
+                    android:text="Proper document submission with ent to end assistance"
+                    />
+                <RadioGroup
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black_color"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black_color"
+                        android:text="Yes"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_third"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black_color"
+
+                        android:textColor="@color/black_color"
+                        android:text="No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"
+                    android:text="Pick and drop facilty within city"
+                    />
+                <RadioGroup
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <RadioButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black_color"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black_color"
+                        android:text="Yes"
+                        android:fontFamily="@font/roboto_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_third"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black_color"
+
+                        android:textColor="@color/black_color"
+                        android:text="No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/first"
+                android:layout_marginTop="15dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                />
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                android:background="@drawable/query_last_note"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="06dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginTop="03dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+
+                            <EditText
+                                android:layout_gravity="center_vertical"
+                                android:textColor="#000"
+                                android:layout_marginLeft="05dp"
+                                android:gravity="start"
+                                android:textSize="12sp"
+                                android:background="@null"
+                                android:backgroundTint="@null"
+                                android:textAlignment="viewStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="We will be gold to serve you (owner name) choose us by sit back and just relex, everything will be handled by us from document verification, client verification to final document and payment required destination and enjoy hurdle free smooth ride. We will always be there till the end of the deal and for future requirements too."/>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                android:visibility="gone"
+
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_bold_first"
+                android:layout_marginTop="15dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <EditText
+                        android:layout_marginRight="05dp"
+                        android:layout_marginLeft="05dp"
+                        android:background="@null"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Your contact detail will be shared only if Owner/Agent offer."
+                        android:backgroundTint="@null"
+                        android:textColorHint="@color/color_edit_text"
+
+                        android:fontFamily="@font/second"
+                        android:textSize="16sp"
+
+                        />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                android:fontFamily="@font/roboto_five"
+                android:layout_marginTop="25dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="Thanks"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                android:fontFamily="@font/roboto_five"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="(Broker Name)"
+                />
+
+
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+
+                    android:text="Attach this"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_marginLeft="10dp"
+
+                    android:text="Edit and write Yourself"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_submit"
+        android:visibility="gone"
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+        app:cardElevation="8dp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            android:id="@+id/tv_next_make_offer"
+            android:layout_marginBottom="@dimen/dimen_bottom_10sp"
+            android:text="Submit"
+            android:fontFamily="@font/first"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

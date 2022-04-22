@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CUSTOM_LEADS_AD"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:background="@drawable/nest_card_back"
+        android:maxWidth="350dp"
+        android:minWidth="300dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+
+            android:id="@+id/CUSTOM_LEADS_AD_BG"
+            android:layout_width="139dp"
+            android:layout_height="135dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/doctor_icon">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEADS_AD_NAME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="05dp"
+                        android:fontFamily="@font/roboto_bold_first"
+
+                        android:text="Hello Sahil"
+                        android:textColor="#000"
+
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEADS_AD_T1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="02dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="We Somehow Know "
+                        android:textColor="#000"
+
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEADS_AD_T2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="02dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="That Everything you touch"
+                        android:textColor="#000"
+
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEADS_AD_T3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="02dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="Turns to Sold"
+                        android:textColor="#000"
+
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CUSTOM_LEDS_PROPERTY"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nest_card_back"
+        android:visibility="gone"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="05dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/CUSTOM_LEDS_PROPERTY_DP"
+            android:layout_width="105dp"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/background_image_personal" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="07dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/CUSTOM_LEDS_PROPERTY_NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="Aman"
+                android:textColor="@color/black_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_LEDS_PROPERTY_DATE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/second"
+                android:text="17,oct,2021"
+                android:textColor="@color/black_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_LEDS_PROPERTY_STATUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/second"
+                android:text="BUYER"
+                android:textColor="@color/black_color"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_LEDS_PROPERTY_DOCTOR_FRAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:background="@drawable/lead_unlock_alert">
+
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEDS_PROPERTY_DOCTOR_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="DOCTOR"
+                        android:textColor="@color/black_color"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/CUSTOM_LEDS_PROPERTY_SECOND_FRAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/CUSTOM_LEDS_PROPERTY_SECEND_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="07dp"
+                        android:layout_marginRight="07dp"
+                        android:fontFamily="@font/second"
+
+                        android:text="SEOND DEAL"
+                        android:textColor="@color/black_color"
+                        android:textSize="13sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/CUSTOM_LEDS_PROPERTY_BHK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="2 BHK"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:background="#A7A6A6" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_LEDS_PROPERTY_ADDRESSS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Palam Gurgaon"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/CUSTOM_LEDS_PROPERTY_BUDGET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="98dp"
+            android:fontFamily="@font/roboto_third"
+            android:text="BUDGET  :₹ 2.2 Crore"
+            android:textColor="@color/black_color"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:id="@+id/CUSTOM_LEDS_PROPERTY_SEE_DETAILS"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="05dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/contact_builder">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+
+                android:fontFamily="@font/sort_btn_font"
+                android:text="See Details"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_profile_offer_12sp"
+
+                />
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/CUSTOM_LEADS_BROKER"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:background="@drawable/nest_card_back"
+        android:visibility="gone"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="05dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="07dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/CUSTOM_LEADS_BROKER_NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:text="Aman"
+                android:textColor="@color/black_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_LEADS_BROKER_DATE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/second"
+                android:text="17,oct,2021"
+                android:textColor="@color/black_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/CUSTOM_LEADS_BROKER_STATUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/second"
+                android:text="BUYER"
+                android:textColor="@color/black_color"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:id="@+id/CUSTOM_LEADS_BROKER_DOCTOR_FRAME"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/lead_unlock_alert"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/CUSTOM_LEADS_BROKER_DOCTOR_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/second"
+
+                    android:text="DOCTOR"
+                    android:textColor="@color/black_color"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false">
+
+                <ImageView
+                    android:id="@+id/CUSTOM_LEADS_BROKER_DP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/background_login_image" />
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/CUSTOM_LEADS_BROKER_BHK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="2 BHK"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:background="#A7A6A6" />
+
+                <TextView
+                    android:id="@+id/CUSTOM_LEADS_BROKER_ADDRESS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Palam Gurgaon"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/CUSTOM_LEADS_BROKER_BUDGET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/roboto_third"
+            android:text="Budget  :₹ 2.2 Crore"
+            android:textColor="@color/black_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/CUSTOM_LEADS_BROKER_UNLCK_IN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_third"
+            android:text="Unlock in 1 hour"
+            android:textColor="@color/black_color"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:id="@+id/CUSTOM_LEADS_BROKER_SEE_ALL"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/contact_builder">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+
+                android:fontFamily="@font/sort_btn_font"
+                android:text="See Details"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_profile_offer_12sp"
+
+                />
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

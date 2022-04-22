@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/filter_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#8A8888"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="Property Type"
+                    />
+                <ImageView
+                    android:id="@+id/iv_third"
+                    android:src="@drawable/close_icon_search"
+                    android:layout_width="15dp"
+
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_height="15dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#DDD4D4" />
+            
+            
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/frm_residential"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="Residential"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/frm_commercial"
+
+                    android:background="@drawable/employe_circle_rounded"
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginRight="05dp"
+                        android:layout_marginLeft="05dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="Commericial"
+
+                        />
+
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/frm_other"
+
+                    android:background="@drawable/employe_circle_rounded"
+                    android:layout_height="43dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginRight="18sp"
+                        android:layout_marginLeft="18sp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnr_residential_property_type"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_13sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="@dimen/home_screen_two_20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Flat/Apartment"
+
+                                    />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="House"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Studio Apartment"
+
+                                    />
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="18dp"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Villa"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Builder Floor Apartment"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plot Residential"
+
+                                    />
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Penthouse"
+
+                                    />
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="18dp"
+                                    android:layout_marginLeft="18dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Duplex"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnr_commercial_property_type"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_13sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="05dp"
+                                    android:layout_marginLeft="05dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Office Space"
+
+                                    />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="05dp"
+                                    android:layout_marginLeft="05dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Office in IT Park"
+
+                                    />
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Showroom"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Factory"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="06dp"
+                                    android:layout_marginLeft="06dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Warehouse Godown"
+
+                                    />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="06dp"
+                                    android:layout_marginLeft="06dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plot Commercial"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="05dp"
+                                    android:layout_marginLeft="05dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Industrial Building"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="05dp"
+                                    android:layout_marginLeft="05dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Industrial Shed"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnr_other_property_type"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_13sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Agriculture Land"
+
+                                    />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Commercial Land"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Farm House"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginRight="07dp"
+                                    android:layout_marginLeft="07dp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hoter/Resort"
+
+                                    />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_mediaum_second"
+                                    android:layout_marginRight="08dp"
+                                    android:layout_marginLeft="08dp"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Banquet/Guest House"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+
+            <TextView
+
+                android:layout_marginTop="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#DDD4D4" />
+            <FrameLayout
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:background="@drawable/reset_background"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+
+                    android:layout_height="45dp">
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear All"
+                        />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/apply_background"
+                    android:layout_width="105dp"
+                    android:layout_gravity="end|center_vertical"
+
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_bold_first"
+                        android:id="@+id/tv_view_profile"
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply"
+
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="6dp"
+    android:paddingTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/id_changed_view"
+        android:background="@drawable/ready_to_move_rounded_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+
+            android:text="Service"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:id="@+id/tv_changed"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/id_unchanged_view"
+        android:background="@drawable/contact_builder"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp">
+
+        <TextView
+            android:text="Service"
+            android:textSize="16sp"
+            android:id="@+id/tv_unchanged"
+            android:textColor="#fff"
+            android:paddingRight="17dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+    </FrameLayout>
+
+
+</LinearLayout>

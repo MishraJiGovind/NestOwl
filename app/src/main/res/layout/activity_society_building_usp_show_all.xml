@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.SocietyBuildingUspShowAll">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/filter_padding_20sp"
+        android:paddingRight="@dimen/filter_padding_20sp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:gravity="center"
+                    android:paddingLeft="05dp"
+                    android:paddingRight="05dp"
+                    android:id="@+id/shopping_centre_id"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Shopping Centre"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:id="@+id/inoor_games_id"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center"
+                    android:text="Indoor Games"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/atm_facilities_id"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="ATM Facilities"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="14sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:id="@+id/cumunity_centre_id"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Cumunity Centre"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/swiming_pool_id"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Swiming Pool"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="@drawable/employe_circle_rounded"
+                    android:id="@+id/econ_fiendly_id"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:text="Econ-Friendly"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/security_system_id"
+                    android:paddingRight="15dp"
+                    android:layout_height="43dp"
+                    android:text="Security System"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:layout_height="43dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/movie_theatre_id"
+                    android:gravity="center"
+                    android:text="Movie Theatre"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                    android:background="@drawable/employe_circle_rounded"
+
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:textColor="@color/black_font"
+                    android:id="@+id/air_rooms_id"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:layout_height="43dp"
+                    android:text="Air Rooms"
+
+                    />
+
+
+            </FrameLayout>
+
+
+
+
+
+        </LinearLayout>
+        <HorizontalScrollView
+
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginRight="05dp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/employe_circle_rounded"
+
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:paddingRight="05dp"
+                        android:paddingLeft="05dp"
+                        android:id="@+id/structural_aids_id"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="Structural aids for senior citizer"
+
+                        />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:gravity="center"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:id="@+id/water_supply_id"
+                        android:text="24*7 Water Supply"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+        <HorizontalScrollView
+
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginRight="05dp"
+                        android:gravity="center"
+                        android:background="@drawable/employe_circle_rounded"
+
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="wrap_content"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/on_site_maintenance_id"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="On Site Maintenance"
+
+                        />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:background="@drawable/employe_circle_rounded"
+
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/car_charging_id"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="Car Charging Station"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <HorizontalScrollView
+
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginRight="05dp"
+                        android:layout_marginLeft="05dp"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:id="@+id/no_open_drainange_id"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_mediaum_second"
+
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="No open Drainage near by"
+
+                        />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:id="@+id/natural_light_id"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="Natural Light"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <HorizontalScrollView
+
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:layout_marginLeft="05dp"
+
+                        android:background="@drawable/employe_circle_rounded"
+
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:layout_marginRight="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/private_gym_spa_id"
+                        android:gravity="center"
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="Private Gym and Spa"
+
+                        />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/amenties_view_all_padding_06dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/amenties_view_all_text_size_12dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/close_to_bank_id"
+                        android:background="@drawable/employe_circle_rounded"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textColor="@color/black_font"
+                        android:layout_height="43dp"
+                        android:text="Close to Bank"
+
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/card_submit"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="Submit"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.GreenTickBrokerThirdCard">
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Project:   M3M"
+            android:fontFamily="@font/second"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <FrameLayout
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="28dp"
+                android:layout_marginTop="25dp"
+                android:layout_height="28dp" />
+
+
+
+            <FrameLayout
+                android:layout_marginTop="53dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="2dp"
+                android:background="@color/line_color"
+                android:layout_height="55dp">
+
+            </FrameLayout>
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="28dp"
+                android:layout_marginTop="110dp"
+                android:layout_height="28dp" />
+
+
+
+            <FrameLayout
+                android:layout_marginTop="138dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="2dp"
+                android:background="@color/line_color"
+                android:layout_height="55dp">
+
+            </FrameLayout>
+            <ImageView
+                android:src="@drawable/green_circle"
+                android:layout_width="28dp"
+                android:layout_marginTop="193dp"
+                android:layout_height="28dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/review_first"
+                    android:layout_marginTop="192dp"
+                    android:background="@drawable/contact_builder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="14sp"
+                            android:layout_marginRight="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Write Review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginLeft="@dimen/dimen_bottom_10sp"
+                    android:layout_marginTop="192dp"
+                    android:id="@+id/ask_for_six"
+                    android:background="@drawable/contact_builder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="14sp"
+                            android:layout_marginRight="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ask for Review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_marginTop="54dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="2dp"
+                android:background="@color/line_color"
+                android:layout_height="55dp">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:text="Enquired for M3M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="108dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="05dp"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+
+                        android:text="Deal Closed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:textColor="#000"
+                        android:id="@+id/frame_deal_closed"
+                        android:textSize="14sp"
+                        android:text="Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+
+
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="192dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

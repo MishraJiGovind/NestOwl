@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.HomeScreenSeller">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:id="@+id/haider_layout_frame_childr"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_gravity="end|center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp">
+                        <ImageView
+                            android:src="@drawable/send_icons"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp" />
+                        <FrameLayout
+                            android:layout_marginTop="02dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:background="@drawable/send_icon_background"
+
+                            android:layout_width="13dp"
+                            android:layout_height="13dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4"
+                                android:textColor="#000"
+                                android:textSize="08sp"
+                                />
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="12dp"
+
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/frame_toolbar_seller"
+                        android:background="@drawable/toolbar_req_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_third"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Post Requirements"
+                            />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginRight="16dp"
+                android:id="@+id/haider_layout_first_linear_child"
+                android:visibility="visible"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical"
+
+                >
+<!--
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="13dp"
+                    android:src="@drawable/location_top" />-->
+
+<!--
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="02dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:text="GURGAON"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+
+                    />
+-->
+
+                <!--<ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_keyboard_arrow_down_black" />
+
+-->
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/search_view_background_home">
+
+                    <TextView
+                        android:id="@+id/tv_app_bar_home"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:text="Search by Locality or Types "
+
+                        android:textColor="#9E9A9A"
+                        android:textSize="12sp" />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_home_screen_seller" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_sellerr"
+        android:background="#fff"
+        app:labelVisibilityMode="labeled"
+
+
+        app:menu="@menu/bottom_navigation_two"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nestowl.brokerapp.AmentiesActCopy">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Ownership and Approvals"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_bold_first"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Ownership Status"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+
+                    />
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Freehold"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Lasehold"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_marginRight="05dp"
+                                android:layout_marginLeft="05dp"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Power of Attorney"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+
+                        <FrameLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_marginRight="05dp"
+                                android:layout_marginLeft="05dp"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Co-Operative Society"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Approved by"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="16sp"
+
+                    />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_height="@dimen/post_property_rectangle_40dp">
+                    <LinearLayout
+                        android:paddingLeft="@dimen/filter_padding_20sp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/proposal_status"
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:theme="@style/mySpinnerItemStyle"
+
+                                android:textColor="@color/brown_color"
+
+
+                                android:entries="@array/budget"
+                                />
+
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Amenties"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="16sp"
+
+                    />
+
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="20dp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="@dimen/filter_padding_20sp"
+                        android:paddingRight="@dimen/filter_padding_20sp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Fridge"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="14sp"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Microwave"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Exhuast fan"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Show all"
+                    android:textColor="@color/brown_color"
+                    android:id="@+id/show_all_amenties_post_property"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="14sp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Property Features"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="16sp"
+
+                    />
+
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="20dp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="@dimen/filter_padding_20sp"
+                        android:paddingRight="@dimen/filter_padding_20sp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Swiming Pool"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="14sp"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jacuzzi"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fire Alarm"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Show all"
+                    android:textColor="@color/brown_color"
+                    android:id="@+id/show_all_property_features_post_property"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="14sp"
+
+                    />
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Society Building USP"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="16sp"
+
+                    />
+
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="20dp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="@dimen/filter_padding_20sp"
+                        android:paddingRight="@dimen/filter_padding_20sp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Security Staff"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="14sp"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Visitor Parking"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/employe_circle_rounded"
+                                android:layout_height="43dp">
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="@color/black_font"
+                                    android:layout_height="wrap_content"
+                                    android:text="Club House"
+
+                                    />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Show all"
+                    android:textColor="@color/brown_color"
+                    android:id="@+id/show_all_society_building_usp_post_property"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="14sp"
+
+                    />
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Other Features"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_third"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+
+                    />
+
+                <HorizontalScrollView
+                    android:fillViewport="true"
+                    android:layout_marginTop="@dimen/filter_18sp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="In a Gated Society"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:fontFamily="@font/roboto_third"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Corner Property"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/employe_circle_rounded"
+                            android:layout_height="@dimen/filters_rounded_30sp">
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_marginRight="05dp"
+                                android:layout_marginLeft="05dp"
+                                android:textColor="@color/black_font"
+                                android:layout_height="wrap_content"
+                                android:text="Wheelchair Friendly"
+
+                                />
+
+
+                        </FrameLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filter_24sp"
+                    android:text="Near by Facilities"
+                    android:textColor="#000"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="16sp"
+
+                    />
+
+
+
+
+                <LinearLayout
+                    android:paddingRight="@dimen/post_property_padding_20dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="@dimen/post_property_padding_20dp"
+
+                    android:orientation="horizontal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginRight="10dp"
+
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:background="@null"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Name Metro/Railway"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="16sp"
+
+                                    />
+
+                                <TextView
+                                    android:layout_marginRight="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+
+                        </LinearLayout>
+                        <FrameLayout
+
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp">
+                            <FrameLayout
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="12sp"
+                                    android:text="Distance from property"
+
+
+                                    />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:id="@+id/distance_from_property"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:src="@drawable/down_arrow_personal"
+                                    android:layout_height="25dp" />
+
+                                <TextView
+
+                                    android:layout_width="180dp"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="#D8D6D6" />
+
+
+                            </FrameLayout>
+
+
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Show all"
+                    android:textColor="@color/brown_color"
+                    android:id="@+id/show_all_nearby_places_post_property"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/roboto_third"
+
+                    android:textSize="14sp"
+
+                    />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_width="match_parent"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_bold_first"
+                    android:text="Key Selling points of XYZ Property name"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_width="match_parent"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_third"
+                    android:text="Give Buyes the top reason why they should buy a property /nat XYZ property"
+                    android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_lenght"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/post_property_padding_20dp"
+                    android:layout_marginLeft="@dimen/post_property_padding_20dp"
+                    android:layout_height="90dp">
+                    <EditText
+                        android:layout_marginTop="15dp"
+                        android:textColorHint="@color/color_edit_text"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_sign_up_16sp"
+                        android:background="@null"
+                        android:backgroundTint="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        />
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+
+        android:id="@+id/POST_PHOTO_CONTINEUE"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="@dimen/post_property_padding_20dp"
+        android:layout_marginLeft="@dimen/post_property_padding_20dp"
+
+        app:cardElevation="8dp"
+
+        android:layout_marginBottom="10dp"
+
+        app:cardBackgroundColor="@color/brown_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:textColor="#ffff"
+            android:text="SAVE and CONTINUE"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

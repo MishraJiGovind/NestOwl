@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.FrontViewQuerySecond">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="07dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Proposal"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <ScrollView
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:id="@+id/scroll_first"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:text="Tell us about the offer you have in mind. You can propose your offer complete privacy."
+                            />
+
+                        <FrameLayout
+
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:background="@drawable/background"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="215dp">
+
+                            <FrameLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="215dp"
+                                android:background="@drawable/background_image_personal"
+                                android:fitsSystemWindows="true" />
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:background="@drawable/make_offer_img_back"
+                                android:layout_gravity="bottom"
+                                android:layout_height="45dp">
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="05dp"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/PROPOSAL_VIEW_PRO_PRICE"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="₹ 7000"
+                                        android:textColor="#fff"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/PROPOSAL_VIEW_PRO_PRICE_ADDRESS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="03dp"
+                                        android:text="Gurgaon"
+                                        android:textColor="#fff"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="50dp"
+                                    android:layout_marginTop="05dp"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/PROPOSAL_VIEW_PRO_BED"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="5"
+                                        android:textColor="#fff"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:textColor="#fff"
+                                        android:layout_marginBottom="03dp"
+                                        android:textSize="12sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bed"
+                                        />
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="05dp"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/PROPOSAL_VIEW_PRO_BATH"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="4"
+                                        android:textColor="#fff"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:textColor="#fff"
+                                        android:layout_marginBottom="03dp"
+                                        android:textSize="12sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bath"
+                                        />
+
+
+                                </LinearLayout>
+
+
+
+
+                            </FrameLayout>
+
+
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/second"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textColor="@color/black_light"
+                            android:layout_height="wrap_content"
+                            android:text="You will be notified when user will Accept your offer"
+                            />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="25dp"
+                            android:background="#A7A6A6" />
+
+                        <TextView
+                            android:id="@+id/PROPOSAL_VIEW_PRO_HELO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/first"
+                            android:text="Hello Sahil"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="14sp"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/roboto_third"
+                            android:textColor="@color/black_color"
+                            android:layout_height="wrap_content"
+                            android:text="Please fill out following details to submit your offer"
+                            />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="25dp"
+                            android:background="#A7A6A6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Numbers of Buyers in Line for Your Property"
+                            />
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_BUYERS"
+                                    android:layout_width="75dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="1"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Buyers of your Property want the deal to happen"
+                            />
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_WANT"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="As Soon as Possible"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Nest Professional is at following stage of deal with Buye"
+                            />
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_STAGE"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Initially Discussed"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Have Nest Professional Personally verified Buyer Background"
+                            />
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:paddingRight="14dp"
+                                android:paddingLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="05dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_VERIFYD"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Yes"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Any Negotiation Demand By Nest Pro's for your Demanding Price."
+                            />
+
+                        <RadioGroup
+
+                            android:layout_marginRight="14dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="05dp"
+
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_weight="1"
+                                android:buttonTint="@color/black_color"
+
+                                android:textSize="16sp"
+                                android:textColor="@color/black_color"
+                                android:text="Yes"
+                                android:id="@+id/PROPOSAL_VIEW_PRO_NEGOTIATE"
+                                android:fontFamily="@font/roboto_third"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+
+                        </RadioGroup>
+
+
+                        <LinearLayout
+                            android:id="@+id/SELLER_PROPOSAL_NEGOTIATE_UNLOCK"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/roboto_mediaum_second"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content"
+                                android:text="Price mention by Nest Pro."
+                                />
+
+                            <HorizontalScrollView
+                                android:scrollbars="none"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <RadioButton
+                                        android:buttonTint="@color/black_color"
+
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        />
+                                    <FrameLayout
+                                        android:layout_marginRight="05dp"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="10dp"
+
+                                        android:orientation="horizontal"
+
+                                        android:layout_width="175dp"
+                                        android:layout_height="50dp">
+
+                                        <FrameLayout
+                                            android:layout_gravity="center_vertical"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@null"
+                                                android:background="@null"
+                                                android:hint="Price"
+                                                android:textColorHint="@color/color_edit_text"
+
+                                                android:fontFamily="@font/second"
+                                                android:layout_marginRight="20dp"
+                                                android:textSize="16sp"
+
+                                                />
+
+                                            <TextView
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:layout_marginTop="30dp"
+                                                android:background="#D8D6D6" />
+
+
+                                        </FrameLayout>
+
+                                    </FrameLayout>
+
+                                    <RadioButton
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/roboto_third"
+                                        android:textSize="16sp"
+                                        android:layout_gravity="center_vertical"
+                                        android:buttonTint="@color/black_color"
+
+                                        android:textColor="@color/black_color"
+                                        android:text="Will Discuss with Owner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Time Required by Buyer's for the booking Payment"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:layout_marginTop="05dp"
+
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <HorizontalScrollView
+                                    android:scrollbars="none"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioGroup
+                                        android:paddingRight="14dp"
+                                        android:paddingLeft="14dp"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:id="@+id/PROPOSAL_VIEW_PRO_TIME"
+                                            android:layout_width="match_parent"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/black_color"
+                                            android:fontFamily="@font/roboto_third"
+                                            android:text="15 Days"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+
+                                    </RadioGroup>
+
+                                </HorizontalScrollView>
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Time Required by Buyer's for the final Payment after Booking Payment"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RadioGroup
+                                android:layout_marginTop="05dp"
+
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <HorizontalScrollView
+                                    android:scrollbars="none"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioGroup
+                                        android:paddingLeft="14dp"
+                                        android:paddingRight="14dp"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:id="@+id/PROPOSAL_VIEW_PRO_FINAL"
+                                            android:layout_width="match_parent"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/black_color"
+                                            android:fontFamily="@font/roboto_third"
+                                            android:text="1 Month"
+                                            android:textColor="@color/black_color"
+                                            android:textSize="16sp" />
+
+
+                                    </RadioGroup>
+
+                                </HorizontalScrollView>
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_height="wrap_content"
+                            android:text="Mode of Payment that Buyer will use for Maximum Transaction"
+                            />
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:paddingLeft="14dp"
+                                android:paddingRight="14dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_MODE"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Cash"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:layout_height="wrap_content"
+                            android:text="Date and Time Schedule for Meeting and Discussion"
+                            />
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:layout_marginTop="25dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp">
+
+                            <FrameLayout
+                                android:layout_marginRight="05dp"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:id="@+id/PROPOSAL_REQ_MEET_DAY"
+                                android:background="@drawable/proposal_status"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_DAY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+
+
+                                    android:fontFamily="@font/roboto_third"
+
+                                    android:text="Day"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="16sp" />
+
+
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:id="@+id/PROPOSAL_REQ_MEET_TIME"
+                                android:layout_marginLeft="05dp"
+                                android:background="@drawable/proposal_status"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_TIME_TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+
+                                    android:layout_marginLeft="10dp"
+
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Time Slot"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="16sp" />
+
+
+                            </FrameLayout>
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="30dp"
+
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:textColor="#000"
+
+                            android:layout_height="wrap_content"
+                            android:text="Extra offering for you Sir/Madam"
+                            />
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:textSize="18sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_third"
+                                android:textColor="#000"
+
+                                android:layout_height="wrap_content"
+                                android:text="Loan Facility"
+                                />
+                            <RadioGroup
+                                android:layout_marginLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_LOADn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Yes"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:textSize="18sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_third"
+                                android:textColor="#000"
+
+                                android:layout_height="wrap_content"
+                                android:text="Client Verification"
+                                />
+                            <RadioGroup
+                                android:layout_marginLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_CLINT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Yes"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                android:textSize="18sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/roboto_third"
+                                android:textColor="#000"
+
+                                android:layout_height="wrap_content"
+                                android:text="Pick and Drop Facility within City"
+                                />
+                            <RadioGroup
+                                android:layout_marginLeft="14dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <RadioButton
+                                    android:id="@+id/PROPOSAL_VIEW_PRO_PICK"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/black_color"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:text="Yes"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="16sp" />
+
+
+                            </RadioGroup>
+
+
+
+                        </LinearLayout>
+
+
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/roboto_third"
+                                    android:textColor="#000"
+
+                                    android:layout_height="wrap_content"
+                                    android:text="Proper document submission with ent to end assistance"
+                                    />
+                                <RadioGroup
+                                    android:layout_marginLeft="14dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp">
+
+                                    <RadioButton
+                                        android:id="@+id/PROPOSAL_VIEW_PRO_DOCS"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:buttonTint="@color/black_color"
+                                        android:fontFamily="@font/roboto_third"
+                                        android:text="Yes"
+                                        android:textColor="@color/black_color"
+                                        android:textSize="16sp" />
+
+
+                                </RadioGroup>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/first"
+                            android:layout_marginTop="15dp"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:text="Note"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:background="@drawable/query_last_note"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginTop="06dp"
+
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_marginTop="03dp"
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+
+
+                                        <EditText
+                                            android:layout_gravity="center_vertical"
+                                            android:textColor="#000"
+                                            android:layout_marginLeft="05dp"
+                                            android:gravity="start"
+                                            android:textSize="12sp"
+                                            android:background="@null"
+                                            android:backgroundTint="@null"
+                                            android:textAlignment="viewStart"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:hint="We will be gold to serve you (owner name) choose us by sit back and just relex, everything will be handled by us from document verification, client verification to final document and payment required destination and enjoy hurdle free smooth ride. We will always be there till the end of the deal and for future requirements too."/>
+
+
+                                    </LinearLayout>
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:visibility="gone"
+
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/roboto_bold_first"
+                            android:layout_marginTop="15dp"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:text="Note"
+                            />
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+                                <EditText
+                                    android:layout_marginRight="05dp"
+                                    android:layout_marginLeft="05dp"
+                                    android:background="@null"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Your contact detail will be shared only if Owner/Agent offer."
+                                    android:backgroundTint="@null"
+                                    android:textColorHint="@color/color_edit_text"
+
+                                    android:fontFamily="@font/second"
+                                    android:textSize="16sp"
+
+                                    />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+
+                            android:fontFamily="@font/roboto_five"
+                            android:layout_marginTop="25dp"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:text="Thanks"
+                            />
+
+                        <TextView
+                            android:id="@+id/PROPOSAL_VIEW_PRO_NAME"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_five"
+                            android:text="(Broker Name)"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+
+                        <LinearLayout
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <CheckBox
+
+                                android:text="Attach this"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_marginLeft="10dp"
+
+                                android:text="Edit and write Yourself"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+
+        </ScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_size_height_button_40sp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+            android:layout_marginBottom="10dp"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Accept"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Reject"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_size_height_button_40sp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_pro_rectangle">
+
+                    <TextView
+                        android:id="@+id/make_offer_rera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/second"
+                        android:text="Chat"
+                        android:textColor="@color/brown_color"
+                        android:textSize="12sp"
+
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/CUSTOM_LOCALITIES_DIOLOG_MAIN"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/employe_circle_rounded"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/CUSTOM_LOCALITIES_DIOLOG_TEXT"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_mediaum_second"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Balcony"
+            android:textAlignment="center"
+            android:textColor="@color/black_font"
+            android:textSize="14sp" />
+
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

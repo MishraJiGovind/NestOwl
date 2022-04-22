@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.newprojectr.com.nestowl.newprojectr.PropertySelectedSecondDoneInventory">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/left_arrow"
+                        android:layout_width="18dp"
+                        android:id="@+id/ARTICLES_BACK"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:text="Select Property"
+                            android:textSize="20sp"
+                            android:textColor="#fff"
+                            android:fontFamily="@font/roboto_mediaum_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_mediaum_second"
+        android:layout_marginTop="30dp"
+        android:textColor="#000"
+
+        android:layout_height="wrap_content"
+        android:text="Select Details for Each Property Separately"
+        />
+
+    <FrameLayout
+        android:visibility="visible"
+        android:id="@+id/basic_primary"
+        android:background="@drawable/shadow_home_page"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property by One"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textSize="18sp"
+
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/green_circle"
+            android:layout_width="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_height="17dp" />
+
+
+
+    </FrameLayout>
+    <FrameLayout
+        android:visibility="visible"
+        android:background="@drawable/shadow_home_page"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:id="@+id/property_two"
+
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property by Two"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textSize="18sp"
+
+                />
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/green_circle"
+                android:layout_width="17dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_height="17dp" />
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/properyt_by_two"
+
+            android:buttonTint="@color/brown_color"
+            android:visibility="gone"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/green_circle"
+            android:layout_width="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_height="17dp" />
+
+
+
+    </FrameLayout>
+    <FrameLayout
+        android:visibility="visible"
+        android:background="@drawable/shadow_home_page"
+        android:layout_marginRight="@dimen/screen_sixteen_16sp"
+        android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+        android:id="@+id/property_three"
+
+
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property by Three"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_mediaum_second"
+                android:textSize="18sp"
+
+                />
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/green_circle"
+                android:layout_width="17dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_height="17dp" />
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/property_by_three_item"
+            android:visibility="visible"
+            android:buttonTint="@color/brown_color"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
