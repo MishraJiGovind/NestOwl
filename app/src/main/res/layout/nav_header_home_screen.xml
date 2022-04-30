@@ -20,7 +20,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_third"
 
-            android:text="Sahil Kumar"
+            android:text="Complete Profile"
             android:textColor="#000"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Moble"
+            android:text="--"
             android:textColor="@color/black_color"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/HOME_NAME"

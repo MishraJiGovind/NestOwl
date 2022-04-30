@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.newprojectr.com.nestowl.newprojectr.InterestedPropertyThirdUser">
+    tools:context="com.nestowl.brokerapp.InterestedPropertyThirdUser">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/PROPERTY_PREVIEW_APPBAR"
@@ -1213,6 +1213,7 @@
                                         android:layout_marginBottom="10dp">
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_AIRPORT"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1247,6 +1248,7 @@
                                         </LinearLayout>
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_RAILWAYS"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1282,6 +1284,7 @@
                                         </LinearLayout>
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_PHRAMACY"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1317,6 +1320,7 @@
                                         </LinearLayout>
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_PARK"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1352,6 +1356,7 @@
                                         </LinearLayout>
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_HOSPITAL"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1387,6 +1392,7 @@
                                         </LinearLayout>
 
                                         <LinearLayout
+                                            android:id="@+id/LEADS_PRO_MAP_BANKS"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -1423,6 +1429,16 @@
 
 
                                     </LinearLayout>
+
+<!--                                    <com.google.android.gms.maps.MapView-->
+<!--                                        android:id="@+id/LEADS_PROPERTY_MAP_VIEW"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="240dp" />-->
+
+                                    <com.nestowl.utils.CustomMapView
+                                        android:id="@+id/LEADS_PROPERTY_MAP_VIEW"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="240dp"/>
 
 
                                 </LinearLayout>

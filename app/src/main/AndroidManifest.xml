@@ -26,6 +26,9 @@
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_color"
         android:resource="@color/brown" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key"/>
 
     <application
         android:allowBackup="true"
@@ -36,6 +39,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
+
+
         <activity
             android:name="com.nestowl.brokerapp.FAQ"
             android:exported="false" />
@@ -103,9 +108,8 @@
             android:name="com.nestowl.brokerapp.ReadArticles"
             android:exported="false" />
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -472,6 +476,7 @@
             android:name="com.nestowl.brokerapp.IntroActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.nestowl.brokerapp.PlanBasicActivityEdit" />
+
     </application>
 
 </manifest>

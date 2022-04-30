@@ -18,13 +18,14 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:background="@drawable/background_login_image"
                     android:fitsSystemWindows="true"
-                    android:focusable="true">
-                </ImageView>
+                    android:focusable="true"></ImageView>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -86,40 +87,41 @@
                             </LinearLayout>
 
                         </FrameLayout>
+
                         <RadioGroup
                             android:id="@+id/group_login"
-                            android:layout_marginLeft="12dp"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="15dp"
                             android:layout_width="match_parent"
-                            android:layout_height="45dp">
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
                             <RadioButton
                                 android:id="@+id/otp_login"
-                                android:buttonTint="@color/brown_color"
-                                android:layout_weight="1"
-                                android:textSize="14sp"
-                                android:checked="true"
-                                android:textColor="#000"
-                                android:text="OTP"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/brown_color"
+                                android:checked="true"
+                                android:text="OTP"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
 
                             <RadioButton
 
                                 android:id="@+id/password_loging"
 
-                                android:checked="false"
-
-                                android:layout_weight="1"
-                                android:buttonTint="@color/brown_color"
-
-                                android:textSize="14sp"
-                                android:textColor="#000"
-                                android:text="PASSWORD"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
 
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:buttonTint="@color/brown_color"
+                                android:checked="false"
+                                android:text="PASSWORD"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
 
 
                         </RadioGroup>
@@ -234,7 +236,6 @@
 
 
                         </FrameLayout>
-
 
 
                         <androidx.cardview.widget.CardView
@@ -363,6 +364,14 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/LOGIN_BACK"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/arrow_back_set_up"
+                    app:tint="@color/white" />
 
             </FrameLayout>
 

@@ -42,6 +42,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.nestowl.CommenDialog.WarningDio;
 import com.nestowl.brodcast.OtpResponseReciver;
 import com.nestowl.model.LoginPojo;
@@ -68,6 +71,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.gson.Gson;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Arrays;
@@ -117,6 +121,12 @@ public class LoginActivity extends AppCompatActivity {
         GOOGLE_LOGIN=findViewById(R.id.GOOGLE_LOGIN);
         loginButton=findViewById(R.id.login_button_fb);
         title=findViewById(R.id.LOGIN_TITLE);
+        findViewById(R.id.LOGIN_BACK).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         GOOGLE_LOGIN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -423,12 +433,35 @@ public class LoginActivity extends AppCompatActivity {
                }
             }
         });
+        FacebookSdk.sdkInitialize(this);
         callbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 LoginResult result = loginResult;
                 Log.e("FB", "onSuccess: "+result.getAccessToken().getUserId() );
+                GraphRequest graphRequest =  GraphRequest.newMeRequest(result.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(@Nullable JSONObject jsonObject, @Nullable GraphResponse graphResponse) {
+                        if (jsonObject!=null){
+                            try {
+                                String namn = jsonObject.getString("name");
+                                Intent intent =  new Intent(LoginActivity.this,SignUpActivity.class);
+                                intent.putExtra("name",namn);
+                                intent.putExtra("email","null");
+                                intent.putExtra("s","true");
+                                startActivity(intent);
+                                finish();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+
+                    }
+                });
+
+
             }
 
             @Override

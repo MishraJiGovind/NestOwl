@@ -176,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold_first"
-                            android:text="Sahil Dahiya"
+                            android:text="Complete profile"
                             android:textColor="#000"
 
                             android:textSize="22sp" />
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_mediaum_second"
-                        android:text="Gurgaon"
+                        android:text="--"
                         android:textColor="#292828"
 
                         android:textSize="16sp" />

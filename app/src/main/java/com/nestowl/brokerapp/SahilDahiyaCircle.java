@@ -55,8 +55,8 @@ public class SahilDahiyaCircle extends AppCompatActivity implements TabLayout.On
         share=findViewById(R.id.PROFILE_SHARE);
         name=findViewById(R.id.PROFILE_NAME);
         city=findViewById(R.id.PROFILE_CITY);
-        user =  new Gson().fromJson(PrefMananger.getString(this,"user"),User.class);
-        dpModal =  new Gson().fromJson(PrefMananger.getString(this,"photo"),DpModal.class);
+
+
         editDp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,10 +69,14 @@ public class SahilDahiyaCircle extends AppCompatActivity implements TabLayout.On
                 startActivity(new Intent(SahilDahiyaCircle.this,SignUpPhotos.class));
             }
         });
+        if (PrefMananger.getString(this,"user")!=null&&PrefMananger.getString(this,"photo")!=null){
+            user =  new Gson().fromJson(PrefMananger.getString(this,"user"),User.class);
+            dpModal =  new Gson().fromJson(PrefMananger.getString(this,"photo"),DpModal.class);
+            name.setText(user.getFirst_name());
+            Glide.with(this).load(UrlClass.BASE_URL+dpModal.getProfile_photo()).placeholder(R.drawable.profile_img_sahil).into(dp);
+            Glide.with(this).load(UrlClass.BASE_URL+dpModal.getCover()).placeholder(R.drawable.top_image).into(cover);
+        }
 
-        name.setText(user.getFirst_name());
-        Glide.with(this).load(UrlClass.BASE_URL+dpModal.getProfile_photo()).placeholder(R.drawable.profile_img_sahil).into(dp);
-        Glide.with(this).load(UrlClass.BASE_URL+dpModal.getCover()).placeholder(R.drawable.top_image).into(cover);
 
         nested=findViewById(R.id.scroll);
         nested.setOnScrollChangeListener(new View.OnScrollChangeListener() {

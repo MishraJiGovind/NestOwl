@@ -68,8 +68,8 @@ public class SignUpActivity extends AppCompatActivity {
     CardView cardView;
     Context context;
     Activity activity;
-    String email,name,social,savePassword;
-    ImageView showHide;
+    String email,name,social,savePassword,vEmail;
+    ImageView showHide,back;
     CheckBox checkBox;
     boolean passowrdVisble = false;
 
@@ -96,6 +96,13 @@ public class SignUpActivity extends AppCompatActivity {
         tv_OtpTimer = findViewById(R.id.tv_OtpTimer);
         checkBox=findViewById(R.id.SIGN_UP_CHECKBOX);
         scrollView = findViewById(R.id.scroll);
+        back=findViewById(R.id.SIGNUP_BACK);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 //        showHide=findViewById(R.id.SIGNUP_SHOW_HIDE_PASSWORD);
         savePassword = null;
 //        showHide.setOnClickListener(new View.OnClickListener() {
@@ -112,10 +119,12 @@ public class SignUpActivity extends AppCompatActivity {
 //                }
 //            }
 //        });
+        vEmail="No";
         if (social!=null){
              if (social.equals("true")){
             email=getIntent().getStringExtra("email");
             name=getIntent().getStringExtra("name");
+            vEmail="Yes";
             handleSocialLogin();
         }
         }
@@ -454,7 +463,7 @@ public class SignUpActivity extends AppCompatActivity {
         if (name!=null){
         edt_full_name.setText(name,null);
         }
-        if (email!=null){
+        if (email!=null&&!email.equals("null")){
         edt_email_adreess.setText(email,null);
         }
     }
@@ -472,6 +481,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
         String otp = "";
     public void signup() {
+        String[] name = edt_full_name.getText().toString().split(" ");
         final ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please Wait...");
         progressDialog.setCancelable(false);
@@ -501,11 +511,14 @@ public class SignUpActivity extends AppCompatActivity {
                         loginPojo.setPermissions("no data");
 
                         String userinfo =  new Gson().toJson(user);
+
                         PrefMananger.saveString(SignUpActivity.this,"user",userinfo);
                         PrefMananger.SaveLoginData(context, loginPojo);
+
                         Intent intent = new Intent(SignUpActivity.this, EditSignUpForm.class);
                         startActivity(intent);
-                        finishAffinity();
+                        finish();
+
                         Toast.makeText(context, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
                     } else {
@@ -529,6 +542,9 @@ public class SignUpActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<>();
                 map.put("email", edt_email_adreess.getText().toString());
+                map.put("first_name",name[0]);
+                map.put("last_name",name[1]);
+                map.put("v_email", vEmail);
                 map.put("password", edt_password.getText().toString());
                 map.put("mobile", edt_mobile.getText().toString());
                 map.put("OTP", otp);

@@ -1,13 +1,19 @@
 package com.nestowl.brokerapp;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.location.Address;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -18,9 +24,11 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -36,6 +44,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.nestowl.AdapterClass.AmentiesAdapter;
 import com.nestowl.AdapterClass.Pager;
 import com.nestowl.CommenDialog.DialogOpenClass;
@@ -48,10 +65,13 @@ import com.nestowl.model.AllAcceptedDataModal;
 import com.nestowl.model.AmentiesListModal;
 import com.nestowl.model.LeadsPublicPro;
 import com.nestowl.model.LoginPojo;
+import com.nestowl.model.MapPinModal;
+import com.nestowl.model.MapPinsModals;
 import com.nestowl.model.ResponseAllacceptRejectModal;
 import com.nestowl.model.User;
 import com.nestowl.model.aichat;
 import com.nestowl.utils.AmentiesImages;
+import com.nestowl.utils.CustomMapView;
 import com.nestowl.utils.PrefMananger;
 import com.nestowl.utils.UrlClass;
 import com.nestowl.viewmodal.LiveCommnication;
@@ -59,6 +79,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -68,9 +89,9 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class InterestedPropertyThirdUser extends AppCompatActivity {
+public class InterestedPropertyThirdUser extends AppCompatActivity implements OnMapReadyCallback {
     FrameLayout viewContact,makeoffer,buywithNestPros,exploreMore,powerBackup,maditaion,swimingpool,amentiesMore,providedInfoYes,providedInfoNo,accept,reject,chat,ON_SAMEUSER_CONTACT,ON_SAME_USER_BOTTOM_INFO_1,ON_SAME_USER_BOTTOM_INFO_2;
-    LinearLayout leadsDataCorrect,leadsDataCorrectOptions,otherCharges,frm_third;
+    LinearLayout leadsDataCorrect,leadsDataCorrectOptions,otherCharges,frm_third,airportL,railwaysL,pharmacyL,parkL,hospitalL,banksL;
     TextView title,price,date,address,ownername,ownerMob,carpetArea,address2,location,configration,status,frunishing,proDescription,proDescriptionReadMore,overLokking,openSides,funishing2,area,desclaimer,desclaimerReadMore;
     TabLayout tab_filters;
     ViewPager viewPager_filter;
@@ -81,25 +102,40 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
     String id,user_id,description,otherChargesTXT,idd,desclaimerS,URL;
     User user;
     LoginPojo loginPojo ;
-    ArrayList<String> keyvalues,valuesData;
+    ArrayList<String> keyvalues,valuesData,placeTypeList;
     ArrayList<FloorPojo> floorPojos;
     ArrayList<AmentiesListModal> amenties,homeListAMenties;
+    ArrayList<MapPinsModals>mapPinsModals;
     LiveCommnication liveCommnication;
     boolean acceptStatusPro,typeAccept,isUser,isAccepted,isSummited,isProposalAccepted,isBroker;
     LeadsClicks handleLeads;
     LeadsPublicPro data;
     RecyclerView recyclerView;
     AppBarLayout appBarLayout;
-    int proposalSumiitedTotal;
+    int proposalSumiitedTotal,airport,railways,pharmacy,park,hospital,banks;
     ArrayList<AllAcceptedDataModal> propertyAcceptedData;
 
+    CustomMapView mapView;
+//    MapView mapView;
+    GoogleMap gMap;
 
 
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interested_property_third_user);
+
+        airport=R.drawable.airport_icon;
+        railways=R.drawable.grocery_icon;
+        pharmacy=R.drawable.grocery_icon;
+        park=R.drawable.school_icon;
+        hospital=R.drawable.hospital_icon;
+        banks=R.drawable.bank_icon;
+
         intent = getIntent();
         proposalSumiitedTotal=0;
         Uri uri = getIntent().getData();
@@ -127,6 +163,13 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         backImage=findViewById(R.id.LEADS_PROPERTY_DETA_BG_IMAGE);
         appBarLayout=findViewById(R.id.PROPERTY_PREVIEW_APPBAR);
         shareProperty=findViewById(R.id.LEADS_PROPERTY_DETA_SHARE);
+        mapView=findViewById(R.id.LEADS_PROPERTY_MAP_VIEW);
+        airportL=findViewById(R.id.LEADS_PRO_MAP_AIRPORT);
+        railwaysL=findViewById(R.id.LEADS_PRO_MAP_RAILWAYS);
+        pharmacyL=findViewById(R.id.LEADS_PRO_MAP_PHRAMACY);
+        parkL=findViewById(R.id.LEADS_PRO_MAP_PARK);
+        hospitalL=findViewById(R.id.LEADS_PRO_MAP_HOSPITAL);
+        banksL=findViewById(R.id.LEADS_PRO_MAP_BANKS);
         user=new Gson().fromJson(PrefMananger.getString(this,"user"),User.class);
         propertyAcceptedData=new ArrayList<>();
         shareProperty.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +198,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         });
         isUser=true;
         loginPojo = PrefMananger.GetLoginData(this);
+
+
 
         amenties =  new ArrayList<>();
         viewPager_filter =findViewById(R.id.filters_view_pager);
@@ -214,11 +259,6 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
                 tab_filters.setVisibility(View.VISIBLE);
                 horizontalScrollView.setVisibility(View.GONE);
 
-                if (scrollY>=300){
-
-                }else {
-
-                }
                 if (scrollY>=400){
                     if (isUser){
                         horizontalScrollView.setVisibility(View.VISIBLE);
@@ -282,6 +322,14 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         recyclerView=findViewById(R.id.LEADS_PROPERTY_RECYCLER);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true));
         homeListAMenties=new ArrayList<>();
+        placeTypeList=new ArrayList<>();
+        mapPinsModals=new ArrayList<>();
+        placeTypeList.add("airport");
+        placeTypeList.add("railways");
+        placeTypeList.add("pharmacy");
+        placeTypeList.add("park");
+        placeTypeList.add("hospital");
+        placeTypeList.add("banks");
 //        frames
         viewContact=findViewById(R.id.LEADS_PROPERTY_DETA_OWNER_CONTACT);
         makeoffer=findViewById(R.id.LEADS_PROPERTY_DETA_MAKE_OFFER);
@@ -538,6 +586,134 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         FecthPropertyDataById(id);
         getAllAcceptedRejected(user.getUser_id());
         handleLeads =  new LeadsClicks(InterestedPropertyThirdUser.this,idd,user.getUser_id(),idd);
+        mapView.getMapAsync(this);
+        try {
+            mapView.onCreate(savedInstanceState);
+        }catch (Exception e){
+            Log.e("MapError", "onCreate: "+e );
+        }
+        airportL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(0))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),airport)));
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+        railwaysL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(1))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),railways)));
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+        pharmacyL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(2))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),pharmacy)));
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+        parkL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(3))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),park)));
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+        hospitalL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(4))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),hospital)));
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+        banksL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(5))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),banks)));
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        });
+
+    }
+    private BitmapDescriptor BitmapFromVector(Context context, int vectorResId) {
+        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
+        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
+        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        vectorDrawable.draw(canvas);
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
     private void getAllAcceptedRejected(String userID) {
         HashMap<String,String>hashMap=new HashMap<>();
@@ -687,6 +863,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
                         carpetArea.setText(data.getCaptur_area_max()+data.getCaptur_area_max_mezor());
                         address2.setText(data.getLocality()+", "+data.getCity());
                         location.setText(data.getLocality());
+                        Log.e("property", "locality: "+data.getLocality() );
+                        getCordinates(data.getLocality());
                         configration.setText(data.getBedrooms()+"Beds,"+data.getWashrooms()+"Wash");
                         status.setText(data.getPossession_status());
                         frunishing.setText(data.getFurnished_status());
@@ -755,6 +933,78 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         };
         Volley.newRequestQueue(this).add(request);
 
+    }
+    private void getCordinates(String locality) {
+        StringRequest request = new StringRequest(Request.Method.GET, UrlClass.GET_LAT_LOG_BY_ADDRESS + locality + UrlClass.GET_LAT_LOG_BY_ADDRESS_ENDING_PART, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray =  jsonObject.getJSONArray("results");
+                    JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                    JSONObject jsonObject2 =  jsonObject1.getJSONObject("geometry");
+                    JSONObject jsonObject3 =  jsonObject2.getJSONObject("location");
+                    int lat , lon;
+                    lat = jsonObject3.getInt("lat");
+                    lon = jsonObject3.getInt("lng");
+
+                    LatLng india = new LatLng(lat,lon);
+                    gMap.addMarker(new MarkerOptions().position(india).title(locality));
+                    gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(india,15));
+
+                    for (String data : placeTypeList){
+                        MapPinsModals mapPinsModal =  new MapPinsModals();
+                        ArrayList<MapPinModal> mapPinModals = new ArrayList<>();
+                        String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json" + "?location=" + lat + "," + lon + "&radius=5000" + "&type=" + data + "&sensor=true" + "&key=" + getResources().getString(R.string.google_maps_key);
+                        StringRequest getdata =  new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    JSONArray jsonArray =  jsonObject.getJSONArray("results");
+
+                                    for (int i=0;i<jsonArray.length();i++){
+                                        JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                                        JSONObject jsonObject2 =  jsonObject1.getJSONObject("geometry");
+                                        JSONObject jsonObject3 =  jsonObject2.getJSONObject("location");
+                                        String name = jsonObject1.getString("name");
+                                        int lat , lon;
+                                        lat = jsonObject3.getInt("lat");
+                                        lon = jsonObject3.getInt("lng");
+                                        MapPinModal mapPinModal =  new MapPinModal();
+                                        mapPinModal.setName(name);
+                                        mapPinModal.setLat(lat);
+                                        mapPinModal.setLon(lon);
+                                        mapPinModals.add(mapPinModal);
+                                    }
+                                    mapPinsModal.setName(data);
+                                    mapPinsModal.setPins(mapPinModals);
+                                    mapPinsModals.add(mapPinsModal);
+
+                                }catch (Exception e){
+                                    Log.e("PINS", "map pins: "+e );
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                
+                            }
+                        });
+                        Volley.newRequestQueue(InterestedPropertyThirdUser.this).add(getdata);
+                    }
+
+                }catch (Exception e){
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        Volley.newRequestQueue(this).add(request);
     }
     private void arreyHandler(LeadsPublicPro data) {
         keyvalues.add("Property Features");
@@ -1121,4 +1371,54 @@ public class InterestedPropertyThirdUser extends AppCompatActivity {
         textView.setText("Summit Proposal");
         typeAccept = false;
     }
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        gMap=googleMap;
+        LatLng india = new LatLng(28.4595,77.0266);
+        gMap.addMarker(new MarkerOptions().position(india).title("Gurugram"));
+        gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(india,12));
+//        gMap.moveCamera(CameraUpdateFactory.newLatLng(india));
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
 }

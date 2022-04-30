@@ -42,15 +42,17 @@
             android:layout_width="match_parent"
             android:layout_height="210dp"
             android:background="@drawable/card_background">
+
             <ImageView
                 android:id="@+id/frame_main"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="125dp"
+                android:src="@drawable/netswl_icon"
                 android:fitsSystemWindows="true"
                 android:focusable="true"
-                android:layout_marginBottom="125dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:background="@drawable/netswl_icon"
-                android:layout_width="250dp"
-                android:layout_height="45dp">
+                android:scaleType="centerInside">
 
 
             </ImageView>

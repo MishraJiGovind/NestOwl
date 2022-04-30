@@ -3,6 +3,9 @@ package com.nestowl.utils;
 public class UrlClass {
     public static final String BASE_URL="https://www.nestowl.in/";
     public static final String BASE_URL2="https://www.nestowl.in";
+    public static final String MAP_API="AIzaSyBXs-UohXuOxHKp7bxT26tKHCW5cAcodF8";
+    public static final String GET_LAT_LOG_BY_ADDRESS="https://maps.googleapis.com/maps/api/geocode/json?address=";
+    public static final String GET_LAT_LOG_BY_ADDRESS_ENDING_PART="&key="+MAP_API;
     public static final String LOGIN=BASE_URL+"api/login";
     public static final String SIGN_UP=BASE_URL+"api/signup";
     public static final String OTP=BASE_URL+"api/otp";

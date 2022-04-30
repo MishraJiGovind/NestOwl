@@ -27,77 +27,82 @@
 
             <ImageView
 
-                android:background="@drawable/background_login_image"
                 android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:background="@drawable/background_login_image"
                 android:fitsSystemWindows="true"
-                android:focusable="true"
 
 
-                android:layout_height="185dp">
+                android:focusable="true">
 
             </ImageView>
+
             <LinearLayout
-                android:orientation="vertical"
-                android:background="@drawable/sign_up_design"
-                android:layout_marginTop="165dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="165dp"
+                android:background="@drawable/sign_up_design"
+                android:orientation="vertical">
+
                 <LinearLayout
-                    android:layout_marginLeft="23dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="23dp"
+                    android:orientation="vertical">
+
                     <TextView
-                        android:layout_marginTop="30dp"
-                        android:textColor="#000"
-                        android:textSize="26sp"
-                        android:fontFamily="@font/roboto_bold_first"
-                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/roboto_bold_first"
                         android:text="Sign Up"
+                        android:textColor="#000"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
 
                         />
+
                     <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sign_up_40sp"
                         android:layout_marginTop="25dp"
                         android:layout_marginRight="23dp"
-                        android:background="@drawable/bacground_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/sign_up_40sp">
+                        android:background="@drawable/bacground_text">
+
                         <EditText
-                            android:layout_gravity="center"
-                            android:textColorHint="@color/color_edit_text"
-                            android:layout_marginLeft="10dp"
-                            android:singleLine="true"
-                            android:textSize="@dimen/text_sign_up_16sp"
                             android:id="@+id/et_full_name"
-                            android:background="@null"
-                            android:backgroundTint="@null"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@null"
                             android:hint="Full Name"
-                            />
+                            android:singleLine="true"
+                            android:textColorHint="@color/color_edit_text"
+                            android:textSize="@dimen/text_sign_up_16sp" />
 
                     </FrameLayout>
+
                     <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sign_up_40sp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="23dp"
-                        android:background="@drawable/bacground_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/sign_up_40sp">
+                        android:background="@drawable/bacground_text">
+
                         <EditText
-                            android:layout_gravity="center"
-                            android:textColorHint="@color/color_edit_text"
-                            android:layout_marginLeft="10dp"
-                            android:singleLine="true"
-                            android:textSize="@dimen/text_sign_up_16sp"
                             android:id="@+id/et_email_address"
-                            android:background="@null"
-                            android:backgroundTint="@null"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:backgroundTint="@null"
                             android:hint="Email Address"
-                            />
+                            android:singleLine="true"
+                            android:textColorHint="@color/color_edit_text"
+                            android:textSize="@dimen/text_sign_up_16sp" />
 
                     </FrameLayout>
 
@@ -125,19 +130,19 @@
                                 android:drawableTint="@color/brown"
                                 android:ems="10"
                                 android:hint="Password"
-                                android:longClickable="false"
-                                android:inputType="textPassword" />
+                                android:inputType="textPassword"
+                                android:longClickable="false" />
 
                         </LinearLayout>
 
                     </FrameLayout>
 
                     <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sign_up_40sp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="23dp"
-                        android:background="@drawable/bacground_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/sign_up_40sp">
+                        android:background="@drawable/bacground_text">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -173,27 +178,29 @@
                     </FrameLayout>
 
                     <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sign_up_40sp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="23dp"
-                        android:background="@drawable/bacground_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/sign_up_40sp">
-                        <FrameLayout
-                            android:layout_marginRight="10dp"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:textSize="16sp"
-                                android:id="@+id/sent_otp"
-                                android:textColor="#3F51B5"
-                                android:gravity="center_vertical"
-                                android:layout_width="wrap_content"
-                                android:fontFamily="@font/roboto_five"
-                                android:layout_height="wrap_content"
+                        android:background="@drawable/bacground_text">
 
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginRight="10dp">
+
+                            <TextView
+                                android:id="@+id/sent_otp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_five"
+                                android:gravity="center_vertical"
                                 android:text="Send OTP"
-                                />
+                                android:textColor="#3F51B5"
+
+                                android:textSize="16sp" />
+
                             <TextView
                                 android:id="@+id/tv_OtpTimer"
                                 android:layout_width="match_parent"
@@ -222,30 +229,32 @@
                                 android:visibility="gone" />
 
                         </FrameLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
+
                             <EditText
-                                android:inputType="number"
-                                android:maxLength="1"
                                 android:id="@+id/LOGIN_SCREEN_OTP_ONE"
-                                android:layout_marginLeft="20dp"
-                                android:layout_gravity="start"
-                                android:backgroundTint="#9E9B9B"
                                 android:layout_width="35dp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="20dp"
+                                android:backgroundTint="#9E9B9B"
+                                android:inputType="number"
+                                android:maxLength="1"
 
                                 />
 
                             <EditText
-                                android:inputType="number"
+                                android:id="@+id/et_two"
 
+                                android:layout_width="35dp"
+                                android:layout_height="wrap_content"
                                 android:layout_gravity="start"
                                 android:backgroundTint="#9E9B9B"
-                                android:layout_width="35dp"
+                                android:inputType="number"
                                 android:maxLength="1"
-                                android:id="@+id/et_two"
-                                android:layout_height="wrap_content"
 
                                 />
 
@@ -260,24 +269,26 @@
                                 android:maxLength="1"
 
                                 />
+
                             <EditText
-                                android:inputType="number"
-                                android:layout_gravity="start"
-                                android:backgroundTint="#9E9B9B"
-                                android:maxLength="1"
                                 android:id="@+id/et_four"
                                 android:layout_width="35dp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:backgroundTint="#9E9B9B"
+                                android:inputType="number"
+                                android:maxLength="1"
 
                                 />
 
                         </LinearLayout>
 
                     </FrameLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp">
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp">
 
                         <CheckBox
                             android:id="@+id/SIGN_UP_CHECKBOX"
@@ -285,52 +296,50 @@
                             android:layout_height="27dp"
 
                             android:layout_gravity="center_vertical" />
+
                         <LinearLayout
-                            android:layout_gravity="center_vertical"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
 
                             <FrameLayout
-                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
 
-<LinearLayout
-    android:layout_gravity="center_vertical"
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-
-
-    <TextView
-        android:layout_gravity="center_vertical"
-        android:textColor="#000"
-        android:layout_marginLeft="05dp"
-        android:gravity="start"
-        android:textSize="12sp"
-        android:textAlignment="viewStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I agree to Nestowl "
-        />
-    <TextView
-        android:layout_gravity="center_vertical"
-        android:textColor="@color/basic_color"
-        android:gravity="start"
-        android:textSize="12sp"
-        android:textAlignment="viewStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Terms of Use and Privacy Policy "
-        />
-
-</LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="horizontal">
 
 
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="05dp"
+                                        android:gravity="start"
+                                        android:text="I agree to Nestedge"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="#000"
+                                        android:textSize="12sp" />
 
-<!--
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="start"
+                                        android:text="Terms of Use and Privacy Policy "
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/basic_color"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                                <!--
 
                                 <TextView
                                     android:layout_gravity="center_vertical"
@@ -349,20 +358,21 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <FrameLayout
-                        android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
 
 
                         <TextView
-                            android:textSize="14sp"
-                            android:textColor="#000"
-                            android:fontFamily="@font/roboto_five"
-                            android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_five"
                             android:text="Already Have and account?"
+                            android:textColor="#000"
+                            android:textSize="14sp"
 
                             />
 
@@ -390,15 +400,17 @@
                     </FrameLayout>
 
 
-
-
-
-
-
                 </LinearLayout>
 
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/SIGNUP_BACK"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/arrow_back_set_up"
+                app:tint="@color/white" />
 
 
         </FrameLayout>
