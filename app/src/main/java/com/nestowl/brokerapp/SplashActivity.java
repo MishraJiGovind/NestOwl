@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        int secondsDelayed = 2;
+        int secondsDelayed = 1;
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 if (PrefMananger.GetLoginData(SplashActivity.this)!=null){
@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
                 }
             }
-        }, secondsDelayed * 2000);
+        },  secondsDelayed*1000);
 
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();

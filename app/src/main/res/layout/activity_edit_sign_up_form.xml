@@ -101,6 +101,28 @@
                       android:background="@drawable/shadow_home_page"
                       android:visibility="visible">
 
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:gravity="right"
+                          android:orientation="horizontal">
+
+                          <TextView
+                              android:id="@+id/PROFILE_SUMIT_PROGRESS"
+
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="30dp"
+                              android:layout_marginRight="25dp"
+                              android:fontFamily="@font/roboto_mediaum_second"
+
+
+                              android:gravity="right"
+                              android:text="0%"
+                              android:textColor="@color/Greeen"
+                              android:textSize="14sp" />
+                      </LinearLayout>
+
                       <TextView
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
@@ -113,20 +135,6 @@
 
 
                           />
-
-                      <TextView
-                          android:id="@+id/PROFILE_SUMIT_PROGRESS"
-
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_marginLeft="25dp"
-                          android:layout_marginTop="30dp"
-                          android:fontFamily="@font/roboto_mediaum_second"
-                          android:text="0%"
-                          android:textColor="#E70808"
-
-
-                          android:textSize="14sp" />
 
                       <ProgressBar
                           android:id="@+id/PROFILE_SUMIT_PROGRESSBAR"

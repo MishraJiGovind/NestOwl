@@ -196,13 +196,10 @@ public class SignUpVerification extends AppCompatActivity {
                 unselected(process);
                 unselected(availble);
                 unselected(not_available);
-                rera_lnr.setVisibility(View.GONE);
-                if (is_Residential_click) {
-                    is_Residential_click = false;
+                if (rera_lnr.getVisibility()==View.VISIBLE){
                     rera_lnr.setVisibility(View.GONE);
                     rera_frm.setBackgroundResource(R.drawable.employe_circle_rounded);
-                } else {
-                    is_Residential_click = true;
+                }else {
                     rera_lnr.setVisibility(View.VISIBLE);
                     verification_typee="Rera Id";
                     rera_frm.setBackgroundResource(R.drawable.selected_background_filter);
@@ -216,10 +213,10 @@ public class SignUpVerification extends AppCompatActivity {
                 isRera=false;
                 rera_lnr.setVisibility(View.GONE);
                 rera_frm.setBackgroundResource(R.drawable.employe_circle_rounded);
-                if (is_Residential_click) {
+                if (adhar_card_lnr.getVisibility()==View.VISIBLE) {
                     is_Residential_click = false;
                     _aadhar_frm.setBackgroundResource(R.drawable.selected_background_filter);
-                    adhar_card_lnr.setVisibility(View.VISIBLE);
+                    adhar_card_lnr.setVisibility(View.GONE);
                 } else {
                     is_Residential_click = true;
                     _aadhar_frm.setBackgroundResource(R.drawable.selected_background_filter);

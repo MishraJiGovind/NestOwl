@@ -27,6 +27,7 @@ import com.nestowl.brokerapp.InterestedPropertyThirdUser;
 import com.nestowl.brokerapp.R;
 import com.nestowl.utils.UrlClass;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -37,7 +38,7 @@ public class MannagePropertyDialog {
     String user_id,property_id;
     PopupMannageModal popupMannageModal;
     boolean isContact,isFreeze;
-
+    Dialog dialog ;
     public MannagePropertyDialog(Context context, String user_id, String property_id, PopupMannageModal popupMannageModal) {
         this.context = context;
         this.user_id = user_id;
@@ -47,10 +48,51 @@ public class MannagePropertyDialog {
         isFreeze=false;
         checkFreeze(property_id);
         checkContact(property_id);
+        dialog = new Dialog(context);
     }
 
     private void checkContact(String property_id) {
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_PHOTO, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonObject = new JSONObject(response);
+                    String sttaus= jsonObject.getString("status");
+                    if (sttaus.equals("1")){
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                        String contact = jsonObject1.getString("hide_contact_details");
+                        if (contact.equals("Yes")){
+                            dialog.dismiss();
+                            isContact=true;
+                            showPopup();
+                        }else {
+                            dialog.dismiss();
+                            showPopup();
+                            isContact=false;
+                        }
+                    }
+                }catch (Exception e){
 
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String>hashMap=new HashMap<>();
+                hashMap.put("property_id",property_id);
+                hashMap.put("user_id",user_id);
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(context).add(request);
     }
     private void checkFreeze(String property_id) {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_FREEZE_STATUS, new Response.Listener<String>() {
@@ -68,6 +110,7 @@ public class MannagePropertyDialog {
                         }else {
                             isFreeze=false;
                         }
+                        dialog.dismiss();
                         showPopup();
                     }
                 }catch (Exception e){
@@ -92,7 +135,7 @@ public class MannagePropertyDialog {
         Volley.newRequestQueue(context).add(request);
     }
     public void showPopup(){
-        final Dialog dialog = new Dialog(context);
+
         dialog.setContentView(R.layout.manage_property_five);
         TextView id,status,posted,catogory;
 
@@ -128,6 +171,13 @@ public class MannagePropertyDialog {
             TextView textView =  (TextView) FREEZE.getChildAt(0);
             textView.setText("UnFreeze Property");
         }
+        if (isContact){
+            TextView textView =  (TextView) frm_show_contact.getChildAt(0);
+            textView.setText("Hide Contact");
+        }else {
+            TextView textView =  (TextView) frm_show_contact.getChildAt(0);
+            textView.setText("Show Contact");
+        }
         dialog.show();
         frm_show_contact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,7 +188,7 @@ public class MannagePropertyDialog {
                        @Override
                        public void getClicks(int click) {
                            if (click==1){
-
+                                showContact();
                            }
                        }
                    },false);
@@ -147,7 +197,7 @@ public class MannagePropertyDialog {
                        @Override
                        public void getClicks(int click) {
                            if (click==1){
-
+                                hideContact();
                            }
                        }
                    },false);
@@ -197,6 +247,7 @@ public class MannagePropertyDialog {
                 intent.putExtra("user_id", user_id);
                 intent.putExtra("idd", property_id);
                 intent.putExtra("id", property_id);
+                intent.putExtra("isBroker", true);
                 context.startActivity(intent);
             }
         });
@@ -296,6 +347,94 @@ public class MannagePropertyDialog {
                 HashMap<String,String>hashMap=new HashMap<>();
                 hashMap.put("property_id",property_id);
                 hashMap.put("active","Yes");
+                hashMap.put("user_id",user_id);
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(context).add(request);
+    }
+    private void showContact(){
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.PHOTO_PROPERTY_PHOTO, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonObject = new JSONObject(response);
+                    String sttaus= jsonObject.getString("status");
+                    if (sttaus.equals("1")){
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                        String contact = jsonObject1.getString("hide_contact_details");
+                        if (contact.equals("Yes")){
+                            dialog.dismiss();
+                            isContact=true;
+                            showPopup();
+                        }else {
+                            dialog.dismiss();
+                            showPopup();
+                            isContact=false;
+                        }
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String>hashMap=new HashMap<>();
+                hashMap.put("hide_contact_details","Yes");
+                hashMap.put("property_id",property_id);
+                hashMap.put("user_id",user_id);
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(context).add(request);
+    }
+    private void hideContact(){
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.PHOTO_PROPERTY_PHOTO, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonObject = new JSONObject(response);
+                    String sttaus= jsonObject.getString("status");
+                    if (sttaus.equals("1")){
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                        String contact = jsonObject1.getString("hide_contact_details");
+                        if (contact.equals("Yes")){
+                            dialog.dismiss();
+                            isContact=true;
+                            showPopup();
+                        }else {
+                            dialog.dismiss();
+                            showPopup();
+                            isContact=false;
+                        }
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String>hashMap=new HashMap<>();
+                hashMap.put("hide_contact_details","No");
+                hashMap.put("property_id",property_id);
                 hashMap.put("user_id",user_id);
                 return hashMap;
             }

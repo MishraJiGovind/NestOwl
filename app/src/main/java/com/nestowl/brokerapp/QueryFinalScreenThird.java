@@ -31,12 +31,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nestowl.CommenDialog.WarningDio;
+import com.nestowl.model.LoginPojo;
 import com.nestowl.model.ProjectRecivedModal;
 import com.nestowl.model.User;
 import com.nestowl.utils.PrefMananger;
 import com.nestowl.utils.UrlClass;
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -58,6 +60,7 @@ public class QueryFinalScreenThird extends AppCompatActivity {
     RecyclerView imagesView;
     TextView dateDate,dateMonth,timeTime;
     User frontUser,user;
+    LoginPojo loginPojo;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -70,7 +73,7 @@ public class QueryFinalScreenThird extends AppCompatActivity {
         INTREST="NO";
         isAccepted=false;
         getUSer();
-
+        loginPojo=PrefMananger.GetLoginData(this);
         user=new Gson().fromJson(PrefMananger.getString(this,"user"),User.class);
         projectName=findViewById(R.id.BUILDER_DEAL_PROJECT_NAME);
         possassion=findViewById(R.id.BUILDER_DEAL_POSSASTION);
@@ -134,24 +137,24 @@ public class QueryFinalScreenThird extends AppCompatActivity {
             }
         });
 
-        fm_physically.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                phycallyLnr.setVisibility(View.VISIBLE);
-                vetuallyLnr.setVisibility(View.GONE);
-                fm_physically.setBackgroundResource(R.drawable.selected_background_filter);
-                fm_virtually.setBackgroundResource(R.drawable.employe_circle_rounded);
-            }
-        });
-        fm_virtually.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fm_virtually.setBackgroundResource(R.drawable.selected_background_filter);
-                fm_physically.setBackgroundResource(R.drawable.employe_circle_rounded);
-                vetuallyLnr.setVisibility(View.VISIBLE);
-                phycallyLnr.setVisibility(View.GONE);
-            }
-        });
+//        fm_physically.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                phycallyLnr.setVisibility(View.VISIBLE);
+//                vetuallyLnr.setVisibility(View.GONE);
+//                fm_physically.setBackgroundResource(R.drawable.selected_background_filter);
+//                fm_virtually.setBackgroundResource(R.drawable.employe_circle_rounded);
+//            }
+//        });
+//        fm_virtually.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                fm_virtually.setBackgroundResource(R.drawable.selected_background_filter);
+//                fm_physically.setBackgroundResource(R.drawable.employe_circle_rounded);
+//                vetuallyLnr.setVisibility(View.VISIBLE);
+//                phycallyLnr.setVisibility(View.GONE);
+//            }
+//        });
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,8 +194,50 @@ public class QueryFinalScreenThird extends AppCompatActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));}
         fetchProposal();
+        isAcceptedProposal();
     }
 
+    private void isAcceptedProposal() {
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.PROJECT_GET_ACCEPT_REJECT, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    Log.e("accepted project", "onResponse: "+response );
+                    String status =  jsonObject.getString("status");
+                    if (status.equals("1")){
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                        String accepted =  jsonObject1.getString("interest");
+                        Log.e("accepted project", "onResponse: "+accepted+"\n"+response );
+                        if (accepted.contains("Yes")){
+                            reject.setVisibility(View.GONE);
+                            TextView textView =  (TextView) accept.getChildAt(0);
+                            textView.setText("View Contact");
+                            isAccepted = true;
+                        }
+                    }
+                }catch (Exception e){
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String >hashMap=new HashMap<>();
+                hashMap.put("id",id);
+                hashMap.put("user_id",String.valueOf(loginPojo.getUserId()));
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(this).add(request);
+    }
     private void handleAcceptreject() {
         ProgressDialog pd = new ProgressDialog(this);
         pd.setCancelable(false);
@@ -205,6 +250,7 @@ public class QueryFinalScreenThird extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String  status =  jsonObject.getString("status");
+                    Log.e("loge", "onResponse: "+response );
                     if (status.equals("1")){
                         if (INTREST.equals("Yes")){
                             new WarningDio(QueryFinalScreenThird.this, "Project accepted", "OK", null, new WarningDio.Response() {

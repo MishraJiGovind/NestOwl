@@ -1,6 +1,7 @@
 package com.nestowl.Fragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -55,6 +56,7 @@ public class PartnerRequest extends Fragment {
     LoginPojo data;
     ArrayList<String> projectIdStrings,statusList;
     ConstraintLayout noDatashow;
+    Context context;
 
     public PartnerRequest() {
         // Required empty public constructor
@@ -63,6 +65,7 @@ public class PartnerRequest extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_partner_request, container, false);
+        context = getContext();
         rg_group=view.findViewById(R.id.rg_two);
         lr_submit=view.findViewById(R.id.HOME_PROJECT_LNR_LIVE);
         lr_accept=view.findViewById(R.id.HOME_PROJECT_LNR_PENDING);
@@ -71,9 +74,9 @@ public class PartnerRequest extends Fragment {
         pendings=view.findViewById(R.id.ALERT_PROJECT_PENDING_RECYCLER);
         noDatashow=view.findViewById(R.id.ALL_NO_DATA_SHOW);
 
-        live.setLayoutManager(new LinearLayoutManager(getContext()));
-        recived.setLayoutManager(new LinearLayoutManager(getContext()));
-        pendings.setLayoutManager(new LinearLayoutManager(getContext()));
+        live.setLayoutManager(new LinearLayoutManager(context));
+        recived.setLayoutManager(new LinearLayoutManager(context));
+        pendings.setLayoutManager(new LinearLayoutManager(context));
         
         liveArrey=new ArrayList<>();
         recievdArrey=new ArrayList<>();
@@ -81,7 +84,7 @@ public class PartnerRequest extends Fragment {
         projectIdStrings=new ArrayList<>();
         statusList=new ArrayList<>();
 
-        data = PrefMananger.GetLoginData(getContext());
+        data = PrefMananger.GetLoginData(context);
         
         getprojectOnBoard();
 
@@ -199,7 +202,7 @@ public class PartnerRequest extends Fragment {
                             projectIdStrings.add(d.getProject_name());
                             statusList.add("RECEIVED");
                         }
-                        Volley.newRequestQueue(getContext()).add(requestss);
+                        Volley.newRequestQueue(context).add(requestss);
                     }
                 }catch (Exception e){
 
@@ -232,7 +235,7 @@ public class PartnerRequest extends Fragment {
                             projectIdStrings.add(d.getProject_name());
                             statusList.add("PENDING");
                         }
-                        Volley.newRequestQueue(getContext()).add(requests);
+                        Volley.newRequestQueue(context).add(requests);
                     }
                 }catch (Exception e){
 
@@ -252,7 +255,7 @@ public class PartnerRequest extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
     }
     private void handlerProjectArrey() {
@@ -308,14 +311,14 @@ public class PartnerRequest extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void setProjectRecyclerViews() {
-        adapter =  new AlertProjectAdapter(getContext(),liveArrey);
+        adapter =  new AlertProjectAdapter(context,liveArrey);
         live.setAdapter(adapter);
-        adapter =  new AlertProjectAdapter(getContext(),recievdArrey);
+        adapter =  new AlertProjectAdapter(context,recievdArrey);
         recived.setAdapter(adapter);
-        adapter =  new AlertProjectAdapter(getContext(),pendingsArrey);
+        adapter =  new AlertProjectAdapter(context,pendingsArrey);
         pendings.setAdapter(adapter);
     }
 }

@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -147,6 +148,8 @@ public class HomeFragment extends Fragment {
     LiveCommnication liveCommnication;
     CardView clints,how2;
     ArrayList<NotificationModal>notificationModals;
+    Context context;
+    NestedScrollView nestedScrollView;
 
     int scrollhandler;
     public HomeFragment() {
@@ -156,6 +159,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
+        context =  getContext();
         int PERMISSION_ALL = 1;
         String[] PERMISSIONS = {
                 android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -165,11 +169,11 @@ public class HomeFragment extends Fragment {
                 Manifest.permission.CALL_PHONE,
                 Manifest.permission.MANAGE_DOCUMENTS
         };
-        if (!hasPermissions(getContext(), PERMISSIONS)) {
+        if (!hasPermissions(context, PERMISSIONS)) {
             ActivityCompat.requestPermissions(getActivity(), PERMISSIONS, PERMISSION_ALL);
         }
-        if (PrefMananger.getString(getContext(),"user")!=null){
-           user =  new Gson().fromJson(PrefMananger.getString(getContext(),"user"),User.class);
+        if (PrefMananger.getString(context,"user")!=null){
+           user =  new Gson().fromJson(PrefMananger.getString(context,"user"),User.class);
            UserID = user.getUser_id();
        }
         tv_new_project =view.findViewById(R.id.new_projects_alt);
@@ -189,6 +193,7 @@ public class HomeFragment extends Fragment {
         IncompleteList=view.findViewById(R.id.HOME_INCOMPLETE_LIST);
         clints=view.findViewById(R.id.HOME_CLINTS);
         how2=view.findViewById(R.id.HOME_CARD_2);
+        nestedScrollView=view.findViewById(R.id.HOME_INCOMPLETE_SCROLL);
 
         leadsByPropertyMain=view.findViewById(R.id.HOME_LEADS_BY_PRO_MAIN);
         leadsByPropertyType=view.findViewById(R.id.HOME_LEADS_BY_PRO_TYPE);
@@ -212,7 +217,7 @@ public class HomeFragment extends Fragment {
                 lnr_parent_frg.setVisibility(View.VISIBLE);
             }
         });
-        IncompleteList.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        IncompleteList.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         incompleteArrey=new ArrayList<>();
         projectIdStrings= new ArrayList<>();
         statusList=new ArrayList<>();
@@ -222,7 +227,7 @@ public class HomeFragment extends Fragment {
         LeadsRecycler.setNestedScrollingEnabled(true);
 
         PropertyRecycler=view.findViewById(R.id.HOME_PROPERTY_RECYCLER);
-        layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        layoutManager = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
         PropertyRecycler.setLayoutManager(layoutManager);
         data = PrefMananger.GetLoginData(getActivity());
         getIncompleteListings();
@@ -230,10 +235,10 @@ public class HomeFragment extends Fragment {
         subscribeClick=false;
         handleProfileSumbition();
         isAd=true;
-        ProgressDialog pd  = new ProgressDialog(getContext());
+        ProgressDialog pd  = new ProgressDialog(context);
         pd.setCancelable(false);
         pd.setMessage("Loading...");
-        pd.show();
+//        pd.show();
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
@@ -246,7 +251,7 @@ public class HomeFragment extends Fragment {
                 leadsViewModals.add(ad);
                 setLeadsRecycler();
                 try {
-                    String json = PrefMananger.getString(getContext(),"remains");
+                    String json = PrefMananger.getString(context,"remains");
                     if (json!=null){
                         JSONArray jsonArray = new JSONArray(json);
                         for (int i=0;i<jsonArray.length();i++){
@@ -260,9 +265,9 @@ public class HomeFragment extends Fragment {
 
                                 Date today = new Date();
                                 if (futureDate<=today.getYear()&&month<=today.getMonth()&&day<=today.getDay()){
-                                    PrefMananger.saveString(getContext(),"sub","false");
+                                    PrefMananger.saveString(context,"sub","false");
                                 }else {
-                                    PrefMananger.saveString(getContext(),"sub","true");
+                                    PrefMananger.saveString(context,"sub","true");
                                 }
                             }
                             if (data.getName().equals("8")){
@@ -273,9 +278,9 @@ public class HomeFragment extends Fragment {
 
                                 Date today = new Date();
                                 if (futureDate<=today.getYear()&&month<=today.getMonth()&&day<=today.getDay()){
-                                    PrefMananger.saveString(getContext(),"sub","false");
+                                    PrefMananger.saveString(context,"sub","false");
                                 }else {
-                                    PrefMananger.saveString(getContext(),"sub","true");
+                                    PrefMananger.saveString(context,"sub","true");
                                 }
                             }
                             if (data.getName().equals("9")){
@@ -286,24 +291,25 @@ public class HomeFragment extends Fragment {
 
                                 Date today = new Date();
                                 if (futureDate<=today.getYear()&&month<=today.getMonth()&&day<=today.getDay()){
-                                    PrefMananger.saveString(getContext(),"sub","false");
+                                    PrefMananger.saveString(context,"sub","false");
                                 }else {
-                                    PrefMananger.saveString(getContext(),"sub","true");
+                                    PrefMananger.saveString(context,"sub","true");
                                 }
                             }
                         }
                     }else {
-                        PrefMananger.saveString(getContext(),"sub","false");
+                        PrefMananger.saveString(context,"sub","false");
                     }
                 }catch (Exception e){
                     Log.e("date error", "onResponse: "+e );
                 }
-                if (PrefMananger.getString(getContext(),"sub").equals("true")){
+                if (PrefMananger.getString(context,"sub").equals("true")){
                     SubscribeBOdy.setVisibility(View.GONE);
                     WelcomeMassageBody.setVisibility(View.GONE);
                 }else {
                     SubscribeBOdy.setVisibility(View.VISIBLE);
                     WelcomeMassageBody.setVisibility(View.VISIBLE);
+                    propertyCount.setText("00");
                 }
             }
         };
@@ -313,9 +319,9 @@ public class HomeFragment extends Fragment {
         projectRecicvedRecyler  =view.findViewById(R.id.HOME_PROJECT_RECICVED_RECYCLER);
         projectPendingRecycler  =view.findViewById(R.id.HOME_PROJECT_PENDING_RECYCLER);
 
-        projectLiveRecyler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        projectRecicvedRecyler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        projectPendingRecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        projectLiveRecyler.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        projectRecicvedRecyler.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        projectPendingRecycler.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         lnr_city=view.findViewById(R.id.lnr_city_centric);
         nest_search=view.findViewById(R.id.SEARCH_NEST_PRO_SEARCH);
         rohit=view.findViewById(R.id.hello_rohit);
@@ -324,11 +330,11 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (subscribeClick){
-                    startActivity(new Intent(getContext(), SubscriptionPlan.class));
+                    startActivity(new Intent(context, SubscriptionPlan.class));
                 }else {
-                    if (PrefMananger.getString(getContext(),"status").equals("0")){
-                        startActivity(new Intent(getContext(), EditSignUpForm.class));
-//                        new WarningDio(getContext(), "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
+                    if (PrefMananger.getString(context,"status").equals("0")){
+                        startActivity(new Intent(context, EditSignUpForm.class));
+//                        new WarningDio(context, "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
 //                            @Override
 //                            public void getClicks(int click) {
 //                                if (click==1){
@@ -336,16 +342,16 @@ public class HomeFragment extends Fragment {
 //                            }
 //                        },false);
                     }
-                    if (PrefMananger.getString(getContext(),"status").equals("1")){
-                        new WarningDio(getContext(), "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
+                    if (PrefMananger.getString(context,"status").equals("1")){
+                        new WarningDio(context, "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
 
                             }
                         },false);
                     }
-                    if (PrefMananger.getString(getContext(),"status").equals("2")){
-                        new WarningDio(getContext(), "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
+                    if (PrefMananger.getString(context,"status").equals("2")){
+                        new WarningDio(context, "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
                             }
@@ -357,19 +363,19 @@ public class HomeFragment extends Fragment {
         rohit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(getContext(), FrontViewQueryFirst.class));
+//                startActivity(new Intent(context, FrontViewQueryFirst.class));
             }
         });
         how2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), HowItWorks.class));
+                startActivity(new Intent(context, HowItWorks.class));
             }
         });
         nest_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SearchNestPro.class));
+                startActivity(new Intent(context, SearchNestPro.class));
             }
         });
         edt_home=view.findViewById(R.id.edt_home_filter);
@@ -406,7 +412,7 @@ public class HomeFragment extends Fragment {
         frame_incom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), PlanBasicActivity.class));
+                startActivity(new Intent(context, PlanBasicActivity.class));
 
 
             }
@@ -417,39 +423,39 @@ public class HomeFragment extends Fragment {
         clints.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (PrefMananger.getString(getContext(),"sub").equals("true")){
-                    startActivity(new Intent(getContext(), Clints.class));
+                if (PrefMananger.getString(context,"sub").equals("true")){
+                    startActivity(new Intent(context, Clints.class));
                 }else {
-                    if ( PrefMananger.getString(getContext(),"id").equals("true")){
-                        new WarningDio(getContext(), "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
+                    if ( PrefMananger.getString(context,"id").equals("true")){
+                        new WarningDio(context, "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
                                 if (click==1){
-                                    startActivity(new Intent(getContext(),SubscriptionPlan.class));
+                                    startActivity(new Intent(context,SubscriptionPlan.class));
                                 }
                             }
                         },false);
                     }else {
-                        if (PrefMananger.getString(getContext(),"status").equals("0")){
-                            new WarningDio(getContext(), "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("0")){
+                            new WarningDio(context, "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                     if (click==1){
-                                        startActivity(new Intent(getContext(),EditSignUpForm.class));
+                                        startActivity(new Intent(context,EditSignUpForm.class));
                                     }
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("1")){
-                            new WarningDio(getContext(), "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("1")){
+                            new WarningDio(context, "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
 
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("2")){
-                            new WarningDio(getContext(), "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("2")){
+                            new WarningDio(context, "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                 }
@@ -464,19 +470,19 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 //                if (t){
-//                    ArticleAdapter adapter =  new ArticleAdapter(getContext(), articles);
+//                    ArticleAdapter adapter =  new ArticleAdapter(context, articles);
 //                    articlesRecyler.setAdapter(adapter);
 //                    TextView textView =  (TextView) show_All.getChildAt(0);
 //                    textView.setText("Hide all("+articles.size()+")");
 //                    t=false;
 //                }else {
-//                    ArticleAdapter adapter =  new ArticleAdapter(getContext(), article);
+//                    ArticleAdapter adapter =  new ArticleAdapter(context, article);
 //                    articlesRecyler.setAdapter(adapter);
 //                    TextView textView =  (TextView) show_All.getChildAt(0);
 //                    textView.setText("Show all("+articles.size()+")");
 //                    t=true;
 //                }
-                getContext().startActivity(new Intent(getContext(), Articles.class));
+                context.startActivity(new Intent(context, Articles.class));
             }
         });
         post_property=view.findViewById(R.id.post_property_form);
@@ -488,14 +494,14 @@ public class HomeFragment extends Fragment {
         home_card_shadow_second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SalePropertiesSecondForNestOwners.class));
+                startActivity(new Intent(context, SalePropertiesSecondForNestOwners.class));
 
             }
         });
         home_card_shadow_first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
 
             }
@@ -503,7 +509,7 @@ public class HomeFragment extends Fragment {
         edt_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SearchViewActivity.class));
+                startActivity(new Intent(context, SearchViewActivity.class));
 
 
             }
@@ -512,7 +518,7 @@ public class HomeFragment extends Fragment {
         new_project.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), ReraActivity.class));
+                startActivity(new Intent(context, ReraActivity.class));
 
 
             }
@@ -522,7 +528,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 /*
-                startActivity(new Intent(getContext(), IntroScreenPostRequirement.class));
+                startActivity(new Intent(context, IntroScreenPostRequirement.class));
 */
             }
         });
@@ -561,7 +567,7 @@ public class HomeFragment extends Fragment {
         lnr_nest_professional.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), NestOwnersSixteen.class));
+                startActivity(new Intent(context, NestOwnersSixteen.class));
 
             }
         });
@@ -569,18 +575,18 @@ public class HomeFragment extends Fragment {
         ht_properties.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), ReraActivity.class));
+                startActivity(new Intent(context, ReraActivity.class));
 
             }
         });
         lnr_city.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), ReraActivity.class));
+                startActivity(new Intent(context, ReraActivity.class));
 
             }
         });/*
-                startActivity(new Intent(getContext(), NestOwnersSixteen.class));
+                startActivity(new Intent(context, NestOwnersSixteen.class));
 */
 
         frame_rera=view.findViewById(R.id.home_frame_nest);
@@ -588,7 +594,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getContext(), ScreenSixteenDetailsPage.class));
+                startActivity(new Intent(context, ScreenSixteenDetailsPage.class));
 
 
             }
@@ -598,14 +604,14 @@ public class HomeFragment extends Fragment {
         lnr_hello_sahil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         lnr_save_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaveMoreActivity.class));
+                startActivity(new Intent(context, SaveMoreActivity.class));
 
 
             }
@@ -621,7 +627,7 @@ public class HomeFragment extends Fragment {
         tv_new_project.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), NewProjectHomeBuyer.class));
+                startActivity(new Intent(context, NewProjectHomeBuyer.class));
 
             }
         });
@@ -629,47 +635,48 @@ public class HomeFragment extends Fragment {
         featured_product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         hot_properties.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         nest_project.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         city_centre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         nes_professional.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         tv_se_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SaleProperties.class));
+                startActivity(new Intent(context, SaleProperties.class));
 
             }
         });
         scrollhandler=0;
         getprojectOnBoard();
+
         PropertyRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
@@ -677,7 +684,7 @@ public class HomeFragment extends Fragment {
                 Log.e("testRecycler", "onScrolled: "+dx+" "+dy );
                if (dx<=1){
                    if (scrollhandler==1){
-                       if (layoutManager.findLastCompletelyVisibleItemPosition()>0){
+                       if (layoutManager.findLastCompletelyVisibleItemPosition()>=0){
                            PropertyViewModal s = propertyViewModals.get(layoutManager.findLastCompletelyVisibleItemPosition());
                            leadsByPropertyId.setText("RESPONSE ON ID:"+s.getProId());
                            getLeadsById(s.getId());
@@ -686,20 +693,14 @@ public class HomeFragment extends Fragment {
                            scrollhandler=0;
                            return ;
                        }else {
-//                           PropertyViewModal s = propertyViewModals.get(0);
-//                           leadsByPropertyId.setText("RESPONSE ON ID:"+s.getProId());
-//                           getLeadsById(s.getId());
-//                           scrollhandler=0;
-//                           responseIdS=s.getId();
-//                           Log.e("RESPONSE ID", "onScrolled: "+responseIdS );
-//                           return ;
+
                        }
 
                    }
                }
                if (dx>=1){
                    if (scrollhandler==1){
-                       if (layoutManager.findLastCompletelyVisibleItemPosition()>0){
+                       if (layoutManager.findLastCompletelyVisibleItemPosition()>=0){
                            PropertyViewModal s = propertyViewModals.get(layoutManager.findLastCompletelyVisibleItemPosition());
                            leadsByPropertyId.setText("RESPONSE ON ID:"+s.getProId());
                            getLeadsById(s.getId());
@@ -708,13 +709,7 @@ public class HomeFragment extends Fragment {
                            scrollhandler=0;
                            return ;
                        }else {
-//                           PropertyViewModal s = propertyViewModals.get(0);
-//                           leadsByPropertyId.setText("RESPONSE ON ID:"+s.getProId());
-//                           getLeadsById(s.getId());
-//                           scrollhandler=0;
-//                           responseIdS=s.getId();
-//                           Log.e("RESPONSE ID", "onScrolled: "+responseIdS );
-//                           return ;
+
                        }
 
                    }
@@ -732,39 +727,39 @@ public class HomeFragment extends Fragment {
         postPropertyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (PrefMananger.getString(getContext(),"sub").equals("true")){
-                getContext().startActivity(new Intent(getContext(), SelectOptionMode.class));
+                if (PrefMananger.getString(context,"sub").equals("true")){
+                context.startActivity(new Intent(context, SelectOptionMode.class));
                 }else {
-                    if ( PrefMananger.getString(getContext(),"id").equals("true")){
-                        new WarningDio(getContext(), "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
+                    if ( PrefMananger.getString(context,"id").equals("true")){
+                        new WarningDio(context, "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
                                 if (click==1){
-                                    startActivity(new Intent(getContext(),SubscriptionPlan.class));
+                                    startActivity(new Intent(context,SubscriptionPlan.class));
                                 }
                             }
                         },false);
                     }else {
-                        if (PrefMananger.getString(getContext(),"status").equals("0")){
-                            new WarningDio(getContext(), "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("0")){
+                            new WarningDio(context, "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                     if (click==1){
-                                        startActivity(new Intent(getContext(),EditSignUpForm.class));
+                                        startActivity(new Intent(context,EditSignUpForm.class));
                                     }
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("1")){
-                            new WarningDio(getContext(), "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("1")){
+                            new WarningDio(context, "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
 
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("2")){
-                            new WarningDio(getContext(), "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("2")){
+                            new WarningDio(context, "Your Profile is in Review yet.", "OK", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                 }
@@ -776,6 +771,15 @@ public class HomeFragment extends Fragment {
         });
         getAllAcceptedRejected(UserID);
         return view;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        if (context==null){
+            Volley.newRequestQueue(context).cancelAll(null);
+        }
+
     }
 
     private void getAllAcceptedRejected(String userID) {
@@ -833,7 +837,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     public static boolean hasPermissions(Context context, String[] permissions) {
         if (context != null && permissions != null) {
@@ -893,7 +897,7 @@ public class HomeFragment extends Fragment {
                             projectIdStrings.add(d.getProject_name());
                             statusList.add("RECEIVED");
                         }
-                        Volley.newRequestQueue(getContext()).add(requestss);
+                        Volley.newRequestQueue(context).add(requestss);
                     }
                 }catch (Exception e){
 
@@ -926,7 +930,7 @@ public class HomeFragment extends Fragment {
                             projectIdStrings.add(d.getProject_name());
                             statusList.add("PENDING");
                         }
-                        Volley.newRequestQueue(getContext()).add(requests);
+                        Volley.newRequestQueue(context).add(requests);
                     }
                 }catch (Exception e){
 
@@ -946,7 +950,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
     }
     private void handlerProjectArrey() {
@@ -962,9 +966,9 @@ public class HomeFragment extends Fragment {
 
     }
     private void setProjectRecyclerViews() {
-        ProjectListAdapter adapter =  new ProjectListAdapter(getContext(),liveList);
-        ProjectListAdapter adapterrecived =  new ProjectListAdapter(getContext(),recivedList);
-        ProjectListAdapter adapterPending =  new ProjectListAdapter(getContext(),pendingList);
+        ProjectListAdapter adapter =  new ProjectListAdapter(context,liveList);
+        ProjectListAdapter adapterrecived =  new ProjectListAdapter(context,recivedList);
+        ProjectListAdapter adapterPending =  new ProjectListAdapter(context,pendingList);
         projectLiveRecyler.setAdapter(adapter);
         projectRecicvedRecyler.setAdapter(adapterrecived);
         projectPendingRecycler.setAdapter(adapterPending);
@@ -1010,7 +1014,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getIncompleteListings() {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_LIST_INCOMPLETE, new Response.Listener<String>() {
@@ -1023,15 +1027,19 @@ public class HomeFragment extends Fragment {
                     incompleteArrey = new ArrayList<>();
                     if (status.equals("1")){
                         JSONArray jsonArray = jsonObject.getJSONArray("InComplete");
+                        if (jsonArray.length()==0){
+                            nestedScrollView.setVisibility(View.GONE);
+                        }
                         for (int i=0;i<jsonArray.length();i++){
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
                             BasicDetailsModal d = new Gson().fromJson(jsonObject1.toString(),BasicDetailsModal.class);
                             incompleteArrey.add(d);
                         }
-                        adpterIncomplete =  new IncompleteHomeAdpter(getContext(),incompleteArrey);
+                        adpterIncomplete =  new IncompleteHomeAdpter(context,incompleteArrey);
                         IncompleteList.setAdapter(adpterIncomplete);
                     }
                 }catch (Exception e){
+                    nestedScrollView.setVisibility(View.GONE);
                     Log.e("incompleteHome", "onResponse: "+e );
                 }
             }
@@ -1039,6 +1047,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("incompleteHome", "onResponse: "+error );
+                nestedScrollView.setVisibility(View.GONE);
             }
         }){
             @Nullable
@@ -1049,7 +1058,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void showLeads() {
         StringRequest PublicHeros =  new StringRequest(Request.Method.POST, UrlClass.LEADS_INDIANHEROS, new Response.Listener<String>() {
@@ -1135,13 +1144,13 @@ public class HomeFragment extends Fragment {
                 }catch (Exception e){
                     Log.e("Dubble Catch error", "onResponse: "+e );
                 }
-                Volley.newRequestQueue(getContext()).add(PublicHeros);
+                Volley.newRequestQueue(context).add(PublicHeros);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Dubble error res", "onResponse: "+error );
-                Volley.newRequestQueue(getContext()).add(PublicHeros);
+                Volley.newRequestQueue(context).add(PublicHeros);
             }
         }) {
             @Nullable
@@ -1227,12 +1236,12 @@ public class HomeFragment extends Fragment {
                 }catch (Exception e){
                     Log.e("Dubble Catch error", "onResponse: "+e );
                 }
-                Volley.newRequestQueue(getContext()).add(dubbleLeads);
+                Volley.newRequestQueue(context).add(dubbleLeads);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                        Volley.newRequestQueue(getContext()).add(dubbleLeads);
+                        Volley.newRequestQueue(context).add(dubbleLeads);
                 Log.e("Dubble error res", "onResponse: "+error );
             }
         }) {
@@ -1371,12 +1380,12 @@ public class HomeFragment extends Fragment {
                 }catch (Exception e){
                     Log.e("Accepted", "onResponse: "+e );
                 }
-                Volley.newRequestQueue(getContext()).add(brokerLeads);
+                Volley.newRequestQueue(context).add(brokerLeads);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Volley.newRequestQueue(getContext()).add(brokerLeads);
+                Volley.newRequestQueue(context).add(brokerLeads);
                 Log.e("Public Response error", "onResponse: "+error );
             }
         }){
@@ -1389,7 +1398,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
 
 
@@ -1483,7 +1492,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getIndianHerosServicepro(LeadsPublicPro data) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.LEADS_INDIANHEROS_DETAILS, new Response.Listener<String>() {
@@ -1570,7 +1579,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
     }
     private void varifyIndianHeros(LeadsRequmentsModal datas) {
@@ -1660,7 +1669,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getIndianHerosService(LeadsRequmentsModal data) {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.LEADS_INDIANHEROS_DETAILS, new Response.Listener<String>() {
@@ -1748,7 +1757,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
     }
     private void getPropertyInfoById(String property_id) {
@@ -1838,7 +1847,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getRequrementsDataByReqId(String requirement_id) {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.LEADS_REQ_DETAILS, new Response.Listener<String>() {
@@ -1926,11 +1935,11 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void setLeadsRecycler(){
-        LeadsRecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        LeadsAdapter adapter =  new LeadsAdapter(getContext(), leadsViewModals);
+        LeadsRecycler.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        LeadsAdapter adapter =  new LeadsAdapter(context, leadsViewModals);
         LeadsRecycler.setAdapter(adapter);
     }
     private void getName(String user_id,LeadsViewModal leadsViewModal,int i) {
@@ -1969,7 +1978,7 @@ public class HomeFragment extends Fragment {
             }
 
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private String getBudgetInLakhs(String budget_max) {
         String data =  null;
@@ -2063,11 +2072,12 @@ public class HomeFragment extends Fragment {
                         propertyViewModals = new ArrayList<>();
                         if (jsonArray.length()==0){
                             postPropertyBody.setVisibility(View.VISIBLE);
+                            propertyCount.setText("00");
                         }
                         for (int i=0;i<jsonArray.length();i++){
                             JSONObject object = jsonArray.getJSONObject(i);
                             LeadsPublicPro d =  new Gson().fromJson(object.toString(),LeadsPublicPro.class);
-                            propertyReciver =  new PropertyReciver(getContext(),d.getUser_id(),d.getProperty_id());
+                            propertyReciver =  new PropertyReciver(context,d.getUser_id(),d.getProperty_id());
                             PropertyViewModal views =  new PropertyViewModal();
                             views.setStatus(null);
                             views.setId(d.getProperty_id());
@@ -2081,14 +2091,16 @@ public class HomeFragment extends Fragment {
                             tosave.add(d);
 
                         }
-                        PrefMananger.savePropertyiList(getContext(),tosave);
-                       if (PrefMananger.getString(getContext(),"sub").equals("true")){
-                           PropertyViewAdapter adapter =  new PropertyViewAdapter(getContext(), propertyViewModals);
+
+                        PrefMananger.savePropertyiList(context,tosave);
+                       if (PrefMananger.getString(context,"sub").equals("true")){
+                           PropertyViewAdapter adapter =  new PropertyViewAdapter(context, propertyViewModals);
                            PropertyRecycler.setAdapter(adapter);
                        }
                         PropertyViewModal s = propertyViewModals.get(0);
                         leadsByPropertyId.setText("RESPONSE ON ID:"+s.getProId());
                         getLeadsById(s.getId());
+                        responseIdS=s.getId();
                     }
                 }catch (Exception e){
                     Log.e("PropertyShowEX", "onResponse: "+e );
@@ -2108,7 +2120,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void showArticles(){
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.GET_ARTICLES, new Response.Listener<String>() {
@@ -2129,8 +2141,8 @@ public class HomeFragment extends Fragment {
                                 article.add(t);
                             }
                         }
-                        articlesRecyler.setLayoutManager(new GridLayoutManager(getContext(),2));
-                        ArticleAdapter articleAdapter =  new ArticleAdapter(getContext(), article);
+                        articlesRecyler.setLayoutManager(new GridLayoutManager(context,2));
+                        ArticleAdapter articleAdapter =  new ArticleAdapter(context, article);
                         articlesRecyler.setAdapter(articleAdapter);
                         TextView textView = (TextView) show_All.getChildAt(0);
                         textView.setText("Show all("+object.length()+")");
@@ -2156,11 +2168,11 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void handleProfileSumbition() {
-        int res = getResources().getIdentifier(String.valueOf(R.drawable.green_circle), "drawable", getContext().getPackageName());
-        int no = getResources().getIdentifier(String.valueOf(R.drawable.close_icon_multipul), "drawable", getContext().getPackageName());
+        int res = getResources().getIdentifier(String.valueOf(R.drawable.green_circle), "drawable", context.getPackageName());
+        int no = getResources().getIdentifier(String.valueOf(R.drawable.close_icon_multipul), "drawable", context.getPackageName());
         String id = String.valueOf(data.getUserId());
         StringRequest getProfile = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
             @Override
@@ -2173,35 +2185,46 @@ public class HomeFragment extends Fragment {
                         JSONObject object = jsonObject.getJSONObject("data");
                         LoginPojo loginPojo = new Gson().fromJson(object.toString(), LoginPojo.class);
                         if (loginPojo.getStatus().equals("0")){
-                            imgSUMBITED.setImageResource(res);
+                            imgSUMBITED.setImageResource(no);
                             imgAPPROVED.setImageResource(no);
                             imgVARIFIED.setImageResource(no);
                             imgRECIVED.setImageResource(no);
-                            statusText.setText("Sumbited");
+                            statusText.setText("Profile Incomplete");
                             SubscribeBOdy.setVisibility(View.VISIBLE);
                             TextView textView =  (TextView)subscribe.getChildAt(0);
                             textView.setText("Sumbit Profile");
-                            PrefMananger.saveString(getContext(),"status","1");
+                            PrefMananger.saveString(context,"status","0");
                         }
                         if (loginPojo.getStatus().equals("1")){
                             imgSUMBITED.setImageResource(res);
                             imgRECIVED.setImageResource(res);
                             imgVARIFIED.setImageResource(no);
                             imgAPPROVED.setImageResource(no);
-                            statusText.setText("Pending");
+                            statusText.setText("Sumbited");
                             SubscribeBOdy.setVisibility(View.VISIBLE);
-                            PrefMananger.saveString(getContext(),"status","2");
+                            PrefMananger.saveString(context,"status","1");
                         }
                         if (loginPojo.getStatus().equals("2")){
                             imgRECIVED.setImageResource(res);
                             imgVARIFIED.setImageResource(res);
                             imgAPPROVED.setImageResource(res);
                             imgSUMBITED.setImageResource(res);
+                            statusText.setText("Pending");
+                            subscribeClick=true;
+                            PrefMananger.saveString(context,"status","2");
+                            PrefMananger.saveString(context,"id","false");
+                        }
+                        if (loginPojo.getStatus().equals("3")){
+                            imgRECIVED.setImageResource(res);
+                            imgVARIFIED.setImageResource(res);
+                            imgAPPROVED.setImageResource(res);
+                            imgSUMBITED.setImageResource(res);
                             statusText.setText("Approved");
                             subscribeClick=true;
-                            PrefMananger.saveString(getContext(),"id","true");
+                            PrefMananger.saveString(context,"status","3");
+                            PrefMananger.saveString(context,"id","true");
                         }
-                        if (PrefMananger.getString(getContext(),"sub").equals("true")){
+                        if (PrefMananger.getString(context,"sub").equals("true")){
                             SubscribeBOdy.setVisibility(View.GONE);
                             WelcomeMassageBody.setVisibility(View.GONE);
                         }else {
@@ -2228,7 +2251,9 @@ public class HomeFragment extends Fragment {
                 imgVARIFIED.setImageResource(no);
                 imgRECIVED.setImageResource(no);
                 statusText.setText("Profile Incomplete");
-                PrefMananger.saveString(getContext(),"status","0");
+                TextView textView =  (TextView)subscribe.getChildAt(0);
+                textView.setText("Sumbit Profile");
+                PrefMananger.saveString(context,"status","0");
                 subscribeClick=false;
             }
         }){
@@ -2240,7 +2265,7 @@ public class HomeFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(getProfile);
+        Volley.newRequestQueue(context).add(getProfile);
 
     }
     @RequiresApi(api = Build.VERSION_CODES.O)

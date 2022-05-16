@@ -292,33 +292,36 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_height="120dp">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    app:cardCornerRadius="15dp"
-                    android:layout_marginTop="05dp"
-                    app:cardElevation="05dp"
+                    android:layout_height="110dp"
                     android:layout_marginLeft="05dp"
-                    android:background="@drawable/nest_card_back"
+                    android:layout_marginTop="05dp"
                     android:layout_weight="1"
+                    android:background="@drawable/nest_card_back"
+                    android:minWidth="80dp"
 
-                    android:layout_height="110dp">
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="05dp">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BHK"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/second"
-                            android:textSize="14sp"
                             android:layout_marginTop="10dp"
-
-
+                            android:fontFamily="@font/second"
+                            android:text="BHK"
                             android:textColor="#000"
-                            />
+
+
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/LEADS_ACTIVITY_BHK"
@@ -334,83 +337,91 @@
                     </LinearLayout>
 
 
-
-
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
-                    android:layout_marginTop="05dp"
-
                     android:layout_width="wrap_content"
-                    android:background="@drawable/nest_card_back"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="05dp"
-                    android:layout_marginLeft="05dp"
 
-                    android:layout_height="110dp">
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginTop="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_card_back"
+                    android:minWidth="80dp"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="05dp">
 
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Locality"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/second"
                             android:layout_marginTop="10dp"
-
-
+                            android:fontFamily="@font/second"
+                            android:text="Locality"
                             android:textColor="#000"
-                            />
+
+
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/LEADS_ACTIVITY_AD"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
+                            android:ellipsize="marquee"
                             android:fontFamily="@font/roboto_mediaum_second"
+
+
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="100dp"
+                            android:singleLine="true"
                             android:text="Tilak Nagar"
-
-
                             android:textColor="#000"
                             android:textSize="16sp" />
                     </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
-                    android:layout_marginLeft="05dp"
                     android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="05dp"
                     android:layout_marginTop="05dp"
+
                     android:layout_marginRight="05dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nest_card_back"
+                    android:minWidth="80dp"
 
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="05dp"
-                    android:background="@drawable/nest_card_back"
-                    android:layout_weight="1"
+                    app:cardElevation="05dp">
 
-                    android:layout_height="110dp">
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Budget"
-                            android:fontFamily="@font/second"
-                            android:textSize="14sp"
                             android:layout_marginTop="10dp"
-
-
+                            android:fontFamily="@font/second"
+                            android:text="Budget"
                             android:textColor="#000"
-                            />
+
+
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/LEADS_ACTIVITY_BUDGET"
@@ -424,8 +435,6 @@
                             android:textColor="#000"
                             android:textSize="16sp" />
                     </LinearLayout>
-
-
 
 
                 </androidx.cardview.widget.CardView>

@@ -123,10 +123,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="07dp"
+                    android:ellipsize="marquee"
                     android:fontFamily="@font/roboto_third"
-                    android:maxWidth="180dp"
-                    android:text="Tata Housing Society"
+                    android:marqueeRepeatLimit="marquee_forever"
 
+                    android:maxWidth="180dp"
+                    android:singleLine="true"
+                    android:text="Tata Housing Society"
                     android:textColor="#000"
                     android:textSize="12sp" />
 
@@ -135,11 +138,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="02dp"
+                    android:ellipsize="marquee"
                     android:fontFamily="@font/roboto_third"
+
+                    android:marqueeRepeatLimit="marquee_forever"
+
                     android:maxWidth="150dp"
-
+                    android:singleLine="true"
                     android:text="Sector-112,Gurgaon"
-
                     android:textColor="#000"
                     android:textSize="12sp" />
 
@@ -183,7 +189,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/ready_to_move_rounded_background">
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:minWidth="80dp">
 
                     <TextView
                         android:id="@+id/CUSTOM_MY_PRO_READY"
@@ -206,7 +213,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="05dp"
                     android:layout_weight="1"
-                    android:background="@drawable/ready_to_move_rounded_background">
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:minWidth="80dp">
 
                     <TextView
                         android:id="@+id/CUSTOM_MY_PRO_RESALE"
@@ -229,7 +237,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="05dp"
                     android:layout_weight="1"
-                    android:background="@drawable/ready_to_move_rounded_background">
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:minWidth="80dp">
 
                     <TextView
                         android:id="@+id/CUSTOM_MY_PRO_SQ"
@@ -253,7 +262,8 @@
                     android:layout_marginLeft="05dp"
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/ready_to_move_rounded_background">
+                    android:background="@drawable/ready_to_move_rounded_background"
+                    android:minWidth="80dp">
 
                     <TextView
                         android:id="@+id/CUSTOM_MY_PRO_OWNER"

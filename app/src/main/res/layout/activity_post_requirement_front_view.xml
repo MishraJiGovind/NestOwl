@@ -104,7 +104,8 @@
                         android:layout_marginTop="20dp"
 
                         android:layout_marginRight="@dimen/post_property_padding_20dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -142,7 +143,8 @@
                         android:layout_marginTop="20dp"
 
                         android:layout_marginRight="@dimen/post_property_padding_20dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -180,7 +182,8 @@
                         android:layout_marginTop="20dp"
 
                         android:layout_marginRight="@dimen/post_property_padding_20dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1234,14 +1237,6 @@
                             </FrameLayout>
 
 
-                            <ImageView
-                                android:id="@+id/property_on_floor_image"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_gravity="end|center_vertical"
-                                android:layout_marginLeft="35dp"
-                                android:src="@drawable/down_arrow_personal" />
-
                         </FrameLayout>
 
                         <TextView
@@ -1295,18 +1290,6 @@
 
                         </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="07dp"
-                            android:layout_marginTop="02dp"
-                            android:text="To"
-                            android:textColor="#000"
-                            android:textSize="16sp"
-
-                            />
-
                         <FrameLayout
 
                             android:layout_width="wrap_content"
@@ -1345,14 +1328,6 @@
 
                             </FrameLayout>
 
-
-                            <ImageView
-                                android:id="@+id/property_on_floor_image_second"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_gravity="end|center_vertical"
-                                android:layout_marginLeft="35dp"
-                                android:src="@drawable/down_arrow_personal" />
 
                         </FrameLayout>
 
@@ -3415,13 +3390,6 @@
                                         android:textColor="#000"
 
                                         android:textSize="16sp" />
-                                    <ImageView
-                                        android:layout_marginLeft="60dp"
-                                        android:id="@+id/down_arrow_second_carpet"
-                                        android:layout_gravity="center_vertical"
-                                        android:src="@drawable/down_arrow_btm"
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp" />
 
                                     <TextView
 
@@ -3525,14 +3493,6 @@
                                         android:textColor="#000"
 
                                         android:textSize="16sp" />
-                                    <ImageView
-                                        android:layout_marginLeft="60dp"
-                                        android:id="@+id/down_arrow_second_builtup"
-
-                                        android:layout_gravity="center_vertical"
-                                        android:src="@drawable/down_arrow_btm"
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp" />
 
                                     <TextView
 
@@ -3634,14 +3594,6 @@
                                         android:textColor="#000"
 
                                         android:textSize="16sp" />
-                                    <ImageView
-                                        android:layout_marginLeft="60dp"
-                                        android:id="@+id/down_arrow_second_super"
-
-                                        android:layout_gravity="center_vertical"
-                                        android:src="@drawable/down_arrow_btm"
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp" />
 
                                     <TextView
 
@@ -3743,6 +3695,7 @@
                             android:id="@+id/LEADS_REQ_SHOW_MORE_INFO"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:minHeight="200dp"
                             android:text="More Details" />
 
                     </FrameLayout>

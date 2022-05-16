@@ -2,6 +2,7 @@ package com.nestowl.Fragment;
 
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -56,6 +57,7 @@ public class ProfileBroker extends Fragment {
     FrameLayout hideView,complete;
     LoginPojo loginPojo;
     CardView FAQ;
+    Context context;
 
 
     LinearLayout view_nest,lnr_payment,notification;
@@ -70,6 +72,7 @@ public class ProfileBroker extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_profile_broker, container, false);
+        context=getContext();
         edt_profile=view.findViewById(R.id.lnr_post_property);
         rate_us=view.findViewById(R.id.rate_us_on_the);
         tv_feedback=view.findViewById(R.id.send_feedback);
@@ -82,7 +85,7 @@ public class ProfileBroker extends Fragment {
         FAQ=view.findViewById(R.id.PROFILE_FAQ);
         logout=view.findViewById(R.id.logout);
         notification=view.findViewById(R.id.lnr_activity);
-        loginPojo= PrefMananger.GetLoginData(getContext());
+        loginPojo= PrefMananger.GetLoginData(context);
         getUserInfo();
         getEarnmoreInfo();
         name.setText(loginPojo.getFirstName());
@@ -90,14 +93,14 @@ public class ProfileBroker extends Fragment {
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), Notification.class));
+                startActivity(new Intent(context, Notification.class));
 
             }
         });
         FAQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), com.nestowl.brokerapp.FAQ.class));
+                startActivity(new Intent(context, com.nestowl.brokerapp.FAQ.class));
             }
         });
         rate_us.setOnClickListener(new View.OnClickListener() {
@@ -114,18 +117,18 @@ public class ProfileBroker extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               new WarningDio(getContext(), "Do you want log out your account?", "LOG OUT", null, new WarningDio.Response() {
+               new WarningDio(context, "Do you want log out your account?", "LOG OUT", null, new WarningDio.Response() {
                    @Override
                    public void getClicks(int click) {
                        if (click==1){
-                           PrefMananger.SaveLoginData(getContext(),null);
-                           startActivity(new Intent(getContext(), LoginActivity.class));
+                           PrefMananger.SaveLoginData(context,null);
+                           startActivity(new Intent(context, LoginActivity.class));
                            getActivity().finish();
                        }
                    }
                },false);
 /*
-                startActivity(new Intent(getContext(), FrontViewQuerySecond.class));
+                startActivity(new Intent(context, FrontViewQuerySecond.class));
 
 */
 
@@ -136,27 +139,27 @@ public class ProfileBroker extends Fragment {
         lnr_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), Payments.class));
+                startActivity(new Intent(context, Payments.class));
             }
         });
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SignUpEarnMoney.class));
+                startActivity(new Intent(context, SignUpEarnMoney.class));
 
             }
         });
         tv_feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), FeedBack.class));
+                startActivity(new Intent(context, FeedBack.class));
 
             }
         });
         view_nest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), SahilDahiyaCircle.class));
+                startActivity(new Intent(context, SahilDahiyaCircle.class));
 
 
             }
@@ -164,7 +167,7 @@ public class ProfileBroker extends Fragment {
         edt_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), EditSignUpForm.class));
+                startActivity(new Intent(context, EditSignUpForm.class));
 
 
             }
@@ -207,7 +210,7 @@ public class ProfileBroker extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getUserInfo() {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -219,10 +222,10 @@ public class ProfileBroker extends Fragment {
                     if (staus.equals("1")){
                         User data  = new Gson().fromJson(jsonObject.getJSONObject("data").toString(),User.class);
                         DpModal dps  = new Gson().fromJson(jsonObject.getJSONObject("Photo").toString(), DpModal.class);
-                        Glide.with(getContext()).load(UrlClass.BASE_URL+dps.getProfile_photo()).placeholder(R.drawable.profile_img_sahil).into(dp);
+                        Glide.with(context).load(UrlClass.BASE_URL+dps.getProfile_photo()).placeholder(R.drawable.profile_img_sahil).into(dp);
                         data.setAvatar(UrlClass.BASE_URL+dps.getProfile_photo());
                         String json =  new Gson().toJson(data);
-                        PrefMananger.saveString(getContext(),"user",json);
+                        PrefMananger.saveString(context,"user",json);
                     }
                 }catch (Exception e){
 
@@ -242,7 +245,7 @@ public class ProfileBroker extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
 

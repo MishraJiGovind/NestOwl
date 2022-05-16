@@ -11,14 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:layout_collapseMode="pin"
-
             android:layout_width="match_parent"
+
             android:layout_height="55dp"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <LinearLayout
                 android:id="@+id/haider_layout_first_linear"
@@ -162,50 +163,43 @@
             </FrameLayout>
 
 
-
         </androidx.appcompat.widget.Toolbar>
 
 
-
-
-
-    </com.google.android.material.appbar.AppBarLayout
-        >
-
+    </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_home_screen"
 
 
-
-
         />
 
-<FrameLayout
-    android:layout_gravity="bottom"
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:background="#fff"
-        android:id="@+id/bottom_navigation"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/iv_add"
-            android:layout_width="35dp"
-            android:layout_gravity="center"
-            android:tint="#5C000000"
-            android:src="@drawable/post_p"
-            android:layout_height="35dp" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation">
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/post_p"
+                android:tint="#5C000000" />
 
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-</FrameLayout>
+    </FrameLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

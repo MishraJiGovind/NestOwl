@@ -2,6 +2,7 @@ package com.nestowl.Fragment;
 
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -82,6 +83,7 @@ public class LeadFragment extends Fragment {
     String userId,timeS,proposalS,typeS;
     ConstraintLayout noData;
     ArrayList<String>allLeadsId;
+    Context context;
     int leadsType,proposalInt,timeL;
     int def = R.drawable.employe_circle_rounded;
     int act = R.drawable.selected_background_filter;
@@ -94,6 +96,7 @@ public class LeadFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_lead, container, false);
+        context =getContext();
         projectLead=view.findViewById(R.id.ALERT_LEADS_PROJECT_RECYCLER);
         publicLead=view.findViewById(R.id.ALERT_LEADS_PUBLIC_RECYLER);
         indianHerosLeads=view.findViewById(R.id.ALERT_LEADS_INDIAN_HEROS_RECYCLER);
@@ -116,12 +119,12 @@ public class LeadFragment extends Fragment {
         proposalS="Proposal Status";
         typeS="Lead Type";
 
-        projectLead.setLayoutManager(new LinearLayoutManager(getContext()));
-        publicLead.setLayoutManager(new LinearLayoutManager(getContext()));
-        indianHerosLeads.setLayoutManager(new LinearLayoutManager(getContext()));
-        dubbleLeads.setLayoutManager(new LinearLayoutManager(getContext()));
+        projectLead.setLayoutManager(new LinearLayoutManager(context));
+        publicLead.setLayoutManager(new LinearLayoutManager(context));
+        indianHerosLeads.setLayoutManager(new LinearLayoutManager(context));
+        dubbleLeads.setLayoutManager(new LinearLayoutManager(context));
 
-        loginPojo = PrefMananger.GetLoginData(getContext());
+        loginPojo = PrefMananger.GetLoginData(context);
         userId=String.valueOf(loginPojo.getUserId());
 
 
@@ -144,9 +147,9 @@ public class LeadFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                final Dialog dialog= new Dialog(getContext());
+                final Dialog dialog= new Dialog(context);
                 dialog.setContentView(R.layout.work_location);
-                String data = PrefMananger.getString(getContext(),PrefMananger.ARREY_LOCALTIES);
+                String data = PrefMananger.getString(context,PrefMananger.ARREY_LOCALTIES);
                 if (data!=null){
                     try {
                         localitiesModals= new ArrayList<>();
@@ -164,15 +167,15 @@ public class LeadFragment extends Fragment {
                 apply=dialog.findViewById(R.id.CUSTOM_LOCALITIES_DIOLOG_APPLY);
                 clear=dialog.findViewById(R.id.CUSTOM_LOCALITIES_DIOLOG_CLEAR_ALL);
                 recyclerView=dialog.findViewById(R.id.CUSTOM_LOCALITIES_DIOLOG_RECYLCER);
-                LocalitiesdialogAdapter adapter =  new LocalitiesdialogAdapter(getContext(),localitiesModals);
-                recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+                LocalitiesdialogAdapter adapter =  new LocalitiesdialogAdapter(context,localitiesModals);
+                recyclerView.setLayoutManager(new GridLayoutManager(context,3));
                 recyclerView.setAdapter(adapter);
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
                 lp.copyFrom(dialog.getWindow().getAttributes());
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 FrameLayout iv_c = dialog.findViewById(R.id.iv_cancel_9);
                 dialog.show();
@@ -198,7 +201,7 @@ public class LeadFragment extends Fragment {
                             da.add(s);
                         }
                         String ss = new Gson().toJson(da);
-                        PrefMananger.saveString(getContext(),PrefMananger.ARREY_LOCALTIES,ss);
+                        PrefMananger.saveString(context,PrefMananger.ARREY_LOCALTIES,ss);
                         handlelocalitiesFilter(da);
                         dialog.dismiss();
                     }
@@ -208,7 +211,7 @@ public class LeadFragment extends Fragment {
         f3_lead_type.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog= new Dialog(getContext());
+                final Dialog dialog= new Dialog(context);
                 dialog.setContentView(R.layout.lead_type_broker);
                 FrameLayout publics,indian,dubble,project,apply,clear;
                 publics=dialog.findViewById(R.id.ALERT_CUSTOM_LEAD_TYPE_PUBLIC);
@@ -243,7 +246,7 @@ public class LeadFragment extends Fragment {
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 ImageView iv_c = dialog.findViewById(R.id.iv_six);
                 dialog.show();
@@ -329,7 +332,7 @@ public class LeadFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                final Dialog dialog = new Dialog(getContext());
+                final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.proposal_status);
                 FrameLayout accpetMe,rejectMe,accpetUser,rejectUser,apply,clear;
                 accpetMe=dialog.findViewById(R.id.ALERT_CUSTOM_LEAD_PROPOSAL_ACCETP_ME);
@@ -365,7 +368,7 @@ public class LeadFragment extends Fragment {
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 dialog.show();
                 ImageView imageView=dialog.findViewById(R.id.DIOLOG_POSTED_TO_DELETE);
@@ -447,7 +450,7 @@ public class LeadFragment extends Fragment {
         f5_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(getContext());
+                final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.lead_statuss_broker);
                 FrameLayout accepted, rejected,clear,apply;
                 TextView status  =dialog.findViewById(R.id.STATUS_OF_MYRESPONSE);
@@ -480,7 +483,7 @@ public class LeadFragment extends Fragment {
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 dialog.show();
                 ImageView imageView=dialog.findViewById(R.id.DIOLOG_MY_RESPONSE_DISSMISSED);
@@ -660,13 +663,13 @@ public class LeadFragment extends Fragment {
         setRecycler2();
     }
     private void setRecycler2() {
-        adater =  new AlertLeadsAdater(getContext(),publicLeadArrey2);
+        adater =  new AlertLeadsAdater(context,publicLeadArrey2);
         publicLead.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),indianHerosLeadsArrey2);
+        adater =  new AlertLeadsAdater(context,indianHerosLeadsArrey2);
         indianHerosLeads.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),dubbleLeadsArrey2);
+        adater =  new AlertLeadsAdater(context,dubbleLeadsArrey2);
         dubbleLeads.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),projectLeadArrey2);
+        adater =  new AlertLeadsAdater(context,projectLeadArrey2);
         projectLead.setAdapter(adater);
     }
 
@@ -684,20 +687,25 @@ public class LeadFragment extends Fragment {
                         if (publicPros!=null) {
                             for (int i = 0; i < publicPros.length(); i++) {
                                 LeadsPublicPro data = new Gson().fromJson(publicPros.getJSONObject(i).toString(), LeadsPublicPro.class);
-                                getMoreDetailsIndianPublic(data);
-                                allLeadsId.add(data.getProperty_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    getMoreDetailsIndianPublic(data);
+                                    allLeadsId.add(data.getProperty_id());
+                                }
+
                             }
                         }
-                        adater =  new AlertLeadsAdater(getContext(),indianHerosLeadsArrey);
+                        adater =  new AlertLeadsAdater(context,indianHerosLeadsArrey);
                         indianHerosLeads.setAdapter(adater);
                         if (requirement_data!=null) {
                             for (int i = 0; i < requirement_data.length(); i++) {
                                 LeadsRequmentsModal data = new Gson().fromJson(requirement_data.getJSONObject(i).toString(), LeadsRequmentsModal.class);
-                                getMoreInfoIndianReq(data);
-                                allLeadsId.add(data.getRequirement_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    getMoreInfoIndianReq(data);
+                                    allLeadsId.add(data.getRequirement_id());
+                                }
                             }
                         }
-                        adater =  new AlertLeadsAdater(getContext(),indianHerosLeadsArrey);
+                        adater =  new AlertLeadsAdater(context,indianHerosLeadsArrey);
                         indianHerosLeads.setAdapter(adater);
                     }
                 }
@@ -719,7 +727,7 @@ public class LeadFragment extends Fragment {
                 return  hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getMoreInfoIndianReq(LeadsRequmentsModal data) {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.LEADS_INDIANHEROS_DETAILS, new Response.Listener<String>() {
@@ -752,7 +760,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void finalIndianHeroReq(LeadsRequmentsModal data, String service) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -778,6 +786,7 @@ public class LeadFragment extends Fragment {
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
                         viewModal.setTime(data.getUpdated_at());
                         viewModal.setBhk(data.getProperty());
+                        viewModal.setAddress(data.getLocality());
                         publicLeadArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -798,7 +807,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getMoreDetailsIndianPublic(LeadsPublicPro data) {
         StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.LEADS_INDIANHEROS_DETAILS, new Response.Listener<String>() {
@@ -830,7 +839,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void finalIndianHeroPublic(LeadsPublicPro data, String service) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -857,6 +866,7 @@ public class LeadFragment extends Fragment {
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
                         viewModal.setTime(data.getUpdated_at());
                         viewModal.setBhk(data.getProperty());
+                        viewModal.setAddress(data.getLocality());
                         dubbleLeadsArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -877,7 +887,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void fecthDubbleleads() {
@@ -894,20 +904,26 @@ public class LeadFragment extends Fragment {
                         if (publicPros!=null) {
                             for (int i = 0; i < publicPros.length(); i++) {
                                 LeadsPublicPro data = new Gson().fromJson(publicPros.getJSONObject(i).toString(), LeadsPublicPro.class);
-                                getMoreDetailsDubblePublic(data);
-                                allLeadsId.add(data.getProperty_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    getMoreDetailsDubblePublic(data);
+                                    allLeadsId.add(data.getProperty_id());
+                                }
+
                             }
                         }
-                        adater =  new AlertLeadsAdater(getContext(),dubbleLeadsArrey);
+                        adater =  new AlertLeadsAdater(context,dubbleLeadsArrey);
                         dubbleLeads.setAdapter(adater);
                         if (requirement_data!=null) {
                             for (int i = 0; i < requirement_data.length(); i++) {
                                 LeadsRequmentsModal data = new Gson().fromJson(requirement_data.getJSONObject(i).toString(), LeadsRequmentsModal.class);
-                                getMoreInfoDubbleReq(data);
-                                allLeadsId.add(data.getRequirement_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    getMoreInfoDubbleReq(data);
+                                    allLeadsId.add(data.getRequirement_id());
+                                }
+
                             }
                         }
-                        adater =  new AlertLeadsAdater(getContext(),dubbleLeadsArrey);
+                        adater =  new AlertLeadsAdater(context,dubbleLeadsArrey);
                         dubbleLeads.setAdapter(adater);
                     }
                 }catch (Exception e){
@@ -928,7 +944,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getMoreInfoDubbleReq(LeadsRequmentsModal data) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -953,6 +969,8 @@ public class LeadFragment extends Fragment {
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
                         viewModal.setTime(data.getUpdated_at());
                         viewModal.setBhk(data.getProperty());
+                        viewModal.setAddress(data.getLocality());
+                        viewModal.setDubbleLead(true);
                         dubbleLeadsArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -973,7 +991,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getMoreDetailsDubblePublic(LeadsPublicPro data) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -998,6 +1016,8 @@ public class LeadFragment extends Fragment {
                         viewModal.setTime(data.getUpdated_at());
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
                         viewModal.setBhk(data.getProperty());
+                        viewModal.setAddress(data.getLocality());
+                        viewModal.setDubbleLead(true);
                         dubbleLeadsArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -1018,7 +1038,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void fetcProjetcLeads() {
@@ -1033,8 +1053,11 @@ public class LeadFragment extends Fragment {
                             JSONArray jsonArray = jsonObject.getJSONArray("ProjectPreviousLead_data");
                             for (int i=0;i<jsonArray.length();i++){
                                 LeadsProjectModal data =  new Gson().fromJson(jsonArray.getJSONObject(i).toString(),LeadsProjectModal.class);
-                                getProejctInfo(data);
-                                allLeadsId.add(data.getProperty_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    getProejctInfo(data);
+                                    allLeadsId.add(data.getProperty_id());
+                                }
+
                             }
                         }
                     }catch (Exception e){
@@ -1056,7 +1079,7 @@ public class LeadFragment extends Fragment {
                     return hashMap;
                 }
             };
-            Volley.newRequestQueue(getContext()).add(request);
+            Volley.newRequestQueue(context).add(request);
         StringRequest requests = new StringRequest(Request.Method.POST, UrlClass.LEADS_PROJECT_TODAY, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -1091,7 +1114,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(requests);
+        Volley.newRequestQueue(context).add(requests);
     }
     private void getProejctInfo(LeadsProjectModal data) {
         StringRequest request= new StringRequest(Request.Method.POST, UrlClass.GET_PROJECT_BY_ID, new Response.Listener<String>() {
@@ -1123,6 +1146,7 @@ public class LeadFragment extends Fragment {
                         viewModal.setBhk(modal.getNumber_bhk());
                         viewModal.setUnlocking(geUnclockTime(modal.getUpdated_at()));
                         viewModal.setBhk(data.getProperty() + " in "+data.getProject_name());
+                        viewModal.setAddress(data.getLocality());
                         projectLeadArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -1143,7 +1167,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void fetchPublicLeads() {
@@ -1160,15 +1184,21 @@ public class LeadFragment extends Fragment {
                          if (requirement_data!=null){
                            for (int i=0;i<requirement_data.length();i++){
                                LeadsRequmentsModal data =  new Gson().fromJson(requirement_data.getJSONObject(i).toString(),LeadsRequmentsModal.class);
-                               leadsRequmentsModals.add(data);
-                               allLeadsId.add(data.getRequirement_id());
+                               if (!userId.equals(data.getUser_id())){
+                                   leadsRequmentsModals.add(data);
+                                   allLeadsId.add(data.getRequirement_id());
+                               }
+
                            }
                          }
                         if (publicprodata!=null){
                             for (int i=0;i<publicprodata.length();i++){
                                 LeadsPublicPro data = new Gson().fromJson(publicprodata.getJSONObject(i).toString(),LeadsPublicPro.class);
-                                leadsPublicProsMain.add(data);
-                                allLeadsId.add(data.getProperty_id());
+                                if (!userId.equals(data.getUser_id())){
+                                    leadsPublicProsMain.add(data);
+                                    allLeadsId.add(data.getProperty_id());
+                                }
+
                             }
                         }
                         handlerPublicLeads();
@@ -1191,19 +1221,19 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void handlerPublicLeads() {
         publicLeadArrey =  new ArrayList<>();
         for (LeadsRequmentsModal data:leadsRequmentsModals){
             setViewModal(data);
         }
-        adater =  new AlertLeadsAdater(getContext(),publicLeadArrey);
+        adater =  new AlertLeadsAdater(context,publicLeadArrey);
         publicLead.setAdapter(adater);
         for (LeadsPublicPro data:leadsPublicProsMain){
             setViewModalPublicPRos(data);
         }
-        adater =  new AlertLeadsAdater(getContext(),publicLeadArrey);
+        adater =  new AlertLeadsAdater(context,publicLeadArrey);
         publicLead.setAdapter(adater);
     }
     private void setViewModalPublicPRos(LeadsPublicPro data) {
@@ -1229,6 +1259,7 @@ public class LeadFragment extends Fragment {
                         viewModal.setType(true);
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
                         viewModal.setBhk(data.getProperty());
+                        viewModal.setAddress(data.getLocality());
                         publicLeadArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -1249,7 +1280,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void setViewModal(LeadsRequmentsModal data) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -1278,6 +1309,7 @@ public class LeadFragment extends Fragment {
 //                        }
                         viewModal.setBhk(data.getProperty());
                         viewModal.setUnlocking(geUnclockTime(data.getUpdated_at()));
+                        viewModal.setAddress(data.getLocality());
                         publicLeadArrey.add(viewModal);
                     }
                 }catch (Exception e){
@@ -1298,21 +1330,21 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void setRecycler(){
-        adater =  new AlertLeadsAdater(getContext(),publicLeadArrey);
+        adater =  new AlertLeadsAdater(context,publicLeadArrey);
         publicLead.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),indianHerosLeadsArrey);
+        adater =  new AlertLeadsAdater(context,indianHerosLeadsArrey);
         indianHerosLeads.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),dubbleLeadsArrey);
+        adater =  new AlertLeadsAdater(context,dubbleLeadsArrey);
         dubbleLeads.setAdapter(adater);
-        adater =  new AlertLeadsAdater(getContext(),projectLeadArrey);
+        adater =  new AlertLeadsAdater(context,projectLeadArrey);
         projectLead.setAdapter(adater);
     }
     private LeadsPublicPro getFullPropertyData(String property_id, String user_id) {
-        leadsPublicPros = PrefMananger.getPropertyList(getContext());
+        leadsPublicPros = PrefMananger.getPropertyList(context);
         LeadsPublicPro data =  new LeadsPublicPro();
         if (leadsPublicPros!=null){
             for (LeadsPublicPro d : leadsPublicPros){
@@ -1421,7 +1453,7 @@ public class LeadFragment extends Fragment {
 
                         }
                         String s = new Gson().toJson(localitiesModals);
-                        PrefMananger.saveString(getContext(),PrefMananger.ARREY_LOCALTIES,s);
+                        PrefMananger.saveString(context,PrefMananger.ARREY_LOCALTIES,s);
                         Log.e("loge", "onResponse: "+data );
                     }
                 }catch (Exception e){
@@ -1442,7 +1474,7 @@ public class LeadFragment extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void handleLeadsTime() {
         if (timeL==0){

@@ -79,7 +79,7 @@
                     android:layout_marginRight="@dimen/filters_rounded_30sp"
                     android:background="@null"
                     android:backgroundTint="@null"
-                    android:hint="Enter Search State"
+                    android:hint="Search"
                     android:singleLine="true"
                     android:textColorHint="#C4BEBE"
                     android:textSize="12sp" />

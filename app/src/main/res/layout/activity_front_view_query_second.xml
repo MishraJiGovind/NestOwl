@@ -100,17 +100,18 @@
                         android:layout_marginTop="15dp"
                         android:orientation="vertical"
                         android:layout_height="match_parent">
+
                         <TextView
                             android:layout_width="wrap_content"
-                            android:textSize="12sp"
-                            android:fontFamily="@font/second"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
 
                             android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                            android:textColor="#000"
-                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/second"
                             android:text="Tell us about the offer you have in mind. You can propose your offer complete privacy."
-                            />
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
 
                         <FrameLayout
 
@@ -230,16 +231,16 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
                             android:layout_marginTop="25dp"
-                            android:fontFamily="@font/second"
 
                             android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                            android:textColor="@color/black_light"
-                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/second"
                             android:text="You will be notified when user will Accept your offer"
-                            />
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
 
 
                         <TextView
@@ -265,15 +266,15 @@
                         <TextView
                             android:layout_width="wrap_content"
 
-                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                            android:textSize="14sp"
-                            android:layout_marginTop="25dp"
-                            android:fontFamily="@font/roboto_third"
-                            android:textColor="@color/black_color"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                            android:fontFamily="@font/roboto_third"
                             android:text="Please fill out following details to submit your offer"
-                            />
+                            android:textColor="@color/black_color"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
 
 
                         <TextView
@@ -1232,30 +1233,31 @@
                             android:fontFamily="@font/roboto_five"
                             android:text="(Broker Name)"
                             android:textColor="#000"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:visibility="gone" />
 
 
                         <LinearLayout
-                            android:layout_marginBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                            android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_marginBottom="15dp"
+                            android:visibility="gone">
+
                             <CheckBox
 
-                                android:text="Attach this"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="Attach this" />
+
                             <CheckBox
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-
-                                android:text="Edit and write Yourself"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-
-
+                                android:text="Edit and write Yourself" />
 
 
                         </LinearLayout>

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -265,7 +266,13 @@ public class FrontViewMainSecond extends AppCompatActivity {
                           ProposalStringModal save =  new Gson().fromJson(jsonObject1.getJSONObject(i).toString(),ProposalStringModal.class);
                           property_one.add(save);
                         }
-                        filterProperty(1);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                filterProperty(1);
+
+                            }
+                        },1000);
 
                     }
                 }catch (Exception e){

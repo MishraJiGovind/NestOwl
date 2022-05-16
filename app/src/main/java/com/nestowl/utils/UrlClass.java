@@ -39,6 +39,7 @@ public class UrlClass {
     public static final String GET_PROPERTY_LIST=BASE_URL+"api/propertylist";
     public static final String GET_PROPERTY_PRICE=BASE_URL+"api/post-property/getpostprice";
     public static final String GET_PROPERTY_PHOTO=BASE_URL+"api/post-property/getpostphotos";
+    public static final String PHOTO_PROPERTY_PHOTO=BASE_URL+"api/postproperty/postphotos";
     public static final String GET_PROPERTY_FREEZE_STATUS=BASE_URL+"api/check-freeze";
     public static final String GET_PROPERTY_FREEZE_YES=BASE_URL+"api/freeze";
     public static final String GET_PROPERTY_FREEZE_NO=BASE_URL+"api/resume";
@@ -158,6 +159,7 @@ public class UrlClass {
     public static final String DEAL_CLOSED= BASE_URL+"api/dealclose";
     public static final String ASK_FOR_REVIEW= BASE_URL+"api/askreview";
     public static final String PROJECT_ACCEPT_REJECT= BASE_URL+"api/project-accept-reject";
+    public static final String PROJECT_GET_ACCEPT_REJECT= BASE_URL+"api/view-project-accept-reject";
 
     //deleting
     public static final String DELETE_PROFILE_PHOTO= BASE_URL+"api/broker/profile-photo/delete";

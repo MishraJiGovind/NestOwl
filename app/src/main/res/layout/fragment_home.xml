@@ -366,6 +366,7 @@
                 </FrameLayout>
 
                 <androidx.core.widget.NestedScrollView
+                    android:id="@+id/HOME_INCOMPLETE_SCROLL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"

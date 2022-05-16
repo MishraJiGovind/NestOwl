@@ -71,7 +71,7 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
     CardView cardView;
     ScrollView scrollView;
     FrameLayout add_photos_office_photos, profile_add_photos, logo_add_photos, cover_photo_add_photos;
-    ImageView office_photo_img, profile_photo_img, logo_photo_img, cover_photo_img;
+    ImageView office_photo_img, profile_photo_img, logo_photo_img, cover_photo_img,imagetoHidedp,imagetoHidecover,imagetoHidelogo;
     Context context;
     ImageView one_up, two_down, three_up, four_down, five_up, six_down, saven_up, eight_down, nine_up, ten_down,deleteProfile,deleteLogo,deleteCover;
     Activity activity;
@@ -110,6 +110,9 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
         deleteProfile = findViewById(R.id.PROFILE_PHOTO_PROFILE_DELETE);
         deleteLogo = findViewById(R.id.PROFILE_PHOTO_LOGO_DELETE);
         deleteCover = findViewById(R.id.PROFILE_PHOTO_COVER_DELETE);
+        imagetoHidedp=findViewById(R.id.imagetoHidedp);
+        imagetoHidelogo=findViewById(R.id.imagetoHidelogo);
+        imagetoHidecover=findViewById(R.id.imagetoHidecover);
         bitmapList=new ArrayList<>();
         getUpdatePhotos();
         uploadAdapter = new ImageUploadAdapter(this, bitmapList, this);
@@ -582,14 +585,17 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
                     Glide.with(SignUpPhotos.this).load(bitmap).placeholder(R.drawable.default_x_x).into(profile_photo_img);
 //                    profile_photo_img.setImageBitmap(bitmap);
                     Log.e("DP", "onActivityResult: setting dp" );
+                    imagetoHidedp.setVisibility(View.GONE);
                 } else if (CLICK_ON.equals(THIRDE_IMAGE)) {
                     bitmap3 = bitmap;
 //                    logo_photo_img.setImageBitmap(bitmap);
                     Glide.with(SignUpPhotos.this).load(bitmap).placeholder(R.drawable.default_x_x).into(logo_photo_img);
+                    imagetoHidelogo.setVisibility(View.GONE);
                 } else if (CLICK_ON.equals(FOURTH_IMAGE)) {
                     bitmap4 = bitmap;
 //                    cover_photo_img.setImageBitmap(bitmap);
                     Glide.with(SignUpPhotos.this).load(bitmap).placeholder(R.drawable.default_x_x).into(cover_photo_img);
+                    imagetoHidecover.setVisibility(View.GONE);
                 }
             } else if (requestCode == 2) {
                 filePath = data.getData();
@@ -613,17 +619,20 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
                     filePath2 = filePath;
 //                    profile_photo_img.setImageBitmap(bitmap);
                     Glide.with(SignUpPhotos.this).load(filePath).placeholder(R.drawable.default_x_x).into(profile_photo_img);
+                    imagetoHidedp.setVisibility(View.GONE);
                     Log.e("DP", "onActivityResult: setting dp" );
                 } else if (CLICK_ON.equals(THIRDE_IMAGE)) {
                     bitmap3 = bitmap;
                     filePath3 = filePath;
 //                    logo_photo_img.setImageBitmap(bitmap);
                     Glide.with(SignUpPhotos.this).load(filePath).placeholder(R.drawable.default_x_x).into(logo_photo_img);
+                    imagetoHidelogo.setVisibility(View.GONE);
                 } else if (CLICK_ON.equals(FOURTH_IMAGE)) {
                     bitmap4 = bitmap;
                     filePath4 = filePath;
 //                    cover_photo_img.setImageBitmap(bitmap);
                     Glide.with(SignUpPhotos.this).load(filePath).placeholder(R.drawable.default_x_x).into(cover_photo_img);
+                    imagetoHidecover.setVisibility(View.GONE);
                 }
             }
         }
@@ -687,6 +696,10 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
                         Glide.with(context).load(UrlClass.BASE_URL+object.getString("logo")).into(logo_photo_img);
                         Glide.with(context).load(UrlClass.BASE_URL+object.getString("cover")).into(cover_photo_img);
                         Glide.with(context).load(UrlClass.BASE_URL+object.getString("profile_photo")).into(profile_photo_img);
+
+                        imagetoHidedp.setVisibility(View.GONE);
+                        imagetoHidelogo.setVisibility(View.GONE);
+                        imagetoHidecover.setVisibility(View.GONE);
 //                        Glide.with(context).load(UrlClass.BASE_URL+object.getString("office_photo")).into(office_photo_img);
                     } else {
                         isUpdating=false;

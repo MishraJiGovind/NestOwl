@@ -69,6 +69,12 @@ public class PostRequirementFrontView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_requirement_front_view);
+        findViewById(R.id.DEALS_BACK).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         horizontalScrollView =findViewById(R.id.horizontal_third);
         scrollView=findViewById(R.id.scroll);
         intent =  getIntent();
@@ -100,7 +106,12 @@ public class PostRequirementFrontView extends AppCompatActivity {
         data =  new LeadsRequmentsModal();
         propertyAcceptedData=new ArrayList<>();
         typeAccept = true;
-        handleLeads =  new LeadsClicks(this,idd, String.valueOf(loginPojo.getUserId()), idd);
+        handleLeads =  new LeadsClicks(this, idd, String.valueOf(loginPojo.getUserId()), idd, new LeadsClicks.AccepetStatus() {
+            @Override
+            public void status(boolean isTrue, boolean isAccept) {
+
+            }
+        });
         liveCommnication = ViewModelProviders.of(this).get(LiveCommnication.class);
         liveCommnication.getText().observe(this, new Observer<aichat>() {
             @Override

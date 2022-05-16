@@ -1,13 +1,13 @@
 package com.nestowl.model;
 
 public class AlertLeadsViewModal {
-    String id,user_id,property_id,name,bhk,projectname,budget,sq,doctor,status,city,unlocking,time;
-    boolean isAccepted, isProposalSummibted, isProposalAccepted,isType;
+    String id,user_id,property_id,name,bhk,projectname,budget,sq,doctor,status,city,unlocking,time,address;
+    boolean isAccepted, isProposalSummibted, isProposalAccepted,isType,isDubbleLead;
 
     public AlertLeadsViewModal() {
     }
 
-    public AlertLeadsViewModal(String id, String user_id, String property_id, String name, String bhk, String projectname, String budget, String sq, String doctor, String status, String city, String unlocking, String time, boolean isAccepted, boolean isProposalSummibted, boolean isProposalAccepted, boolean isType) {
+    public AlertLeadsViewModal(String id, String user_id, String property_id, String name, String bhk, String projectname, String budget, String sq, String doctor, String status, String city, String unlocking, String time, String address, boolean isAccepted, boolean isProposalSummibted, boolean isProposalAccepted, boolean isType, boolean isDubbleLead) {
         this.id = id;
         this.user_id = user_id;
         this.property_id = property_id;
@@ -21,10 +21,20 @@ public class AlertLeadsViewModal {
         this.city = city;
         this.unlocking = unlocking;
         this.time = time;
+        this.address = address;
         this.isAccepted = isAccepted;
         this.isProposalSummibted = isProposalSummibted;
         this.isProposalAccepted = isProposalAccepted;
         this.isType = isType;
+        this.isDubbleLead = isDubbleLead;
+    }
+
+    public boolean isDubbleLead() {
+        return isDubbleLead;
+    }
+
+    public void setDubbleLead(boolean dubbleLead) {
+        isDubbleLead = dubbleLead;
     }
 
     public String getId() {
@@ -129,6 +139,14 @@ public class AlertLeadsViewModal {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public boolean isAccepted() {

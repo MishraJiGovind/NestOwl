@@ -70,8 +70,8 @@ public class AboutUs extends AppCompatActivity {
             try {
                 AboutUsModal data =  new Gson().fromJson(jsons,AboutUsModal.class);
                 String html = header+data.getIntrotext()+bodyOpen+data.getArticle_description()+close;
-                mainText.setText(Html.fromHtml(data.getArticle_description()));
-                ourMission.loadDataWithBaseURL("", data.getArticle_description(), mimeType, encoding, "");
+//                mainText.setText(Html.fromHtml(data.getArticle_description()));
+                ourMission.loadDataWithBaseURL("", html, mimeType, encoding, "");
             }catch (Exception e){
                 Log.e("preLoadError", "onCreate: "+e );
             }
@@ -81,8 +81,8 @@ public class AboutUs extends AppCompatActivity {
             try {
                 AboutUsModal data =  new Gson().fromJson(jsons,AboutUsModal.class);
                 String html = header+data.getIntrotext()+bodyOpen+data.getArticle_description()+close;
-                nestText.setText(Html.fromHtml(data.getArticle_description()));
-                nestPross.loadDataWithBaseURL("", data.getArticle_description(), mimeType, encoding, "");
+//                nestText.setText(Html.fromHtml(data.getArticle_description()));
+                nestPross.loadDataWithBaseURL("", html, mimeType, encoding, "");
             }catch (Exception e){
                 Log.e("preLoadError", "onCreate: "+e );
             }

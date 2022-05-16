@@ -44,13 +44,13 @@
                         >
 
                         <TextView
-                            android:text="Buyer Details"
-                            android:textSize="20sp"
-                            android:textColor="#fff"
+                            android:id="@+id/LIVE_LEADS_MORE_INFO_HEADING"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="Interested Property"
+                            android:textColor="#fff"
 
-                            />
+                            android:textSize="20sp" />
 
 
 
@@ -82,43 +82,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <FrameLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="45dp"
-                android:background="@drawable/circle_background"
-                android:layout_height="45dp">
+                android:layout_height="45dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp">
+
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_marginBottom="05dp"
-                    android:src="@drawable/face_icon"
+                    android:id="@+id/LIVE_LEADS_MORE_INFO_DP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_height="30dp" />
+                    android:layout_marginBottom="05dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/face_icon" />
+            </androidx.cardview.widget.CardView>
 
-
-            </FrameLayout>
             <LinearLayout
                 android:layout_marginLeft="05dp"
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
+
                 <TextView
+                    android:id="@+id/LIVE_LEADS_MORE_INFO_NAME"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Akshit Yadav"
-                    android:textColor="#000"
                     android:fontFamily="@font/roboto_mediaum_second"
-                    android:textSize="16sp"
+                    android:text="--"
+                    android:textColor="#000"
 
-                    />
+                    android:textSize="16sp" />
+
                 <TextView
+                    android:id="@+id/LIVE_LEADS_MORE_INFO_TYPEOFLINE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/second"
-                    android:text="has sent you a Proposal for requirement"
+                    android:text="--"
+
                     android:textColor="@color/black_light"
 
-                    android:textSize="12sp"
-
-                    />
+                    android:textSize="12sp" />
                 <FrameLayout
                     android:background="@drawable/contact_builder"
                     android:layout_width="wrap_content"
@@ -156,21 +161,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_gravity="end"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/nest_circle_back"
-                        android:layout_height="25dp" />
-
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_marginLeft="05dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/nest_circle_back"
-                        android:layout_height="25dp" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"/>
 
             </FrameLayout>
 
@@ -207,139 +198,154 @@
 
             </FrameLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
+            android:layout_height="130dp"
             android:layout_marginTop="10dp"
-            android:layout_height="120dp">
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="06dp"
-                android:background="@drawable/nest_card_back"
+                android:layout_height="110dp"
                 android:layout_weight="1"
+                android:background="@drawable/nest_card_back"
+                android:minWidth="80dp"
 
-                android:layout_height="110dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="06dp">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center|center_vertical"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BHK"
-                        android:fontFamily="@font/second"
-                        android:textSize="14sp"
                         android:layout_marginTop="10dp"
-
-
+                        android:fontFamily="@font/second"
+                        android:text="Property"
                         android:textColor="#000"
-                        />
+
+
+                        android:textSize="14sp" />
+
                     <TextView
-                        android:layout_marginTop="15dp"
+                        android:id="@+id/LIVE_LEADS_MORE_INFO_PROPERTY"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 BHK"
+                        android:layout_marginTop="15dp"
                         android:fontFamily="@font/roboto_mediaum_second"
-                        android:textSize="16sp"
+                        android:text="--"
 
 
                         android:textColor="#000"
-                        />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
-
-
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:background="@drawable/nest_card_back"
-                android:layout_weight="1"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="06dp"
+                android:layout_height="110dp"
                 android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/nest_card_back"
+                android:minWidth="80dp"
 
-                android:layout_height="110dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="06dp">
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="wrap_content">
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/second"
                         android:text="Locality"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/second"
-                        android:layout_marginTop="10dp"
-
-
                         android:textColor="#000"
-                        />
+
+
+                        android:textSize="14sp" />
+
                     <TextView
-                        android:layout_marginTop="15dp"
+                        android:id="@+id/LIVE_LEADS_MORE_INFO_LOCALITY"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Palam"
-                        android:textSize="16sp"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="marquee"
                         android:fontFamily="@font/roboto_mediaum_second"
 
 
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="100dp"
+                        android:singleLine="true"
+                        android:text="--"
                         android:textColor="#000"
-                        />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
-                android:layout_marginLeft="05dp"
                 android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/nest_card_back"
+                android:minWidth="80dp"
+
                 app:cardCornerRadius="15dp"
                 app:cardElevation="06dp"
-                android:background="@drawable/nest_card_back"
-                android:layout_weight="1"
+                app:cardUseCompatPadding="false">
 
-                android:layout_height="110dp">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="wrap_content">
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Budget"
-                        android:fontFamily="@font/second"
-                        android:textSize="14sp"
                         android:layout_marginTop="10dp"
-
-
+                        android:fontFamily="@font/second"
+                        android:text="Budget"
                         android:textColor="#000"
-                        />
+
+
+                        android:textSize="14sp" />
+
                     <TextView
-                        android:layout_marginTop="15dp"
+                        android:id="@+id/LIVE_LEADS_MORE_INFO_BUDGET"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="₹ 4 lac"
+                        android:layout_marginTop="15dp"
                         android:fontFamily="@font/roboto_mediaum_second"
-                        android:textSize="16sp"
+                        android:text="--"
 
 
                         android:textColor="#000"
-                        />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
-
-
             </androidx.cardview.widget.CardView>
-
-
 
 
         </LinearLayout>
@@ -356,59 +362,63 @@
 
 
             />
+
         <androidx.cardview.widget.CardView
 
-            android:background="@drawable/nest_card_back"
             android:layout_width="275dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="20dp"
-            app:cardCornerRadius="15dp"
             android:layout_marginTop="10dp"
-            android:layout_height="100dp">
-            <FrameLayout
+            android:background="@drawable/nest_card_back"
+            app:cardCornerRadius="15dp">
 
-                android:fitsSystemWindows="true"
-                android:background="@drawable/background_image_personal"
+            <ImageView
+                android:id="@+id/LIVE_LEADS_MORE_INFO_PRO_CARD_IMG"
                 android:layout_width="130dp"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_gravity="center_vertical"
-                android:layout_height="98dp" />
+                android:layout_height="98dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/background_image_personal" />
 
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="140dp"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
 
                     <TextView
-                        android:textSize="12sp"
-                        android:textColor="#000"
-                        android:text="2 BHK"
-                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:id="@+id/LIVE_LEADS_MORE_INFO_PRO_CARD_PROPERTY"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:maxWidth="80dp"
+                        android:singleLine="true"
+                        android:text="--"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
                     <FrameLayout
-                        android:layout_marginLeft="35dp"
                         android:layout_width="45dp"
-                        android:background="@drawable/active_background"
-                        android:layout_height="15dp">
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/active_background">
+
                         <TextView
-                            android:paddingLeft="7dp"
-                            android:paddingRight="7dp"
-                            android:layout_gravity="center_vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:paddingRight="7dp"
                             android:text="Active"
-                            android:textSize="10dp"
                             android:textColor="#20C727"
+                            android:textSize="10dp"
 
 
                             />
@@ -418,52 +428,56 @@
                 </LinearLayout>
 
                 <TextView
-                    android:textSize="12sp"
+                    android:id="@+id/LIVE_LEADS_MORE_INFO_PRO_CARD_AREA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="680 Sq.ft."
-                    android:fontFamily="@font/second"
-                    android:textColor="@color/black_color"
                     android:layout_marginTop="07dp"
+                    android:fontFamily="@font/second"
+                    android:text="--"
+                    android:textColor="@color/black_color"
 
-                    />
+                    android:textSize="12sp" />
 
                 <TextView
-                    android:textSize="10sp"
-                    android:fontFamily="@font/roboto_mediaum_second"
-                    android:layout_marginTop="07dp"
-
+                    android:id="@+id/LIVE_LEADS_MORE_INFO_PRO_CARD_BUDGET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₹ 2 Crore"
+
+                    android:layout_marginTop="07dp"
+                    android:fontFamily="@font/roboto_mediaum_second"
+                    android:text="--"
                     android:textColor="#000"
 
-                    />
+                    android:textSize="10sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_marginTop="05dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="05dp">
+
                     <ImageView
                         android:layout_width="10dp"
-                        android:layout_marginTop="03dp"
                         android:layout_height="10dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/location_top"
-                        />
+                        android:layout_marginTop="03dp"
+                        android:src="@drawable/location_top" />
 
 
                     <TextView
-                        android:textSize="10sp"
-                        android:layout_marginLeft="05dp"
-                        android:layout_marginTop="05dp"
-                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:id="@+id/LIVE_LEADS_MORE_INFO_PRO_CARD_LOACTION"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tilak Nagar"
-                        android:textColor="#000"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginTop="05dp"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/roboto_mediaum_second"
+                        android:marqueeRepeatLimit="marquee_forever"
 
-                        />
+                        android:maxWidth="60dp"
+                        android:singleLine="true"
+                        android:text="--"
+                        android:textColor="#000"
+                        android:textSize="10sp" />
 
 
                 </LinearLayout>
@@ -471,87 +485,119 @@
 
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/LIVE_LEADS_MORE_INFO_NOTE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textView91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Note:-"
+                android:textColor="@color/black_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0"
+                android:text="Our Team will call you as soon as possibile." />
+        </LinearLayout>
+
     </LinearLayout>
+
     <HorizontalScrollView
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="bottom"
+        android:id="@+id/LIVE_LEADS_MORE_INFO_BUTONS"
         android:layout_width="match_parent"
-        android:fillViewport="true"
+        android:layout_height="@dimen/bottom_size_height_button_40sp"
+        android:layout_gravity="bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
         android:measureAllChildren="false"
-        android:scrollbars="none"
-        android:layout_height="@dimen/bottom_size_height_button_40sp">
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <FrameLayout
-                android:layout_weight="1"
+                android:id="@+id/LIVE_LEADS_MORE_INFO_ACCEPT"
                 android:layout_width="match_parent"
-                android:background="@drawable/nest_pro_rectangle"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/nest_pro_rectangle">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Accept"
+                    android:textColor="@color/brown_color"
                     android:textSize="12sp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/LIVE_LEADS_MORE_INFO_REJECT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:text="Reject"
+                    android:textColor="@color/brown_color"
+                    android:textSize="12sp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/LIVE_LEADS_MORE_INFO_CHAT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="05dp"
+                android:layout_weight="1"
+                android:background="@drawable/nest_pro_rectangle">
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Chat"
                     android:textColor="@color/brown_color"
-
-                    />
-
-
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="05dp"
-                android:background="@drawable/nest_pro_rectangle"
-                android:layout_height="match_parent">
-                <TextView
                     android:textSize="12sp"
-                    android:layout_gravity="center"
-
-                    android:textColor="@color/brown_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View Contact"
 
                     />
 
 
-
             </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_marginLeft="05dp"
-                android:layout_weight="1"
-                android:background="@drawable/nest_pro_rectangle"
-                android:layout_height="match_parent">
-                <TextView
-                    android:textSize="12sp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/brown_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View Offer"
-
-                    />
-
-
-
-            </FrameLayout>
-
-
 
 
         </LinearLayout>
-
 
 
     </HorizontalScrollView>

@@ -240,14 +240,13 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView49">
+            app:layout_constraintTop_toBottomOf="@+id/imageView24">
 
             <LinearLayout
                 android:id="@+id/FEEDBACK_RADIO_LNR_AWOSOME"
@@ -326,6 +325,16 @@
             </LinearLayout>
 
         </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView49"
+            app:srcCompat="@drawable/feedback_icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.cardview.widget.CardView

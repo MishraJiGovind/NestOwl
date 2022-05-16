@@ -7,6 +7,56 @@
     android:orientation="vertical"
     tools:context="com.nestowl.brokerapp.InterestedPropertyThirdUser">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TECHNICAL_ERROR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whit_button"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/error_icom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error while fetching property data."
+            android:textColor="@color/brown"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Check your internet connection and restart application."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView93" />
+
+        <ImageView
+            android:id="@+id/ERROR_BACK"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/close_icon"
+            tools:tint="@color/brown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/PROPERTY_PREVIEW_APPBAR"
         android:layout_width="match_parent"
@@ -423,10 +473,370 @@
 
                             <TextView
 
+                                android:id="@+id/textView97"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_marginTop="15dp"
+                                android:layout_marginTop="@dimen/dimen_15sp"
                                 android:background="#A7A6A6" />
+
+                            <LinearLayout
+                                android:id="@+id/LEADS_PROPERTY_BROKER_UI"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/light_blue">
+
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="16dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/LEADS_PROPERTY_BROKER_UI_NAME"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginTop="03dp"
+                                            android:fontFamily="@font/first"
+                                            android:text="Vasu Miglani"
+                                            android:textColor="#000"
+
+                                            android:textSize="16sp" />
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+
+                                            android:layout_marginTop="10dp">
+
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/nest_circle_back" />
+
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="22dp"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:src="@drawable/nest_circle_back" />
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginLeft="05dp"
+                                                    android:src="@drawable/nest_circle_back" />
+                                            </LinearLayout>
+
+                                        </FrameLayout>
+
+
+                                        <TextView
+                                            android:id="@+id/LEADS_PROPERTY_BROKER_UI_NUMBER"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginRight="05dp"
+                                            android:fontFamily="@font/roboto_third"
+                                            android:text="+91-98xxxxxxx2"
+                                            android:textColor="#000"
+
+                                            android:textSize="12sp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="1dp"
+                                            android:fontFamily="@font/first"
+                                            android:text="NEST PRO"
+                                            android:textColor="#000"
+                                            android:textSize="16sp"
+
+                                            />
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="12dp"
+                                            android:background="@drawable/rera_background_nest">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="RERA Registered:       "
+                                                android:textColor="#fff"
+                                                android:textSize="12sp"
+
+                                                />
+
+
+                                            <TextView
+                                                android:id="@+id/LEADS_PROPERTY_BROKER_UI_RERA_REGISTOR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end|center_vertical"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:fontFamily="@font/roboto_third"
+                                                android:text="Yes"
+                                                android:textColor="@color/rera_color"
+
+                                                android:textSize="12sp" />
+
+
+                                        </FrameLayout>
+
+
+                                        <TextView
+                                            android:id="@+id/LEADS_PROPERTY_BROKER_UI_RERA_ID"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="12dp"
+                                            android:fontFamily="@font/third"
+
+                                            android:gravity="end|center_vertical"
+                                            android:text="RERA ID:98124"
+                                            android:textColor="#000"
+
+                                            android:textSize="12sp" />
+
+
+                                    </LinearLayout>
+
+
+                                    <!--
+
+
+
+                                                    <TextView
+                                                        android:layout_marginTop="12dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_marginRight="45dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:textSize="12sp"
+                                                        android:fontFamily="@font/third"
+
+                                                        android:gravity="center_vertical"
+                                                        android:layout_gravity="end|center_vertical"
+                                                        android:text="RERA ID:98124"
+                                                        android:textColor="#000"
+
+                                                        />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textSize="12sp"
+                                                        android:fontFamily="@font/third"
+                                                        android:layout_marginTop="03dp"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:text="Vasu Miglani"
+                                                        android:textColor="#000"
+
+                                                        />
+                                                    <FrameLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_marginTop="55dp"
+
+                                                        android:layout_height="wrap_content">
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content">
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+
+
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_marginLeft="05dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+
+                                                            <ImageView
+                                                                android:layout_width="22dp"
+                                                                android:layout_marginLeft="05dp"
+                                                                android:layout_gravity="center"
+                                                                android:src="@drawable/nest_circle_back"
+                                                                android:layout_height="22dp" />
+                                                        </LinearLayout>
+
+                                                    </FrameLayout>
+
+                                    -->
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp">
+
+
+                                    <FrameLayout
+                                        android:id="@+id/LEADS_PROPERTY_BROKER_UI_VIEW_PROFILE"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/view_profile_offer_28sp"
+                                        android:layout_gravity="center_vertical"
+
+                                        android:background="@drawable/contact_builder">
+
+                                        <TextView
+                                            android:id="@+id/view_profile_rera"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="15dp"
+
+                                            android:layout_marginRight="15dp"
+                                            android:fontFamily="@font/sort_btn_font"
+                                            android:text="View Profile"
+                                            android:textColor="#fff"
+                                            android:textSize="@dimen/text_profile_offer_12sp"
+
+                                            />
+
+                                    </FrameLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/LEADS_PROPERTY_BROKER_UI_VIEW_PHONE_NUMBER"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:orientation="vertical">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/view_profile_offer_28sp"
+                                            android:layout_marginTop="02dp"
+
+                                            android:background="@drawable/contact_builder">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="12dp"
+                                                android:layout_marginRight="12dp"
+
+                                                android:fontFamily="@font/sort_btn_font"
+                                                android:text="View Phone No."
+                                                android:textColor="#fff"
+                                                android:textSize="@dimen/text_profile_offer_12sp"
+
+                                                />
+
+                                        </FrameLayout>
+
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/light_blue">
+
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="16dp">
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@drawable/card_back_amenties">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:text="Pro Agent"
+                                            android:textColor="@color/brown_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:text="Eligible for 30% Off on Second Deal......"
+                                        android:textColor="@color/brown_color"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <TextView
+
+                                    android:id="@+id/textView96"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:background="#A7A6A6" />
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -1223,6 +1633,7 @@
                                                 android:layout_width="45dp"
                                                 android:layout_height="45dp"
                                                 android:layout_gravity="center"
+                                                app:cardBackgroundColor="@color/whit_button"
                                                 app:cardCornerRadius="25dp"
                                                 app:cardElevation="@dimen/card_elevation_05dp">
 
@@ -1996,7 +2407,7 @@
                                     android:layout_marginLeft="@dimen/screen_sixteen_16sp"
                                     android:layout_marginTop="@dimen/screen_sixteen_16sp"
                                     android:fontFamily="@font/second"
-                                    android:text="Lorem ipsum dolor sit amet, consectetur addipiscing elit. lectus."
+                                    android:text="Munafa has endeavoured to ascertain the requirement and the particulars of RERA registration. The advertiser has provided the details and the same can be verified from the website of the concerned RERA Authority. Users are cautioned accordingly"
                                     android:textColor="#000"
                                     android:textSize="12sp" />
 

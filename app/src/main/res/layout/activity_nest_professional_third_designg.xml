@@ -521,7 +521,7 @@
                                     <FrameLayout
                                         android:background="@drawable/contact_builder"
                                         android:layout_width="wrap_content"
-                                        android:id="@+id/view_profile_nineteen"
+                                        android:id="@+id/LEADS_PROPERTY_BROKER_UI_VIEW_PROFILE"
                                         android:layout_gravity="center_vertical"
 
                                         android:layout_height="@dimen/view_profile_offer_28sp">

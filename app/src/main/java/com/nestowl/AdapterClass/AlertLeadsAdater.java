@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nestowl.brokerapp.LeadFirstCardOpen;
 import com.nestowl.brokerapp.R;
 import com.nestowl.model.AlertLeadsViewModal;
 import com.nestowl.brokerapp.Chating;
@@ -25,7 +27,7 @@ import java.util.ArrayList;
 public class AlertLeadsAdater extends RecyclerView.Adapter<AlertLeadsAdater.ViewHolder> {
     Context context;
     ArrayList<AlertLeadsViewModal> data;
-    String seller,buyer;
+    String seller,buyer,sell;
     int viewHandler = 0;
     int viewHandlers = 0;
 
@@ -47,6 +49,14 @@ public class AlertLeadsAdater extends RecyclerView.Adapter<AlertLeadsAdater.View
     @Override
     public void onBindViewHolder(@NonNull AlertLeadsAdater.ViewHolder holder, int position) {
         AlertLeadsViewModal info=data.get(position);
+
+        holder.bhk.setSelected(true);
+        holder.projectName.setSelected(true);
+        holder.budget.setSelected(true);
+        holder.SQ.setSelected(true);
+        holder.verified.setSelected(true);
+        holder.ViewProposal.setSelected(true);
+
         viewHandler=0;
         Log.e("Property Id", "onBindViewHolder: "+info.getProperty_id() );
         holder.name.setText(info.getName());
@@ -58,24 +68,32 @@ public class AlertLeadsAdater extends RecyclerView.Adapter<AlertLeadsAdater.View
         if (info.isType()){
             holder.intrested.setText(seller+info.getBhk());
             holder.textView.setText("View Property");
-            viewHandlers=1;
-        }
-        if (info.isType()){
-            holder.intrested.setText(seller+info.getBhk());
-            holder.textView.setText("View Property");
-            holder.viewContact.setVisibility(View.VISIBLE);
+            holder.viewContact.setVisibility(View.GONE);
+            sell="sell";
             viewHandlers=1;
         }
         if (!info.isType()){
             holder.intrested.setText(buyer+info.getBhk());
             holder.textView.setText("View Requirement");
+            holder.viewContact.setVisibility(View.GONE);
+            sell="buy";
             viewHandler=2;
         }
-        if (!info.isType()){
-            holder.intrested.setText(buyer+info.getBhk());
-            holder.textView.setText("View Requirement");
+        if (info.isDubbleLead()){
             holder.viewContact.setVisibility(View.VISIBLE);
-            viewHandler=2;
+            holder.dubbleLead.setVisibility(View.VISIBLE);
+            if (info.isType()){
+                holder.intrested.setText(seller+info.getBhk());
+                holder.textView.setText("View Property");
+                sell="sell";
+                viewHandlers=1;
+            }
+            if (!info.isType()){
+                holder.intrested.setText(buyer+info.getBhk());
+                holder.textView.setText("View Requirement");
+                sell="buy";
+                viewHandler=2;
+            }
         }
         if (info.isAccepted()){
             holder.intrested.setText(buyer+info.getBhk());
@@ -133,39 +151,40 @@ public class AlertLeadsAdater extends RecyclerView.Adapter<AlertLeadsAdater.View
                 }
             }
         });
-//        holder.main.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, LeadFirstCardOpen.class);
-//                intent.putExtra("key", info.getProperty_id());
-//                intent.putExtra("id", info.getId());
-//                intent.putExtra("user", info.getUser_id());
-//                intent.putExtra("bhk", info.getBhk());
-//                intent.putExtra("ad", info.getAddress());
-//                intent.putExtra("budget", info.getBudget());
-//                intent.putExtra("name", info.getName());
-//                intent.putExtra("dp", "");
-//                intent.putExtra("unlock", info.getUnlocking());
-//                intent.putExtra("doctor", info.getDoctor());
-//                intent.putExtra("doctor2", info.getDoctor());
-//                intent.putExtra("status", info.getStatus());
-//                intent.putExtra("want", info.getWant());
-//                intent.putExtra("location", info.getAddress());
-//                intent.putExtra("isAccepted",info.getAccepted());
-//                intent.putExtra("isSumbited",info.getProposalSummibted());
-//                intent.putExtra("isProposalAccepted",info.getProposalAccepted());
-//                context.startActivity(intent);
-//            }
-//        });
+        holder.main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, LeadFirstCardOpen.class);
+                intent.putExtra("key", info.getProperty_id());
+                intent.putExtra("id", info.getId());
+                intent.putExtra("user", info.getUser_id());
+                intent.putExtra("bhk", info.getBhk());
+                intent.putExtra("ad", info.getAddress());
+                intent.putExtra("budget", info.getBudget());
+                intent.putExtra("name", info.getName());
+                intent.putExtra("dp", "");
+                intent.putExtra("unlock", info.getUnlocking());
+                intent.putExtra("doctor", info.getDoctor());
+                intent.putExtra("doctor2", info.getDoctor());
+                intent.putExtra("status", info.getStatus());
+                intent.putExtra("want", sell);
+                intent.putExtra("location", info.getAddress());
+                intent.putExtra("isAccepted",info.isAccepted());
+                intent.putExtra("isSumbited",info.isProposalSummibted());
+                intent.putExtra("isProposalAccepted",info.isProposalAccepted());
+                context.startActivity(intent);
+            }
+        });
     }
     @Override
     public int getItemCount() {
         return data.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView name,intrested,bhk,projectName,budget,SQ,doctor,status,textView,unlocking;
+        TextView name,intrested,bhk,projectName,budget,SQ,doctor,status,textView,unlocking,verified;
         FrameLayout doctorFrame,chat,viewContact,ViewProposal;
         ConstraintLayout main;
+        LinearLayout dubbleLead;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.CUSTOM_ALERT_NAME);
@@ -182,6 +201,8 @@ public class AlertLeadsAdater extends RecyclerView.Adapter<AlertLeadsAdater.View
             viewContact=itemView.findViewById(R.id.CUSTOM_ALERT_VIEW_CONTACT);
             ViewProposal=itemView.findViewById(R.id.CUSTOM_ALERT_VIEW_REQ);
             main=itemView.findViewById(R.id.CUSTOM_ALERT_MAIN);
+            dubbleLead=itemView.findViewById(R.id.CUSTOM_ALERT_DUBBLE_LEAD);
+            verified=itemView.findViewById(R.id.vrifiedbynest);
             doctor=(TextView) doctorFrame.getChildAt(0);
         }
 

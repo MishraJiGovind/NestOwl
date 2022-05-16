@@ -33,10 +33,13 @@ public class AlertPartnerRecivedAdapter extends RecyclerView.Adapter<AlertPartne
     Context context;
     ArrayList<LeadsPublicPro> data;
     NumberToWords numberToWords;
+    String buy,sell;
 
     public AlertPartnerRecivedAdapter(Context context, ArrayList<LeadsPublicPro> data) {
         this.context = context;
         this.data = data;
+        buy="is interested to buy ";
+        sell="is interested to sell his ";
 
     }
 
@@ -52,7 +55,7 @@ public class AlertPartnerRecivedAdapter extends RecyclerView.Adapter<AlertPartne
     public void onBindViewHolder(@NonNull ViewModal holder, int position) {
         LeadsPublicPro info = data.get(position);
         holder.name.setText(info.getName());
-        holder.intersted.setText("is interested to buy "+info.getProperty()+" in "+info.getCity());
+
         holder.bhk.setText(info.getPlot_area()+"Bhk");
         holder.flat.setText(info.getPropertytype());
         holder.budget.setText(getBudgetInLakhs(info.getExpectedprice()));
@@ -60,6 +63,10 @@ public class AlertPartnerRecivedAdapter extends RecyclerView.Adapter<AlertPartne
        if (info.getLooking()!=null){
            if (info.getLooking().equals("Sell")){
                holder.proposal.setText("View Property");
+               holder.intersted.setText(sell+info.getProperty()+" in "+info.getCity());
+           }else {
+               holder.proposal.setText("View Requirement");
+               holder.intersted.setText(buy+info.getProperty()+" in "+info.getCity());
            }
        }else {
            holder.viewProposal.setVisibility(View.GONE);

@@ -2,12 +2,12 @@ package com.nestowl.model;
 
 public class MapPinModal {
     String name;
-    int lat,lon;
+    double lat,lon;
 
     public MapPinModal() {
     }
 
-    public MapPinModal(String name, int lat, int lon) {
+    public MapPinModal(String name, double lat, double lon) {
         this.name = name;
         this.lat = lat;
         this.lon = lon;
@@ -21,19 +21,19 @@ public class MapPinModal {
         this.name = name;
     }
 
-    public int getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(int lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public int getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(int lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 }

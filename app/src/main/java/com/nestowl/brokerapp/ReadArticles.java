@@ -15,6 +15,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.nestowl.utils.PrefMananger;
 
 public class ReadArticles extends AppCompatActivity {
     ImageView back,articleImage;
@@ -46,27 +47,17 @@ public class ReadArticles extends AppCompatActivity {
         TITLE =  intent.getStringExtra("title");
         DATE =  intent.getStringExtra("date");
         IMAGE =  intent.getStringExtra("image");
-        DESCRIPTION =  intent.getStringExtra("description");
+        if (PrefMananger.getString(this,"article/body")!=null){
+            DESCRIPTION =  PrefMananger.getString(this,"article/body");
+        }
 
+        PrefMananger.saveString(this,"article/body",null);
         setData();
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            scrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-                @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                    if (scrollY<=50){
-                        nav_title.setText("Read Articles");
-                    }
-                    if (scrollY>=40){
-                        nav_title.setText(TITLE);
-                    }
-                }
-            });
         }
     }
 

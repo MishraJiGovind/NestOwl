@@ -105,8 +105,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:textColor="@color/black_color"
-                    android:textSize="16sp"
-                    android:visibility="gone" />
+                    android:textSize="16sp" />
 
                 <WebView
                     android:id="@+id/ABOUT_US_MAIN_WEB_VIEW"

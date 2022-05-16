@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.nestowl.model.ArticleModal;
 import com.nestowl.brokerapp.R;
 import com.nestowl.brokerapp.ReadArticles;
+import com.nestowl.utils.PrefMananger;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
                 intent.putExtra("title", info.getTitle());
                 intent.putExtra("date", info.getPostdate());
                 intent.putExtra("image", info.getImage());
-                intent.putExtra("description", info.getBody());
+                PrefMananger.saveString(context,"article/body",info.getBody());
                 context.startActivity(intent);
             }
         });

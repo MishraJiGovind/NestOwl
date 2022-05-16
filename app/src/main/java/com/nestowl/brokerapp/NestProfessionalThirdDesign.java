@@ -503,7 +503,7 @@ read_disclaimer.setOnClickListener(new View.OnClickListener() {
             }
         });
         */
-        view_profile=findViewById(R.id.view_profile_nineteen);
+        view_profile=findViewById(R.id.LEADS_PROPERTY_BROKER_UI_VIEW_PROFILE);
 
         /*frm_rer.setOnClickListener(new View.OnClickListener() {
             @Override

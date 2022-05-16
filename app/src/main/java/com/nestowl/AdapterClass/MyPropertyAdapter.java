@@ -58,6 +58,9 @@ public class MyPropertyAdapter extends RecyclerView.Adapter<MyPropertyAdapter.Vi
         }else {
             holder.posted.setText(info.getProperypost());
         }
+        holder.locality.setSelected(true);
+        holder.address.setSelected(true);
+
         holder.price.setText(info.getPropertytype()+","+info.getProperty());
         holder.address.setText(info.getLocality()+","+info.getCity());
         holder.locality.setText(info.getLocality());

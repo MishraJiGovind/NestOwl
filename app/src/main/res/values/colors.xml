@@ -39,6 +39,7 @@
     <color name="duskYellow">#48211c</color>
     <color name="lightGrey">#A3A0A0</color>
     <color name="lightGreyChat">#C4D5D5D5</color>
+    <color name="Greeen">#4CAF50</color>
 
 
     <integer-array name="dot_on_page_not_active">

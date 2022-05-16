@@ -2,6 +2,7 @@ package com.nestowl.Fragment;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ public class ActivityFragmentBuer extends Fragment implements TabLayout.OnTabSel
     ViewPager2 viewPager2;
     Pager adapter ;
     View pro,response;
+    Context context;
 
 
     public ActivityFragmentBuer() {
@@ -40,7 +42,7 @@ public class ActivityFragmentBuer extends Fragment implements TabLayout.OnTabSel
         FrameLayout frame_filter_first;
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_activity, container, false);
-
+        context = getContext();
 
         viewPager= view.findViewById(R.id.view_pager_activityy);
         tabLayout = view.findViewById(R.id.tabs_activity);
@@ -51,10 +53,10 @@ public class ActivityFragmentBuer extends Fragment implements TabLayout.OnTabSel
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-        ProgressDialog pd =  new ProgressDialog(getContext());
+        ProgressDialog pd =  new ProgressDialog(context);
         pd.setCancelable(false);
         pd.setMessage("Loading...");
-        pd.show();
+//        pd.show();
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
@@ -64,7 +66,7 @@ public class ActivityFragmentBuer extends Fragment implements TabLayout.OnTabSel
         };
         handler.postDelayed(runnable,6000);
         response =((ViewGroup) tabLayout.getChildAt(0)).getChildAt(1);
-        if (PrefMananger.getString(getContext(),"responsekey")!=null){
+        if (PrefMananger.getString(context,"responsekey")!=null){
             viewPager.setCurrentItem(1);
             response.performClick();
 

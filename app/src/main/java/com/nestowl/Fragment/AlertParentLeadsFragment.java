@@ -2,6 +2,7 @@ package com.nestowl.Fragment;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -23,6 +24,7 @@ public class AlertParentLeadsFragment extends Fragment implements TabLayout.OnTa
 
     ViewPager viewPager;
     TabLayout tabLayout;
+    Context context;
 
     public AlertParentLeadsFragment() {
         // Required empty public constructor
@@ -34,16 +36,16 @@ public class AlertParentLeadsFragment extends Fragment implements TabLayout.OnTa
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_alert_parent_leads, container, false);
-
+        context= getContext();
         viewPager=view.findViewById(R.id.vp_leads_alert);
         tabLayout=view.findViewById(R.id.tab_leads_alert);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-        ProgressDialog pd =  new ProgressDialog(getContext());
+        ProgressDialog pd =  new ProgressDialog(context);
         pd.setCancelable(false);
         pd.setMessage("Loading...");
-        pd.show();
+//        pd.show();
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override

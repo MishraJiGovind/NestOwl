@@ -2,6 +2,7 @@ package com.nestowl.Fragment;
 
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
@@ -91,6 +92,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
     Autoclicks autoclicks;
     ConstraintLayout noDataShow;
     CardView setData;
+    Context context;
 
     public ActivityMyProperties() {
         // Required empty public constructor
@@ -100,6 +102,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_activity_my_properties, container, false);
+        context =getContext();
         ld_format=view.findViewById(R.id.MY_RESPONSE_LEADS_FORMAT);
         MakeOfferRecycler=view.findViewById(R.id.MY_RESPONSE_MAKE_OFFER);
         ContactUserRecycler=view.findViewById(R.id.MY_RESPONSE_CONTACT_USER);
@@ -109,10 +112,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         ld_to=view.findViewById(R.id.MY_RESPONSE_LEADS_STATUS);
         noDataShow=view.findViewById(R.id.ALL_NO_DATA_SHOW);
         setData=view.findViewById(R.id.ALL_NO_DATA_SHOW_BTN);
-        if (PrefMananger.getString(getContext(),"responsekey")!=null){
-            ids.setText(PrefMananger.getString(getContext(),"responsekey"));
-            PrefMananger.saveString(getContext(),"responsekey",null);
-        }
+
 
         makeOfferList=new ArrayList<>();
         contactUserList=new ArrayList<>();
@@ -131,10 +131,10 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         pricModal =  new PropertyPricModal();
         leadsPublicPros =  new ArrayList<>();
 
-        formatS="Format";
-        timeS="Time";
-        statusS="Status";
-        adapterss = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,ides);
+        formatS="Lead format";
+        timeS="Time filter";
+        statusS=" Lead status";
+        adapterss = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1,ides);
         ids.setAdapter(adapterss);
         autoclicks =  new Autoclicks();
         ids.setOnItemSelectedListener(autoclicks);
@@ -160,40 +160,40 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         setData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (PrefMananger.getString(getContext(),"sub").equals("true")){
-                    Intent intent = new Intent(getContext(), SelectModePostRequirement.class);
+                if (PrefMananger.getString(context,"sub").equals("true")){
+                    Intent intent = new Intent(context, SelectModePostRequirement.class);
                     startActivity(intent);
                 }else {
-                    if ( PrefMananger.getString(getContext(),"id").equals("true")){
-                        new WarningDio(getContext(), "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
+                    if ( PrefMananger.getString(context,"id").equals("true")){
+                        new WarningDio(context, "You are not subscribe any plan please subscribe to continue.", "Subscribe Now", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
                                 if (click==1){
-                                    startActivity(new Intent(getContext(), SubscriptionPlan.class));
+                                    startActivity(new Intent(context, SubscriptionPlan.class));
                                 }
                             }
                         },false);
                     }else {
-                        if (PrefMananger.getString(getContext(),"status").equals("0")){
-                            new WarningDio(getContext(), "Your is incomplete", "Complete Profile", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("0")){
+                            new WarningDio(context, "Your is incomplete", "Complete Profile", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                     if (click==1){
-                                        startActivity(new Intent(getContext(), EditSignUpForm.class));
+                                        startActivity(new Intent(context, EditSignUpForm.class));
                                     }
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("1")){
-                            new WarningDio(getContext(), "Your is summited", "Ok", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("1")){
+                            new WarningDio(context, "Your is summited", "Ok", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
 
                                 }
                             },false);
                         }
-                        if (PrefMananger.getString(getContext(),"status").equals("2")){
-                            new WarningDio(getContext(), "Your Profile is pending.", "OK", null, new WarningDio.Response() {
+                        if (PrefMananger.getString(context,"status").equals("2")){
+                            new WarningDio(context, "Your Profile is pending.", "OK", null, new WarningDio.Response() {
                                 @Override
                                 public void getClicks(int click) {
                                 }
@@ -209,7 +209,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
 //            @Override
 //            public void onClick(View v) {
 //
-//                startActivity(new Intent(getContext(), NestProfessionalFourthDesign.class));
+//                startActivity(new Intent(context, NestProfessionalFourthDesign.class));
 //
 //            }
 //        });
@@ -217,7 +217,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
             @Override
             public void onClick(View v) {
 
-                final Dialog dialog = new Dialog(getContext());
+                final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.lead_format_seller);
                 FrameLayout drectLead,proposal,clear,apply;
                 drectLead=dialog.findViewById(R.id.DIOLOG_MY_RESPONSE_DRECT_LEAD);
@@ -245,7 +245,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
 
 
                 dialog.getWindow().setAttributes(lp);
@@ -307,7 +307,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
             @Override
             public void onClick(View v) {
 
-                final Dialog dialog = new Dialog(getContext());
+                final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.lead_statuss_broker);
                 FrameLayout accepted, rejected,clear,apply;
                 accepted=dialog.findViewById(R.id.DIOLOG_MY_RESPONSE_ACCEPT);
@@ -335,7 +335,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 dialog.show();
                 ImageView imageView=dialog.findViewById(R.id.DIOLOG_MY_RESPONSE_DISSMISSED);
@@ -394,7 +394,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         ld_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(getContext());
+                final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.lead_statuss_broker);
                 FrameLayout accepted, rejected,clear,apply;
                 TextView status  =dialog.findViewById(R.id.STATUS_OF_MYRESPONSE);
@@ -429,7 +429,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.BOTTOM;
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), android.R.color.transparent)));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
                 dialog.getWindow().setAttributes(lp);
                 dialog.show();
                 ImageView imageView=dialog.findViewById(R.id.DIOLOG_MY_RESPONSE_DISSMISSED);
@@ -484,7 +484,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                 });
             }
         });
-        loginPojo= PrefMananger.GetLoginData(getContext());
+        loginPojo= PrefMananger.GetLoginData(context);
         getData();
         return view;
     }
@@ -500,24 +500,36 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                         JSONArray makeOffers = jsonObject.getJSONArray("Makeanoffers_data");
                         JSONArray contactUser = jsonObject.getJSONArray("ContactUser_data");
                         JSONArray startoffer = jsonObject.getJSONArray("Startanoffer_data");
-                        noDataShow.setVisibility(View.GONE);
+
                         for (int i=0;i<makeOffers.length();i++){
                             LiveLeadsModal data = new Gson().fromJson(makeOffers.getJSONObject(i).toString(),LiveLeadsModal.class);
-                            getMoreInfoMakeOffer(data);
-                            ides.add(data.getProperty_id());
-                            userIds.add(data.getLead_user_id());
+                            if (!String.valueOf(loginPojo.getUserId()).equals(data.getLead_user_id())){
+                                getMoreInfoMakeOffer(data,data.getLead_user_id());
+                                ides.add(data.getProperty_id());
+                                userIds.add(data.getLead_user_id());
+                                noDataShow.setVisibility(View.GONE);
+                            }
+
                         }
                         for (int i=0;i<contactUser.length();i++){
                             LeadLiveContactModal data =  new Gson().fromJson(contactUser.getJSONObject(i).toString(),LeadLiveContactModal.class);
-                            getMoreInfoContact(data);
-                            ides.add(data.getProperty_id());
-                            userIds.add(data.getLead_user_id());
+                            if (!String.valueOf(loginPojo.getUserId()).equals(data.getLead_user_id())){
+                                getMoreInfoContact(data,data.getLead_user_id());
+                                ides.add(data.getProperty_id());
+                                userIds.add(data.getLead_user_id());
+                                noDataShow.setVisibility(View.GONE);
+                            }
+
                         }
                         for (int i=0;i<startoffer.length();i++){
                             LeadsLiveOfferModal data =  new Gson().fromJson(startoffer.getJSONObject(i).toString(),LeadsLiveOfferModal.class);
-                            getMoreInfoStartOffer(data);
-                            ides.add(data.getProperty_id());
-                            userIds.add(data.getLead_user_id());
+                            if (!String.valueOf(loginPojo.getUserId()).equals(data.getLead_user_id())){
+                                getMoreInfoStartOffer(data,data.getLead_user_id());
+                                ides.add(data.getProperty_id());
+                                userIds.add(data.getLead_user_id());
+                                noDataShow.setVisibility(View.GONE);
+                            }
+
                         }
                         setRecylcerViews();
                         handlerAcceptReject();
@@ -540,7 +552,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void handlerAcceptReject() {
         for (String id:userIds){
@@ -575,25 +587,31 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
                     return hashMap;
                 }
             };
-            Volley.newRequestQueue(getContext()).add(request);
+            Volley.newRequestQueue(context).add(request);
         }
     }
     private void setRecylcerViews() {
-        MakeOfferRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        ContactUserRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        StartOfferRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter  = new MyResponsesAdapter(getContext(),makeOfferList);
+        MakeOfferRecycler.setLayoutManager(new LinearLayoutManager(context));
+        ContactUserRecycler.setLayoutManager(new LinearLayoutManager(context));
+        StartOfferRecycler.setLayoutManager(new LinearLayoutManager(context));
+        adapter  = new MyResponsesAdapter(context,makeOfferList);
         MakeOfferRecycler.setAdapter(adapter);
-        adapter  = new MyResponsesAdapter(getContext(),contactUserList);
+        adapter  = new MyResponsesAdapter(context,contactUserList);
         ContactUserRecycler.setAdapter(adapter);
-        adapter  = new MyResponsesAdapter(getContext(),startOfferList);
+        adapter  = new MyResponsesAdapter(context,startOfferList);
         StartOfferRecycler.setAdapter(adapter);
+
+        if (PrefMananger.getString(context,"responsekey")!=null){
+            ids.setText(PrefMananger.getString(context,"responsekey"));
+            searchProperty(PrefMananger.getString(context,"responsekey"));
+            PrefMananger.saveString(context,"responsekey",null);
+        }
     }
-    private void getMoreInfoStartOffer(LeadsLiveOfferModal data) {
+    private void getMoreInfoStartOffer(LeadsLiveOfferModal data,String leadID) {
         LeadsPublicPro leadsPublicPro = getFullPropertyData(data.getProperty_id(),data.getUser_id());
         MyresponeViewModal modal =  new MyresponeViewModal();
         modal.setProperty_id(data.getProperty_id());
-        modal.setUser_id(data.getUser_id());
+        modal.setUser_id(leadID);
         modal.setBhk(leadsPublicPro.getProperty());
         modal.setId(data.getId());
         modal.setName(data.getName());
@@ -605,7 +623,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         makeOfferList.add(modal);
     }
     private LeadsPublicPro getFullPropertyData(String property_id,String user_id) {
-       leadsPublicPros = PrefMananger.getPropertyList(getContext());
+       leadsPublicPros = PrefMananger.getPropertyList(context);
         LeadsPublicPro data =  new LeadsPublicPro();
        if (leadsPublicPros!=null){
            for (LeadsPublicPro d : leadsPublicPros){
@@ -616,11 +634,11 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
        }
        return data;
     }
-    private void getMoreInfoContact(LeadLiveContactModal data) {
+    private void getMoreInfoContact(LeadLiveContactModal data,String leadID) {
         LeadsPublicPro leadsPublicPro=getFullPropertyData(data.getProperty_id(),data.getUser_id());
         MyresponeViewModal modal =  new MyresponeViewModal();
         modal.setProperty_id(data.getProperty_id());
-        modal.setUser_id(data.getUser_id());
+        modal.setUser_id(leadID);
         modal.setBhk(leadsPublicPro.getProperty());
         modal.setId(data.getId());
         modal.setName(data.getName());
@@ -631,11 +649,11 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         modal.setTime(data.getUpdated_at());
         makeOfferList.add(modal);
     }
-    private void getMoreInfoMakeOffer(LiveLeadsModal data) {
+    private void getMoreInfoMakeOffer(LiveLeadsModal data , String leadID) {
         LeadsPublicPro leadsPublicPro= getFullPropertyData(data.getProperty_id(),data.getUser_id());
         MyresponeViewModal modal =  new MyresponeViewModal();
         modal.setProperty_id(data.getProperty_id());
-        modal.setUser_id(data.getUser_id());
+        modal.setUser_id(leadID);
         modal.setBhk(leadsPublicPro.getProperty());
         modal.setId(data.getId());
         modal.setName(data.getName());
@@ -643,7 +661,7 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         modal.setCity(leadsPublicPro.getLocality());
         modal.setSq(leadsPublicPro.getPlot_area()+leadsPublicPro.getPlot_area_mezor());
         modal.setType("interested");
-        modal.setTime(data.getUpdated_at());
+        modal.setTime(data.getUpdated_at());;
         makeOfferList.add(modal);
     }
     private void handleLeadsTime() {
@@ -844,14 +862,14 @@ public class ActivityMyProperties extends Fragment implements TabLayout.OnTabSel
         }
     }
     private void setRecylcerViews2() {
-        MakeOfferRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        ContactUserRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        StartOfferRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter  = new MyResponsesAdapter(getContext(),makeOfferList2);
+        MakeOfferRecycler.setLayoutManager(new LinearLayoutManager(context));
+        ContactUserRecycler.setLayoutManager(new LinearLayoutManager(context));
+        StartOfferRecycler.setLayoutManager(new LinearLayoutManager(context));
+        adapter  = new MyResponsesAdapter(context,makeOfferList2);
         MakeOfferRecycler.setAdapter(adapter);
-        adapter  = new MyResponsesAdapter(getContext(),contactUserList2);
+        adapter  = new MyResponsesAdapter(context,contactUserList2);
         ContactUserRecycler.setAdapter(adapter);
-        adapter  = new MyResponsesAdapter(getContext(),startOfferList2);
+        adapter  = new MyResponsesAdapter(context,startOfferList2);
         StartOfferRecycler.setAdapter(adapter);
     }
     public static String getDateTime() {

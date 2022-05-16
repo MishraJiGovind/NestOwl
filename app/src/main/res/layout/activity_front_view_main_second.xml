@@ -169,16 +169,16 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
                     android:layout_marginTop="25dp"
-                    android:fontFamily="@font/second"
 
                     android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                    android:textColor="@color/black_light"
-                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/second"
                     android:text="You will be notified when user will Accept your offer"
-                    />
+                    android:textColor="@color/black_light"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
 
 
                 <TextView
@@ -204,15 +204,15 @@
                 <TextView
                     android:layout_width="wrap_content"
 
-                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
-                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
-                    android:textSize="14sp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="@font/roboto_third"
-                    android:textColor="@color/black_color"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/screen_sixteen_16sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="@dimen/screen_sixteen_16sp"
+                    android:fontFamily="@font/roboto_third"
                     android:text="Please fill out following details to submit your offer"
-                    />
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
 
 
                 <TextView
@@ -957,12 +957,6 @@
                                     android:textColor="@color/black_font"
                                     android:textSize="16sp" />
 
-                                <ImageView
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:src="@drawable/down_arrow_personal" />
-
 
                             </FrameLayout>
 
@@ -987,12 +981,6 @@
                                     android:text="Time Slot"
                                     android:textColor="@color/black_font"
                                     android:textSize="16sp" />
-
-                                <ImageView
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:src="@drawable/down_arrow_personal" />
 
 
                             </FrameLayout>
@@ -1135,12 +1123,6 @@
                                 android:textColor="@color/black_font"
                                 android:textSize="16sp" />
 
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_gravity="end|center_vertical"
-                                android:src="@drawable/down_arrow_personal"
-                                android:layout_height="25dp" />
-
 
                         </FrameLayout>
                         <FrameLayout
@@ -1164,13 +1146,6 @@
                                 android:text="Time Slot"
                                 android:textColor="@color/black_font"
                                 android:textSize="16sp" />
-
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:id="@+id/montyly_dropdown"
-                                android:layout_gravity="end|center_vertical"
-                                android:src="@drawable/down_arrow_personal"
-                                android:layout_height="25dp" />
 
 
                         </FrameLayout>
@@ -1287,14 +1262,6 @@
 
 
                                             />
-
-                                        <ImageView
-                                            android:layout_width="25dp"
-                                            android:id="@+id/distance_from_property"
-                                            android:layout_marginLeft="05dp"
-                                            android:layout_gravity="center_vertical|end"
-                                            android:src="@drawable/down_arrow_personal"
-                                            android:layout_height="25dp" />
 
                                         <TextView
 
@@ -1688,7 +1655,8 @@
                         android:fontFamily="@font/roboto_five"
                         android:text="(Broker Name)"
                         android:textColor="#000"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:visibility="gone" />
 
 
                     <LinearLayout

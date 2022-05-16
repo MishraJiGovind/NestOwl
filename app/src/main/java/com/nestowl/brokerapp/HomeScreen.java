@@ -22,6 +22,7 @@ import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.nestowl.CommenDialog.TechnicalError;
 import com.nestowl.CommenDialog.WarningDio;
 import com.nestowl.Fragment.ActivityFragmentBuer;
 import com.nestowl.Fragment.AlertParentLeadsFragment;
@@ -59,6 +60,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -106,6 +108,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
    ArrayList<SubscriptionRemainModal> subscriptionRemainModals;
    DpModal dpModal;
    LiveCommnication liveCommnication;
+   TechnicalError technicalError;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -488,13 +491,21 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 startActivity(i);*/
             }
         });
+        Fragment activity = new ActivityFragmentBuer();
+        Fragment alert = new AlertParentLeadsFragment();
+        Fragment profile = new ProfileBroker();
+        Fragment home = new HomeFragment();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId()==R.id.navigation_home){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home_one,new HomeFragment()).commit();
+
+
                 } else if (menuItem.getItemId()==R.id.navigation_activity){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home_one,new ActivityFragmentBuer()).commit();
+
+
                 }else if (menuItem.getItemId()==R.id.nav_post_property){
                     Dialog dialog = new Dialog(HomeScreen.this);
                     dialog.setContentView(R.layout.switch_to_owner_seller_post_requirement);
@@ -615,8 +626,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 }else if (menuItem.getItemId()==R.id.navigation_alert){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home_one,new AlertParentLeadsFragment()).commit();
 
+
+
                 }else if (menuItem.getItemId()==R.id.navigation_profile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home_one,new ProfileBroker()).commit();
+
+
                 }
 
                 return true;
@@ -681,6 +696,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Notification Error", "onResponse: "+error );
+//                technicalError=new TechnicalError(context);
             }
         }){
             @Nullable
@@ -754,7 +770,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+//                technicalError=new TechnicalError(context);
             }
         }){
             @Nullable
@@ -813,6 +829,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
             public void onErrorResponse(VolleyError error) {
                 Log.e("error", "onResponse: "+error );
                 PrefMananger.saveString(HomeScreen.this,"remains",null);
+                technicalError=new TechnicalError(context);
             }
         }){
             @Nullable

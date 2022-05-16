@@ -29,13 +29,14 @@ public class LeadsClicks {
     String id, user_id, extraId;
     boolean statuss;
     LiveCommnication liveCommnication;
+    AccepetStatus accepetStatus;
 
-
-    public LeadsClicks(Context context, String id, String user_id, String extraId) {
+    public LeadsClicks(Context context, String id, String user_id, String extraId,AccepetStatus accepetStatus) {
         this.context = context;
         this.id = id;
         this.user_id = user_id;
         this.extraId = extraId;
+        this.accepetStatus = accepetStatus;
         statuss=false;
         Log.e("Accepet Data", "LeadsClicks: "+id+" "+user_id );
         live();
@@ -63,6 +64,7 @@ public class LeadsClicks {
                         ai.setText("AP");
                         ai.setValue("true");
                         liveCommnication.setText(ai);
+                        accepetStatus.status(true,true);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -106,6 +108,7 @@ public class LeadsClicks {
                         ai.setText("AP");
                         ai.setValue("false");
                         liveCommnication.setText(ai);
+                        accepetStatus.status(true,false);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -148,6 +151,7 @@ public class LeadsClicks {
                         ai.setText("AR");
                         ai.setValue("true");
                         liveCommnication.setText(ai);
+                        accepetStatus.status(true,false);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -190,6 +194,7 @@ public class LeadsClicks {
                         ai.setText("AR");
                         ai.setValue("false");
                         liveCommnication.setText(ai);
+                        accepetStatus.status(true,false);
 
                     }
                 } catch (JSONException e) {
@@ -214,5 +219,8 @@ public class LeadsClicks {
         };
         Volley.newRequestQueue(context).add(request);
         return statuss;
+    }
+    public interface AccepetStatus{
+        void status(boolean isTrue,boolean isAccept);
     }
 }

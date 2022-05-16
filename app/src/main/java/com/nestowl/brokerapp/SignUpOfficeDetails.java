@@ -349,6 +349,7 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         dialog.getWindow().setAttributes(lp);
         rv_states=dialog.findViewById(R.id.rv_states);
         et_search=dialog.findViewById(R.id.et_search);
+        et_search.setHint("Search State");
         CardView card_submit=dialog.findViewById(R.id.card_submit);
         dialog.show();
         ImageView imageView=dialog.findViewById(R.id.iv_cancel);
@@ -450,6 +451,7 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         et_search=dialog.findViewById(R.id.et_search);
         TextView textView = dialog.findViewById(R.id.OFFICE_DIO_MAIN_TEXT);
         textView.setText("Select City");
+        et_search.setHint("Search City");
         CardView card_submit=dialog.findViewById(R.id.card_submit);
         dialog.show();
         ImageView imageView=dialog.findViewById(R.id.iv_cancel);
@@ -557,6 +559,7 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         CardView card_submit=dialog.findViewById(R.id.card_submit);
         TextView textView = dialog.findViewById(R.id.OFFICE_DIO_MAIN_TEXT);
         textView.setText("Select Localities");
+        et_search.setHint("Search Localities");
         linearLayout.setVisibility(View.VISIBLE);
 
         dialog.show();

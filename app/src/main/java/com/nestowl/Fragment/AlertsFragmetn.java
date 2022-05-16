@@ -1,6 +1,7 @@
 package com.nestowl.Fragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -53,6 +54,7 @@ public class AlertsFragmetn extends Fragment {
     LoginPojo loginPojo ;
     String userId;
     ConstraintLayout noDataShow;
+    Context context;
     public AlertsFragmetn() {
         // Required empty public constructor
     }
@@ -63,6 +65,7 @@ public class AlertsFragmetn extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_alerts_fragmetn, container, false);
+        context =getContext();
         rad_ongoing=view.findViewById(R.id.radio_ongoing);
         rad_deal=view.findViewById(R.id.radio_deal_closed);
         lnr_ongoing=view.findViewById(R.id.lnd_ongoing);
@@ -74,10 +77,10 @@ public class AlertsFragmetn extends Fragment {
         ongoingArrey=new ArrayList<>();
         dealclosedArrey=new ArrayList<>();
 
-        ongoning.setLayoutManager(new LinearLayoutManager(getContext()));
-        dealcloesed.setLayoutManager(new LinearLayoutManager(getContext()));
+        ongoning.setLayoutManager(new LinearLayoutManager(context));
+        dealcloesed.setLayoutManager(new LinearLayoutManager(context));
 
-        loginPojo= PrefMananger.GetLoginData(getContext());
+        loginPojo= PrefMananger.GetLoginData(context);
         userId=String.valueOf(loginPojo.getUserId());
 
         fetchStatus();
@@ -127,7 +130,7 @@ public class AlertsFragmetn extends Fragment {
                     String sttaus = jsonObject.getString("status");
                     if (sttaus.equals("1")){
                         JSONArray jsonArray= jsonObject.getJSONArray("alldata");
-                        PrefMananger.saveString(getContext(),"status",jsonArray.toString());
+                        PrefMananger.saveString(context,"status",jsonArray.toString());
                         for (int i=0;i<jsonArray.length();i++){
                             AcceptRejectModal data =  new Gson().fromJson(jsonArray.getJSONObject(i).toString(),AcceptRejectModal.class);
                             if (data.getType().equals("Requirement")){
@@ -156,12 +159,12 @@ public class AlertsFragmetn extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void setRecyclers() {
-        adater =  new AlertStatusAdapter(getContext(),ongoingArrey);
+        adater =  new AlertStatusAdapter(context,ongoingArrey);
         ongoning.setAdapter(adater);
-        adater =  new AlertStatusAdapter(getContext(),dealclosedArrey);
+        adater =  new AlertStatusAdapter(context,dealclosedArrey);
         dealcloesed.setAdapter(adater);
     }
     private void getMoreInfoPro(AcceptRejectModal data) {
@@ -228,7 +231,7 @@ public class AlertsFragmetn extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getName(AcceptRejectModal data, LeadsPublicPro datas) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -287,7 +290,7 @@ public class AlertsFragmetn extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
 
     }
     private void getMoreInfoReq(AcceptRejectModal data) {
@@ -352,7 +355,7 @@ public class AlertsFragmetn extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
     private void getNameReq(AcceptRejectModal data, LeadsPublicPro datas) {
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROFILE_BY_ID, new Response.Listener<String>() {
@@ -411,7 +414,7 @@ public class AlertsFragmetn extends Fragment {
                 return hashMap;
             }
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
 

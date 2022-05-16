@@ -1,12 +1,12 @@
 package com.nestowl.model;
 
 public class MyresponeViewModal {
-    String id,user_id,property_id,name,type,bhk,city,budget,sq,time;
+    String id,user_id,property_id,name,type,bhk,city,budget,sq,time,lead_user_id;
 
     public MyresponeViewModal() {
     }
 
-    public MyresponeViewModal(String id, String user_id, String property_id, String name, String type, String bhk, String city, String budget, String sq,String time) {
+    public MyresponeViewModal(String id, String user_id, String property_id, String name, String type, String bhk, String city, String budget, String sq, String time, String lead_user_id) {
         this.id = id;
         this.user_id = user_id;
         this.property_id = property_id;
@@ -16,7 +16,16 @@ public class MyresponeViewModal {
         this.city = city;
         this.budget = budget;
         this.sq = sq;
-        this.time=time;
+        this.time = time;
+        this.lead_user_id = lead_user_id;
+    }
+
+    public String getLead_user_id() {
+        return lead_user_id;
+    }
+
+    public void setLead_user_id(String lead_user_id) {
+        this.lead_user_id = lead_user_id;
     }
 
     public String getTime() {

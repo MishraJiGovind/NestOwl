@@ -372,6 +372,7 @@
                         app:srcCompat="@drawable/delete_icon" />
 
                     <ImageView
+                        android:id="@+id/imagetoHidedp"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_gravity="center"
@@ -476,6 +477,7 @@
                         app:srcCompat="@drawable/delete_icon" />
 
                     <ImageView
+                        android:id="@+id/imagetoHidelogo"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_gravity="center"
@@ -578,6 +580,7 @@
                         app:srcCompat="@drawable/delete_icon" />
 
                     <ImageView
+                        android:id="@+id/imagetoHidecover"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_gravity="center"

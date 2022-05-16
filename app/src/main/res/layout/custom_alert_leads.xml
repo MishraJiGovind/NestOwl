@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/CUSTOM_ALERT_MAIN"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -30,8 +31,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="1dp">
 
                 <TextView
                     android:id="@+id/CUSTOM_ALERT_BHK"
@@ -40,9 +42,13 @@
 
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="2 BHK"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
                     android:textColor="#000"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:singleLine="true" />
 
                 <TextView
                     android:layout_width="1dp"
@@ -59,8 +65,11 @@
                     android:layout_marginLeft="10sp"
                     android:layout_weight="1"
                     android:text="M3M Project"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
                     android:textColor="#000"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:singleLine="true" />
 
                 <TextView
                     android:layout_width="1dp"
@@ -79,7 +88,10 @@
                     android:layout_weight="1"
                     android:text="30-40 Lac"
                     android:textColor="#000"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    tools:singleLine="true" />
 
                 <TextView
                     android:layout_width="1dp"
@@ -96,9 +108,12 @@
                     android:layout_gravity="end|center_vertical"
                     android:layout_marginLeft="12sp"
                     android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
                     android:text="680 Sq.ft."
                     android:textColor="#000"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:singleLine="true" />
 
 
             </LinearLayout>
@@ -122,13 +137,67 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="45dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/CUSTOM_ALERT_UNLOCKING"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="in 2 min"
+                        android:textColor="@color/brown_color"
+                        android:textSize="10sp" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/CUSTOM_ALERT_DUBBLE_LEAD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/lead_unlock_alert"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Double Lead"
+                        android:textColor="@color/black_color"
+                        android:textSize="10sp"
+                        tools:textColor="@color/brown" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:layout_weight="1">
 
                     <FrameLayout
                         android:layout_width="35dp"
@@ -178,8 +247,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="right|center_vertical"
                     android:orientation="horizontal"
                     android:padding="2dp">
@@ -228,16 +298,22 @@
                     <FrameLayout
 
                         android:layout_width="wrap_content"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="3dp"
-                        android:background="@drawable/doctor_background">
+                        android:background="@drawable/doctor_background"
+                        android:minWidth="50dp">
 
                         <TextView
+                            android:id="@+id/vrifiedbynest"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="07dp"
                             android:layout_marginRight="07dp"
+                            android:ellipsize="marquee"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
                             android:text="Verified by Nest"
                             android:textColor="#000"
                             android:textSize="12sp" />
@@ -246,28 +322,6 @@
 
                 </LinearLayout>
             </LinearLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="46dp"
-                android:background="@drawable/lead_unlock_alert"
-                android:visibility="visible">
-
-                <TextView
-                    android:id="@+id/CUSTOM_ALERT_UNLOCKING"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:textColor="@color/brown_color"
-                    android:textSize="10sp"
-                    android:visibility="gone" />
-
-
-            </FrameLayout>
 
 
         </FrameLayout>
@@ -351,10 +405,13 @@
                         android:layout_height="wrap_content"
 
                         android:layout_gravity="center"
+                        android:ellipsize="marquee"
                         android:fontFamily="@font/sort_btn_font"
                         android:gravity="center"
-                        android:text="View Requirement"
 
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="View Requirement"
                         android:textColor="@color/brown_color"
                         android:textSize="12sp" />
 

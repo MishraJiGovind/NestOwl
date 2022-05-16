@@ -1,6 +1,7 @@
 package com.nestowl.Fragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -52,6 +53,7 @@ public class PartnerRequirement extends Fragment {
     ArrayList<LeadsPublicPro> recivedArrey,sumbitArrey;
     LoginPojo loginPojo;
     ConstraintLayout noDataShow;
+    Context context;
 
     public PartnerRequirement() {
         // Required empty public constructor
@@ -61,6 +63,7 @@ public class PartnerRequirement extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_partner_requirement, container, false);
+        context = getContext();
 
         rad_ongoing=view.findViewById(R.id.radio_ongoing);
         rad_deal=view.findViewById(R.id.radio_deal_closed);
@@ -73,10 +76,10 @@ public class PartnerRequirement extends Fragment {
         recivedArrey=new ArrayList<>();
         sumbitArrey=new ArrayList<>();
 
-        recived.setLayoutManager(new LinearLayoutManager(getContext()));
-        sumbited.setLayoutManager(new LinearLayoutManager(getContext()));
+        recived.setLayoutManager(new LinearLayoutManager(context));
+        sumbited.setLayoutManager(new LinearLayoutManager(context));
 
-        loginPojo= PrefMananger.GetLoginData(getContext());
+        loginPojo= PrefMananger.GetLoginData(context);
 
         fetchBrokerLeads();
 
@@ -151,11 +154,11 @@ public class PartnerRequirement extends Fragment {
 
             }
         });
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void setRecyclerSumbitRecyler() {
-        adapterSumbit=new AlertPartnerReqSumbitedAdapter(getContext(),sumbitArrey);
+        adapterSumbit=new AlertPartnerReqSumbitedAdapter(context,sumbitArrey);
         sumbited.setAdapter(adapterSumbit);
     }
     private void getname(LeadsPublicPro data) {
@@ -193,11 +196,11 @@ public class PartnerRequirement extends Fragment {
             }
 
         };
-        Volley.newRequestQueue(getContext()).add(request);
+        Volley.newRequestQueue(context).add(request);
     }
 
     private void setLeadsRecycler() {
-        adapterRecived=new AlertPartnerRecivedAdapter(getContext(),recivedArrey);
+        adapterRecived=new AlertPartnerRecivedAdapter(context,recivedArrey);
         recived.setAdapter(adapterRecived);
     }
 }

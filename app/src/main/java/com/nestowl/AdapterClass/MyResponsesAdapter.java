@@ -2,6 +2,7 @@ package com.nestowl.AdapterClass;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +13,24 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nestowl.brokerapp.BuyerDetails;
 import com.nestowl.model.MyresponeViewModal;
 import com.nestowl.brokerapp.Chating;
 import com.nestowl.brokerapp.FrontViewQuerySecond;
 import com.nestowl.brokerapp.InterestedPropertyThirdUser;
 import com.nestowl.brokerapp.R;
 import com.nestowl.brokerapp.ViewContact;
+import com.nestowl.utils.PrefMananger;
 
 import java.util.ArrayList;
 
 public class MyResponsesAdapter extends RecyclerView.Adapter<MyResponsesAdapter.ViewHolder> {
     Context context;
     ArrayList<MyresponeViewModal> data;
+    String buy = "is interested to buy your ";
+    String offer = "has started a offer for your property ";
+    String test;
+   
 
 
     public MyResponsesAdapter(Context context, ArrayList<MyresponeViewModal> data) {
@@ -43,11 +50,8 @@ public class MyResponsesAdapter extends RecyclerView.Adapter<MyResponsesAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyResponsesAdapter.ViewHolder holder, int position) {
         MyresponeViewModal info =  data.get(position);
+        boolean isWithProposal = false,isContact = false,isIntrested = false,isReq = false;
         holder.name.setText(info.getName());
-        holder.interseted.setText("is interested to buy your "+info.getBhk());
-        holder.bhk.setText(info.getBhk());
-        holder.city.setText(info.getCity());
-        holder.budget.setText(info.getBudget());
         holder.sq.setText(info.getSq()+" SQ.Ft.");
         holder.chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,26 +63,47 @@ public class MyResponsesAdapter extends RecyclerView.Adapter<MyResponsesAdapter.
                 context.startActivity(intent);
             }
         });
-        if (info.getType().equals("proposal")){
+
+        if (info.getType().contains("interested")){
             TextView textView = (TextView) holder.viewProposal.getChildAt(0);
-            textView.setText("View Proposal");
-        }
-        if (info.getType().equals("contact")){
-            TextView textView = (TextView) holder.viewProposal.getChildAt(0);
-            textView.setText("View Contact");
-        }
-        if (info.getType().equals("interested")){
-            TextView textView = (TextView) holder.viewProposal.getChildAt(0);
+            holder.interseted.setText(offer+info.getBhk());
             textView.setText("Interested Property");
             holder.chat.setVisibility(View.GONE);
+            isWithProposal=false;
+            isContact=false;
+            isIntrested=true;
+            PrefMananger.saveString(context,"response/key","i");
+            Log.e("debug error", "onClick: in" );
         }
+        if (info.getType().contains("proposal")){
+            TextView textView = (TextView) holder.viewProposal.getChildAt(0);
+            holder.interseted.setText(buy+info.getBhk());
+            textView.setText("View Proposal");
+            isWithProposal=true;
+            isContact=false;
+            isIntrested=false;
+            PrefMananger.saveString(context,"response/key","p");
+            Log.e("debug error", "onClick: pro" );
+        }
+        if (info.getType().contains("contact")){
+            TextView textView = (TextView) holder.viewProposal.getChildAt(0);
+            holder.interseted.setText(buy+info.getBhk());
+            textView.setText("View Contact");
+            isWithProposal=false;
+            isContact=true;
+            isIntrested=false;
+            PrefMananger.saveString(context,"response/key","c");
+            Log.e("debug error", "onClick: con" );
+        }
+
+
         holder.viewProposal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (info.getType().equals("proposal")){
                     Intent intents = new Intent(context, FrontViewQuerySecond.class);
-                    intents.putExtra("user_id","13");
-                    intents.putExtra("id","NESTOWL202106030719");
+                    intents.putExtra("user_id",info.getUser_id());
+                    intents.putExtra("id",info.getProperty_id());
                     context.startActivity(intents);
                 }
                 if (info.getType().equals("contact")){
@@ -93,9 +118,27 @@ public class MyResponsesAdapter extends RecyclerView.Adapter<MyResponsesAdapter.
                     intentd.putExtra("id",info.getProperty_id());
                     intentd.putExtra("user_id",info.getUser_id());
                     intentd.putExtra("idd",info.getId());
-                    intentd.putExtra("isBroker","false");
+                    intentd.putExtra("isBroker",false);
                     context.startActivity(intentd);
                 }
+            }
+        });
+        boolean finalIsContact = isContact;
+        boolean finalIsProposal = isWithProposal;
+        boolean finalIsIntrested = isIntrested;
+        boolean finalIsReq = isReq;
+        holder.main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("debug error", "onClick: "+finalIsProposal+ finalIsContact +finalIsReq+finalIsIntrested );
+                Intent intent = new Intent(context, BuyerDetails.class);
+                intent.putExtra("property_id",info.getProperty_id());
+                intent.putExtra("user_id",info.getUser_id());
+                intent.putExtra("isWith",finalIsProposal);
+                intent.putExtra("isContact", finalIsContact);
+                intent.putExtra("isInterested",finalIsIntrested);
+                intent.putExtra("isReq",finalIsReq);
+                context.startActivity(intent);
             }
         });
     }

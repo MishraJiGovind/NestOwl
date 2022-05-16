@@ -92,7 +92,12 @@ public class LeadFirstCardOpen extends AppCompatActivity {
             }
         });
         getSummitedProposals(PropertyID);
-        handleLeads =  new LeadsClicks(this,ID,userId,PropertyID);
+        handleLeads =  new LeadsClicks(this, ID, userId, PropertyID, new LeadsClicks.AccepetStatus() {
+            @Override
+            public void status(boolean isTrue, boolean isAccept) {
+
+            }
+        });
         Log.e("id error", "onCreate: "+ID+" "+userId+" "+PropertyID);
         Log.e("Accepted", "onCreate: "+isAccepted);
         isSeller=false;
@@ -201,6 +206,7 @@ public class LeadFirstCardOpen extends AppCompatActivity {
             TextView t = (TextView) accept.getChildAt(0);
             t.setText("View Contact");
         }
+        ad.setSelected(true);
         frm_view_requirement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -287,6 +293,7 @@ public class LeadFirstCardOpen extends AppCompatActivity {
                         intent1.putExtra("user_id",UserId);
                         startActivity(intent1);
                     }
+                    return;
                 }
                 if (isProposalAccepted){
                     Intent intent =  new Intent(LeadFirstCardOpen.this,ViewContact.class);
