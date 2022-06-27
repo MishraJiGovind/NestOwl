@@ -70,6 +70,33 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <LinearLayout
+        android:id="@+id/CHATING_LIST_NO_CHAT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whit_button"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PROPERTY_PREVIEW_APPBAR">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tint="@color/brown"
+            app:srcCompat="@drawable/no_comment" />
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Chat !"
+            android:textColor="@color/brown"
+            android:textSize="20sp" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/CHAT_LIST_VIEW"
         android:layout_width="match_parent"

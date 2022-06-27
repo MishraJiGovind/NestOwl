@@ -3,6 +3,7 @@ package com.nestowl.brokerapp;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.ProgressDialog;
 import android.os.Build;
@@ -29,8 +30,9 @@ import java.util.Map;
 
 public class Contact extends AppCompatActivity {
     EditText name,phone,email,qury;
-    CardView sumbit;
+    CardView sumbit,home;
     ImageView back;
+    ConstraintLayout sumbited;
 
 
     @Override
@@ -43,8 +45,17 @@ public class Contact extends AppCompatActivity {
         email=findViewById(R.id.PROFILE_CONTACT_US_EMAIL_ADDRESS);
         qury=findViewById(R.id.PROFILE_CONTACT_US_QURY);
         sumbit=findViewById(R.id.PROFILE_CONTACT_US_SUMBIT);
+        sumbited=findViewById(R.id.CONTACT_US_SUMBITED_SCREEN);
+        home=findViewById(R.id.CONTACT_US_SUMBITED_SCREEN_HOME);
         back=findViewById(R.id.CONTACT_US_BACK);
 
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         sumbit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +104,8 @@ public class Contact extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     String status =  jsonObject.getString("status");
                     if (status.equals("1")){
+                        sumbited.setVisibility(View.VISIBLE);
+                        sumbit.setVisibility(View.GONE);
                         new WarningDio(Contact.this, "Contact request summited", "OK", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {

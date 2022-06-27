@@ -10,6 +10,7 @@ import com.nestowl.model.PostPricingModal;
 import com.nestowl.model.PostPropertyModal;
 import com.nestowl.model.ResponseAllacceptRejectModal;
 import com.nestowl.model.User;
+import com.nestowl.model.chatmodals.ChatFileUploadResponseModal;
 import com.nestowl.utils.UrlClass;
 
 import java.util.HashMap;
@@ -179,6 +180,11 @@ public interface ApiService {
             @Part MultipartBody.Part logo,
             @Part MultipartBody.Part[] office_photo,
             @PartMap() Map<String, RequestBody> partMap
+    );
+    @Multipart
+    @POST(UrlContainer.CHAT_FILEUPLOAD)
+    Call<ChatFileUploadResponseModal>uploadChatsFile(
+            @Part MultipartBody.Part[] file
     );
     @Multipart
     @POST(UrlContainer.PROPERTY_PHOTO_UPLOAD)

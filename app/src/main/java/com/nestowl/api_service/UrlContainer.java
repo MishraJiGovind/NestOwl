@@ -59,6 +59,7 @@ public interface UrlContainer {
     String PRICING_FEATURES="api/post-property/postphotos";
     String SUMBIT_REVIEW="api/review";
 
+    String CHAT_FILEUPLOAD="api/file-upload-api";
 
 
 }

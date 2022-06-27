@@ -1,6 +1,7 @@
 package com.nestowl.CommenDialog;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
@@ -46,31 +47,44 @@ public class MannagePropertyDialog {
         this.property_id = property_id;
         isContact=false;
         isFreeze=false;
-        checkFreeze(property_id);
-        checkContact(property_id);
+        checkStatus();
         dialog = new Dialog(context);
     }
-
-    private void checkContact(String property_id) {
-        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_PHOTO, new Response.Listener<String>() {
+    private void checkStatus() {
+        ProgressDialog pd =  new ProgressDialog(context);
+        pd.setMessage("Loading...");
+        pd.setCancelable(false);
+        pd.show();
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_FREEZE_CONTATC_STATUS, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                pd.dismiss();
                 try{
                     JSONObject jsonObject = new JSONObject(response);
                     String sttaus= jsonObject.getString("status");
                     if (sttaus.equals("1")){
-                        JSONArray jsonArray = jsonObject.getJSONArray("data");
-                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+                        JSONObject Freeze= jsonObject.getJSONObject("Freeze");
+                        JSONObject jsonObject1 = jsonObject.getJSONObject("Contact");
                         String contact = jsonObject1.getString("hide_contact_details");
-                        if (contact.equals("Yes")){
-                            dialog.dismiss();
-                            isContact=true;
-                            showPopup();
-                        }else {
-                            dialog.dismiss();
-                            showPopup();
-                            isContact=false;
+                        String freezestatus = Freeze.getString("freeze");
+                        if (contact!=null){
+                            if (contact.equals("Yes")){
+                                isContact=true;
+                            }else {
+                                isContact=false;
+                            }
                         }
+
+                        if (freezestatus!=null){
+                        if (freezestatus.equals("Yes")){
+                            isFreeze=true;
+                        }else {
+                            isFreeze=false;
+                        }
+                        }else {
+                            isFreeze=false;
+                        }
+                        showPopup();
                     }
                 }catch (Exception e){
 
@@ -80,7 +94,7 @@ public class MannagePropertyDialog {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                pd.dismiss();
             }
         }){
             @Nullable
@@ -89,46 +103,6 @@ public class MannagePropertyDialog {
                 HashMap<String,String>hashMap=new HashMap<>();
                 hashMap.put("property_id",property_id);
                 hashMap.put("user_id",user_id);
-                return hashMap;
-            }
-        };
-        Volley.newRequestQueue(context).add(request);
-    }
-    private void checkFreeze(String property_id) {
-        StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.GET_PROPERTY_FREEZE_STATUS, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonObject =  new JSONObject(response);
-                    String statsus =  jsonObject.getString("status");
-                    if (statsus.equals("1")){
-                        JSONObject jsonObject1 = jsonObject.getJSONObject("Freeze");
-                        String  stat = jsonObject1.getString("freeze").toLowerCase();
-                        Log.e("FreezeStatus", "onResponse: "+stat );
-                        if (stat.contains("yes")){
-                            isFreeze=true;
-                        }else {
-                            isFreeze=false;
-                        }
-                        dialog.dismiss();
-                        showPopup();
-                    }
-                }catch (Exception e){
-                    showPopup();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                showPopup();
-            }
-        }){
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String,String>hashMap=new HashMap<>();
-                hashMap.put("property_id",property_id);
                 return hashMap;
             }
         };
@@ -188,7 +162,7 @@ public class MannagePropertyDialog {
                        @Override
                        public void getClicks(int click) {
                            if (click==1){
-                                showContact();
+                                showHideContact("Yes");
                            }
                        }
                    },false);
@@ -197,7 +171,7 @@ public class MannagePropertyDialog {
                        @Override
                        public void getClicks(int click) {
                            if (click==1){
-                                hideContact();
+                                showHideContact("No");
                            }
                        }
                    },false);
@@ -292,7 +266,8 @@ public class MannagePropertyDialog {
                         new WarningDio(context, "Property Unfreeze Successfully.", "OK", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
-                                checkFreeze(property_id);
+                                dialog.dismiss();
+                                checkStatus();
                             }
                         },false);
                     }
@@ -327,7 +302,8 @@ public class MannagePropertyDialog {
                         new WarningDio(context, "Property Freeze Successfully.", "OK", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
-                                checkFreeze(property_id);
+                                dialog.dismiss();
+                                checkStatus();
                             }
                         },false);
                     }
@@ -353,26 +329,22 @@ public class MannagePropertyDialog {
         };
         Volley.newRequestQueue(context).add(request);
     }
-    private void showContact(){
-        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.PHOTO_PROPERTY_PHOTO, new Response.Listener<String>() {
+    private void showHideContact(String set){
+        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.SET_PROPRTY_CONTATC_VISBILITY, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try{
                     JSONObject jsonObject = new JSONObject(response);
                     String sttaus= jsonObject.getString("status");
                     if (sttaus.equals("1")){
-                        JSONArray jsonArray = jsonObject.getJSONArray("data");
-                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
-                        String contact = jsonObject1.getString("hide_contact_details");
-                        if (contact.equals("Yes")){
-                            dialog.dismiss();
-                            isContact=true;
-                            showPopup();
-                        }else {
-                            dialog.dismiss();
-                            showPopup();
-                            isContact=false;
-                        }
+                        new WarningDio(context, "Contact status updated", "OK", null, new WarningDio.Response() {
+                            @Override
+                            public void getClicks(int click) {
+                                dialog.dismiss();
+                                checkStatus();
+                            }
+                        },false);
+
                     }
                 }catch (Exception e){
 
@@ -389,51 +361,7 @@ public class MannagePropertyDialog {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String,String>hashMap=new HashMap<>();
-                hashMap.put("hide_contact_details","Yes");
-                hashMap.put("property_id",property_id);
-                hashMap.put("user_id",user_id);
-                return hashMap;
-            }
-        };
-        Volley.newRequestQueue(context).add(request);
-    }
-    private void hideContact(){
-        StringRequest request = new StringRequest(Request.Method.POST, UrlClass.PHOTO_PROPERTY_PHOTO, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try{
-                    JSONObject jsonObject = new JSONObject(response);
-                    String sttaus= jsonObject.getString("status");
-                    if (sttaus.equals("1")){
-                        JSONArray jsonArray = jsonObject.getJSONArray("data");
-                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
-                        String contact = jsonObject1.getString("hide_contact_details");
-                        if (contact.equals("Yes")){
-                            dialog.dismiss();
-                            isContact=true;
-                            showPopup();
-                        }else {
-                            dialog.dismiss();
-                            showPopup();
-                            isContact=false;
-                        }
-                    }
-                }catch (Exception e){
-
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        }){
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String,String>hashMap=new HashMap<>();
-                hashMap.put("hide_contact_details","No");
+                hashMap.put("hide_contact_details",set);
                 hashMap.put("property_id",property_id);
                 hashMap.put("user_id",user_id);
                 return hashMap;

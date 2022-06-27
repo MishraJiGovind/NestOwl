@@ -282,10 +282,10 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         frm_locality.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cityValues==null){
-                    Toast.makeText(context, "Please select city", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+//                if (cityValues==null){
+//                    Toast.makeText(context, "Please select city", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
                 openLocalitySelectDialog();
             }
         });
@@ -347,11 +347,44 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         lp.gravity = Gravity.BOTTOM;
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(SignUpOfficeDetails.this, android.R.color.transparent)));
         dialog.getWindow().setAttributes(lp);
+        LinearLayout add = dialog.findViewById(R.id.STATE_DIO_LIN);
         rv_states=dialog.findViewById(R.id.rv_states);
         et_search=dialog.findViewById(R.id.et_search);
         et_search.setHint("Search State");
         CardView card_submit=dialog.findViewById(R.id.card_submit);
+        add.setVisibility(View.VISIBLE);
         dialog.show();
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialogs = new Dialog(SignUpOfficeDetails.this);
+                dialogs.setContentView(R.layout.cityname_pop_up);
+                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                lp.copyFrom(dialogs.getWindow().getAttributes());
+                lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                TextView textView = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_NAME);
+                EditText getFields = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESSES_IN);
+                CardView sumbit = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_SUMBIT);
+                sumbit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (getFields.getText() == null|getFields.getText().length() <=0){
+                            getFields.setError("Data is Empty");
+                            return;
+                        }
+                        tv_state.setText(getFields.getText().toString());
+                        dialog.dismiss();
+                        dialogs.dismiss();
+                    }
+                });
+                textView.setText("Please Enter The Locality Name");
+                dialogs.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(SignUpOfficeDetails.this, android.R.color.transparent)));
+                dialogs.getWindow().setAttributes(lp);
+                dialogs.show();
+            }
+        });
         ImageView imageView=dialog.findViewById(R.id.iv_cancel);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -449,10 +482,12 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         dialog.getWindow().setAttributes(lp);
         rv_states=dialog.findViewById(R.id.rv_states);
         et_search=dialog.findViewById(R.id.et_search);
+        LinearLayout add = dialog.findViewById(R.id.STATE_DIO_LIN);
         TextView textView = dialog.findViewById(R.id.OFFICE_DIO_MAIN_TEXT);
         textView.setText("Select City");
         et_search.setHint("Search City");
         CardView card_submit=dialog.findViewById(R.id.card_submit);
+        add.setVisibility(View.VISIBLE);
         dialog.show();
         ImageView imageView=dialog.findViewById(R.id.iv_cancel);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -460,6 +495,37 @@ public class SignUpOfficeDetails extends AppCompatActivity {
             public void onClick(View v) {
                 dialog.dismiss();
                 selectedCity=null;
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialogs = new Dialog(SignUpOfficeDetails.this);
+                dialogs.setContentView(R.layout.cityname_pop_up);
+                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                lp.copyFrom(dialogs.getWindow().getAttributes());
+                lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                TextView textView = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_NAME);
+                EditText getFields = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESSES_IN);
+                CardView sumbit = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_SUMBIT);
+                sumbit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (getFields.getText() == null|getFields.getText().length() <=0){
+                            getFields.setError("Data is Empty");
+                            return;
+                        }
+                        tv_city.setText(getFields.getText().toString());
+                        dialog.dismiss();
+                        dialogs.dismiss();
+                    }
+                });
+                textView.setText("Please Enter The Locality Name");
+                dialogs.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(SignUpOfficeDetails.this, android.R.color.transparent)));
+                dialogs.getWindow().setAttributes(lp);
+                dialogs.show();
             }
         });
         card_submit.setOnClickListener(new View.OnClickListener() {
@@ -555,7 +621,7 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         rv_states=dialog.findViewById(R.id.rv_states);
         et_search=dialog.findViewById(R.id.et_search);
         LinearLayout linearLayout = dialog.findViewById(R.id.STATE_DIO_LIN);
-        TextView add = dialog.findViewById(R.id.STATE_DIO_ADD);
+        LinearLayout add = dialog.findViewById(R.id.STATE_DIO_LIN);
         CardView card_submit=dialog.findViewById(R.id.card_submit);
         TextView textView = dialog.findViewById(R.id.OFFICE_DIO_MAIN_TEXT);
         textView.setText("Select Localities");
@@ -567,16 +633,16 @@ public class SignUpOfficeDetails extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog = new Dialog(SignUpOfficeDetails.this);
-                dialog.setContentView(R.layout.cityname_pop_up);
+                Dialog dialogs = new Dialog(SignUpOfficeDetails.this);
+                dialogs.setContentView(R.layout.cityname_pop_up);
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-                lp.copyFrom(dialog.getWindow().getAttributes());
+                lp.copyFrom(dialogs.getWindow().getAttributes());
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 lp.gravity = Gravity.CENTER;
-                TextView textView = dialog.findViewById(R.id.POST_REQ_DIO_ADRESS_NAME);
-                EditText getFields = dialog.findViewById(R.id.POST_REQ_DIO_ADRESSES_IN);
-                CardView sumbit = dialog.findViewById(R.id.POST_REQ_DIO_ADRESS_SUMBIT);
+                TextView textView = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_NAME);
+                EditText getFields = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESSES_IN);
+                CardView sumbit = dialogs.findViewById(R.id.POST_REQ_DIO_ADRESS_SUMBIT);
                 sumbit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -586,12 +652,13 @@ public class SignUpOfficeDetails extends AppCompatActivity {
                         }
                         tv_locality.setText(getFields.getText().toString());
                         dialog.dismiss();
+                        dialogs.dismiss();
                     }
                 });
                 textView.setText("Please Enter The Locality Name");
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(SignUpOfficeDetails.this, android.R.color.transparent)));
-                dialog.getWindow().setAttributes(lp);
-                dialog.show();
+                dialogs.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(SignUpOfficeDetails.this, android.R.color.transparent)));
+                dialogs.getWindow().setAttributes(lp);
+                dialogs.show();
             }
         });
         imageView.setOnClickListener(new View.OnClickListener() {

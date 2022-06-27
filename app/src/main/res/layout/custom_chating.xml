@@ -56,14 +56,14 @@
                 android:layout_height="50dp">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/CHATING_SENDER_DOCS_TYPE_IMAGE"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:padding="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/documents"
-                    app:tint="#FFFFFF" />
+                    app:tint="@color/black_color" />
 
                 <TextView
                     android:id="@+id/CHATING_SENDER_DOCS_NAME"
@@ -72,8 +72,8 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:text="document name"
-                    android:textColor="@color/whit_button"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    android:textColor="@color/black_color"
+                    app:layout_constraintStart_toEndOf="@+id/CHATING_SENDER_DOCS_TYPE_IMAGE"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -82,9 +82,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="50MB"
-                    android:textColor="@color/whit_button"
+                    android:textColor="@color/black_color"
                     android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/CHATING_SENDER_DOCS_TYPE_IMAGE"
                     app:layout_constraintTop_toBottomOf="@+id/CHATING_SENDER_DOCS_NAME" />
 
                 <ImageView
@@ -95,7 +96,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/dawnload"
-                    app:tint="#FFFFFF" />
+                    app:tint="@color/black_color" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
@@ -104,17 +105,50 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:minWidth="100dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/CHATING_SENDER_TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/CHATING_REPLAY_SENDER_VIEW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:maxWidth="250dp"
-                android:text="TextView"
-                android:textColor="@color/black_color"
-                android:textSize="15sp" />
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reply:"
+                    android:textColor="@color/black_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/CHATING_REPLAY_SENDER_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/CHATING_SENDER_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="250dp"
+                    android:text="TextView"
+                    android:textColor="@color/black_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -173,14 +207,14 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/CHATTING_RECIVER_DOCS_TYPE_IMAGE"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:padding="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/documents"
-                        app:tint="#FFFFFF" />
+                        app:tint="@color/black_color" />
 
                     <TextView
                         android:id="@+id/CHATING_DOCS_NAME"
@@ -190,8 +224,8 @@
                         android:maxLines="1"
                         android:singleLine="true"
                         android:text="doccument name"
-                        android:textColor="@color/whit_button"
-                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        android:textColor="@color/black_color"
+                        app:layout_constraintStart_toEndOf="@+id/CHATTING_RECIVER_DOCS_TYPE_IMAGE"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -200,9 +234,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="50MB"
-                        android:textColor="@color/lightGrey"
+                        android:textColor="@color/black_color"
                         android:textSize="12sp"
-                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/CHATTING_RECIVER_DOCS_TYPE_IMAGE"
                         app:layout_constraintTop_toBottomOf="@+id/CHATING_DOCS_NAME" />
 
                     <ImageView
@@ -213,7 +248,7 @@
                         app:layout_constraintStart_toEndOf="@+id/CHATING_DOCS_NAME"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/dawnload"
-                        app:tint="#FFFFFF" />
+                        app:tint="@color/black_color" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </LinearLayout>
@@ -223,27 +258,112 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="100dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/CHATING_RECIVER_TEXT_MASG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/CHATING_REPLAY_RECIVER_VIEW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
-                android:maxWidth="250dp"
-                android:text="TextView"
-                android:textColor="@color/black_color"
-                android:textSize="15sp" />
+                android:orientation="horizontal"
+                android:visibility="gone">
 
-            <TextView
-                android:id="@+id/CHATING_RECIVER_TEXT_DATE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reply:"
+                    android:textColor="@color/black_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/CHATING_REPLAY_RECIVER_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textColor="@color/lightGrey"
-                android:textSize="10sp"
-                android:visibility="gone" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/CHATING_RECIVER_TEXT_MASG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="250dp"
+                    android:text="TextView"
+                    android:textColor="@color/black_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CHATTING_TIME_RECIVER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CHATING_C_RECIVER">
+
+        <TextView
+            android:id="@+id/CHATTING_TIME_RECIVER_TIME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="5:30PM"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/CHATTING_TIME_RECIVER_SEEN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Seen"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CHATTING_TIME_SENDER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/CHATTING_C_SENDER"
+        app:layout_constraintTop_toBottomOf="@+id/CHATTING_C_SENDER">
+
+        <TextView
+            android:id="@+id/CHATTING_TIME_SENDER_SEEN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Seen"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/CHATTING_TIME_SENDER_TIME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="5:30PM"
+            android:textSize="10sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

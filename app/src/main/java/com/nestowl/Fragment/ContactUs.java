@@ -6,12 +6,14 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -34,6 +36,8 @@ import java.util.Map;
 public class ContactUs extends Fragment {
     EditText name,phone,email,qury;
     CardView sumbit;
+    ConstraintLayout sumbited;
+    LinearLayout sumbitedFarm;
 
     public ContactUs() {
         // Required empty public constructor
@@ -50,7 +54,9 @@ public class ContactUs extends Fragment {
         email=view.findViewById(R.id.PROFILE_CONTACT_US_EMAIL_ADDRESS);
         qury=view.findViewById(R.id.PROFILE_CONTACT_US_QURY);
         sumbit=view.findViewById(R.id.PROFILE_CONTACT_US_SUMBIT);
-        
+        sumbited=view.findViewById(R.id.CONTACT_US_SUMBITED_SCREEN);
+        sumbitedFarm=view.findViewById(R.id.CONTACT_US_SUMBITED_SCREEN_FARM);
+
         sumbit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,6 +95,8 @@ public class ContactUs extends Fragment {
                     JSONObject jsonObject = new JSONObject(response);
                     String status =  jsonObject.getString("status");
                     if (status.equals("1")){
+                        sumbited.setVisibility(View.VISIBLE);
+                        sumbitedFarm.setVisibility(View.GONE);
                         new WarningDio(getContext(), "Contact request summited", "OK", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {

@@ -1,22 +1,31 @@
 package com.nestowl.model;
 
 public class ChatListModal {
-    String name, massage, date, dpurl,  imageUrl, uid;
-    Boolean isOnline, isImage, isUnread;
+    String name, massage, date, dpurl,  imageUrl, uid,type,time,seen,filename,fileSize,unreadCount,replayMassage,replayType;
+    Boolean isOnline, isImage, isUnread,isReply;
 
     public ChatListModal() {
     }
 
-    public ChatListModal(String name, String massage, String date, String dpurl, String imageUrl, String uid, Boolean isOnline, Boolean isImage, Boolean isUnread) {
+    public ChatListModal(String name, String massage, String date, String dpurl, String imageUrl, String uid, String type, String time, String seen, String filename, String fileSize, String unreadCount, String replayMassage, String replayType, Boolean isOnline, Boolean isImage, Boolean isUnread, Boolean isReply) {
         this.name = name;
         this.massage = massage;
         this.date = date;
         this.dpurl = dpurl;
         this.imageUrl = imageUrl;
         this.uid = uid;
+        this.type = type;
+        this.time = time;
+        this.seen = seen;
+        this.filename = filename;
+        this.fileSize = fileSize;
+        this.unreadCount = unreadCount;
+        this.replayMassage = replayMassage;
+        this.replayType = replayType;
         this.isOnline = isOnline;
         this.isImage = isImage;
         this.isUnread = isUnread;
+        this.isReply = isReply;
     }
 
     public String getName() {
@@ -67,6 +76,70 @@ public class ChatListModal {
         this.uid = uid;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getSeen() {
+        return seen;
+    }
+
+    public void setSeen(String seen) {
+        this.seen = seen;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
+    public String getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(String fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    public String getUnreadCount() {
+        return unreadCount;
+    }
+
+    public void setUnreadCount(String unreadCount) {
+        this.unreadCount = unreadCount;
+    }
+
+    public String getReplayMassage() {
+        return replayMassage;
+    }
+
+    public void setReplayMassage(String replayMassage) {
+        this.replayMassage = replayMassage;
+    }
+
+    public String getReplayType() {
+        return replayType;
+    }
+
+    public void setReplayType(String replayType) {
+        this.replayType = replayType;
+    }
+
     public Boolean getOnline() {
         return isOnline;
     }
@@ -89,5 +162,13 @@ public class ChatListModal {
 
     public void setUnread(Boolean unread) {
         isUnread = unread;
+    }
+
+    public Boolean getReply() {
+        return isReply;
+    }
+
+    public void setReply(Boolean reply) {
+        isReply = reply;
     }
 }

@@ -2,6 +2,7 @@ package com.nestowl.AdapterClass;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 public class SubscriptionPagerAdapter extends PagerAdapter {
     Context context;
     ArrayList<SubsricptionModal> data;
-    TextView type,remaining,extra,price,toremove,lineOne,lineTwo;
+    TextView type,remaining,extra,price,toremove,lineOne,lineTwo,cut;
     FrameLayout knowMore,subscribe;
 
     public SubscriptionPagerAdapter(Context context, ArrayList<SubsricptionModal> data) {
@@ -58,12 +59,17 @@ public class SubscriptionPagerAdapter extends PagerAdapter {
         lineTwo=view.findViewById(R.id.PROPERTY_PLAN_LINE_TWO);
         knowMore=view.findViewById(R.id.PROPERTY_PLAN_KNOW_MORE);
         subscribe=view.findViewById(R.id.PROPERTY_PLAN_BUYPROPERTY);
+        cut=view.findViewById(R.id.PROPERTY_PLAN_CUT);
+
+        cut.setPaintFlags(cut.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
         SubsricptionModal info = data.get(position);
         type.setText(info.getTime());
         remaining.setText(info.getPurchases());
         extra.setText(info.getExtraLine());
         price.setText("₹"+info.getPrice());
+        int tota=Integer.parseInt(info.getPrice())+599;
+        cut.setText("₹"+tota);
         lineOne.setText(info.getLine());
         lineTwo.setText(info.getLine2());
         if (info.getTime().equals("FREE")){

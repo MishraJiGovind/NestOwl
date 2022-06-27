@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/drawable-v21/ic_cancel_dialog.xml" value="0.1" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/drawable/background_black.xml" value="0.271875" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/drawable/circle_background.xml" value="0.271875" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/drawable/circle_filter_background.xml" value="0.26" />
@@ -29,8 +30,8 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_broker_submit_profile_requirement.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_buy_plan.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_buyer_details.xml" value="0.33" />
-        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_chat_list.xml" value="0.21331521739130435" />
-        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_chating.xml" value="0.25" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_chat_list.xml" value="0.33" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_chating.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_clint_sumbit_congo.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_clints.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_congratulation_empty.xml" value="0.33" />
@@ -38,7 +39,7 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_contact.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_deal_closed.xml" value="0.2975630611372381" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_deal_sumbit.xml" value="0.3625" />
-        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_edit_sign_up_form.xml" value="0.75" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_edit_sign_up_form.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_editing_screen_all.xml" value="0.5" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_enter_your_city_name_search.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_faq.xml" value="0.3625" />
@@ -55,7 +56,7 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_card_third.xml" value="0.2702009405728944" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_property.xml" value="0.2702009405728944" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_property_second_name.xml" value="0.2702009405728944" />
-        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_property_third_user.xml" value="0.33" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_property_third_user.xml" value="0.25" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_interested_property_third_user_second.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_inventory_first.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/activity_know_more_first.xml" value="0.3625" />
@@ -171,6 +172,8 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_article_view.xml" value="0.67" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_bedroms.xml" value="0.3120471014492754" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_broker_closed_deals.xml" value="0.3482789855072464" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_chat_view.xml" value="0.28014505893019037" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_chating.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_images_recycler_post.xml" value="0.3129528985507246" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_images_shows.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/custom_incomplete.xml" value="0.33" />
@@ -208,7 +211,7 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_amenties_features.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_basic_details.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_basic_details_rqrmnt.xml" value="0.2504528985507246" />
-        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_contact_us.xml" value="0.3625" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_contact_us.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_dashboard.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/fragment_home_screen_two.xml" value="0.3875" />
@@ -261,6 +264,7 @@
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/query_time.xml" value="0.3625" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/select_state.xml" value="0.3180846515604959" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/show_contact.xml" value="0.3875" />
+        <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/subscriptionplan_first.xml" value="0.25" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/technical_error.xml" value="0.2975630611372381" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/view_all_amenties.xml" value="0.33" />
         <entry key="..\:/Digital Fuled/Android Development/BrokerAPP/app/src/main/res/layout/work_location.xml" value="0.33" />

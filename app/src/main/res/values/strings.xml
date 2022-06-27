@@ -268,4 +268,5 @@
     <string name="facebook_client_token">e0dc6de032b5f74f6f5eea108ba15aef</string>
     <string name="channel_name">Notfication counter</string>
     <string name="channel_description">Notfication counter for app notification</string>
+    <string name="googleApi">AIzaSyBIRK86ibCWUdpzkKMdYKrNk7bEhOH_62M</string>
 </resources>

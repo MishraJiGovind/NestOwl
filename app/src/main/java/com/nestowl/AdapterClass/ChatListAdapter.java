@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHoler> {
     Context context;
     ArrayList<ChatListModal> chats;
-    Integer unread;
 
     public ChatListAdapter(Context context, ArrayList<ChatListModal> chats) {
         this.context = context;
@@ -45,7 +44,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         }
         if (data.getUnread()){
             viewHoler.unread.setVisibility(View.VISIBLE);
-//            viewHoler.unread.setText(unread.toString());
+            viewHoler.unread.setText(data.getUnreadCount());
             viewHoler.massage.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             viewHoler.time.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             viewHoler.username.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));

@@ -486,6 +486,37 @@ public class SignUpActivity extends AppCompatActivity {
         progressDialog.setMessage("Please Wait...");
         progressDialog.setCancelable(false);
         progressDialog.show();
+        StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.CHAT_REGEISTOR, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject= new JSONObject(response);
+                    boolean succes = jsonObject.getBoolean("success");
+                    if (succes){
+                        Log.e("CHAT REGISTER", "onResponse: CHAT REGISTORED" );
+                    }
+                }catch (Exception e){
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String>hashMap=new HashMap<>();
+                hashMap.put("email", edt_email_adreess.getText().toString());
+                hashMap.put("name",name[0]+" "+name[1]);
+                hashMap.put("password", edt_password.getText().toString());
+                hashMap.put("phone", edt_mobile.getText().toString());
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(this).add(request);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UrlClass.SIGN_UP, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

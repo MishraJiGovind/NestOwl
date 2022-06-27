@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.brokerApp",
+  "applicationId": "com.nestowl.brokerapp",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 11,
+      "versionName": "0.1.0.0602",
       "outputFile": "app-release.apk"
     }
   ],

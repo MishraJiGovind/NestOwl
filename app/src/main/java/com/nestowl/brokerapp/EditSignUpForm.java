@@ -1,11 +1,15 @@
 package com.nestowl.brokerapp;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -156,6 +160,7 @@ public class EditSignUpForm extends AppCompatActivity {
         getProfileInfo(user.getUser_id());
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void run() {
              handlerViews();
@@ -365,9 +370,14 @@ public class EditSignUpForm extends AppCompatActivity {
         Volley.newRequestQueue(this).add(photos);
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void handlerViews() {
         progressBar.setProgress(getCompleted());
         progressText.setText(String.valueOf(getCompleted())+"%");
+        if (getCompleted()==100){
+            progressBar.setProgressTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.Greeen)));
+            progressText.setTextColor(ContextCompat.getColor(this, R.color.Greeen));
+        }
         if (complete1==0){
             personal.setImageResource(no);
         }
@@ -392,7 +402,8 @@ public class EditSignUpForm extends AppCompatActivity {
     }
     private int getCompleted(){
         int finalresult = complete1+complete2+complete3+complete4+complete5+complete6+complete7;
-        return finalresult*100/7;
+        int total = finalresult*100/7;
+        return total;
     }
 
     @Override
@@ -409,6 +420,7 @@ public class EditSignUpForm extends AppCompatActivity {
             getProfileInfo(user.getUser_id());
             Handler handler = new Handler();
             Runnable runnable = new Runnable() {
+                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void run() {
                     handlerViews();

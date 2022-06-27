@@ -200,6 +200,17 @@ public class UrlClass {
     public static final String READ_NOTIFICATION=BASE_URL+"api/readnotification";
     public static final String TOTAL_NOTIFICATION=BASE_URL+"api/totalnotification";
     public static final String VIEW_NOTIFICATION=BASE_URL+"api/viewreadnotification";
+    public static final String GET_PROPERTY_FREEZE_CONTATC_STATUS=BASE_URL+"api/getcontactshow-hide";
+    public static final String SET_PROPRTY_CONTATC_VISBILITY=BASE_URL+"api/updatecontactshow-hide";
+
+    public static final String CHAT_REGEISTOR=BASE_URL+"api/mainregister";
+    public static final String CHAT_URL="http://chat.nestowl.in/";
+    public static final String CHAT=CHAT_URL+"api/web-send-message-api";
+    public static final String CHAT_HISTORY=CHAT_URL+"api/get-all-conversation";
+    public static final String CHAT_FILEUPLOAD=CHAT_URL+"api/file-upload-api";
+    public static final String CHAT_FILE_URL="https://chat.nestowl.in/uploads/conversation/";
+    public static final String GET_CHAT_LIST=CHAT_URL+"conversations-list-api/";
+    public static final String SET_CHAT_ONLINE=CHAT_URL+"api/online";
 
 
 }

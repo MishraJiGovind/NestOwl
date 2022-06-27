@@ -917,7 +917,6 @@ public class VerifySubmit extends Fragment {
                 if (CLICK_ON.equals(FIRST_IMAGE)) {
                     bitmap1 = bitmap;
                     filePath1 = filePath;
-
                 } else if (CLICK_ON.equals(SECOND_IMAGE)) {
                     bitmap2 = bitmap;
                     filePath2 = filePath;

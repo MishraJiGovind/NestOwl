@@ -8,8 +8,8 @@ android {
         applicationId "com.nestowl.brokerapp"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 9
-        versionName "0.1.0.0416"
+        versionCode 12
+        versionName "0.1.1.0502"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

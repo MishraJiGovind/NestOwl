@@ -43,6 +43,19 @@ public class GetFiles {
         MultipartBody.Part filePart = MultipartBody.Part.createFormData(key, file.getName(), requestBody);
         return filePart;
     }
+    public MultipartBody.Part getPartBodyFile(String key,Uri uri){
+        File file = null;
+        RequestBody requestBody;
+        try {
+            file = FileUtil.from(context, uri);
+            requestBody = RequestBody.create(MediaType.parse("*/*"), file);
+        } catch (Exception e) {
+            Log.e("GET FILE URI ERROR", e.toString());
+            requestBody = RequestBody.create(MediaType.parse(".pdf"), file);
+        }
+        MultipartBody.Part filePart = MultipartBody.Part.createFormData(key, file.getName(), requestBody);
+        return filePart;
+    }
     public MultipartBody.Part getPartBody(String key,Bitmap bitmap){
         File file;
         file = bitmapToFile(bitmap, context.getString(R.string.app_name) + System.currentTimeMillis() + ".jpg");

@@ -41,6 +41,23 @@ public class ApiExecutor {
         }
         return retrofit;
     }
+    public static ApiService getChatFileService() {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(interceptor);
+        httpClient.readTimeout(4, TimeUnit.HOURS);
+        httpClient.writeTimeout(4, TimeUnit.HOURS);
+        httpClient.connectTimeout(4, TimeUnit.MINUTES);
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        retrofit = new Retrofit.Builder().baseUrl(UrlClass.CHAT_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(httpClient.build())
+                .build();
+        return retrofit.create(ApiService.class);
+    }
 
 
 

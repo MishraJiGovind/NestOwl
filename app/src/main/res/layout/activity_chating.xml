@@ -50,14 +50,39 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/CHATING_NO_CHAT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whit_button"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CHATING_PROFILE">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tint="@color/brown"
+            app:srcCompat="@drawable/no_comment" />
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Chat !"
+            android:textColor="@color/brown"
+            android:textSize="20sp" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/CHATING_VIEW"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,10 +91,10 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="@color/whit_button"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingTop="5dp"
         android:paddingRight="20dp"
@@ -78,51 +103,102 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/CHATING_SHARE"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
+        <LinearLayout
+            android:id="@+id/CHATING_REPLY_VIEW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_weight="0"
-            android:background="@drawable/doctor_background"
-            android:padding="10dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:srcCompat="@drawable/attachments"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:minHeight="30dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/CHATING_REPLY_CANCEL"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/close_icon" />
+
+                <TextView
+                    android:id="@+id/textView100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reply To:"
+                    android:textColor="@color/black_color"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/CHATING_REPLY_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You are cute"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView100" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            android:background="@drawable/activity_apartment_background"
-            android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/CHATING_INPUT"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                android:ems="10"
-                android:hint="Type Massage.."
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
             <ImageButton
-                android:id="@+id/CHATING_SEND"
+                android:id="@+id/CHATING_SHARE"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="0"
-                android:background="#00FFFFFF"
+                android:background="@drawable/doctor_background"
                 android:padding="10dp"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_menu_send"
-                app:tint="@color/basic_color"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/attachments"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@drawable/activity_apartment_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/CHATING_INPUT"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:ems="10"
+                    android:hint="Type Massage.."
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/CHATING_SEND"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:background="#00FFFFFF"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_menu_send"
+                    app:tint="@color/basic_color"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

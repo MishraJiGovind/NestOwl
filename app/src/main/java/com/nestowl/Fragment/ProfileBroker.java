@@ -134,8 +134,10 @@ public class ProfileBroker extends Fragment {
 
             }
         });
+
         view_nest=view.findViewById(R.id.lnd_view_nest_profile);
         lnr_payment=view.findViewById(R.id.lnr_payment);
+
         lnr_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

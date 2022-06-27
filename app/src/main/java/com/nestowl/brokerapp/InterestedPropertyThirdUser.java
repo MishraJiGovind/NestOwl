@@ -93,7 +93,7 @@ import retrofit2.Callback;
 
 public class InterestedPropertyThirdUser extends AppCompatActivity implements OnMapReadyCallback {
     FrameLayout viewContact,makeoffer,buywithNestPros,exploreMore,powerBackup,maditaion,swimingpool,amentiesMore,providedInfoYes,providedInfoNo,accept,reject,BrokerViewPropfile,chat,ON_SAMEUSER_CONTACT,ON_SAME_USER_BOTTOM_INFO_1,ON_SAME_USER_BOTTOM_INFO_2;
-    LinearLayout leadsDataCorrect,leadsDataCorrectOptions,otherCharges,frm_third,airportL,railwaysL,pharmacyL,parkL,hospitalL,banksL,BrokerUI,BrokerViewNumber;
+    LinearLayout leadsDataCorrect,leadsDataCorrectOptions,otherCharges,frm_third,airportL,railwaysL,pharmacyL,parkL,hospitalL,banksL,shopingL,gymL,BrokerUI,BrokerViewNumber;
     TextView title,price,date,address,ownername,ownerMob,carpetArea,address2,location,location2,configration,status,frunishing,proDescription,proDescriptionReadMore,overLokking,openSides,funishing2,area,desclaimer,desclaimerReadMore,BrokerViewReraReg,BrokerViewReraId,BrokerViewName,BrokerNumber;
     TabLayout tab_filters;
     ViewPager viewPager_filter;
@@ -114,11 +114,11 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
     LeadsPublicPro data;
     RecyclerView recyclerView;
     AppBarLayout appBarLayout;
-    int proposalSumiitedTotal,airport,railways,pharmacy,park,hospital,banks,activeCard,defultsCard;
+    int proposalSumiitedTotal,airport,railways,pharmacy,park,hospital,banks,shoping,gym,activeCard,defultsCard;
     ArrayList<AllAcceptedDataModal> propertyAcceptedData;
     double lat , lon;
     String mainName;
-    CardView airportCard,railwaysCard,pharmacyCard,parkCard,hospitalCard,banksCard;
+    CardView airportCard,railwaysCard,pharmacyCard,parkCard,hospitalCard,banksCard,shopingCard,gymCard;
 
     CustomMapView mapView;
 //    MapView mapView;
@@ -141,12 +141,14 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                 onBackPressed();
             }
         });
-        airport=R.drawable.airport_icon;
-        railways=R.drawable.grocery_icon;
-        pharmacy=R.drawable.grocery_icon;
-        park=R.drawable.school_icon;
-        hospital=R.drawable.hospital_icon;
-        banks=R.drawable.bank_icon;
+        airport=R.drawable.map_airport;
+        railways=R.drawable.map_railways;
+        pharmacy=R.drawable.map_pharmacy;
+        park=R.drawable.map_park;
+        hospital=R.drawable.map_hospital;
+        banks=R.drawable.map_bank;
+        shoping=R.drawable.map_shoping_mall;
+        gym=R.drawable.map_gym;
         activeCard=R.color.lightGreyChat;
         defultsCard=R.color.whit_button;
 
@@ -168,6 +170,7 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                 }
             }
         }
+
         isBroker=intent.getBooleanExtra("isBroker",false);
         isAccepted=intent.getBooleanExtra("isAccepted",false);
         isSummited=intent.getBooleanExtra("isSummited",false);
@@ -184,6 +187,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
         pharmacyL=findViewById(R.id.LEADS_PRO_MAP_PHRAMACY);
         parkL=findViewById(R.id.LEADS_PRO_MAP_PARK);
         hospitalL=findViewById(R.id.LEADS_PRO_MAP_HOSPITAL);
+        shopingL=findViewById(R.id.LEADS_PRO_MAP_SHOPING_MALL);
+        gymL=findViewById(R.id.LEADS_PRO_MAP_GYM);
         banksL=findViewById(R.id.LEADS_PRO_MAP_BANKS);
         airportCard=(CardView)airportL.getChildAt(0);
         railwaysCard=(CardView)railwaysL.getChildAt(0);
@@ -191,6 +196,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
         parkCard=(CardView)parkL.getChildAt(0);
         hospitalCard=(CardView)hospitalL.getChildAt(0);
         banksCard=(CardView)banksL.getChildAt(0);
+        shopingCard=(CardView)shopingL.getChildAt(0);
+        gymCard=(CardView)gymL.getChildAt(0);
         BrokerUI=findViewById(R.id.LEADS_PROPERTY_BROKER_UI);
         BrokerViewReraId=findViewById(R.id.LEADS_PROPERTY_BROKER_UI_RERA_ID);
         BrokerViewName=findViewById(R.id.LEADS_PROPERTY_BROKER_UI_NAME);
@@ -360,6 +367,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
         placeTypeList.add("park");
         placeTypeList.add("hospital");
         placeTypeList.add("banks");
+        placeTypeList.add("shopping mall");
+        placeTypeList.add("gym");
 //        frames
         viewContact=findViewById(R.id.LEADS_PROPERTY_DETA_OWNER_CONTACT);
         makeoffer=findViewById(R.id.LEADS_PROPERTY_DETA_MAKE_OFFER);
@@ -656,6 +665,9 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(0))){
                             ArrayList<MapPinModal> pin =  data.getPins();
@@ -685,6 +697,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
 
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(1))){
@@ -716,6 +730,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
 
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(2))){
@@ -746,6 +762,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(activeCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
 
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(3))){
@@ -776,6 +794,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(activeCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
 
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(4))){
@@ -806,6 +826,8 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
                     banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(activeCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
 
                     for (MapPinsModals data : mapPinsModals){
                         if (data.getName().equals(placeTypeList.get(5))){
@@ -819,6 +841,66 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     }
                 }
 
+            }
+        });
+        shopingL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    gMap.clear();
+                    LatLng indias = new LatLng(lat,lon);
+                    gMap.addMarker(new MarkerOptions().position(indias).title(mainName));
+
+                    airportCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    railwaysCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    pharmacyCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(activeCard));
+
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(6))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),shoping)));
+                            }
+
+                        }
+                    }
+                }
+            }
+        });
+        gymL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mapPinsModals.isEmpty()){
+                    gMap.clear();
+                    LatLng indias = new LatLng(lat,lon);
+                    gMap.addMarker(new MarkerOptions().position(indias).title(mainName));
+
+                    airportCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    railwaysCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    pharmacyCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    parkCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    hospitalCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    gymCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(activeCard));
+                    banksCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+                    shopingCard.setCardBackgroundColor(InterestedPropertyThirdUser.this.getResources().getColor(defultsCard));
+
+                    for (MapPinsModals data : mapPinsModals){
+                        if (data.getName().equals(placeTypeList.get(7))){
+                            ArrayList<MapPinModal> pin =  data.getPins();
+                            for (MapPinModal pindata : pin){
+                                LatLng india = new LatLng(pindata.getLat(),pindata.getLon());
+                                gMap.addMarker(new MarkerOptions().position(india).title(pindata.getName()).icon(BitmapFromVector(getApplicationContext(),gym)));
+                            }
+
+                        }
+                    }
+                }
             }
         });
 
@@ -1085,7 +1167,7 @@ public class InterestedPropertyThirdUser extends AppCompatActivity implements On
                     for (String data : placeTypeList){
                         MapPinsModals mapPinsModal =  new MapPinsModals();
                         ArrayList<MapPinModal> mapPinModals = new ArrayList<>();
-                        String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json" + "?location=" + lat + "," + lon + "&radius=5000" + "&type=" + data + "&sensor=true" + "&key=" + getResources().getString(R.string.google_maps_key);
+                        String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json" + "?location=" + lat + "," + lon + "&radius=5000" + "&type=" + data + "&sensor=true" + "&key=" + getResources().getString(R.string.googleApi);
                         StringRequest getdata =  new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

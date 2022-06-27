@@ -334,16 +334,16 @@ public class HomeFragment extends Fragment {
                 }else {
                     if (PrefMananger.getString(context,"status").equals("0")){
                         startActivity(new Intent(context, EditSignUpForm.class));
-//                        new WarningDio(context, "Your Profile is not Summited yet.", "Summit Profile", null, new WarningDio.Response() {
-//                            @Override
-//                            public void getClicks(int click) {
-//                                if (click==1){
-//                                }
-//                            }
-//                        },false);
+                        new WarningDio(context, "Your Profile is not Submitted yet.", "Submit Profile", null, new WarningDio.Response() {
+                            @Override
+                            public void getClicks(int click) {
+                                if (click==1){
+                                }
+                            }
+                        },false);
                     }
                     if (PrefMananger.getString(context,"status").equals("1")){
-                        new WarningDio(context, "Your Profile is Summited but not verified yet.", "Ok", null, new WarningDio.Response() {
+                        new WarningDio(context, "Your Profile is Submitted but not verified yet.", "Ok", null, new WarningDio.Response() {
                             @Override
                             public void getClicks(int click) {
 
@@ -2192,7 +2192,7 @@ public class HomeFragment extends Fragment {
                             statusText.setText("Profile Incomplete");
                             SubscribeBOdy.setVisibility(View.VISIBLE);
                             TextView textView =  (TextView)subscribe.getChildAt(0);
-                            textView.setText("Sumbit Profile");
+                            textView.setText("Submit Profile");
                             PrefMananger.saveString(context,"status","0");
                         }
                         if (loginPojo.getStatus().equals("1")){
@@ -2200,7 +2200,7 @@ public class HomeFragment extends Fragment {
                             imgRECIVED.setImageResource(res);
                             imgVARIFIED.setImageResource(no);
                             imgAPPROVED.setImageResource(no);
-                            statusText.setText("Sumbited");
+                            statusText.setText("Submitted");
                             SubscribeBOdy.setVisibility(View.VISIBLE);
                             PrefMananger.saveString(context,"status","1");
                         }
@@ -2252,7 +2252,7 @@ public class HomeFragment extends Fragment {
                 imgRECIVED.setImageResource(no);
                 statusText.setText("Profile Incomplete");
                 TextView textView =  (TextView)subscribe.getChildAt(0);
-                textView.setText("Sumbit Profile");
+                textView.setText("Submit Profile");
                 PrefMananger.saveString(context,"status","0");
                 subscribeClick=false;
             }

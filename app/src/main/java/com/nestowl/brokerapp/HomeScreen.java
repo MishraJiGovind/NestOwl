@@ -114,6 +114,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setonline(1);
         context=activity=this;
         setContentView(R.layout.activity_home_screen);
         if (PrefMananger.getString(this,"remain")==null){
@@ -271,8 +272,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                                 }
                             },false);
                         }
-
-
                     }
                 }
 
@@ -666,6 +665,30 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         });
     }
 
+    private void setonline(int i) {
+        StringRequest request =  new StringRequest(Request.Method.POST, UrlClass.SET_CHAT_ONLINE, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String>hashMap=new HashMap<>();
+                hashMap.put("user_id",userID);
+                hashMap.put("is_online",String.valueOf(i));
+                return hashMap;
+            }
+        };
+        Volley.newRequestQueue(this).add(request);
+    }
+
     private void getNotification() {
         createNotificationChannel();
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.TOTAL_NOTIFICATION, new Response.Listener<String>() {
@@ -906,5 +929,41 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putCharSequence("test","helo");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        setonline(0);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        setonline(0);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        setonline(0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setonline(1);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setonline(1);
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        setonline(0);
     }
 }

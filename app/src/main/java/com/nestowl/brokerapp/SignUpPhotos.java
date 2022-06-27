@@ -319,6 +319,7 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
     }
     private void deleteLogo() {
         pd.show();
+        Glide.with(SignUpPhotos.this).load("nthing").placeholder(R.drawable.default_x_x).into(logo_photo_img);
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.DELETE_LOGO_PHOTO, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -356,6 +357,7 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
     }
     private void deleteCover() {
         pd.show();
+        Glide.with(SignUpPhotos.this).load("nthing").placeholder(R.drawable.default_x_x).into(cover_photo_img);
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.DELETE_COVER_PHOTO, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -393,6 +395,7 @@ public class SignUpPhotos extends AppCompatActivity implements ImageUploadAdapte
     }
     private void deleteProfile() {
         pd.show();
+        Glide.with(SignUpPhotos.this).load("nthing").placeholder(R.drawable.default_x_x).into(profile_photo_img);
         StringRequest request = new StringRequest(Request.Method.POST, UrlClass.DELETE_PROFILE_PHOTO, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
